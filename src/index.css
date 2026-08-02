@@ -1,0 +1,269 @@
+/* ==========================================================================
+   GB PUBLISHING - MODERN DESIGN SYSTEM TOKENS & STYLES
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --gbp-bg-primary: #FBF9F5;       /* Warm paper background */
+  --gbp-bg-card: #FFFFFF;          /* Pure white card surface */
+  --gbp-bg-secondary: #F3EFEA;     /* Soft warm grey background */
+  --gbp-bg-dark: #121A29;          /* Deep luxury navy/black */
+  
+  --gbp-text-primary: #1C1C1C;     /* Deep charcoal heading text */
+  --gbp-text-secondary: #5A5A5A;   /* Muted metadata text */
+  --gbp-text-light: #9A9A9A;       /* Caption text */
+  
+  --gbp-accent-burgundy: #8C2520;  /* Primary brand burgundy CTA */
+  --gbp-accent-burgundy-hover: #A62D27;
+  --gbp-accent-burgundy-light: #FBF0EF;
+  
+  --gbp-accent-indigo: #1D2A44;    /* Navy indigo header/footer */
+  --gbp-accent-indigo-hover: #263859;
+  
+  --gbp-accent-gold: #D4A359;      /* Gold highlights & signed badges */
+  --gbp-accent-gold-dark: #B8853B;
+  --gbp-accent-gold-light: #FFF9ED;
+  
+  --gbp-border-light: #E5E0DA;
+  --gbp-border-focus: #8C2520;
+  
+  --gbp-success: #2D7D46;
+  --gbp-success-light: #EAF5ED;
+  
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  
+  /* Layout Spacing */
+  --gbp-max-width: 1280px;
+  --gbp-radius-sm: 6px;
+  --gbp-radius-md: 12px;
+  --gbp-radius-lg: 20px;
+  --gbp-radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.12);
+  --shadow-cover: -4px 6px 16px rgba(0, 0, 0, 0.18), inset -2px 0 6px rgba(255, 255, 255, 0.2);
+  --shadow-cover-hover: -8px 12px 28px rgba(140, 37, 32, 0.22);
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--gbp-bg-primary);
+  color: var(--gbp-text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--gbp-bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: #C8C2B9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gbp-accent-burgundy);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--gbp-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Book Cover 3D Styling */
+.book-cover-wrap {
+  position: relative;
+  perspective: 1000px;
+}
+
+.book-cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: var(--gbp-radius-sm);
+  box-shadow: var(--shadow-cover);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  background-color: #EFEAE4;
+}
+
+.book-card:hover .book-cover {
+  transform: translateY(-6px) rotateY(-3deg) scale(1.02);
+  box-shadow: var(--shadow-cover-hover);
+}
+
+/* Spine effect overlay */
+.book-spine-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0,0,0,0.25) 0%, rgba(255,255,255,0.15) 50%, rgba(0,0,0,0.05) 100%);
+  border-top-left-radius: var(--gbp-radius-sm);
+  border-bottom-left-radius: var(--gbp-radius-sm);
+  pointer-events: none;
+}
+
+/* Ribbon Badge */
+.ribbon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--gbp-radius-full);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ribbon-gold {
+  background-color: var(--gbp-accent-gold-light);
+  color: var(--gbp-accent-gold-dark);
+  border: 1px solid rgba(212, 163, 89, 0.4);
+}
+
+.ribbon-burgundy {
+  background-color: var(--gbp-accent-burgundy-light);
+  color: var(--gbp-accent-burgundy);
+  border: 1px solid rgba(140, 37, 32, 0.3);
+}
+
+.ribbon-success {
+  background-color: var(--gbp-success-light);
+  color: var(--gbp-success);
+  border: 1px solid rgba(45, 125, 70, 0.3);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--gbp-radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--gbp-accent-burgundy);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(140, 37, 32, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--gbp-accent-burgundy-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(140, 37, 32, 0.35);
+}
+
+.btn-secondary {
+  background-color: var(--gbp-accent-indigo);
+  color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+  background-color: var(--gbp-accent-indigo-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--gbp-text-primary);
+  border: 1.5px solid var(--gbp-border-light);
+}
+
+.btn-outline:hover {
+  border-color: var(--gbp-accent-burgundy);
+  color: var(--gbp-accent-burgundy);
+  background-color: var(--gbp-accent-burgundy-light);
+}
+
+.btn-gold {
+  background-color: var(--gbp-accent-gold);
+  color: #1C1C1C;
+  font-weight: 700;
+}
+
+.btn-gold:hover {
+  background-color: var(--gbp-accent-gold-dark);
+  color: #FFFFFF;
+}
+
+/* Glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 224, 218, 0.8);
+  border-radius: var(--gbp-radius-lg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Modal Backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(18, 26, 41, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
