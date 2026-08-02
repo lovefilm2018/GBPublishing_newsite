@@ -6,36 +6,44 @@ import os
 
 csv_path = r'C:\Users\TotalBiz\Documents\GBPublishing\catalog_products.csv'
 
-with open(csv_path, 'r', encoding='utf-8', errors='replace') as f:
-    df = pd.read_csv(f)
+df = pd.read_csv(csv_path, encoding='utf-8-sig', encoding_errors='replace')
 
 products = df[df['fieldType'] == 'Product'].copy()
 
-# Known author mappings from title patterns
+def clean_text(text):
+    if not isinstance(text, str) or pd.isna(text):
+        return ""
+    t = html.unescape(text)
+    # Strip HTML tags
+    t = re.sub(r'<[^>]+>', ' ', t)
+    # Fix character replacements
+    t = t.replace('\ufffdzlem', 'Özlem').replace('zlem', 'Özlem').replace('Ozlem', 'Özlem')
+    t = t.replace('\ufffd', ' ')
+    t = re.sub(r'\s+', ' ', t).strip()
+    return t
+
 def extract_author(name, collection):
-    name_str = str(name)
-    coll_str = str(collection)
+    name_str = clean_text(name)
+    coll_str = clean_text(collection)
     
     if "Özlem" in name_str or "Ozlem" in name_str:
         return "Özlem Warren"
-    if "Anthony & Wendy Kimberley" in name_str or "Anthony Kimberley" in name_str:
+    if "Anthony & Wendy Kimberley" in name_str or "Anthony Kimberley" in name_str or "Kimberley" in name_str:
         return "Anthony & Wendy Kimberley"
-    if "P Thornton" in name_str or "P. Thornton" in name_str:
+    if "Thornton" in name_str or "Zodiac Cooks" in name_str:
         return "P Thornton"
-    if "Clare Latham" in name_str:
+    if "Latham" in name_str or "Erin" in name_str:
         return "Clare Latham"
-    if "M.A. Fitzgerald" in name_str:
+    if "Fitzgerald" in name_str or "Tree" in name_str:
         return "M.A. Fitzgerald"
-    if "Solonair" in name_str or "Solonair" in coll_str:
+    if "Solonair" in name_str or "Solonair" in coll_str or "Tommy" in name_str:
         return "Dr Solonair"
-    if "Paddy Cummins" in name_str or "Paddy Cummins" in coll_str:
+    if "Cummins" in name_str or "Cummins" in coll_str or "Vet" in name_str:
         return "Paddy Cummins"
     if "Morganico" in name_str or "Sam Widges" in name_str:
         return "Morganico"
     if "Lois Collins" in name_str or "Lois Collins" in coll_str:
         return "Lois Collins"
-    if "Wendy Kimberley" in name_str:
-        return "Wendy Kimberley BEM"
     
     match = re.search(r'\bby\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3})', name_str)
     if match:
@@ -43,29 +51,20 @@ def extract_author(name, collection):
         
     return "GB Publishing Author"
 
-def clean_text(text):
-    if not isinstance(text, str) or pd.isna(text):
-        return ""
-    t = text.replace('zlem', 'Özlem').replace('Ozlem', 'Özlem')
-    t = t.replace('', ' ')
-    t = html.unescape(t)
-    t = re.sub(r'\s+', ' ', t).strip()
-    return t
-
 def categorize_product(name, collection):
-    n = str(name).lower()
-    c = str(collection).lower()
+    n = clean_text(name).lower()
+    c = clean_text(collection).lower()
     
     cats = []
-    if any(k in n or k in c for k in ['cook', 'food', 'recipe', 'turkish', 'ginologist', 'crumbdog']):
+    if any(k in n or k in c for k in ['cook', 'food', 'recipe', 'turkish', 'ginologist', 'crumbdog', 'zodiac cooks']):
         cats.append("Cookbooks & Food")
-    if any(k in n or k in c for k in ['picture', 'children', 'grandad', 'tommy', 'sam widges', 'erin']):
+    if any(k in n or k in c for k in ['picture', 'children', 'grandad', 'tommy', 'sam widges', 'erin', 'cloud']):
         cats.append("Children's & Picture Books")
     if any(k in n or k in c for k in ['art', 'paintings', 'kimberley bem', 'lois collins', 'illustration']):
         cats.append("Poetry & Fine Art")
-    if any(k in n or k in c for k in ['sci-fi', 'fiction', 'novel', 'young adult', 'ya', 'tree', 'noah', 'war']):
+    if any(k in n or k in c for k in ['sci-fi', 'fiction', 'novel', 'young adult', 'ya', 'tree', 'noah', 'war', 'kingswraith', 'absurd', 'nightmare']):
         cats.append("Fiction, YA & Sci-Fi")
-    if any(k in n or k in c for k in ['vet', 'autobiology', 'biography', 'memoir', 'non-fiction', 'history', 'crisis']):
+    if any(k in n or k in c for k in ['vet', 'autobiology', 'biography', 'memoir', 'non-fiction', 'history', 'crisis', 'appeal']):
         cats.append("Non-Fiction & Memoir")
         
     if not cats:
@@ -90,13 +89,15 @@ for idx, row in products.iterrows():
     raw_name = str(row['name'])
     cleaned_name = clean_text(raw_name)
     
+    # Strip wholesale / discount suffix for clean user-facing title
     display_name = re.sub(r'(?i)\s*-\s*wholesale.*$', '', cleaned_name)
-    display_name = re.sub(r'(?i)\s*-\s*40%\s*off.*$', '', display_name).strip()
+    display_name = re.sub(r'(?i)\s*-\s*40%\s*off.*$', '', display_name)
+    display_name = re.sub(r'(?i)\s*-\s*buy wholesale.*$', '', display_name).strip()
     
     handle_id = str(row['handleId'])
     sku = str(row['sku']) if not pd.isna(row['sku']) else f"GBP-{idx+1000}"
     price = float(row['price']) if not pd.isna(row['price']) else 14.99
-    ribbon = clean_text(row['ribbon']) if not pd.isna(row['ribbon']) else ""
+    ribbon = clean_text(row['ribbon'])
     collection = clean_text(row['collection'])
     description = clean_text(row['description'])
     
@@ -121,11 +122,11 @@ for idx, row in products.iterrows():
         "price": price,
         "originalPrice": round(price * 1.2, 2) if is_signed or "award" in ribbon.lower() else None,
         "sku": sku,
-        "ribbon": ribbon,
+        "ribbon": ribbon if ribbon else ("Signed Collector Edition" if is_signed else ""),
         "categories": categories,
         "coverImage": cover_image,
         "gallery": gallery,
-        "description": description if description else f"A featured indie publication by {author}, available directly from GB Publishing with free bookmark and fast delivery.",
+        "description": description if len(description) > 30 else f"A featured indie publication by {author}, available directly from GB Publishing with free bookmark and fast delivery.",
         "isWholesale": is_wholesale,
         "isSigned": is_signed,
         "format": "Signed Edition" if is_signed else ("Hardcover" if price > 20 else "Paperback"),
@@ -141,4 +142,4 @@ with open('src/data/catalog.json', 'w', encoding='utf-8') as f:
 with open('public/data/catalog.json', 'w', encoding='utf-8') as f:
     json.dump(catalog, f, indent=2, ensure_ascii=False)
 
-print(f"Successfully generated catalog with {len(catalog)} products!")
+print(f"Successfully generated catalog with {len(catalog)} clean products!")
