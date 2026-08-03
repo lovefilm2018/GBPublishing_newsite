@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, CheckCircle2, ArrowRight, ShieldCheck, Heart } from 'lucide-react';
+import gbpLogo from '../assets/GBPLogo.png';
 
 export default function Footer({ onNavClick }) {
   const [email, setEmail] = useState('');
@@ -68,7 +69,11 @@ export default function Footer({ onNavClick }) {
           {/* Brand Colophon */}
           <div className="md:col-span-4 space-y-4">
             <div className="flex items-center gap-2">
-              <img src="/GBPLogo.png" alt="GB Publishing" className="h-9 object-contain filter brightness-0 invert opacity-90" />
+              <img 
+                src={gbpLogo} 
+                alt="GB Publishing" 
+                className="h-9 object-contain filter brightness-0 invert opacity-90" 
+              />
             </div>
 
             <p className="leading-relaxed">

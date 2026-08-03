@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ShoppingBag, Search, Menu, X, BookOpen, Sparkles, Feather, ArrowUpRight } from 'lucide-react';
+import gbpLogo from '../assets/GBPLogo.png';
 
 export default function Navbar({ 
   activeTab, 
@@ -26,9 +27,9 @@ export default function Navbar({
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#1D2A44] text-white shadow-lg">
+    <header className="sticky top-0 z-50 bg-[#1C2B40] text-white shadow-lg">
       {/* Top Direct Buy Incentive Ribbon */}
-      <div className="bg-[#8C2520] text-amber-100 text-xs py-1.5 px-4 font-medium tracking-wide">
+      <div className="bg-[#7A1F1A] text-amber-100 text-xs py-1.5 px-4 font-medium tracking-wide">
         <div className="container mx-auto flex justify-between items-center text-center sm:text-left">
           <div className="flex items-center gap-4 mx-auto sm:mx-0">
             <span className="flex items-center gap-1"><Sparkles className="w-3.5 h-3.5 text-amber-300" /> ✨ Free Custom Bookmark with Every Direct Order</span>
@@ -46,14 +47,18 @@ export default function Navbar({
       </div>
 
       {/* Main Header Bar */}
-      <div className="container mx-auto px-4 py-3.5 flex items-center justify-between gap-4">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
         {/* Brand Logo & Title */}
         <div className="flex items-center gap-3">
           <button 
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3 text-left focus:outline-none group"
+            className="flex items-center gap-3 text-left focus:outline-none group py-1"
           >
-            <img src="/GBPLogo.png" alt="GB Publishing" className="h-10 object-contain filter brightness-0 invert" />
+            <img 
+              src={gbpLogo} 
+              alt="GB Publishing" 
+              className="h-10 sm:h-11 object-contain filter brightness-0 invert group-hover:scale-105 transition-transform" 
+            />
           </button>
         </div>
 

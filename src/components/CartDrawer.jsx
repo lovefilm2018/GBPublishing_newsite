@@ -43,7 +43,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
               <ShoppingBag className="w-5 h-5 text-amber-400" />
               <h2 className="font-serif text-xl font-bold text-amber-50">
                 {checkoutStep === 'cart' && `Your Direct Cart (${cartItems.reduce((a, b) => a + b.quantity, 0)})`}
-                {checkoutStep === 'checkout' && 'Direct Order Information'}
+                {checkoutStep === 'checkout' && 'Direct Checkout'}
                 {checkoutStep === 'success' && 'Order Confirmed!'}
               </h2>
             </div>
@@ -131,39 +131,74 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
             )}
 
             {checkoutStep === 'checkout' && (
-              <div className="space-y-6 text-xs font-sans py-2">
-                <div className="bg-[#F9F2E2] border border-[#C49A45]/40 p-4 rounded-xl space-y-2">
-                  <span className="font-bold text-[#1A1612] text-sm block">Direct Fulfillment Order Desk</span>
-                  <p className="text-slate-700 leading-relaxed">
-                    To place a direct order today, please email our fulfillment team at <a href="mailto:orders@gbpublishing.co.uk?subject=Direct Book Order" className="font-bold text-[#7A1F1A] underline">orders@gbpublishing.co.uk</a> or call <span className="font-bold">01483 223400</span>. Direct orders include free custom bookmarks, signed copies, and direct author royalties.
+              <form onSubmit={handleCheckoutSubmit} className="space-y-4 text-xs font-sans">
+                <div className="bg-[#F9F2E2] border border-[#C49A45]/40 p-3.5 rounded-xl space-y-1">
+                  <span className="font-bold text-[#1A1612] block">✨ Direct Order Benefits Included:</span>
+                  <span className="text-slate-700 block">• Free Custom GB Publishing Bookmark</span>
+                  <span className="text-slate-700 block">• 100% Direct Author Royalty Contribution</span>
+                  <span className="text-slate-700 block">• Fast 1-2 Day UK Tracked Dispatch</span>
+                </div>
+
+                <div>
+                  <label className="font-bold text-slate-700 block mb-1">Full Name</label>
+                  <input 
+                    type="text" 
+                    required 
+                    placeholder="Jane Doe" 
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className="w-full p-2.5 border rounded-lg focus:outline-none focus:border-[#7A1F1A]" 
+                  />
+                </div>
+
+                <div>
+                  <label className="font-bold text-slate-700 block mb-1">Email Address</label>
+                  <input 
+                    type="email" 
+                    required 
+                    placeholder="jane@example.com" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full p-2.5 border rounded-lg focus:outline-none focus:border-[#7A1F1A]" 
+                  />
+                </div>
+
+                <div>
+                  <label className="font-bold text-slate-700 block mb-1">Delivery Address (UK)</label>
+                  <textarea 
+                    required 
+                    placeholder="House number, Street, City, Postcode" 
+                    rows={3}
+                    className="w-full p-2.5 border rounded-lg focus:outline-none focus:border-[#7A1F1A]"
+                  />
+                </div>
+
+                <div className="p-3 bg-slate-100 rounded-xl space-y-2">
+                  <div className="flex justify-between font-bold text-slate-800 text-sm">
+                    <span>Order Total</span>
+                    <span className="text-[#7A1F1A]">£{(subtotal + (isFreeShipping ? 0 : 3.50)).toFixed(2)}</span>
+                  </div>
+                  <p className="text-[11px] text-slate-500">
+                    Includes {isFreeShipping ? 'FREE Shipping' : 'Standard Shipping (£3.50)'}
                   </p>
                 </div>
 
-                <div className="p-4 bg-slate-100 rounded-xl space-y-2">
-                  <div className="flex justify-between font-bold text-slate-800 text-sm">
-                    <span>Order Subtotal ({cartItems.reduce((a, b) => a + b.quantity, 0)} items)</span>
-                    <span>£{subtotal.toFixed(2)}</span>
-                  </div>
-                  <div className="text-[11px] text-slate-500 space-y-1">
-                    <p>• Shipping: {isFreeShipping ? 'FREE UK Shipping' : 'Standard UK Shipping (£3.50)'}</p>
-                    <p>• Direct Perks: Free Custom Bookmark + Author Royalty Contribution</p>
-                  </div>
-                </div>
-
-                <a 
-                  href="mailto:orders@gbpublishing.co.uk?subject=Direct Book Order" 
-                  className="w-full bg-[#7A1F1A] hover:bg-[#8C2520] text-white py-3.5 rounded-xl font-bold text-sm text-center flex items-center justify-center gap-2"
+                <button 
+                  type="submit"
+                  className="w-full bg-[#7A1F1A] hover:bg-[#8C2520] text-white py-3.5 rounded-xl font-bold text-sm shadow-md flex items-center justify-center gap-2"
                 >
-                  <span>Email Direct Order →</span>
-                </a>
+                  <ShieldCheck className="w-4 h-4" />
+                  <span>Proceed to Payment Checkout</span>
+                </button>
 
                 <button 
+                  type="button"
                   onClick={() => setCheckoutStep('cart')}
-                  className="w-full text-slate-500 hover:text-slate-800 py-2 text-xs font-medium"
+                  className="w-full text-slate-500 hover:text-slate-800 py-1 text-xs font-medium text-center block"
                 >
                   ← Back to Cart
                 </button>
-              </div>
+              </form>
             )}
 
             {checkoutStep === 'success' && (
@@ -176,13 +211,13 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                   Your direct order has been placed successfully! Confirmation email sent to <span className="font-bold text-slate-800">{email}</span>.
                 </p>
                 <div className="bg-amber-50 p-4 rounded-xl border border-amber-200 text-xs text-slate-700 text-left space-y-1">
-                  <span className="font-bold block text-[#8C2520]">Order Highlights:</span>
+                  <span className="font-bold block text-[#7A1F1A]">Order Highlights:</span>
                   <span>• Free custom GB Publishing bookmark included</span>
                   <span>• Direct dispatch within 1–2 working days</span>
                 </div>
                 <button 
                   onClick={handleFinish}
-                  className="bg-[#1D2A44] text-white px-8 py-3 rounded-xl text-xs font-bold"
+                  className="bg-[#1C2B40] text-white px-8 py-3 rounded-xl text-xs font-bold"
                 >
                   Return to Storefront
                 </button>
@@ -212,7 +247,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                 onClick={() => setCheckoutStep('checkout')}
                 className="w-full bg-[#7A1F1A] hover:bg-[#8C2520] text-white py-3.5 rounded-xl font-sans font-bold text-sm shadow-lg flex items-center justify-center gap-2"
               >
-                <span>Proceed to Direct Order Info</span>
+                <span>Proceed to Direct Checkout</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
