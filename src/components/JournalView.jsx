@@ -52,80 +52,70 @@ export default function JournalView() {
     }
   ];
 
-  // Fetch live Wix Blog posts via CORS-safe proxy chain
+  // Fetch live Wix Blog posts via RSS2JSON API (bulletproof CORS-safe JSON wrapper)
   useEffect(() => {
-    async function parseXml(xmlText) {
-      const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(xmlText, "text/xml");
-      const items = xmlDoc.querySelectorAll("item");
-      return Array.from(items).map((item, idx) => {
-        const title = item.querySelector("title")?.textContent || "Wix Journal Post";
-        const description = item.querySelector("description")?.textContent || "";
-        const link = item.querySelector("link")?.textContent || "#";
-        const pubDate = item.querySelector("pubDate")?.textContent || "";
-        const creator = item.querySelector("creator")?.textContent || "GB Publishing";
-        const enclosure = item.querySelector("enclosure");
-        const rawMediaUrl = enclosure ? enclosure.getAttribute("url") : "";
-
-        let embedUrl = null;
-        let thumbnail = "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80";
-
-        if (rawMediaUrl) {
-          const ytMatch = rawMediaUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
-          if (ytMatch && ytMatch[1]) {
-            const ytId = ytMatch[1];
-            embedUrl = `https://www.youtube.com/embed/${ytId}`;
-            thumbnail = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
-          }
-        }
-
-        const pubDateObj = pubDate ? new Date(pubDate) : new Date();
-        const ageInDays = (new Date() - pubDateObj) / (1000 * 60 * 60 * 24);
-        const isNew = ageInDays <= 30;
-
-        return {
-          id: `wix-live-${idx}`,
-          title,
-          author: "George S Boughton",
-          date: pubDate ? pubDateObj.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : "3 Aug 2026",
-          type: embedUrl ? "Video Post" : "Article",
-          summary: description.replace(/<[^>]*>?/gm, ''),
-          thumbnail,
-          embedUrl: embedUrl || "https://www.youtube.com/embed/HTaWcwy590M",
-          wixLink: link,
-          badge: isNew ? "NEW!" : null,
-          timestamp: pubDateObj.getTime()
-        };
-      });
-    }
-
     async function fetchWixLiveFeed() {
-      const RAW_FEED = `https://gbpublishingorg.wixsite.com/website-5/blog-feed.xml`;
-      const encodedFeed = encodeURIComponent(RAW_FEED);
+      const RAW_FEED = 'https://gbpublishingorg.wixsite.com/website-5/blog-feed.xml';
+      const rss2jsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RAW_FEED)}&t=${Date.now()}`;
 
-      // Try direct fetch first (works when Wix sends CORS headers), then proxy fallbacks
-      const attempts = [
-        () => fetch(`${RAW_FEED}?t=${Date.now()}`, { cache: 'no-store' }).then(r => r.ok ? r.text() : Promise.reject()),
-        () => fetch(`https://api.codetabs.com/v1/proxy?quest=${encodedFeed}`).then(r => r.ok ? r.text() : Promise.reject()),
-        () => fetch(`https://corsproxy.io/?${encodedFeed}`).then(r => r.ok ? r.text() : Promise.reject()),
-        () => fetch(`https://api.allorigins.win/raw?url=${encodedFeed}&t=${Date.now()}`).then(r => r.ok ? r.text() : Promise.reject()),
-      ];
+      try {
+        const res = await fetch(rss2jsonUrl);
+        if (res.ok) {
+          const data = await res.json();
+          if (data.status === 'ok' && data.items && data.items.length > 0) {
+            const livePosts = data.items.map((item, idx) => {
+              const title = item.title || "Wix Journal Post";
+              const description = item.description || "";
+              const link = item.link || "#";
+              const pubDate = item.pubDate || "";
+              
+              let rawMediaUrl = "";
+              if (item.enclosure && item.enclosure.link) {
+                rawMediaUrl = item.enclosure.link;
+              } else if (item.content) {
+                const match = item.content.match(/src=["'](.*?)["']/);
+                if (match) rawMediaUrl = match[1];
+              }
 
-      for (const attempt of attempts) {
-        try {
-          const xmlText = await attempt();
-          if (xmlText && xmlText.includes('<item>')) {
-            const livePosts = await parseXml(xmlText);
+              let embedUrl = null;
+              let thumbnail = "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80";
+
+              if (rawMediaUrl) {
+                const ytMatch = rawMediaUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+                if (ytMatch && ytMatch[1]) {
+                  const ytId = ytMatch[1];
+                  embedUrl = `https://www.youtube.com/embed/${ytId}`;
+                  thumbnail = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
+                }
+              }
+
+              const pubDateObj = pubDate ? new Date(pubDate.replace(/-/g, '/')) : new Date();
+              const ageInDays = (new Date() - pubDateObj) / (1000 * 60 * 60 * 24);
+              const isNew = ageInDays <= 30;
+
+              return {
+                id: `wix-live-${idx}`,
+                title,
+                author: "George S Boughton",
+                date: pubDate ? pubDateObj.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : "Recently Published",
+                type: embedUrl ? "Video Post" : "Article",
+                summary: description.replace(/<[^>]*>?/gm, ''),
+                thumbnail,
+                embedUrl: embedUrl || "https://www.youtube.com/embed/HTaWcwy590M",
+                wixLink: link,
+                badge: isNew ? "NEW!" : null
+              };
+            });
+
             if (livePosts.length > 0) {
               setWixLivePosts(livePosts);
-              return; // success — stop trying
+              return;
             }
           }
-        } catch (_) {
-          // try next proxy
         }
+      } catch (err) {
+        console.warn("RSS2JSON fetch failed:", err);
       }
-      console.warn("All RSS fetch attempts failed — showing default entries.");
     }
 
     fetchWixLiveFeed();
