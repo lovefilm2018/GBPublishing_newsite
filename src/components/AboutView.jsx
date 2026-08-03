@@ -1,109 +1,193 @@
 import React from 'react';
-import { BookOpen, Feather, ShieldCheck, Mail, Sparkles, Quote, Globe, Award } from 'lucide-react';
+import { BookOpen, Feather, ShieldCheck, Mail, Sparkles, Quote, Heart, Award, CheckCircle2 } from 'lucide-react';
+import gbImage from '../assets/GBImage.avif';
 
 export default function AboutView() {
-  const founderImage = "https://static.wixstatic.com/media/7c7af8_ed5c5ab58eb749838f02682382fc183c~mv2.jpg";
+  const charityPledges = [
+    {
+      title: "Özlem's Turkish Table",
+      author: "Özlem Warren",
+      charity: "Turkey Mozaik Foundation (Earthquake Relief)",
+      detail: "Over £9,000 ($11,000) in total sales donated directly to earthquake relief operations in Turkey.",
+      badge: "Gourmand Award Winner"
+    },
+    {
+      title: "Erin and the Mouse",
+      author: "Clare Latham",
+      charity: "SpecialEffect",
+      detail: "100% of proceeds donated to assist physically disabled children, inspired by real-life Erin.",
+      badge: "Children's Charity"
+    },
+    {
+      title: "You are Noah! Series",
+      author: "Hein Prinsloo Curson",
+      charity: "The Noah's Ark Foundation",
+      detail: "Proceeds support global wildlife conservation and saving endangered species from extinction.",
+      badge: "Wildlife Conservation"
+    },
+    {
+      title: "Dennis to Alice",
+      author: "George S Boughton",
+      charity: "The Noah's Ark Foundation",
+      detail: "Author proceeds donated to river habitat preservation and wild species conservation.",
+      badge: "Nature & Environment"
+    },
+    {
+      title: "Little Tommy & Kingdom of Clouds",
+      author: "Solonair",
+      charity: "Ukraine Disaster Relief",
+      detail: "100% of author proceeds donated directly to Ukraine emergency rescue and relief operations.",
+      badge: "Crisis Relief"
+    },
+    {
+      title: "Tulsi and the Tiger",
+      author: "Dr Chet Trivedy",
+      charity: "The Tulsi Foundation",
+      detail: "All proceeds support frontline ranger healthcare across 14 tiger reserves in India.",
+      badge: "Tiger Conservation"
+    }
+  ];
 
   return (
-    <div className="py-16 bg-[#FAF8F4]">
+    <div className="py-16 bg-[#FAF8F4] text-[#1A1612]">
       <div className="container mx-auto px-4 max-w-4xl space-y-16">
         
-        {/* Publisher Story Header */}
+        {/* Page Title & Mission Badge */}
         <div className="text-center space-y-4">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#7A1F1A] uppercase tracking-widest bg-red-100/60 px-3.5 py-1 rounded-full">
-            <Sparkles className="w-4 h-4 text-[#7A1F1A]" /> Independent UK Publisher Established 2013
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#7A1F1A] uppercase tracking-widest bg-red-100/60 border border-red-200 px-3.5 py-1 rounded-full">
+            <Sparkles className="w-4 h-4 text-[#7A1F1A]" /> Independent UK Publisher · Founded 2013 · Surrey, UK
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-[#1A1612] leading-tight">
-            Celebrating Authentic Literature & Indie Voices
+            About GB Publishing
           </h1>
           <p className="text-slate-600 font-sans text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            GB Publishing is an independent UK publishing house dedicated to high-end literary craftsmanship, author-signed editions, and direct reader relationships across fiction, memoirs, culinary heritage, fine art, and children's picture books.
+            Founded in 2013 in Surrey, UK, GB Publishing is an independent house bringing best-selling authors, environmental specialists, and fine art illustrators directly to readers worldwide.
           </p>
         </div>
 
         {/* Founder & Managing Director Spotlight */}
         <div className="bg-white p-8 md:p-10 rounded-2xl border border-[#E2DDD6] shadow-md grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          <div className="md:col-span-4 space-y-3 text-center">
-            <div className="relative w-44 h-44 mx-auto rounded-2xl overflow-hidden border-2 border-[#C49A45] p-1.5 bg-amber-50 shadow-lg">
+          <div className="md:col-span-5 space-y-3 text-center">
+            <div className="relative w-48 h-56 mx-auto rounded-2xl overflow-hidden border-2 border-[#C49A45] p-1.5 bg-amber-50 shadow-xl">
               <img 
-                src={founderImage} 
-                alt="George S Boughton — Founder & Managing Director" 
+                src={gbImage} 
+                alt="George S Boughton — Founder & CEO of GB Publishing" 
                 className="w-full h-full object-cover object-top rounded-xl"
               />
             </div>
             <div>
-              <h3 className="font-serif text-2xl font-bold text-[#1A1612]">George S Boughton</h3>
+              <h2 className="font-serif text-2xl font-bold text-[#1A1612]">George S Boughton</h2>
               <span className="text-xs font-bold text-[#7A1F1A] block uppercase tracking-wider mt-0.5">
-                Founder & Managing Director
+                Founder & CEO · GB Publishing
               </span>
-              <span className="text-[11px] text-slate-500 font-sans block">BSc (Hons) MechE · Chartered Engineer</span>
+              <span className="text-[11px] text-slate-500 font-sans block mt-0.5">Chartered Engineer (MIMechE) · Author & Publisher</span>
             </div>
           </div>
 
-          <div className="md:col-span-8 space-y-4 text-slate-700 font-sans text-xs sm:text-sm leading-relaxed">
-            <div className="inline-flex items-center gap-1 text-[#C49A45] font-serif italic text-base">
+          <div className="md:col-span-7 space-y-4 text-slate-700 font-sans text-xs sm:text-sm leading-relaxed">
+            <div className="inline-flex items-center gap-1.5 text-[#C49A45] font-serif italic text-base">
               <Quote className="w-5 h-5 opacity-80" />
-              <span>"Books carry a distinct rhythm — when captured with care and published independently, they remain immortal."</span>
+              <span>"A book is for life — its life is in perpetuity, not the print life of a mere two years."</span>
             </div>
             
             <p>
-              Born to English parents in Eritrea and educated internationally in Rome, New York, and London, <strong>George S Boughton</strong> led an extensive expatriate career in international oilfield engineering (Shell and Creole Production Services), change management, and information technology before founding <strong>GB Publishing</strong> in the United Kingdom in 2013.
+              Born in Eritrea to English parents, <strong>George S Boughton</strong> grew up across Rome, New York, and the UK. Before establishing GB Publishing in Surrey in 2013, his global engineering career spanned landmark international assignments:
             </p>
+
+            <ul className="space-y-1.5 text-xs text-slate-600 pl-3 border-l-2 border-[#C49A45]">
+              <li>• <strong>Shell</strong>: Oil exploration in Nigeria (during the Biafran War) & Brent North Sea platform designs.</li>
+              <li>• <strong>Creole Production Services</strong>: Operations in London and Kuwait (during the Iran-Iraq & Gulf wars).</li>
+              <li>• <strong>The Nichols Group & Azeus Systems</strong>: IT & change management across Hong Kong and South Africa.</li>
+            </ul>
 
             <p>
-              His firsthand experiences working across remote areas and historical conflict zones served as the inspiration for his acclaimed memoirs and hard sci-fi works (<em>Black Gold - Black Scorpion</em>, <em>OutTack</em>, and <em>Dennis to Alice</em>), while instilling a core publishing philosophy: empowering indie authors with direct reader connections, transparent author royalties, and craftsman-quality production.
+              Now based in Surrey, his deep passion for nature, art, and storytelling drives GB Publishing's commitment to craftsman-quality books and author-first publishing.
             </p>
           </div>
         </div>
 
-        {/* Core Mission Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-2xl border border-[#E2DDD6] shadow-sm space-y-3">
-            <div className="w-12 h-12 bg-amber-100/70 text-[#7A1F1A] rounded-xl flex items-center justify-center font-bold">
-              <Feather className="w-6 h-6" />
-            </div>
-            <h3 className="font-serif text-xl font-bold text-[#1A1612]">Author Direct First</h3>
-            <p className="text-xs text-slate-600 font-sans leading-relaxed">
-              We champion our authors with higher direct royalty margins and direct reader connections, bypassing traditional 3rd-party gatekeepers.
-            </p>
+        {/* Core Philosophy Section */}
+        <div className="bg-[#1C2B40] text-white p-8 md:p-10 rounded-2xl shadow-xl space-y-6">
+          <div className="space-y-2">
+            <span className="text-amber-300 font-sans font-bold text-xs uppercase tracking-widest block">
+              OUR PUBLISHING PHILOSOPHY
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-amber-50">
+              Keeping the Reading Word Alive
+            </h2>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl border border-[#E2DDD6] shadow-sm space-y-3">
-            <div className="w-12 h-12 bg-red-100/70 text-[#7A1F1A] rounded-xl flex items-center justify-center font-bold">
-              <BookOpen className="w-6 h-6" />
-            </div>
-            <h3 className="font-serif text-xl font-bold text-[#1A1612]">Craftsmanship Quality</h3>
-            <p className="text-xs text-slate-600 font-sans leading-relaxed">
-              Every book features hand-curated typography, bespoke cover designs, premium paper stocks, and optional hand-signed collector editions.
+          <div className="space-y-4 text-slate-300 font-sans text-xs sm:text-sm leading-relaxed">
+            <p>
+              The self-publishing boom has made book publishing bigger than ever — with over 1 million new releases globally each year. While this explosion of writing reflects an incredible human appetite to tell stories, the volume of new releases is simply overwhelming traditional review channels and bookstore buyers.
             </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl border border-[#E2DDD6] shadow-sm space-y-3">
-            <div className="w-12 h-12 bg-emerald-100/70 text-[#2D7D46] rounded-xl flex items-center justify-center font-bold">
-              <ShieldCheck className="w-6 h-6" />
-            </div>
-            <h3 className="font-serif text-xl font-bold text-[#1A1612]">Crisis & Charity Support</h3>
-            <p className="text-xs text-slate-600 font-sans leading-relaxed">
-              Selected publications, including our emergency crisis appeal titles, donate up to 25% of proceeds directly to international relief funds.
+            <p>
+              At GB Publishing, keeping the reading word and the creativity of minds alive despite these challenges is what drives everything we do. We believe authors and illustrators hold the key to connecting directly with readers — for they alone can speak to the heart of what their story is all about.
+            </p>
+            <p className="text-amber-200 italic font-serif text-base border-t border-slate-700/60 pt-4">
+              "We only publish authors and illustrators of exceptional talent. In April 2022, we celebrated this at the Riverhouse Barn Arts Centre in Surrey with an exhibition of original Cover Art Prints alongside our titles — proving that fine books are true works of art."
             </p>
           </div>
         </div>
 
-        {/* Submissions & Contact */}
-        <div className="bg-white p-8 rounded-2xl border border-[#E2DDD6] shadow-sm space-y-4 text-center">
+        {/* Charity & Humanitarian Support Section */}
+        <div className="space-y-8">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-[#7A1F1A] font-sans font-bold text-xs uppercase tracking-widest block">
+              HUMANITARIAN & CONSERVATION PLEDGES
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1A1612]">
+              Books Supporting Global Causes
+            </h2>
+            <p className="text-xs text-slate-600 font-sans leading-relaxed">
+              We are proud to publish authors who pledge their book proceeds to earthquake relief, wildlife conservation, disabled children's care, and crisis operations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {charityPledges.map((item, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-2xl border border-[#E2DDD6] shadow-sm hover:shadow-md transition-shadow space-y-3 flex flex-col justify-between">
+                <div className="space-y-2">
+                  <div className="flex justify-between items-start">
+                    <span className="text-[11px] font-bold text-[#7A1F1A] bg-red-50 px-2.5 py-0.5 rounded-full border border-red-100 uppercase tracking-wider">
+                      {item.badge}
+                    </span>
+                    <Heart className="w-4 h-4 text-[#7A1F1A]" />
+                  </div>
+                  <h3 className="font-serif text-xl font-bold text-[#1A1612]">{item.title}</h3>
+                  <span className="text-xs font-semibold text-slate-600 block">By {item.author}</span>
+                  <p className="text-xs text-slate-600 font-sans leading-relaxed pt-1 border-t border-slate-100">
+                    {item.detail}
+                  </p>
+                </div>
+
+                <div className="pt-2 text-[11px] font-semibold text-emerald-700 flex items-center gap-1">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  <span>Beneficiaries: {item.charity}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Direct Contact & Submissions */}
+        <div className="bg-white p-8 md:p-10 rounded-2xl border border-[#E2DDD6] shadow-sm text-center space-y-4">
           <Mail className="w-10 h-10 text-[#7A1F1A] mx-auto" />
-          <h3 className="font-serif text-2xl font-bold text-[#1A1612]">Author Submissions & Inquiries</h3>
+          <h3 className="font-serif text-2xl font-bold text-[#1A1612]">Contact GB Publishing</h3>
           <p className="text-xs text-slate-600 font-sans max-w-lg mx-auto leading-relaxed">
-            Are you an indie author or illustrator looking to publish? We welcome manuscript submissions for non-fiction memoirs, culinary heritage, children's picture books, fine art, and sci-fi.
+            Whether you are a reader, reviewer, book trade representative, or an author with a manuscript, we welcome hearing from you.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <div className="pt-2">
             <a 
               href="mailto:george@gbpublishing.org"
-              className="bg-[#1C2B40] text-white px-6 py-2.5 rounded-xl font-sans font-bold text-xs hover:bg-[#263859] transition-colors"
+              className="inline-block bg-[#7A1F1A] hover:bg-[#8C2520] text-white px-8 py-3 rounded-xl font-sans font-bold text-xs transition-colors shadow-md"
             >
-              Contact Editorial Team (george@gbpublishing.org)
+              Contact George S Boughton (george@gbpublishing.org)
             </a>
           </div>
+          <p className="text-[11px] text-slate-400 font-sans pt-2">
+            GB Publishing · Surrey, United Kingdom
+          </p>
         </div>
 
       </div>
