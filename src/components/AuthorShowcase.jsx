@@ -55,13 +55,13 @@ export default function AuthorShowcase({ onSelectAuthor }) {
               className="bg-white rounded-2xl p-6 border border-[#E5E0DA] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               <div className="space-y-4 text-center">
-                <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-[#D4A359] p-1 bg-amber-50 shadow-md">
-                  <img src={author.image} alt={author.name} className="w-full h-full object-cover rounded-full" />
+                <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-[#C49A45] p-1 bg-amber-50 shadow-md">
+                  <img src={author.image} alt={author.name} className="w-full h-full object-cover object-top rounded-full" />
                 </div>
 
                 <div>
                   <h3 className="font-serif text-xl font-bold text-slate-900">{author.name}</h3>
-                  <span className="text-[11px] font-semibold text-[#8C2520] block mt-0.5">{author.role}</span>
+                  <span className="text-[11px] font-semibold text-[#7A1F1A] block mt-0.5">{author.role}</span>
                 </div>
 
                 <p className="text-xs text-slate-600 font-sans leading-relaxed line-clamp-3">

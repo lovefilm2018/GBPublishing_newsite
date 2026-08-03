@@ -145,6 +145,10 @@ export default function Navbar({
                     </button>
                   )}
                 </div>
+                <div className="pt-2 text-[11px] text-slate-500 font-sans flex items-center justify-between border-t border-slate-100 mt-2">
+                  <span>{searchQuery ? `Searching for "${searchQuery}"` : 'Live Catalogue Search'}</span>
+                  <span className="font-bold text-[#7A1F1A]">Press Enter / View Below</span>
+                </div>
               </div>
             )}
           </div>
