@@ -104,7 +104,7 @@ export default function Footer({ onNavClick }) {
           <div className="md:col-span-3 space-y-3">
             <h4 className="font-serif text-sm font-bold text-amber-100 uppercase tracking-wider">Book Genres</h4>
             <ul className="space-y-2">
-              <li><button onClick={() => onNavClick('books', 'Fiction, YA & Sci-Fi')} className="hover:text-amber-300 transition-colors">Fiction, YA & Sci-Fi</button></li>
+              <li><button onClick={() => onNavClick('books', 'Fiction, Young Adult & Sci-Fi')} className="hover:text-amber-300 transition-colors">Fiction, Young Adult & Sci-Fi</button></li>
               <li><button onClick={() => onNavClick('books', 'Non-Fiction & Memoir')} className="hover:text-amber-300 transition-colors">Non-Fiction & Memoir</button></li>
               <li><button onClick={() => onNavClick('books', 'Cookbooks & Food')} className="hover:text-amber-300 transition-colors">Cookbooks & Culinary</button></li>
               <li><button onClick={() => onNavClick('books', "Children's & Picture Books")} className="hover:text-amber-300 transition-colors">Children's Picture Books</button></li>

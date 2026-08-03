@@ -7,6 +7,38 @@ const WIX_SITE_ID = import.meta.env.VITE_WIX_SITE_ID || 'dd68067c-f9a8-445f-bc9c
 /**
  * Normalizes a raw Wix REST product payload into our custom React storefront schema
  */
+
+// ─── Comprehensive Wix Collection Name → 5 Core Imprint Mapping ─────────────
+// Based on full audit of all 70+ collections in the Staging Wix Store.
+// Collection names are matched on substrings (case-insensitive).
+const COLLECTION_IMPRINT_MAP = [
+  // Cookbooks & Food
+  { keywords: ['cook', 'food', 'drink', 'ginologist', 'ozlem', 'gin', 'turkish', 'zodiac cooks', 'penny - tzc'], imprint: "Cookbooks & Food" },
+  // Children's & Picture Books
+  { keywords: ['picture book', 'children', 'lois', 'latham', 'boughton -alice', 'boughton - alice', 'solonair', 'islam - doogie', 'trivedy', 'pink biscuit', 'morgan - swsw', 'morgan - a2 prints', 'morgan - a3 prints', 'lois art prints', 'children\'s a', 'tillier'], imprint: "Children's & Picture Books" },
+  // Poetry & Fine Art
+  { keywords: ['poetry', 'pargeter', 'politics & poetry', 'wendy kimberley', 'boughton - art', 'fine art'], imprint: "Poetry & Fine Art" },
+  // Non-Fiction & Memoir
+  { keywords: ['biography', 'memoir', 'non-fiction', 'sauvage', 'animals & nature', 'nature', 'akeroyd', 'plants', 'murray - n&j', 'seafaring', 'boughton - sf'], imprint: "Non-Fiction & Memoir" },
+  // Fiction, Young Adult & Sci-Fi
+  { keywords: ['fiction', 'sci-fi', 'science fiction', 'fantasy', 'young adult', 'fitzgerald', 'pearson', 'kimberley - antecedent', 'boughton - bgbs', 'boughton - outtack', 'walker - tc', 'christopher ritchie', 'ritchie', 'jones - rie', 'o\'brien', 'cowley', 'futcher', 'women writers', 'turner - sgam', 'occult', 'erotica'], imprint: "Fiction, Young Adult & Sci-Fi" },
+];
+
+// ─── Product-Specific Overrides ───────────────────────────────────────────────
+// For books where the Wix Dashboard collection is incorrect.
+// Key: substring match on product name (lowercase), Value: correct imprint
+const PRODUCT_NAME_OVERRIDES = [
+  { match: 'crumbdog', imprint: "Children's & Picture Books" },
+  { match: 'gathering of gods', imprint: "Fiction, Young Adult & Sci-Fi" },
+  { match: 'adventures of milla carter', imprint: "Fiction, Young Adult & Sci-Fi" },
+  { match: 'plants & us', imprint: "Non-Fiction & Memoir" },
+  { match: 'plants and us', imprint: "Non-Fiction & Memoir" },
+  { match: 'poetry collections - by mary pargeter', imprint: "Poetry & Fine Art" },
+  { match: 'mary pargeter', imprint: "Poetry & Fine Art" },
+  { match: 'nora & john', imprint: "Fiction, Young Adult & Sci-Fi" },
+  { match: 'dennis to alice', imprint: "Children's & Picture Books" },
+];
+
 export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
   try {
     const rawName = p.name || "";
@@ -43,39 +75,48 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
     const coverImage = imageUrls[0] || "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80";
     const gallery = imageUrls.length > 1 ? imageUrls.slice(1) : [coverImage];
 
-    // Resolve Collection / Category mapping from Wix Collection IDs
-    const collectionIds = p.collectionIds || [];
-    const rawCategoryNames = collectionIds
-      .map(id => collectionsMap[id])
-      .filter(Boolean)
-      .filter(name => name !== 'All Products' && name !== 'GBP');
-
     let categories = [];
+    const nameLower = rawName.toLowerCase();
 
-    // Map Wix Collections to the 5 Core Imprint Categories
-    for (const catName of rawCategoryNames) {
-      const cLower = catName.toLowerCase();
-      if (cLower.includes('cook') || cLower.includes('food') || cLower.includes('ginologist') || cLower.includes('ozlem')) {
-        if (!categories.includes("Cookbooks & Food")) categories.push("Cookbooks & Food");
-      } else if (cLower.includes('picture') || cLower.includes('children') || cLower.includes('lois') || cLower.includes('boughton - alice') || cLower.includes('latham')) {
-        if (!categories.includes("Children's & Picture Books")) categories.push("Children's & Picture Books");
-      } else if (cLower.includes('art') || cLower.includes('poetry') || cLower.includes('kimberley')) {
-        if (!categories.includes("Poetry & Fine Art")) categories.push("Poetry & Fine Art");
-      } else if (cLower.includes('biography') || cLower.includes('memoir') || cLower.includes('non-fiction') || cLower.includes('sauvage') || cLower.includes('nature') || cLower.includes('animals')) {
-        if (!categories.includes("Non-Fiction & Memoir")) categories.push("Non-Fiction & Memoir");
-      } else if (cLower.includes('fiction') || cLower.includes('sci-fi') || cLower.includes('fantasy') || cLower.includes('young adult') || cLower.includes('fitzgerald') || cLower.includes('pearson')) {
-        if (!categories.includes("Fiction, YA & Sci-Fi")) categories.push("Fiction, YA & Sci-Fi");
+    // ── Step 1: Check product-specific name overrides first (highest priority) ──
+    for (const override of PRODUCT_NAME_OVERRIDES) {
+      if (nameLower.includes(override.match)) {
+        if (!categories.includes(override.imprint)) categories.push(override.imprint);
       }
     }
 
-    // Fallback if no specific collection matched
+    // ── Step 2: Resolve from Wix Collection IDs ───────────────────────────────
     if (categories.length === 0) {
-      const n = rawName.toLowerCase();
-      if (n.includes('cook') || n.includes('food') || n.includes('recipe') || n.includes('turkish')) categories.push("Cookbooks & Food");
-      else if (n.includes('picture') || n.includes('children') || n.includes('grandad') || n.includes('erin') || n.includes('dennis')) categories.push("Children's & Picture Books");
-      else if (n.includes('art') || n.includes('painting') || n.includes('kimberley')) categories.push("Poetry & Fine Art");
-      else if (n.includes('vet') || n.includes('autobiology') || n.includes('memoir')) categories.push("Non-Fiction & Memoir");
-      else categories.push("Fiction, YA & Sci-Fi");
+      const collectionIds = p.collectionIds || [];
+      const rawCategoryNames = collectionIds
+        .map(id => collectionsMap[id])
+        .filter(Boolean)
+        .filter(name => name !== 'All Products' && name !== 'GBP' && name !== 'News letter');
+
+      for (const catName of rawCategoryNames) {
+        const cLower = catName.toLowerCase();
+        for (const { keywords, imprint } of COLLECTION_IMPRINT_MAP) {
+          if (keywords.some(kw => cLower.includes(kw))) {
+            if (!categories.includes(imprint)) categories.push(imprint);
+            break;
+          }
+        }
+      }
+    }
+
+    // ── Step 3: Name-based fallback (if Wix collections returned nothing) ─────
+    if (categories.length === 0) {
+      if (nameLower.includes('cook') || nameLower.includes('food') || nameLower.includes('recipe') || nameLower.includes('turkish') || nameLower.includes('gin')) {
+        categories.push("Cookbooks & Food");
+      } else if (nameLower.includes('picture') || nameLower.includes('children') || nameLower.includes('grandad') || nameLower.includes('erin') || nameLower.includes('dennis') || nameLower.includes('tommy') || nameLower.includes('crumbdog')) {
+        categories.push("Children's & Picture Books");
+      } else if (nameLower.includes('poetry') || nameLower.includes('pargeter') || nameLower.includes('fine art')) {
+        categories.push("Poetry & Fine Art");
+      } else if (nameLower.includes('memoir') || nameLower.includes('biography') || nameLower.includes('nature') || nameLower.includes('plants')) {
+        categories.push("Non-Fiction & Memoir");
+      } else {
+        categories.push("Fiction, Young Adult & Sci-Fi");
+      }
     }
 
     const slug = displayName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');

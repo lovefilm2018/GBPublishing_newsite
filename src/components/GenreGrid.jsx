@@ -4,8 +4,8 @@ import { BookOpen, Utensils, Smile, Palette, Compass, ArrowRight } from 'lucide-
 export default function GenreGrid({ onSelectCategory }) {
   const genres = [
     {
-      id: "Fiction, YA & Sci-Fi",
-      name: "Fiction, YA & Sci-Fi",
+      id: "Fiction, Young Adult & Sci-Fi",
+      name: "Fiction, Young Adult & Sci-Fi",
       count: "25+ Titles",
       desc: "Captivating novels, imaginative sci-fi sagas, and gripping young adult stories.",
       bg: "from-[#1D2A44] to-[#121A29]",

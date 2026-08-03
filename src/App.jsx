@@ -115,7 +115,7 @@ export default function App() {
 
   const categoriesList = [
     { id: 'ALL', label: 'All Catalogue' },
-    { id: 'Fiction, YA & Sci-Fi', label: 'Fiction, YA & Sci-Fi' },
+    { id: 'Fiction, Young Adult & Sci-Fi', label: 'Fiction, Young Adult & Sci-Fi' },
     { id: 'Non-Fiction & Memoir', label: 'Non-Fiction & Memoir' },
     { id: 'Cookbooks & Food', label: 'Cookbooks & Food' },
     { id: "Children's & Picture Books", label: "Children's & Picture Books" },
