@@ -19,6 +19,7 @@ export default function Navbar({
 
   const handleNavClick = (tab, category = null) => {
     setActiveTab(tab);
+    window.location.hash = `#${tab}`;
     if (category !== null) {
       setSelectedCategory(category);
     }

@@ -7,6 +7,17 @@ export default function JournalView() {
 
   const defaultEntries = [
     {
+      id: "autobiology-of-a-vet-preview",
+      title: "Preview - Autobiology of a Vet",
+      author: "Alex Poxon (via John Sauvage / Paddy Cummins)",
+      date: "Live Post from Wix Dashboard",
+      type: "Wix Video Post",
+      summary: "An enlightening, educational but often hilarious memoir. A great read for anyone interested in animals and especially life as a veterinary surgeon, covering travels from the UK to East Africa (including under dictator Idi Amin) and South Africa.",
+      thumbnail: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+      embedUrl: "https://www.youtube.com/embed/HTaWcwy590M",
+      badge: "Live Post from Wix Dashboard"
+    },
+    {
       id: "dennis-to-alice",
       title: "Dennis to Alice — River Flood Documentary & Author Story",
       author: "George S Boughton",
@@ -38,17 +49,6 @@ export default function JournalView() {
       thumbnail: "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=800&q=80",
       embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       badge: "Sky TV Feature"
-    },
-    {
-      id: "riverhouse-art",
-      title: "Cover Art Prints Exhibition — Riverhouse Barn Arts Centre",
-      author: "Wendy Kimberley BEM & Lois Collins",
-      date: "Surrey Fine Art Showcase",
-      type: "Exhibition Feature",
-      summary: "A celebration of fine art in publishing: displaying original oil paintings and limited edition cover art prints alongside GB Publishing's hardback releases in Surrey.",
-      thumbnail: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      badge: "Surrey Art Exhibition"
     }
   ];
 
@@ -57,8 +57,7 @@ export default function JournalView() {
     async function fetchWixLiveFeed() {
       try {
         const feedUrl = "https://gbpublishingorg.wixsite.com/website-5/blog-feed.xml";
-        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(feedUrl)}`;
-        const res = await fetch(proxyUrl);
+        const res = await fetch(feedUrl);
         if (res.ok) {
           const xmlText = await res.text();
           const parser = new DOMParser();
@@ -88,7 +87,7 @@ export default function JournalView() {
               author: creator,
               date: pubDate ? new Date(pubDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : "Recently Published",
               type: embedUrl ? "Wix Video Post" : "Wix Blog Post",
-              summary: description.replace(/<[^>]*>?/gm, ''), // strip HTML tags
+              summary: description.replace(/<[^>]*>?/gm, ''),
               thumbnail: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
               embedUrl: embedUrl || "https://www.youtube.com/embed/HTaWcwy590M",
               wixLink: link,
@@ -101,7 +100,7 @@ export default function JournalView() {
           }
         }
       } catch (err) {
-        console.warn("Could not parse live Wix RSS feed:", err);
+        console.warn("Could not parse live Wix RSS feed directly:", err);
       }
     }
     fetchWixLiveFeed();

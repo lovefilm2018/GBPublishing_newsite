@@ -33,6 +33,24 @@ export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
 
+  // Sync activeTab state with URL hash (#home, #books, #art, #news, #about)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '').toLowerCase();
+      if (['home', 'books', 'art', 'news', 'about'].includes(hash)) {
+        setActiveTab(hash);
+      }
+    };
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const handleSetActiveTab = (tab) => {
+    setActiveTab(tab);
+    window.location.hash = `#${tab}`;
+  };
+
   // Fetch live products from Wix Headless API on mount with resilient fallback
   useEffect(() => {
     async function loadLiveCatalog() {
