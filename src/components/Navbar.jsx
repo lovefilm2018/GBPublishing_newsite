@@ -96,17 +96,13 @@ export default function Navbar({
             {activeTab === 'about' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-400 rounded-full" />}
           </button>
 
-          {/* External Blog Link back to Original Wix Site per Plan */}
-          <a 
-            href={blogUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 text-amber-200 hover:text-amber-300 transition-colors py-1 border-b border-dashed border-amber-400/40"
-            title="Read articles on the GB Publishing Journal on Wix"
+          <button 
+            onClick={() => handleNavClick('news')}
+            className={`transition-colors relative py-1 ${activeTab === 'news' ? 'text-amber-400 font-semibold' : 'text-slate-200 hover:text-white'}`}
           >
             NEWS & BLOG
-            <ArrowUpRight className="w-3.5 h-3.5 opacity-80" />
-          </a>
+            {activeTab === 'news' && <span className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-400 rounded-full" />}
+          </button>
         </nav>
 
         {/* Search & Cart Actions */}

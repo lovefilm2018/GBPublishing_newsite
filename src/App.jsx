@@ -10,6 +10,7 @@ import CartDrawer from './components/CartDrawer';
 import AuthorShowcase from './components/AuthorShowcase';
 import PressReviews from './components/PressReviews';
 import ArtGalleryView from './components/ArtGalleryView';
+import JournalView from './components/JournalView';
 import AboutView from './components/AboutView';
 import Footer from './components/Footer';
 
@@ -362,7 +363,12 @@ export default function App() {
           />
         )}
 
-        {/* TAB 4: ABOUT GBP VIEW */}
+        {/* TAB 4: NEWS & VIDEO JOURNAL VIEW */}
+        {activeTab === 'news' && (
+          <JournalView />
+        )}
+
+        {/* TAB 5: ABOUT GBP VIEW */}
         {activeTab === 'about' && (
           <AboutView />
         )}
