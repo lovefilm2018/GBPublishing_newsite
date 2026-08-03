@@ -15,7 +15,7 @@ export default function Navbar({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  const blogUrl = "https://gbpublishingorg.wixsite.com/website-5/news";
+  const blogUrl = "https://gbpublishingorg.wixsite.com/website-5/posts";
 
   const handleNavClick = (tab, category = null) => {
     setActiveTab(tab);
