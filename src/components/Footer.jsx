@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Mail, CheckCircle2, ArrowRight, ShieldCheck, Heart } from 'lucide-react';
 import gbpLogo from '../assets/GBPLogo.png';
 
+import SocialLinks from './SocialLinks';
+
 export default function Footer({ onNavClick }) {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
@@ -80,7 +82,12 @@ export default function Footer({ onNavClick }) {
               Independent indie book publishing house based in the United Kingdom. Dedicated to high-end literary craftsmanship, author-signed editions, and direct reader relationships since 2013.
             </p>
 
-            <div className="flex items-center gap-2 text-[11px] text-amber-300">
+            <div className="pt-2 space-y-2">
+              <span className="text-[11px] font-bold text-amber-200 uppercase tracking-wider block">Follow GB Publishing:</span>
+              <SocialLinks />
+            </div>
+
+            <div className="flex items-center gap-2 text-[11px] text-amber-300 pt-1">
               <ShieldCheck className="w-4 h-4" />
               <span>100% Direct Storefront Security Guarantee</span>
             </div>

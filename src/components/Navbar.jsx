@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { ShoppingBag, Search, Menu, X, BookOpen, Sparkles, Feather, ArrowUpRight } from 'lucide-react';
 import gbpLogo from '../assets/GBPLogo.png';
 
+import SocialLinks from './SocialLinks';
+
 export default function Navbar({ 
   activeTab, 
   setActiveTab, 
@@ -37,13 +39,16 @@ export default function Navbar({
             <span className="hidden md:flex items-center gap-1"><Feather className="w-3.5 h-3.5 text-amber-300" /> ✍️ Author Signed Copies Available</span>
             <span className="hidden lg:inline">🚚 Free UK Delivery on Orders £25+</span>
           </div>
-          <a 
-            href="#perks" 
-            onClick={(e) => { e.preventDefault(); handleNavClick('home'); setTimeout(() => document.getElementById('perks')?.scrollIntoView(), 100); }}
-            className="hidden sm:inline-block text-amber-200 hover:text-white underline text-[11px]"
-          >
-            Why Buy Direct? →
-          </a>
+          <div className="hidden sm:flex items-center gap-4">
+            <SocialLinks variant="compact" />
+            <a 
+              href="#perks" 
+              onClick={(e) => { e.preventDefault(); handleNavClick('home'); setTimeout(() => document.getElementById('perks')?.scrollIntoView(), 100); }}
+              className="text-amber-200 hover:text-white underline text-[11px]"
+            >
+              Why Buy Direct? →
+            </a>
+          </div>
         </div>
       </div>
 

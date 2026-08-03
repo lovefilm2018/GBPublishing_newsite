@@ -1,6 +1,7 @@
 import React from 'react';
 import { BookOpen, Feather, ShieldCheck, Mail, Sparkles, Quote, Heart, Award, CheckCircle2 } from 'lucide-react';
 import gbImage from '../assets/GBImage.avif';
+import SocialLinks from './SocialLinks';
 
 export default function AboutView() {
   const charityPledges = [
@@ -58,29 +59,37 @@ export default function AboutView() {
             <Sparkles className="w-4 h-4 text-[#7A1F1A]" /> Independent UK Publisher · Founded 2013 · Surrey, UK
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-[#1A1612] leading-tight">
-            About GB Publishing
+            Our Story & Global Mission
           </h1>
           <p className="text-slate-600 font-sans text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Founded in 2013 in Surrey, UK, GB Publishing is an independent house bringing best-selling authors, environmental specialists, and fine art illustrators directly to readers worldwide.
+            GB Publishing is an independent publishing house dedicated to bringing extraordinary voices, fine art literature, and impactful stories to readers worldwide.
           </p>
         </div>
 
-        {/* Founder & Managing Director Spotlight */}
-        <div className="bg-white p-8 md:p-10 rounded-2xl border border-[#E2DDD6] shadow-md grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          <div className="md:col-span-5 space-y-3 text-center">
-            <div className="relative w-48 h-56 mx-auto rounded-2xl overflow-hidden border-2 border-[#C49A45] p-1.5 bg-amber-50 shadow-xl">
+        {/* Founder & CEO Bio Card */}
+        <div className="bg-white rounded-2xl border border-slate-200/90 p-8 shadow-lg grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div className="md:col-span-5 space-y-4 text-center">
+            <div className="relative inline-block">
               <img 
                 src={gbImage} 
-                alt="George S Boughton — Founder & CEO of GB Publishing" 
-                className="w-full h-full object-cover object-top rounded-xl"
+                alt="George S Boughton - Founder & CEO" 
+                className="w-44 h-56 object-cover rounded-2xl shadow-xl border-4 border-amber-100 mx-auto"
               />
+              <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#7A1F1A] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-md whitespace-nowrap">
+                Founder & Publisher
+              </span>
             </div>
-            <div>
-              <h2 className="font-serif text-2xl font-bold text-[#1A1612]">George S Boughton</h2>
+
+            <div className="pt-2">
+              <h3 className="font-serif text-2xl font-bold text-[#1A1612]">George S Boughton</h3>
               <span className="text-xs font-bold text-[#7A1F1A] block uppercase tracking-wider mt-0.5">
                 Founder & CEO · GB Publishing
               </span>
               <span className="text-[11px] text-slate-500 font-sans block mt-0.5">Chartered Engineer (MIMechE) · Author & Publisher</span>
+            </div>
+
+            <div className="pt-2 flex justify-center">
+              <SocialLinks />
             </div>
           </div>
 
