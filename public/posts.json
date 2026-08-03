@@ -1,9 +1,21 @@
 {
-  "generated": "2026-08-03T20:29:46.126321+00:00",
-  "count": 6,
+  "generated": "2026-08-03T20:38:14.334984+00:00",
+  "count": 7,
   "posts": [
     {
       "id": "wix-live-0",
+      "title": "Preview - The Ginologist Cook",
+      "author": "George S Boughton",
+      "date": "3 Aug 2026",
+      "type": "Video Post",
+      "summary": "“The Ginologist Cook”, 150 signature starters, main courses and desserts, in the world's first coffee-table cookery book featuring GIN. And here's a Christmas Day dessert Idea: The Coffee Chocolate Mousse, serving between 2-4 people, just one of the many delicious and richly flavoured recipes curated by The Ginologist Cook! The recipe contains coffee, sugar, dark chocolate and most importantly...Spice Gin! To spice up your home at Christmas, get your copy from our websites.",
+      "thumbnail": "https://img.youtube.com/vi/yhDevxVPvrc/hqdefault.jpg",
+      "embedUrl": "https://www.youtube.com/embed/yhDevxVPvrc",
+      "wixLink": "https://gbpublishingorg.wixsite.com/website-5/post/preview-the-ginologist-cook",
+      "badge": "NEW!"
+    },
+    {
+      "id": "wix-live-1",
       "title": "Preview - Nora & John",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -15,7 +27,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-1",
+      "id": "wix-live-2",
       "title": "Preview - Erin and the Mouse",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -27,7 +39,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-2",
+      "id": "wix-live-3",
       "title": "Preview - Grandad, let's go for a walk",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -39,7 +51,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-3",
+      "id": "wix-live-4",
       "title": "Preview - Seafaring",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -51,7 +63,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-4",
+      "id": "wix-live-5",
       "title": "Preview - The Zodiac Cooks",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -63,7 +75,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-5",
+      "id": "wix-live-6",
       "title": "Preview - Autobiology of a Vet",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
