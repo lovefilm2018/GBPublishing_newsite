@@ -13,7 +13,7 @@ export default function JournalView() {
       date: "Live Post from Wix Dashboard",
       type: "Wix Video Post",
       summary: "An enlightening, educational but often hilarious memoir. A great read for anyone interested in animals and especially life as a veterinary surgeon, covering travels from the UK to East Africa (including under dictator Idi Amin) and South Africa.",
-      thumbnail: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+      thumbnail: "https://img.youtube.com/vi/HTaWcwy590M/hqdefault.jpg",
       embedUrl: "https://www.youtube.com/embed/HTaWcwy590M",
       badge: "Live Post from Wix Dashboard"
     },
@@ -74,10 +74,14 @@ export default function JournalView() {
             const rawMediaUrl = enclosure ? enclosure.getAttribute("url") : "";
 
             let embedUrl = null;
+            let thumbnail = "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80";
+
             if (rawMediaUrl) {
               const ytMatch = rawMediaUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
               if (ytMatch && ytMatch[1]) {
-                embedUrl = `https://www.youtube.com/embed/${ytMatch[1]}`;
+                const ytId = ytMatch[1];
+                embedUrl = `https://www.youtube.com/embed/${ytId}`;
+                thumbnail = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
               }
             }
 
@@ -88,7 +92,7 @@ export default function JournalView() {
               date: pubDate ? new Date(pubDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : "Recently Published",
               type: embedUrl ? "Wix Video Post" : "Wix Blog Post",
               summary: description.replace(/<[^>]*>?/gm, ''),
-              thumbnail: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+              thumbnail,
               embedUrl: embedUrl || "https://www.youtube.com/embed/HTaWcwy590M",
               wixLink: link,
               badge: "Live Post from Wix Dashboard"
