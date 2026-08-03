@@ -8,74 +8,81 @@ const WIX_SITE_ID = import.meta.env.VITE_WIX_SITE_ID || '34002663-ff5b-495e-be4c
  * Normalizes a raw Wix REST product payload into our custom React storefront schema
  */
 export function normalizeWixRestProduct(p, idx) {
-  const rawName = p.name || "";
-  const ribbon = p.ribbon || "";
-  const description = p.description || "";
+  try {
+    const rawName = p.name || "";
+    const ribbon = p.ribbon || "";
+    const description = p.description || "";
 
-  const isSigned = ribbon.toLowerCase().includes('signed') || 
-                   rawName.toLowerCase().includes('signed') || 
-                   description.toLowerCase().includes('signed');
+    const isSigned = ribbon.toLowerCase().includes('signed') || 
+                     rawName.toLowerCase().includes('signed') || 
+                     description.toLowerCase().includes('signed');
 
-  const isWholesale = rawName.toLowerCase().includes('wholesale') || 
-                      rawName.toLowerCase().includes('40% off');
+    const isWholesale = rawName.toLowerCase().includes('wholesale') || 
+                        rawName.toLowerCase().includes('40% off');
 
-  // Strip wholesale suffix for clean display title
-  let displayName = rawName.replace(/(?i)\s*-\s*wholesale.*$/, '')
-                           .replace(/(?i)\s*-\s*40%\s*off.*$/, '')
-                           .replace(/(?i)\s*-\s*buy wholesale.*$/, '').strip ? rawName.trim() : rawName;
+    // Strip wholesale suffix cleanly using valid JS regex
+    let displayName = rawName
+      .replace(/\s*-\s*wholesale.*$/i, '')
+      .replace(/\s*-\s*40%\s*off.*$/i, '')
+      .replace(/\s*-\s*buy wholesale.*$/i, '')
+      .trim();
 
-  displayName = displayName.replace(/\s*-\s*WHOLESALE\s*40%\s*OFF/i, '').replace(/\s*-\s*wholesale paperback 40%\s*OFF/i, '').trim();
+    if (!displayName) displayName = rawName;
 
-  const price = p.price?.price || 14.99;
-  
-  // Media handling
-  const mediaItems = p.media?.items || [];
-  const imageUrls = mediaItems.map(m => {
-    if (m.image?.url) return m.image.url;
-    if (m.url) return m.url;
-    if (m.src) return `https://static.wixstatic.com/media/${m.src}`;
+    const price = p.price?.price || 14.99;
+    
+    // Media handling
+    const mediaItems = p.media?.items || [];
+    const imageUrls = mediaItems.map(m => {
+      if (m.image?.url) return m.image.url;
+      if (m.url) return m.url;
+      if (m.src) return `https://static.wixstatic.com/media/${m.src}`;
+      return null;
+    }).filter(Boolean);
+
+    const coverImage = imageUrls[0] || "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80";
+    const gallery = imageUrls.length > 1 ? imageUrls.slice(1) : [coverImage];
+
+    // Collection / Category mapping
+    const collections = p.collections?.map(c => c.name) || [];
+    let categories = [];
+    if (collections.length > 0) {
+      categories = collections;
+    } else {
+      // Derive categories intelligently from title
+      const n = rawName.toLowerCase();
+      if (n.includes('cook') || n.includes('food') || n.includes('recipe') || n.includes('turkish')) categories.push("Cookbooks & Food");
+      if (n.includes('picture') || n.includes('children') || n.includes('grandad') || n.includes('erin')) categories.push("Children's & Picture Books");
+      if (n.includes('art') || n.includes('painting') || n.includes('kimberley')) categories.push("Poetry & Fine Art");
+      if (n.includes('vet') || n.includes('autobiology') || n.includes('memoir')) categories.push("Non-Fiction & Memoir");
+      if (categories.length === 0) categories.push("Fiction, YA & Sci-Fi");
+    }
+
+    const slug = displayName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+    return {
+      id: p.id || p.numericId || `wix_${idx}`,
+      slug: slug,
+      title: displayName,
+      rawTitle: rawName,
+      author: p.brand || extractAuthorFromName(rawName),
+      price: price,
+      originalPrice: isSigned ? Math.round((price * 1.2) * 100) / 100 : null,
+      sku: p.sku || `GBP-${1000 + idx}`,
+      ribbon: ribbon || (isSigned ? "Signed Collector Edition" : ""),
+      categories: categories,
+      coverImage: coverImage,
+      gallery: gallery,
+      description: description.length > 20 ? description.replace(/<[^>]+>/g, ' ').trim() : `A featured indie publication by GB Publishing, available direct with free bookmark.`,
+      isWholesale: isWholesale,
+      isSigned: isSigned,
+      format: isSigned ? "Signed Edition" : (price > 20 ? "Hardcover" : "Paperback"),
+      stock: p.stock?.quantity || 25
+    };
+  } catch (err) {
+    console.error('[Wix Normalizer] Error normalizing item:', err, p);
     return null;
-  }).filter(Boolean);
-
-  const coverImage = imageUrls[0] || "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80";
-  const gallery = imageUrls.length > 1 ? imageUrls.slice(1) : [coverImage];
-
-  // Collection / Category mapping
-  const collections = p.collections?.map(c => c.name) || [];
-  let categories = [];
-  if (collections.length > 0) {
-    categories = collections;
-  } else {
-    // Derive categories intelligently from title
-    const n = rawName.toLowerCase();
-    if (n.includes('cook') || n.includes('food') || n.includes('recipe') || n.includes('turkish')) categories.push("Cookbooks & Food");
-    if (n.includes('picture') || n.includes('children') || n.includes('grandad') || n.includes('erin')) categories.push("Children's & Picture Books");
-    if (n.includes('art') || n.includes('painting') || n.includes('kimberley')) categories.push("Poetry & Fine Art");
-    if (n.includes('vet') || n.includes('autobiology') || n.includes('memoir')) categories.push("Non-Fiction & Memoir");
-    if (categories.length === 0) categories.push("Fiction, YA & Sci-Fi");
   }
-
-  const slug = displayName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-
-  return {
-    id: p.id || p.numericId || `wix_${idx}`,
-    slug: slug,
-    title: displayName,
-    rawTitle: rawName,
-    author: p.brand || extractAuthorFromName(rawName),
-    price: price,
-    originalPrice: isSigned ? Math.round((price * 1.2) * 100) / 100 : null,
-    sku: p.sku || `GBP-${1000 + idx}`,
-    ribbon: ribbon || (isSigned ? "Signed Collector Edition" : ""),
-    categories: categories,
-    coverImage: coverImage,
-    gallery: gallery,
-    description: description.length > 20 ? description.replace(/<[^>]+>/g, ' ').trim() : `A featured indie publication by GB Publishing, available direct with free bookmark.`,
-    isWholesale: isWholesale,
-    isSigned: isSigned,
-    format: isSigned ? "Signed Edition" : (price > 20 ? "Hardcover" : "Paperback"),
-    stock: p.stock?.quantity || 25
-  };
 }
 
 function extractAuthorFromName(name) {
@@ -111,8 +118,11 @@ export async function fetchCatalogProducts() {
     if (response.ok) {
       const data = await response.json();
       if (data.products && data.products.length > 0) {
-        console.log(`[Wix Headless Live API] Successfully fetched ${data.products.length} live products from Wix Stores!`);
-        return data.products.map((p, idx) => normalizeWixRestProduct(p, idx));
+        const normalized = data.products.map((p, idx) => normalizeWixRestProduct(p, idx)).filter(Boolean);
+        if (normalized.length > 0) {
+          console.log(`[Wix Headless Live API] Successfully fetched ${normalized.length} live products from Wix Stores!`);
+          return normalized;
+        }
       }
     }
   } catch (err) {
