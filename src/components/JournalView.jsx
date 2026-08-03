@@ -7,37 +7,48 @@ export default function JournalView() {
 
   const defaultEntries = [
     {
+      id: "preview-grandad-lets-go-for-a-walk",
+      title: "Preview - Grandad, let's go for a walk",
+      author: "George S Boughton",
+      date: "Live Post from Wix Dashboard",
+      type: "Video Post",
+      summary: "A heartwarming and charming story celebrating intergenerational family walks, nature, and the joy of outdoor discovery.",
+      thumbnail: "https://img.youtube.com/vi/OQBn-mSCfv4/hqdefault.jpg",
+      embedUrl: "https://www.youtube.com/embed/OQBn-mSCfv4",
+      badge: "NEW!"
+    },
+    {
       id: "preview-seafaring",
       title: "Preview - Seafaring",
-      author: "Alex Poxon",
+      author: "George S Boughton",
       date: "Live Post from Wix Dashboard",
-      type: "Wix Video Post",
+      type: "Video Post",
       summary: "Explore the captivating maritime journey and historical seafaring adventures published by GB Publishing.",
-      thumbnail: "https://img.youtube.com/vi/u1JsGksWwb4/hqdefault.jpg",
-      embedUrl: "https://www.youtube.com/embed/u1JsGksWwb4",
-      badge: "Live Post from Wix Dashboard"
+      thumbnail: "https://img.youtube.com/vi/ncS3FYL4R_s/hqdefault.jpg",
+      embedUrl: "https://www.youtube.com/embed/ncS3FYL4R_s",
+      badge: "NEW!"
     },
     {
       id: "preview-the-zodiac-cooks",
       title: "Preview - The Zodiac Cooks",
-      author: "Alex Poxon (via Penny Thornton)",
+      author: "George S Boughton",
       date: "Live Post from Wix Dashboard",
-      type: "Wix Video Post",
+      type: "Video Post",
       summary: "Could serving the right food capture a heart? Yes, according to passionate cook Penny Thornton (author of Suns and Lovers) who believes matching meals to personality types can open the route to happy seduction.",
       thumbnail: "https://img.youtube.com/vi/u1JsGksWwb4/hqdefault.jpg",
       embedUrl: "https://www.youtube.com/embed/u1JsGksWwb4",
-      badge: "Live Post from Wix Dashboard"
+      badge: "NEW!"
     },
     {
       id: "autobiology-of-a-vet-preview",
       title: "Preview - Autobiology of a Vet",
-      author: "Alex Poxon (via John Sauvage / Paddy Cummins)",
+      author: "George S Boughton",
       date: "Live Post from Wix Dashboard",
-      type: "Wix Video Post",
+      type: "Video Post",
       summary: "An enlightening, educational but often hilarious memoir. A great read for anyone interested in animals and especially life as a veterinary surgeon, covering travels from the UK to East Africa (including under dictator Idi Amin) and South Africa.",
       thumbnail: "https://img.youtube.com/vi/HTaWcwy590M/hqdefault.jpg",
       embedUrl: "https://www.youtube.com/embed/HTaWcwy590M",
-      badge: "Live Post from Wix Dashboard"
+      badge: "NEW!"
     }
   ];
 
@@ -119,7 +130,9 @@ export default function JournalView() {
     fetchWixLiveFeed();
   }, []);
 
-  const allEntries = wixLivePosts.length > 0 ? wixLivePosts : defaultEntries;
+  const liveTitles = new Set(wixLivePosts.map(p => p.title.toLowerCase().trim()));
+  const extraDefaults = defaultEntries.filter(d => !liveTitles.has(d.title.toLowerCase().trim()));
+  const allEntries = [...wixLivePosts, ...extraDefaults];
 
   return (
     <div className="py-16 bg-[#FAF8F4] text-[#1A1612]">
