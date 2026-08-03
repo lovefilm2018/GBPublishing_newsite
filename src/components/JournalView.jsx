@@ -68,17 +68,21 @@ export default function JournalView() {
           }
         }
 
+        const pubDateObj = pubDate ? new Date(pubDate) : new Date();
+        const ageInDays = (new Date() - pubDateObj) / (1000 * 60 * 60 * 24);
+        const isNew = ageInDays <= 30;
+
         return {
           id: `wix-live-${idx}`,
           title,
-          author: creator,
-          date: pubDate ? new Date(pubDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : "Recently Published",
-          type: embedUrl ? "Wix Video Post" : "Wix Blog Post",
+          author: "George S Boughton",
+          date: pubDate ? pubDateObj.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : "Recently Published",
+          type: embedUrl ? "Video Post" : "Article",
           summary: description.replace(/<[^>]*>?/gm, ''),
           thumbnail,
           embedUrl: embedUrl || "https://www.youtube.com/embed/HTaWcwy590M",
           wixLink: link,
-          badge: "Live Post from Wix Dashboard"
+          badge: isNew ? "NEW!" : null
         };
       });
     }
@@ -115,10 +119,7 @@ export default function JournalView() {
     fetchWixLiveFeed();
   }, []);
 
-  // Live Wix posts show at the top; sample entries fill the rest as evergreen content
-  const liveIds = new Set(wixLivePosts.map(p => p.title.toLowerCase()));
-  const filteredDefaults = defaultEntries.filter(e => !liveIds.has(e.title.toLowerCase()));
-  const allEntries = [...wixLivePosts, ...filteredDefaults];
+  const allEntries = wixLivePosts.length > 0 ? wixLivePosts : defaultEntries;
 
   return (
     <div className="py-16 bg-[#FAF8F4] text-[#1A1612]">
@@ -133,47 +134,22 @@ export default function JournalView() {
             News, Documentaries & Author Broadcasts
           </h1>
           <p className="text-slate-600 font-sans text-base sm:text-lg leading-relaxed">
-            Watch author interviews, river documentary films, fine art exhibition highlights, and crisis relief updates directly from our independent publishing house.
+            Watch author interviews, river documentary films, fine art exhibition highlights, and publisher updates.
           </p>
         </div>
 
-        {/* Headless Wix CMS Notice Banner for Publisher */}
-        <div className="bg-[#1C2B40] text-amber-50 p-6 rounded-2xl shadow-md border border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-amber-400/20 rounded-xl flex items-center justify-center text-amber-300 font-bold flex-shrink-0">
-              <Sparkles className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="font-serif text-lg font-bold text-amber-100">Live Wix CMS Integration Active</h4>
-              <p className="text-xs text-slate-300 font-sans">
-                Publisher update: All video clips, press articles, and journal entries published in your Wix Dashboard stream directly into this layout.
-              </p>
-            </div>
-          </div>
-          <a 
-            href="https://gbpublishingorg.wixsite.com/website-5/posts" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-[#7A1F1A] hover:bg-[#8C2520] text-white px-5 py-2.5 rounded-xl font-sans text-xs font-bold whitespace-nowrap transition-colors flex items-center gap-1.5 shadow-sm"
-          >
-            <span>Open Wix CMS Dashboard</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
-        </div>
-
-        {/* Video Entries Grid */}
+        {/* Entries Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {allEntries.map((entry) => (
             <div 
               key={entry.id}
-              className="bg-white rounded-2xl border border-[#E2DDD6] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between"
+              className="bg-white rounded-2xl border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between group"
             >
               <div className="p-5 space-y-4">
-                
-                {/* Video Thumbnail Container with Play Overlay */}
+                {/* Media Thumbnail Container */}
                 <div 
                   onClick={() => setActiveVideo(entry)}
-                  className="relative overflow-hidden rounded-xl bg-slate-900 h-60 cursor-pointer group flex items-center justify-center"
+                  className="relative aspect-video rounded-xl overflow-hidden cursor-pointer bg-slate-900 flex items-center justify-center"
                 >
                   <img 
                     src={entry.thumbnail} 
@@ -182,10 +158,12 @@ export default function JournalView() {
                   />
                   <div className="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors" />
 
-                  {/* Badge */}
-                  <span className="absolute top-3 left-3 bg-[#7A1F1A] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
-                    {entry.badge}
-                  </span>
+                  {/* Standout NEW! Badge (Only if 30 days or less old) */}
+                  {entry.badge && (
+                    <span className="absolute top-3 left-3 bg-[#7A1F1A] text-white text-[11px] font-extrabold tracking-widest px-3 py-1 rounded-full shadow-lg border border-red-400/30">
+                      {entry.badge}
+                    </span>
+                  )}
 
                   {/* Big Play Button */}
                   <div className="w-16 h-16 bg-white/95 text-[#7A1F1A] rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform pl-1">
@@ -209,7 +187,7 @@ export default function JournalView() {
                     {entry.title}
                   </h3>
 
-                  <p className="text-xs text-slate-600 font-sans leading-relaxed line-clamp-3">
+                  <p className="text-sm text-slate-600 font-sans leading-relaxed line-clamp-3">
                     {entry.summary}
                   </p>
                 </div>
@@ -218,14 +196,14 @@ export default function JournalView() {
               {/* Action Bar */}
               <div className="p-5 pt-0 border-t border-slate-100 flex items-center justify-between mt-2">
                 <span className="text-xs font-serif italic text-slate-600">
-                  By {entry.author}
+                  By George S Boughton
                 </span>
                 <button 
                   onClick={() => setActiveVideo(entry)}
                   className="bg-amber-100/80 hover:bg-amber-200/80 text-[#1A1612] px-4 py-2 rounded-xl text-xs font-bold font-sans flex items-center gap-1.5 transition-colors"
                 >
                   <Play className="w-3.5 h-3.5 fill-current text-[#7A1F1A]" />
-                  <span>Watch Video</span>
+                  <span>Watch & Read Story →</span>
                 </button>
               </div>
 
@@ -236,7 +214,7 @@ export default function JournalView() {
         {/* Video Lightbox Modal */}
         {activeVideo && (
           <div className="modal-backdrop bg-black/85 backdrop-blur-md" onClick={() => setActiveVideo(null)}>
-            <div className="bg-[#161F2E] border border-slate-700 rounded-2xl max-w-3xl w-full p-6 relative m-4 shadow-2xl space-y-4 text-white" onClick={(e) => e.stopPropagation()}>
+            <div className="bg-[#161F2E] border border-slate-700 rounded-2xl max-w-3xl w-full p-6 relative m-4 shadow-2xl space-y-5 text-white" onClick={(e) => e.stopPropagation()}>
               <button 
                 onClick={() => setActiveVideo(null)}
                 className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded-full text-slate-200 transition-colors z-20"
@@ -246,8 +224,8 @@ export default function JournalView() {
 
               <div className="space-y-1">
                 <span className="text-xs font-bold text-amber-300 uppercase tracking-widest">{activeVideo.type}</span>
-                <h3 className="font-serif text-2xl font-bold text-amber-50">{activeVideo.title}</h3>
-                <p className="text-xs text-slate-300 font-sans">By {activeVideo.author} · {activeVideo.date}</p>
+                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-amber-50 leading-snug">{activeVideo.title}</h3>
+                <p className="text-xs text-slate-300 font-sans">By George S Boughton · {activeVideo.date}</p>
               </div>
 
               {/* Video Player Container */}
@@ -261,9 +239,13 @@ export default function JournalView() {
                 />
               </div>
 
-              <p className="text-xs text-slate-300 font-sans leading-relaxed pt-2">
-                {activeVideo.summary}
-              </p>
+              {/* Full Article Description in Modal */}
+              <div className="bg-slate-900/70 border border-slate-800 rounded-xl p-4 space-y-2 max-h-48 overflow-y-auto">
+                <h4 className="text-xs font-bold text-amber-400 uppercase tracking-wider">About This Broadcast & Article</h4>
+                <p className="text-sm text-slate-300 font-sans leading-relaxed">
+                  {activeVideo.summary}
+                </p>
+              </div>
             </div>
           </div>
         )}
