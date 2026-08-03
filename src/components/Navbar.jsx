@@ -17,8 +17,6 @@ export default function Navbar({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  const blogUrl = "https://gbpublishingorg.wixsite.com/website-5/posts";
-
   const handleNavClick = (tab, category = null) => {
     setActiveTab(tab);
     window.location.hash = `#${tab}`;
@@ -206,15 +204,12 @@ export default function Navbar({
           >
             ABOUT GBP
           </button>
-          <a 
-            href={blogUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center justify-between py-2 text-amber-200 font-medium border-t border-slate-800 pt-3"
+          <button 
+            onClick={() => handleNavClick('news')}
+            className={`block w-full text-left py-2 text-base font-medium ${activeTab === 'news' ? 'text-amber-400 font-bold' : 'text-slate-200'}`}
           >
-            <span>NEWS & BLOG (WIX JOURNAL)</span>
-            <ArrowUpRight className="w-4 h-4" />
-          </a>
+            NEWS & BLOG
+          </button>
         </div>
       )}
     </header>

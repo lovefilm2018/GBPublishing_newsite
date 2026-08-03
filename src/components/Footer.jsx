@@ -17,8 +17,6 @@ export default function Footer({ onNavClick }) {
     }
   };
 
-  const blogUrl = "https://www.gbpublishing.co.uk/blog";
-
   return (
     <footer className="bg-[#121A29] text-white pt-16 pb-12 border-t border-slate-800">
       <div className="container mx-auto px-4 space-y-12">
@@ -101,11 +99,7 @@ export default function Footer({ onNavClick }) {
               <li><button onClick={() => onNavClick('books', 'ALL')} className="hover:text-amber-300 transition-colors">Full Book Catalogue (100+ Titles)</button></li>
               <li><button onClick={() => onNavClick('art')} className="hover:text-amber-300 transition-colors">Fine Art & Painting Gallery</button></li>
               <li><button onClick={() => onNavClick('about')} className="hover:text-amber-300 transition-colors">About GB Publishing</button></li>
-              <li>
-                <a href={blogUrl} target="_blank" rel="noopener noreferrer" className="hover:text-amber-300 transition-colors text-amber-200/90 underline">
-                  News & Blog (Wix Journal) →
-                </a>
-              </li>
+              <li><button onClick={() => onNavClick('news')} className="hover:text-amber-300 transition-colors text-[#F3E5AB]">News, Video Journal & Blog</button></li>
             </ul>
           </div>
 
