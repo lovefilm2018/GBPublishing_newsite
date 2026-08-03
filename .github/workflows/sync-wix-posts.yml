@@ -1,0 +1,113 @@
+name: Sync Wix Blog Posts
+
+on:
+  schedule:
+    # Run every 10 minutes
+    - cron: '*/10 * * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Wix RSS and generate posts.json
+        run: |
+          python3 << 'EOF'
+          import urllib.request, json, re, sys
+          from datetime import datetime, timezone
+
+          feed_url = 'https://gbpublishingorg.wixsite.com/website-5/blog-feed.xml'
+          req = urllib.request.Request(feed_url, headers={
+              'User-Agent': 'Mozilla/5.0 (compatible; GBPublishing-Bot/1.0)',
+              'Cache-Control': 'no-cache',
+              'Pragma': 'no-cache'
+          })
+
+          try:
+              response = urllib.request.urlopen(req, timeout=15)
+              xml = response.read().decode('utf-8')
+          except Exception as e:
+              print(f"ERROR fetching feed: {e}", file=sys.stderr)
+              sys.exit(1)
+
+          # Parse items from XML
+          items_raw = re.findall(r'<item>(.*?)</item>', xml, re.DOTALL)
+          posts = []
+
+          for idx, item in enumerate(items_raw):
+              def get_tag(tag, text):
+                  m = re.search(r'<' + tag + r'[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</' + tag + r'>', text, re.DOTALL)
+                  return m.group(1).strip() if m else ''
+
+              title = get_tag('title', item)
+              description = get_tag('description', item)
+              link = get_tag('link', item)
+              pub_date = get_tag('pubDate', item)
+
+              enc_match = re.search(r'<enclosure[^>]+url=["\']([^"\']+)["\']', item)
+              raw_media = enc_match.group(1) if enc_match else ''
+
+              yt_id = None
+              yt_match = re.search(r'(?:youtu\.be/|youtube\.com/(?:embed/|v/|watch\?v=))([\w-]{11})', raw_media)
+              if yt_match:
+                  yt_id = yt_match.group(1)
+
+              embed_url = f'https://www.youtube.com/embed/{yt_id}' if yt_id else None
+              thumbnail = f'https://img.youtube.com/vi/{yt_id}/hqdefault.jpg' if yt_id else 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80'
+
+              try:
+                  from email.utils import parsedate_to_datetime
+                  pub_dt = parsedate_to_datetime(pub_date)
+                  age_days = (datetime.now(timezone.utc) - pub_dt).days
+                  date_str = pub_dt.strftime('%-d %b %Y')
+              except Exception:
+                  age_days = 0
+                  date_str = 'Recently Published'
+
+              # Strip HTML from description
+              clean_desc = re.sub(r'<[^>]+>', '', description).strip()
+
+              posts.append({
+                  'id': f'wix-live-{idx}',
+                  'title': title,
+                  'author': 'George S Boughton',
+                  'date': date_str,
+                  'type': 'Video Post' if yt_id else 'Article',
+                  'summary': clean_desc,
+                  'thumbnail': thumbnail,
+                  'embedUrl': embed_url or 'https://www.youtube.com/embed/HTaWcwy590M',
+                  'wixLink': link,
+                  'badge': 'NEW!' if age_days <= 30 else None
+              })
+
+          output = {
+              'generated': datetime.now(timezone.utc).isoformat(),
+              'count': len(posts),
+              'posts': posts
+          }
+
+          with open('public/posts.json', 'w', encoding='utf-8') as f:
+              json.dump(output, f, ensure_ascii=False, indent=2)
+
+          print(f"Written {len(posts)} posts to public/posts.json")
+          for p in posts:
+              print(f"  - {p['title']} ({p['date']})")
+          EOF
+
+      - name: Commit posts.json if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/posts.json
+          if git diff --cached --quiet; then
+            echo "No changes to posts.json"
+          else
+            git commit -m "chore: sync Wix blog posts [skip ci]"
+            git push
+          fi
