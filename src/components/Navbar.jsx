@@ -53,17 +53,7 @@ export default function Navbar({
             onClick={() => handleNavClick('home')}
             className="flex items-center gap-3 text-left focus:outline-none group"
           >
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#8C2520] to-[#D4A359] flex items-center justify-center text-white font-serif font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
-              GBP
-            </div>
-            <div>
-              <span className="font-serif text-2xl font-bold tracking-tight text-amber-50 block leading-none">
-                GB PUBLISHING
-              </span>
-              <span className="text-[10px] tracking-widest text-amber-200/80 uppercase font-sans font-semibold mt-1 block">
-                Independent UK Publisher
-              </span>
-            </div>
+            <img src="/GBPLogo.png" alt="GB Publishing" className="h-10 object-contain filter brightness-0 invert" />
           </button>
         </div>
 

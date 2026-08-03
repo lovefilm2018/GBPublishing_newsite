@@ -19,7 +19,7 @@ export default function Hero({ featuredBook, onSelectBook, onExploreClick }) {
               <span>Independent UK Book Publishing House</span>
             </div>
 
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15] text-amber-50">
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight leading-[1.15] text-amber-50">
               Independent Stories, <br />
               <span className="bg-gradient-to-r from-amber-200 via-amber-100 to-amber-400 bg-clip-text text-transparent italic">
                 Beautifully Crafted.
@@ -33,7 +33,7 @@ export default function Hero({ featuredBook, onSelectBook, onExploreClick }) {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <button 
                 onClick={onExploreClick}
-                className="w-full sm:w-auto bg-[#8C2520] hover:bg-[#A62D27] text-white px-7 py-3.5 rounded-xl font-sans font-bold text-base shadow-xl shadow-red-950/50 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 group"
+                className="w-full sm:w-auto bg-[#7A1F1A] hover:bg-[#8C2520] text-white px-7 py-3.5 rounded-xl font-sans font-bold text-base shadow-xl shadow-red-950/50 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 group"
               >
                 <span>Browse Full Catalogue</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -44,7 +44,7 @@ export default function Hero({ featuredBook, onSelectBook, onExploreClick }) {
                 className="w-full sm:w-auto bg-white/10 hover:bg-white/15 text-amber-100 border border-amber-200/30 px-6 py-3.5 rounded-xl font-sans font-semibold text-base transition-colors flex items-center justify-center gap-2"
               >
                 <BookOpen className="w-5 h-5 text-amber-300" />
-                <span>Featured Release: {featuredBook.title.slice(0, 22)}...</span>
+                <span className="truncate max-w-[220px] inline-block align-bottom">Featured Release: {featuredBook.title}</span>
               </button>
             </div>
 
@@ -69,17 +69,16 @@ export default function Hero({ featuredBook, onSelectBook, onExploreClick }) {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative group max-w-xs sm:max-w-sm w-full">
               {/* Glow backdrop */}
-              <div className="absolute -inset-2 bg-gradient-to-tr from-[#8C2520] to-[#D4A359] rounded-2xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity" />
+              <div className="absolute -inset-2 bg-gradient-to-tr from-[#7A1F1A] to-[#C49A45] rounded-2xl blur-xl opacity-40 group-hover:opacity-60 transition-opacity" />
               
               <div className="relative bg-[#1A253A] border border-amber-300/30 rounded-2xl p-6 shadow-2xl space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="bg-amber-400/20 text-amber-300 border border-amber-300/40 text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                <div className="flex justify-between items-center gap-2">
+                  <span className="bg-amber-400/20 text-amber-300 border border-amber-300/40 text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider truncate">
                     {featuredBook.ribbon || "FEATURED BESTSELLER"}
                   </span>
-                  <div className="flex items-center gap-1 text-amber-400 text-xs font-semibold">
-                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                    <span>5.0 Direct Choice</span>
-                  </div>
+                  <span className="text-[11px] font-semibold text-amber-200/90 bg-amber-950/40 px-2 py-0.5 rounded border border-amber-400/20 truncate">
+                    {featuredBook.categories?.[0] || "Publisher Select"}
+                  </span>
                 </div>
 
                 {/* 3D Book Cover */}
@@ -114,9 +113,9 @@ export default function Hero({ featuredBook, onSelectBook, onExploreClick }) {
                   
                   <button 
                     onClick={() => onSelectBook(featuredBook)}
-                    className="bg-[#8C2520] hover:bg-[#A62D27] text-white px-4 py-2 rounded-lg font-sans text-xs font-bold transition-all shadow-md"
+                    className="bg-[#7A1F1A] hover:bg-[#8C2520] text-white px-4 py-2 rounded-lg font-sans text-xs font-bold transition-all shadow-md"
                   >
-                    BUY DIRECT FROM GBP
+                    Add to Cart
                   </button>
                 </div>
               </div>

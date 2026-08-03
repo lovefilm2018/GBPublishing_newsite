@@ -17,7 +17,7 @@ export default function BookCard({ book, onSelectBook, onAddToCart }) {
             src={book.coverImage} 
             alt={book.title} 
             loading="lazy"
-            className="book-cover w-full h-64 object-cover rounded-lg"
+            className="book-cover w-full h-72 object-cover rounded-lg"
           />
           <div className="book-spine-effect" />
 
@@ -34,7 +34,7 @@ export default function BookCard({ book, onSelectBook, onAddToCart }) {
           {/* Quick Hover Quick-View Button */}
           <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center backdrop-blur-[2px]">
             <span className="bg-white text-slate-900 px-4 py-2 rounded-xl text-xs font-bold font-sans shadow-lg flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-              <Eye className="w-4 h-4 text-[#8C2520]" />
+              <Eye className="w-4 h-4 text-[#7A1F1A]" />
               Quick View
             </span>
           </div>
@@ -44,12 +44,11 @@ export default function BookCard({ book, onSelectBook, onAddToCart }) {
         <div className="space-y-1.5">
           <div className="flex items-center justify-between text-[11px] text-slate-500 font-sans font-medium">
             <span className="truncate">{book.categories[0] || "Publication"}</span>
-            <span className="bg-slate-100 px-2 py-0.5 rounded text-slate-600 font-semibold">{book.format}</span>
           </div>
 
           <h3 
             onClick={() => onSelectBook(book)}
-            className="font-serif text-lg font-bold text-slate-900 group-hover:text-[#8C2520] transition-colors line-clamp-2 leading-snug cursor-pointer"
+            className="font-serif text-lg font-medium text-slate-900 group-hover:text-[#7A1F1A] transition-colors line-clamp-2 leading-snug cursor-pointer"
             title={book.title}
           >
             {book.title}
@@ -82,10 +81,10 @@ export default function BookCard({ book, onSelectBook, onAddToCart }) {
         <div className="grid grid-cols-1 gap-2">
           <button 
             onClick={() => onAddToCart(book)}
-            className="w-full bg-[#8C2520] hover:bg-[#A62D27] text-white py-2.5 px-3 rounded-xl font-sans text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow-sm active:scale-95"
+            className="w-full bg-[#7A1F1A] hover:bg-[#8C2520] text-white py-2.5 px-3 rounded-xl font-sans text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow-sm active:scale-95"
           >
             <ShoppingBag className="w-4 h-4" />
-            <span>BUY DIRECT FROM GBP</span>
+            <span>Add to Cart</span>
           </button>
         </div>
       </div>

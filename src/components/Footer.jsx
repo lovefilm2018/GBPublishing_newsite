@@ -68,10 +68,7 @@ export default function Footer({ onNavClick }) {
           {/* Brand Colophon */}
           <div className="md:col-span-4 space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded bg-[#8C2520] flex items-center justify-center font-serif font-bold text-white text-base">
-                GBP
-              </div>
-              <span className="font-serif text-xl font-bold text-amber-50">GB PUBLISHING</span>
+              <img src="/GBPLogo.png" alt="GB Publishing" className="h-9 object-contain filter brightness-0 invert opacity-90" />
             </div>
 
             <p className="leading-relaxed">
@@ -129,10 +126,8 @@ export default function Footer({ onNavClick }) {
         {/* Bottom Copyright */}
         <div className="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>© {new Date().getFullYear()} GB Publishing. All rights reserved. Registered UK Independent Publisher.</p>
-          <p className="flex items-center justify-center gap-1 text-[11px]">
-            <span>Crafted with</span>
-            <Heart className="w-3.5 h-3.5 text-[#8C2520] fill-[#8C2520]" />
-            <span>for Independent Readers Worldwide</span>
+          <p className="flex items-center justify-center gap-1 text-[11px] text-slate-400">
+            <span>Published with passion from the United Kingdom — supporting independent voices since 2013.</span>
           </p>
         </div>
 

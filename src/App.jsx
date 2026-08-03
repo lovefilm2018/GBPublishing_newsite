@@ -77,7 +77,7 @@ export default function App() {
       }
       return true;
     });
-  }, [selectedCategory, selectedAuthor, searchQuery, filterSignedOnly, filterUnder15]);
+  }, [catalog, selectedCategory, selectedAuthor, searchQuery, filterSignedOnly, filterUnder15]);
 
   // Cart operations
   const handleAddToCart = (bookToAdd) => {
@@ -197,8 +197,8 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* 4-Column Book Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* 3-Column Book Cards Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredBooks.slice(0, 8).map((book) => (
                     <BookCard 
                       key={book.id} 
@@ -324,7 +324,7 @@ export default function App() {
                   </button>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredBooks.map((book) => (
                     <BookCard 
                       key={book.id} 

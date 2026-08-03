@@ -9,28 +9,29 @@
 
 :root {
   /* Color Palette */
-  --gbp-bg-primary: #FBF9F5;       /* Warm paper background */
+  --gbp-bg-primary: #FAF8F4;       /* Warm parchment background */
   --gbp-bg-card: #FFFFFF;          /* Pure white card surface */
-  --gbp-bg-secondary: #F3EFEA;     /* Soft warm grey background */
+  --gbp-bg-secondary: #F2EDE7;     /* Soft warm grey background */
   --gbp-bg-dark: #121A29;          /* Deep luxury navy/black */
   
-  --gbp-text-primary: #1C1C1C;     /* Deep charcoal heading text */
+  --gbp-ink-primary: #1A1612;      /* True deep ink for major text */
+  --gbp-text-primary: #1A1612;     /* Deep ink heading text */
   --gbp-text-secondary: #5A5A5A;   /* Muted metadata text */
   --gbp-text-light: #9A9A9A;       /* Caption text */
   
-  --gbp-accent-burgundy: #8C2520;  /* Primary brand burgundy CTA */
-  --gbp-accent-burgundy-hover: #A62D27;
+  --gbp-accent-burgundy: #7A1F1A;  /* Primary brand burgundy CTA */
+  --gbp-accent-burgundy-hover: #8C2520;
   --gbp-accent-burgundy-light: #FBF0EF;
   
-  --gbp-accent-indigo: #1D2A44;    /* Navy indigo header/footer */
+  --gbp-accent-indigo: #1C2B40;    /* Navy indigo header/footer */
   --gbp-accent-indigo-hover: #263859;
   
-  --gbp-accent-gold: #D4A359;      /* Gold highlights & signed badges */
+  --gbp-accent-gold: #C49A45;      /* Gold highlights & signed badges */
   --gbp-accent-gold-dark: #B8853B;
-  --gbp-accent-gold-light: #FFF9ED;
+  --gbp-accent-gold-light: #F9F2E2;
   
-  --gbp-border-light: #E5E0DA;
-  --gbp-border-focus: #8C2520;
+  --gbp-border-light: #E2DDD6;
+  --gbp-border-focus: #7A1F1A;
   
   --gbp-success: #2D7D46;
   --gbp-success-light: #EAF5ED;
@@ -38,7 +39,6 @@
   /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Plus Jakarta Sans', sans-serif;
   
   /* Layout Spacing */
   --gbp-max-width: 1280px;
@@ -52,7 +52,7 @@
   --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.12);
   --shadow-cover: -4px 6px 16px rgba(0, 0, 0, 0.18), inset -2px 0 6px rgba(255, 255, 255, 0.2);
-  --shadow-cover-hover: -8px 12px 28px rgba(140, 37, 32, 0.22);
+  --shadow-cover-hover: -8px 12px 28px rgba(122, 31, 26, 0.22);
   
   /* Transitions */
   --transition-fast: 0.15s ease;
@@ -257,6 +257,15 @@ h1, h2, h3, h4, h5, .font-serif {
 
 .animate-fade-in {
   animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Custom Modal Backdrop */
