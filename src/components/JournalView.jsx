@@ -7,6 +7,17 @@ export default function JournalView() {
 
   const defaultEntries = [
     {
+      id: "preview-the-zodiac-cooks",
+      title: "Preview - The Zodiac Cooks",
+      author: "Alex Poxon (via Penny Thornton)",
+      date: "Live Post from Wix Dashboard",
+      type: "Wix Video Post",
+      summary: "Could serving the right food capture a heart? Yes, according to passionate cook Penny Thornton (author of Suns and Lovers) who believes matching meals to personality types can open the route to happy seduction.",
+      thumbnail: "https://img.youtube.com/vi/u1JsGksWwb4/hqdefault.jpg",
+      embedUrl: "https://www.youtube.com/embed/u1JsGksWwb4",
+      badge: "Live Post from Wix Dashboard"
+    },
+    {
       id: "autobiology-of-a-vet-preview",
       title: "Preview - Autobiology of a Vet",
       author: "Alex Poxon (via John Sauvage / Paddy Cummins)",
@@ -52,12 +63,12 @@ export default function JournalView() {
     }
   ];
 
-  // Fetch live Wix Blog posts from Wix sandbox RSS feed on mount
+  // Fetch live Wix Blog posts from Wix sandbox RSS feed on mount with cache busting
   useEffect(() => {
     async function fetchWixLiveFeed() {
       try {
-        const feedUrl = "https://gbpublishingorg.wixsite.com/website-5/blog-feed.xml";
-        const res = await fetch(feedUrl);
+        const feedUrl = `https://gbpublishingorg.wixsite.com/website-5/blog-feed.xml?t=${Date.now()}`;
+        const res = await fetch(feedUrl, { cache: 'no-store' });
         if (res.ok) {
           const xmlText = await res.text();
           const parser = new DOMParser();
@@ -110,7 +121,7 @@ export default function JournalView() {
     fetchWixLiveFeed();
   }, []);
 
-  const allEntries = [...wixLivePosts, ...defaultEntries];
+  const allEntries = wixLivePosts.length > 0 ? wixLivePosts : defaultEntries;
 
   return (
     <div className="py-16 bg-[#FAF8F4] text-[#1A1612]">
