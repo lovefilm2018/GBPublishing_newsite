@@ -63,65 +63,84 @@ export default function JournalView() {
     }
   ];
 
-  // Fetch live Wix Blog posts from Wix sandbox RSS feed on mount with cache busting
+  // Fetch live Wix Blog posts via CORS-safe proxy chain
   useEffect(() => {
-    async function fetchWixLiveFeed() {
-      try {
-        const feedUrl = `https://gbpublishingorg.wixsite.com/website-5/blog-feed.xml?t=${Date.now()}`;
-        const res = await fetch(feedUrl, { cache: 'no-store' });
-        if (res.ok) {
-          const xmlText = await res.text();
-          const parser = new DOMParser();
-          const xmlDoc = parser.parseFromString(xmlText, "text/xml");
-          const items = xmlDoc.querySelectorAll("item");
-          
-          const livePosts = Array.from(items).map((item, idx) => {
-            const title = item.querySelector("title")?.textContent || "Wix Journal Post";
-            const description = item.querySelector("description")?.textContent || "";
-            const link = item.querySelector("link")?.textContent || "#";
-            const pubDate = item.querySelector("pubDate")?.textContent || "";
-            const creator = item.querySelector("creator")?.textContent || "Alex Poxon";
-            const enclosure = item.querySelector("enclosure");
-            const rawMediaUrl = enclosure ? enclosure.getAttribute("url") : "";
+    async function parseXml(xmlText) {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+      const items = xmlDoc.querySelectorAll("item");
+      return Array.from(items).map((item, idx) => {
+        const title = item.querySelector("title")?.textContent || "Wix Journal Post";
+        const description = item.querySelector("description")?.textContent || "";
+        const link = item.querySelector("link")?.textContent || "#";
+        const pubDate = item.querySelector("pubDate")?.textContent || "";
+        const creator = item.querySelector("creator")?.textContent || "GB Publishing";
+        const enclosure = item.querySelector("enclosure");
+        const rawMediaUrl = enclosure ? enclosure.getAttribute("url") : "";
 
-            let embedUrl = null;
-            let thumbnail = "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80";
+        let embedUrl = null;
+        let thumbnail = "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80";
 
-            if (rawMediaUrl) {
-              const ytMatch = rawMediaUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
-              if (ytMatch && ytMatch[1]) {
-                const ytId = ytMatch[1];
-                embedUrl = `https://www.youtube.com/embed/${ytId}`;
-                thumbnail = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
-              }
-            }
-
-            return {
-              id: `wix-live-${idx}`,
-              title,
-              author: creator,
-              date: pubDate ? new Date(pubDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : "Recently Published",
-              type: embedUrl ? "Wix Video Post" : "Wix Blog Post",
-              summary: description.replace(/<[^>]*>?/gm, ''),
-              thumbnail,
-              embedUrl: embedUrl || "https://www.youtube.com/embed/HTaWcwy590M",
-              wixLink: link,
-              badge: "Live Post from Wix Dashboard"
-            };
-          });
-
-          if (livePosts.length > 0) {
-            setWixLivePosts(livePosts);
+        if (rawMediaUrl) {
+          const ytMatch = rawMediaUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+          if (ytMatch && ytMatch[1]) {
+            const ytId = ytMatch[1];
+            embedUrl = `https://www.youtube.com/embed/${ytId}`;
+            thumbnail = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
           }
         }
-      } catch (err) {
-        console.warn("Could not parse live Wix RSS feed directly:", err);
-      }
+
+        return {
+          id: `wix-live-${idx}`,
+          title,
+          author: creator,
+          date: pubDate ? new Date(pubDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : "Recently Published",
+          type: embedUrl ? "Wix Video Post" : "Wix Blog Post",
+          summary: description.replace(/<[^>]*>?/gm, ''),
+          thumbnail,
+          embedUrl: embedUrl || "https://www.youtube.com/embed/HTaWcwy590M",
+          wixLink: link,
+          badge: "Live Post from Wix Dashboard"
+        };
+      });
     }
+
+    async function fetchWixLiveFeed() {
+      const RAW_FEED = `https://gbpublishingorg.wixsite.com/website-5/blog-feed.xml`;
+      const encodedFeed = encodeURIComponent(RAW_FEED);
+
+      // Try direct fetch first (works when Wix sends CORS headers), then proxy fallbacks
+      const attempts = [
+        () => fetch(`${RAW_FEED}?t=${Date.now()}`, { cache: 'no-store' }).then(r => r.ok ? r.text() : Promise.reject()),
+        () => fetch(`https://api.codetabs.com/v1/proxy?quest=${encodedFeed}`).then(r => r.ok ? r.text() : Promise.reject()),
+        () => fetch(`https://corsproxy.io/?${encodedFeed}`).then(r => r.ok ? r.text() : Promise.reject()),
+        () => fetch(`https://api.allorigins.win/raw?url=${encodedFeed}&t=${Date.now()}`).then(r => r.ok ? r.text() : Promise.reject()),
+      ];
+
+      for (const attempt of attempts) {
+        try {
+          const xmlText = await attempt();
+          if (xmlText && xmlText.includes('<item>')) {
+            const livePosts = await parseXml(xmlText);
+            if (livePosts.length > 0) {
+              setWixLivePosts(livePosts);
+              return; // success — stop trying
+            }
+          }
+        } catch (_) {
+          // try next proxy
+        }
+      }
+      console.warn("All RSS fetch attempts failed — showing default entries.");
+    }
+
     fetchWixLiveFeed();
   }, []);
 
-  const allEntries = wixLivePosts.length > 0 ? wixLivePosts : defaultEntries;
+  // Live Wix posts show at the top; sample entries fill the rest as evergreen content
+  const liveIds = new Set(wixLivePosts.map(p => p.title.toLowerCase()));
+  const filteredDefaults = defaultEntries.filter(e => !liveIds.has(e.title.toLowerCase()));
+  const allEntries = [...wixLivePosts, ...filteredDefaults];
 
   return (
     <div className="py-16 bg-[#FAF8F4] text-[#1A1612]">
