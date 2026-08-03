@@ -11,13 +11,13 @@ export default function BookCard({ book, onSelectBook, onAddToCart }) {
         {/* Book Cover Container with 3D Effect */}
         <div 
           onClick={() => onSelectBook(book)}
-          className="book-cover-wrap cursor-pointer relative"
+          className="book-cover-wrap cursor-pointer relative bg-[#F2EDE7] h-72 rounded-xl p-2 flex items-center justify-center border border-slate-200/60 overflow-hidden"
         >
           <img 
             src={book.coverImage} 
             alt={book.title} 
             loading="lazy"
-            className="book-cover w-full h-72 object-cover rounded-lg"
+            className="max-h-full max-w-full object-contain rounded shadow-md group-hover:scale-105 transition-transform duration-300"
           />
           <div className="book-spine-effect" />
 

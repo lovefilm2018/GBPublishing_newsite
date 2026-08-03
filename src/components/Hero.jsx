@@ -84,12 +84,12 @@ export default function Hero({ featuredBook, onSelectBook, onExploreClick }) {
                 {/* 3D Book Cover */}
                 <div 
                   onClick={() => onSelectBook(featuredBook)}
-                  className="book-cover-wrap cursor-pointer"
+                  className="book-cover-wrap cursor-pointer bg-[#0F1626] h-80 rounded-xl p-3 flex items-center justify-center border border-slate-700/60 overflow-hidden"
                 >
                   <img 
                     src={featuredBook.coverImage} 
                     alt={featuredBook.title}
-                    className="book-cover w-full h-80 rounded-lg shadow-2xl object-cover"
+                    className="max-h-full max-w-full object-contain rounded shadow-2xl group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="book-spine-effect" />
                 </div>

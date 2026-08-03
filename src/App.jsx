@@ -51,6 +51,20 @@ export default function App() {
   // Filtered catalogue logic
   const filteredBooks = useMemo(() => {
     return catalog.filter(book => {
+      const titleLower = book.title.toLowerCase();
+
+      // Exclude generic Wix placeholder/bundle container entries
+      if (
+        titleLower.includes("paperbacks") ||
+        titleLower.includes("copy of") ||
+        titleLower.includes("wholesale") ||
+        titleLower.includes("crisis appeal") ||
+        titleLower.includes("black friday") ||
+        titleLower.includes("stunning coffee-table")
+      ) {
+        return false;
+      }
+
       // Category Filter
       if (selectedCategory !== 'ALL' && !book.categories.includes(selectedCategory)) {
         return false;
