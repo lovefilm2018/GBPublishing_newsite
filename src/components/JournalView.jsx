@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { Play, Video, Sparkles, Feather, Calendar, ExternalLink, X, BookOpen, MessageSquare, CheckCircle2 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Play, Video, Sparkles, Feather, Calendar, ExternalLink, X, BookOpen, MessageSquare, CheckCircle2, Rss } from 'lucide-react';
 
 export default function JournalView() {
   const [activeVideo, setActiveVideo] = useState(null);
+  const [wixLivePosts, setWixLivePosts] = useState([]);
 
-  const featuredEntries = [
+  const defaultEntries = [
     {
       id: "dennis-to-alice",
       title: "Dennis to Alice — River Flood Documentary & Author Story",
@@ -13,7 +14,7 @@ export default function JournalView() {
       type: "Documentary Video",
       summary: "George S Boughton shares the captivating story behind Dennis to Alice, exploring river ecology, environmental preservation, and the human journeys along local waterways.",
       thumbnail: "https://static.wixstatic.com/media/7c7af8_ed5c5ab58eb749838f02682382fc183c~mv2.jpg",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Placeholder embed URL
+      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       badge: "Featured Documentary"
     },
     {
@@ -50,6 +51,63 @@ export default function JournalView() {
       badge: "Surrey Art Exhibition"
     }
   ];
+
+  // Fetch live Wix Blog posts from Wix sandbox RSS feed on mount
+  useEffect(() => {
+    async function fetchWixLiveFeed() {
+      try {
+        const feedUrl = "https://gbpublishingorg.wixsite.com/website-5/blog-feed.xml";
+        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(feedUrl)}`;
+        const res = await fetch(proxyUrl);
+        if (res.ok) {
+          const xmlText = await res.text();
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+          const items = xmlDoc.querySelectorAll("item");
+          
+          const livePosts = Array.from(items).map((item, idx) => {
+            const title = item.querySelector("title")?.textContent || "Wix Journal Post";
+            const description = item.querySelector("description")?.textContent || "";
+            const link = item.querySelector("link")?.textContent || "#";
+            const pubDate = item.querySelector("pubDate")?.textContent || "";
+            const creator = item.querySelector("creator")?.textContent || "Alex Poxon";
+            const enclosure = item.querySelector("enclosure");
+            const rawMediaUrl = enclosure ? enclosure.getAttribute("url") : "";
+
+            let embedUrl = null;
+            if (rawMediaUrl) {
+              const ytMatch = rawMediaUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+              if (ytMatch && ytMatch[1]) {
+                embedUrl = `https://www.youtube.com/embed/${ytMatch[1]}`;
+              }
+            }
+
+            return {
+              id: `wix-live-${idx}`,
+              title,
+              author: creator,
+              date: pubDate ? new Date(pubDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : "Recently Published",
+              type: embedUrl ? "Wix Video Post" : "Wix Blog Post",
+              summary: description.replace(/<[^>]*>?/gm, ''), // strip HTML tags
+              thumbnail: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+              embedUrl: embedUrl || "https://www.youtube.com/embed/HTaWcwy590M",
+              wixLink: link,
+              badge: "Live Post from Wix Dashboard"
+            };
+          });
+
+          if (livePosts.length > 0) {
+            setWixLivePosts(livePosts);
+          }
+        }
+      } catch (err) {
+        console.warn("Could not parse live Wix RSS feed:", err);
+      }
+    }
+    fetchWixLiveFeed();
+  }, []);
+
+  const allEntries = [...wixLivePosts, ...defaultEntries];
 
   return (
     <div className="py-16 bg-[#FAF8F4] text-[#1A1612]">
@@ -94,7 +152,7 @@ export default function JournalView() {
 
         {/* Video Entries Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {featuredEntries.map((entry) => (
+          {allEntries.map((entry) => (
             <div 
               key={entry.id}
               className="bg-white rounded-2xl border border-[#E2DDD6] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between"
