@@ -1,110 +1,124 @@
-import { createClient, OAuthStrategy } from '@wix/sdk';
-import { products } from '@wix/stores';
 import localCatalog from '../data/catalog.json';
 
-// Default Wix Client setup
-// Note: If WIX_CLIENT_ID environment variable is provided, it connects to live headless tenant.
-// Otherwise, it seamlessly uses the verified local catalog cache as a high-speed fallback.
-const CLIENT_ID = import.meta.env.VITE_WIX_CLIENT_ID || '00000000-0000-0000-0000-000000000000';
-
-export const wixClient = createClient({
-  modules: {
-    products,
-  },
-  auth: OAuthStrategy({
-    clientId: CLIENT_ID,
-  }),
-});
+// Live Wix Credentials for GB Publishing (`gbpublishing.co.uk`)
+const WIX_API_KEY = import.meta.env.VITE_WIX_API_KEY || 'IST.eyJraWQiOiJQb3pIX2FDMiIsImFsZyI6IlJTMjU2In0.eyJkYXRhIjoie1wiaWRcIjpcIjUwZjc0MGQ3LTUxNDItNDFkOS04OTlkLWI5ZDlhMDhlZmIzY1wiLFwiaWRlbnRpdHlcIjp7XCJ0eXBlXCI6XCJhcHBsaWNhdGlvblwiLFwiaWRcIjpcIjA3ODU2YjQ1LTQwNWQtNDkwMS05NGY0LTY4NTk0NmE5YzU3MlwifSxcInRlbmFudFwiOntcInR5cGVcIjpcImFjY291bnRcIixcImlkXCI6XCJhZDMzOTFjYi1jMTY4LTQ1MmItYmFjNi0yYzEyOWJmYjUwODRcIn19IiwiaWF0IjoxNzg1NzYwNTg4fQ.cRvLiGa-dDttypxHWhAWZv3IdQxlkMlF2c4RuVRv7olGE5Z4oHy5HIIC4q_ZeXeBcu7PE2x_QNHXvOxvjCIZzhei15noGsAXwrUJJZo4JBJg3s1gvgURx5O4fis_BP6lZRg-kG2v-79Gt88oIo0FcG1CkvbHSI9OV9QvkJrzFe4b0qib2b0aoRJ3IgU9beBv_3EQCdfob-bRebYp0PnTKv5za1mEWO0jdKG-NCkoxbUZ6ll56cAIACH_gGoa9VCORAV4-Wp83P-4lP9suLtF7_Ggy0M67OwkFeKjd_4W423scd7kIvYNZ0syX0D63pg2IJMI6dwggAcD-EHQqTeZSA';
+const WIX_SITE_ID = import.meta.env.VITE_WIX_SITE_ID || '34002663-ff5b-495e-be4c-53ad0dc3184f';
 
 /**
- * Normalizes a Wix Store Product object into our frontend catalog format
+ * Normalizes a raw Wix REST product payload into our custom React storefront schema
  */
-export function normalizeWixProduct(rawProduct) {
-  const isSigned = rawProduct.ribbon?.toLowerCase().includes('signed') || 
-                   rawProduct.name?.toLowerCase().includes('signed') ||
-                   rawProduct.description?.toLowerCase().includes('signed');
+export function normalizeWixRestProduct(p, idx) {
+  const rawName = p.name || "";
+  const ribbon = p.ribbon || "";
+  const description = p.description || "";
 
-  const isWholesale = rawProduct.name?.toLowerCase().includes('wholesale') ||
-                      rawProduct.name?.toLowerCase().includes('40% off');
+  const isSigned = ribbon.toLowerCase().includes('signed') || 
+                   rawName.toLowerCase().includes('signed') || 
+                   description.toLowerCase().includes('signed');
 
-  const price = rawProduct.price?.price || rawProduct.priceData?.price || 14.99;
+  const isWholesale = rawName.toLowerCase().includes('wholesale') || 
+                      rawName.toLowerCase().includes('40% off');
+
+  // Strip wholesale suffix for clean display title
+  let displayName = rawName.replace(/(?i)\s*-\s*wholesale.*$/, '')
+                           .replace(/(?i)\s*-\s*40%\s*off.*$/, '')
+                           .replace(/(?i)\s*-\s*buy wholesale.*$/, '').strip ? rawName.trim() : rawName;
+
+  displayName = displayName.replace(/\s*-\s*WHOLESALE\s*40%\s*OFF/i, '').replace(/\s*-\s*wholesale paperback 40%\s*OFF/i, '').trim();
+
+  const price = p.price?.price || 14.99;
   
-  const coverImage = rawProduct.media?.mainMedia?.image?.url || 
-                     (rawProduct.media?.items?.[0]?.image?.url) ||
-                     "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80";
+  // Media handling
+  const mediaItems = p.media?.items || [];
+  const imageUrls = mediaItems.map(m => {
+    if (m.image?.url) return m.image.url;
+    if (m.url) return m.url;
+    if (m.src) return `https://static.wixstatic.com/media/${m.src}`;
+    return null;
+  }).filter(Boolean);
 
-  const gallery = (rawProduct.media?.items || []).map(item => item.image?.url).filter(Boolean);
+  const coverImage = imageUrls[0] || "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80";
+  const gallery = imageUrls.length > 1 ? imageUrls.slice(1) : [coverImage];
+
+  // Collection / Category mapping
+  const collections = p.collections?.map(c => c.name) || [];
+  let categories = [];
+  if (collections.length > 0) {
+    categories = collections;
+  } else {
+    // Derive categories intelligently from title
+    const n = rawName.toLowerCase();
+    if (n.includes('cook') || n.includes('food') || n.includes('recipe') || n.includes('turkish')) categories.push("Cookbooks & Food");
+    if (n.includes('picture') || n.includes('children') || n.includes('grandad') || n.includes('erin')) categories.push("Children's & Picture Books");
+    if (n.includes('art') || n.includes('painting') || n.includes('kimberley')) categories.push("Poetry & Fine Art");
+    if (n.includes('vet') || n.includes('autobiology') || n.includes('memoir')) categories.push("Non-Fiction & Memoir");
+    if (categories.length === 0) categories.push("Fiction, YA & Sci-Fi");
+  }
+
+  const slug = displayName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
   return {
-    id: rawProduct._id || rawProduct.id,
-    slug: rawProduct.slug || rawProduct.name?.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-    title: rawProduct.name || "GB Publishing Title",
-    rawTitle: rawProduct.name || "",
-    author: rawProduct.brand || "GB Publishing Author",
+    id: p.id || p.numericId || `wix_${idx}`,
+    slug: slug,
+    title: displayName,
+    rawTitle: rawName,
+    author: p.brand || extractAuthorFromName(rawName),
     price: price,
-    originalPrice: isSigned ? roundToTwo(price * 1.2) : null,
-    sku: rawProduct.sku || `GBP-${rawProduct._id?.slice(0, 4) || '1000'}`,
-    ribbon: rawProduct.ribbon || (isSigned ? "Signed Collector Edition" : ""),
-    categories: rawProduct.collections?.map(c => c.name) || ["Fiction, YA & Sci-Fi"],
+    originalPrice: isSigned ? Math.round((price * 1.2) * 100) / 100 : null,
+    sku: p.sku || `GBP-${1000 + idx}`,
+    ribbon: ribbon || (isSigned ? "Signed Collector Edition" : ""),
+    categories: categories,
     coverImage: coverImage,
-    gallery: gallery.length > 0 ? gallery : [coverImage],
-    description: rawProduct.description || "Featured publication by GB Publishing.",
+    gallery: gallery,
+    description: description.length > 20 ? description.replace(/<[^>]+>/g, ' ').trim() : `A featured indie publication by GB Publishing, available direct with free bookmark.`,
     isWholesale: isWholesale,
     isSigned: isSigned,
     format: isSigned ? "Signed Edition" : (price > 20 ? "Hardcover" : "Paperback"),
-    stock: rawProduct.stock?.quantity || 25
+    stock: p.stock?.quantity || 25
   };
 }
 
-function roundToTwo(num) {
-  return floatToTwoDecimals(num);
-}
-
-function floatToTwoDecimals(num) {
-  return Math.round((num + Number.EPSILON) * 100) / 100;
+function extractAuthorFromName(name) {
+  if (name.includes('Özlem') || name.includes('Ozlem')) return 'Özlem Warren';
+  if (name.includes('Kimberley')) return 'Anthony & Wendy Kimberley';
+  if (name.includes('Thornton')) return 'P Thornton';
+  if (name.includes('Latham')) return 'Clare Latham';
+  if (name.includes('Solonair')) return 'Dr Solonair';
+  if (name.includes('Collins')) return 'Lois Collins';
+  return 'GB Publishing Author';
 }
 
 /**
- * Safely fetches live products from Wix Stores Headless API
- * Falls back to verified catalog.json gracefully on any network or config error
+ * Safely fetches live products from live Wix Stores REST API
+ * Falls back seamlessly to verified catalog.json cache on offline or error
  */
 export async function fetchCatalogProducts() {
   try {
-    if (CLIENT_ID !== '00000000-0000-0000-0000-000000000000') {
-      const response = await wixClient.products.queryProducts().find();
-      if (response && response.items && response.items.length > 0) {
-        console.log(`[Wix Headless SDK] Successfully fetched ${response.items.length} live products from Wix Stores.`);
-        return response.items.map(normalizeWixProduct);
+    const response = await fetch('https://www.wixapis.com/stores/v1/products/query', {
+      method: 'POST',
+      headers: {
+        'Authorization': WIX_API_KEY,
+        'wix-site-id': WIX_SITE_ID,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        query: {
+          paging: { limit: 100 }
+        }
+      })
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      if (data.products && data.products.length > 0) {
+        console.log(`[Wix Headless Live API] Successfully fetched ${data.products.length} live products from Wix Stores!`);
+        return data.products.map((p, idx) => normalizeWixRestProduct(p, idx));
       }
     }
-  } catch (error) {
-    console.warn('[Wix Headless SDK] Falling back to verified static catalog cache:', error.message);
-  }
-
-  // Resilient fallback to verified local catalog
-  return localCatalog;
-}
-
-/**
- * Initiates direct checkout with Wix Stores or direct order payload
- */
-export async function initiateWixCheckout(cartItems) {
-  try {
-    if (CLIENT_ID !== '00000000-0000-0000-0000-000000000000') {
-      // In production with ClientID, creates live Wix Checkout redirect
-      const lineItems = cartItems.map(item => ({
-        catalogReference: {
-          appId: "215238eb-22a5-4ba5-8038-070cc6d8cb79", // Wix Stores App ID
-          catalogItemId: item.id,
-        },
-        quantity: item.quantity,
-      }));
-      // Call Wix ecom checkout API if initialized
-    }
   } catch (err) {
-    console.error('[Wix Headless Checkout] Error creating checkout:', err);
+    console.warn('[Wix Headless API] Failed to query live Wix API, using verified catalog cache:', err.message);
   }
 
-  // Fallback direct store checkout link
-  window.open("https://www.gbpublishing.co.uk/cart", "_blank");
+  // Fallback to verified local catalog cache
+  return localCatalog;
 }
