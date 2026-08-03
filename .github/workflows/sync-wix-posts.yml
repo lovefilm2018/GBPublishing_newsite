@@ -19,7 +19,7 @@ jobs:
       - name: Fetch Wix RSS and generate posts.json
         run: |
           python3 << 'EOF'
-          import urllib.request, json, re, sys
+          import urllib.request, json, re, sys, html
           from datetime import datetime, timezone
 
           feed_url = 'https://gbpublishingorg.wixsite.com/website-5/blog-feed.xml'
@@ -45,7 +45,7 @@ jobs:
                   m = re.search(r'<' + tag + r'[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</' + tag + r'>', text, re.DOTALL)
                   return m.group(1).strip() if m else ''
 
-              title = get_tag('title', item)
+              title = html.unescape(get_tag('title', item))
               description = get_tag('description', item)
               link = get_tag('link', item)
               pub_date = get_tag('pubDate', item)
@@ -71,7 +71,7 @@ jobs:
                   date_str = 'Recently Published'
 
               # Strip HTML from description
-              clean_desc = re.sub(r'<[^>]+>', '', description).strip()
+              clean_desc = html.unescape(re.sub(r'<[^>]+>', '', description).strip())
 
               posts.append({
                   'id': f'wix-live-{idx}',

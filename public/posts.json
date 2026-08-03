@@ -1,9 +1,21 @@
 {
-  "generated": "2026-08-03T20:11:51.029352+00:00",
-  "count": 5,
+  "generated": "2026-08-03T20:29:46.126321+00:00",
+  "count": 6,
   "posts": [
     {
       "id": "wix-live-0",
+      "title": "Preview - Nora & John",
+      "author": "George S Boughton",
+      "date": "3 Aug 2026",
+      "type": "Video Post",
+      "summary": "Nora & John, a true World War II BEST SELLER love story set in Stalin's brutal regime in Russia and Ukraine.",
+      "thumbnail": "https://img.youtube.com/vi/nz-JH_a90h0/hqdefault.jpg",
+      "embedUrl": "https://www.youtube.com/embed/nz-JH_a90h0",
+      "wixLink": "https://gbpublishingorg.wixsite.com/website-5/post/preview-nora-john",
+      "badge": "NEW!"
+    },
+    {
+      "id": "wix-live-1",
       "title": "Preview - Erin and the Mouse",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -15,7 +27,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-1",
+      "id": "wix-live-2",
       "title": "Preview - Grandad, let's go for a walk",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -27,7 +39,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-2",
+      "id": "wix-live-3",
       "title": "Preview - Seafaring",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -39,7 +51,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-3",
+      "id": "wix-live-4",
       "title": "Preview - The Zodiac Cooks",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -51,7 +63,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-4",
+      "id": "wix-live-5",
       "title": "Preview - Autobiology of a Vet",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
