@@ -7,6 +7,17 @@ export default function JournalView() {
 
   const defaultEntries = [
     {
+      id: "preview-seafaring",
+      title: "Preview - Seafaring",
+      author: "Alex Poxon",
+      date: "Live Post from Wix Dashboard",
+      type: "Wix Video Post",
+      summary: "Explore the captivating maritime journey and historical seafaring adventures published by GB Publishing.",
+      thumbnail: "https://img.youtube.com/vi/u1JsGksWwb4/hqdefault.jpg",
+      embedUrl: "https://www.youtube.com/embed/u1JsGksWwb4",
+      badge: "Live Post from Wix Dashboard"
+    },
+    {
       id: "preview-the-zodiac-cooks",
       title: "Preview - The Zodiac Cooks",
       author: "Alex Poxon (via Penny Thornton)",
@@ -27,39 +38,6 @@ export default function JournalView() {
       thumbnail: "https://img.youtube.com/vi/HTaWcwy590M/hqdefault.jpg",
       embedUrl: "https://www.youtube.com/embed/HTaWcwy590M",
       badge: "Live Post from Wix Dashboard"
-    },
-    {
-      id: "dennis-to-alice",
-      title: "Dennis to Alice — River Flood Documentary & Author Story",
-      author: "George S Boughton",
-      date: "Surrey & Thames Tributaries Feature",
-      type: "Documentary Video",
-      summary: "George S Boughton shares the captivating story behind Dennis to Alice, exploring river ecology, environmental preservation, and the human journeys along local waterways.",
-      thumbnail: "https://static.wixstatic.com/media/7c7af8_ed5c5ab58eb749838f02682382fc183c~mv2.jpg",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      badge: "Featured Documentary"
-    },
-    {
-      id: "ozlems-table",
-      title: "Özlem's Turkish Table — Gourmand Award & TV/Radio Feature",
-      author: "Özlem Warren",
-      date: "BBC & Talk Radio Europe Interview",
-      type: "Author Interview",
-      summary: "Celebrated author Özlem Warren discusses regional Turkish culinary heritage, hosting live cooking masterclasses, and donating book proceeds to Turkey earthquake relief.",
-      thumbnail: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      badge: "Award Winner"
-    },
-    {
-      id: "you-are-noah",
-      title: "You are Noah! — Wildlife Conservation & Sky TV Broadcast",
-      author: "Hein Prinsloo Curson",
-      date: "Global Wildlife Appeal",
-      type: "Conservation Video",
-      summary: "Explore the international wildlife rescue mission behind the You are Noah! series, protecting endangered species from extinction in partnership with The Noah's Ark Foundation.",
-      thumbnail: "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=800&q=80",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      badge: "Sky TV Feature"
     }
   ];
 
