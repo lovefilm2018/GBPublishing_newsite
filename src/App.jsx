@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import PerksRibbon from './components/PerksRibbon';
@@ -14,9 +14,11 @@ import AboutView from './components/AboutView';
 import Footer from './components/Footer';
 
 import catalogData from './data/catalog.json';
+import { fetchCatalogProducts } from './services/wixClient';
 import { Filter, Sparkles, Feather, Search, RotateCcw, Check, ShoppingBag, ArrowRight } from 'lucide-react';
 
 export default function App() {
+  const [catalog, setCatalog] = useState(catalogData);
   const [activeTab, setActiveTab] = useState('home');
   const [selectedCategory, setSelectedCategory] = useState('ALL');
   const [selectedAuthor, setSelectedAuthor] = useState('ALL');
@@ -30,14 +32,25 @@ export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
 
+  // Fetch live products from Wix Headless API on mount with resilient fallback
+  useEffect(() => {
+    async function loadLiveCatalog() {
+      const liveProducts = await fetchCatalogProducts();
+      if (liveProducts && liveProducts.length > 0) {
+        setCatalog(liveProducts);
+      }
+    }
+    loadLiveCatalog();
+  }, []);
+
   // Featured book for Hero banner
   const featuredBook = useMemo(() => {
-    return catalogData.find(b => b.title.includes("Özlem") || b.title.includes("Plants & Us")) || catalogData[0];
-  }, []);
+    return catalog.find(b => b.title.includes("Özlem") || b.title.includes("Plants & Us")) || catalog[0];
+  }, [catalog]);
 
   // Filtered catalogue logic
   const filteredBooks = useMemo(() => {
-    return catalogData.filter(book => {
+    return catalog.filter(book => {
       // Category Filter
       if (selectedCategory !== 'ALL' && !book.categories.includes(selectedCategory)) {
         return false;
@@ -330,7 +343,7 @@ export default function App() {
         {/* TAB 3: ART GALLERY VIEW */}
         {activeTab === 'art' && (
           <ArtGalleryView 
-            catalog={catalogData} 
+            catalog={catalog} 
             onAddToCart={handleAddToCart} 
           />
         )}
@@ -348,7 +361,7 @@ export default function App() {
           onClose={() => setSelectedBook(null)}
           onAddToCart={handleAddToCart}
           onOpenExcerpt={(b) => { setExcerptBook(b); setSelectedBook(null); }}
-          relatedBooks={catalogData.filter(b => b.categories.some(c => selectedBook.categories.includes(c)) && b.id !== selectedBook.id)}
+          relatedBooks={catalog.filter(b => b.categories.some(c => selectedBook.categories.includes(c)) && b.id !== selectedBook.id)}
           onSelectBook={setSelectedBook}
         />
       )}
