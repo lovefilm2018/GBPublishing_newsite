@@ -1,9 +1,21 @@
 {
-  "generated": "2026-08-03T20:38:14.334984+00:00",
-  "count": 7,
+  "generated": "2026-08-03T21:06:41.120516+00:00",
+  "count": 8,
   "posts": [
     {
       "id": "wix-live-0",
+      "title": "Preview - Plants & Us",
+      "author": "George S Boughton",
+      "date": "3 Aug 2026",
+      "type": "Video Post",
+      "summary": "This book is \"fascinating\" - The Telegraph. It’s packed with amazing facts about plants. Some will intrigue, some will amuse. This book trailer ends on an extremely sobering chapter, the interdependence of plants and animals. On that note, the world is witnessing a peace that could herald the end of wars, a hugely historic moment, and a shift to rebuilding our relationship with nature. A shift that we’d fail in at our peril. And the whole world is watching.",
+      "thumbnail": "https://img.youtube.com/vi/cAGTK5aVbGk/hqdefault.jpg",
+      "embedUrl": "https://www.youtube.com/embed/cAGTK5aVbGk",
+      "wixLink": "https://gbpublishingorg.wixsite.com/website-5/post/preview-plants-us",
+      "badge": "NEW!"
+    },
+    {
+      "id": "wix-live-1",
       "title": "Preview - The Ginologist Cook",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -15,7 +27,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-1",
+      "id": "wix-live-2",
       "title": "Preview - Nora & John",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -27,7 +39,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-2",
+      "id": "wix-live-3",
       "title": "Preview - Erin and the Mouse",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -39,7 +51,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-3",
+      "id": "wix-live-4",
       "title": "Preview - Grandad, let's go for a walk",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -51,7 +63,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-4",
+      "id": "wix-live-5",
       "title": "Preview - Seafaring",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -63,7 +75,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-5",
+      "id": "wix-live-6",
       "title": "Preview - The Zodiac Cooks",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
@@ -75,7 +87,7 @@
       "badge": "NEW!"
     },
     {
-      "id": "wix-live-6",
+      "id": "wix-live-7",
       "title": "Preview - Autobiology of a Vet",
       "author": "George S Boughton",
       "date": "3 Aug 2026",
