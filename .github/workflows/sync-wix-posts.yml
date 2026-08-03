@@ -108,6 +108,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to posts.json"
           else
-            git commit -m "chore: sync Wix blog posts [skip ci]"
+            git commit -m "chore: sync Wix blog posts"
             git push
           fi
