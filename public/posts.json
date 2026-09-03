@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-03T18:07:19.939627+00:00",
+  "generated": "2026-09-03T20:59:24.476920+00:00",
   "count": 9,
   "posts": [
     {
@@ -24,7 +24,7 @@
       "thumbnail": "https://img.youtube.com/vi/cAGTK5aVbGk/hqdefault.jpg",
       "embedUrl": "https://www.youtube.com/embed/cAGTK5aVbGk",
       "wixLink": "https://gbpublishingorg.wixsite.com/website-5/post/preview-plants-us",
-      "badge": "NEW!"
+      "badge": null
     },
     {
       "id": "wix-live-2",
@@ -36,7 +36,7 @@
       "thumbnail": "https://img.youtube.com/vi/yhDevxVPvrc/hqdefault.jpg",
       "embedUrl": "https://www.youtube.com/embed/yhDevxVPvrc",
       "wixLink": "https://gbpublishingorg.wixsite.com/website-5/post/preview-the-ginologist-cook",
-      "badge": "NEW!"
+      "badge": null
     },
     {
       "id": "wix-live-3",
@@ -48,7 +48,7 @@
       "thumbnail": "https://img.youtube.com/vi/nz-JH_a90h0/hqdefault.jpg",
       "embedUrl": "https://www.youtube.com/embed/nz-JH_a90h0",
       "wixLink": "https://gbpublishingorg.wixsite.com/website-5/post/preview-nora-john",
-      "badge": "NEW!"
+      "badge": null
     },
     {
       "id": "wix-live-4",
@@ -60,7 +60,7 @@
       "thumbnail": "https://img.youtube.com/vi/oKl_YLQ5qC4/hqdefault.jpg",
       "embedUrl": "https://www.youtube.com/embed/oKl_YLQ5qC4",
       "wixLink": "https://gbpublishingorg.wixsite.com/website-5/post/preview-erin-and-the-mouse",
-      "badge": "NEW!"
+      "badge": null
     },
     {
       "id": "wix-live-5",
@@ -72,7 +72,7 @@
       "thumbnail": "https://img.youtube.com/vi/OQBn-mSCfv4/hqdefault.jpg",
       "embedUrl": "https://www.youtube.com/embed/OQBn-mSCfv4",
       "wixLink": "https://gbpublishingorg.wixsite.com/website-5/post/preview-grandad-let-s-go-for-a-walk",
-      "badge": "NEW!"
+      "badge": null
     },
     {
       "id": "wix-live-6",
@@ -84,7 +84,7 @@
       "thumbnail": "https://img.youtube.com/vi/ncS3FYL4R_s/hqdefault.jpg",
       "embedUrl": "https://www.youtube.com/embed/ncS3FYL4R_s",
       "wixLink": "https://gbpublishingorg.wixsite.com/website-5/post/preview-seafaring",
-      "badge": "NEW!"
+      "badge": null
     },
     {
       "id": "wix-live-7",
@@ -96,7 +96,7 @@
       "thumbnail": "https://img.youtube.com/vi/u1JsGksWwb4/hqdefault.jpg",
       "embedUrl": "https://www.youtube.com/embed/u1JsGksWwb4",
       "wixLink": "https://gbpublishingorg.wixsite.com/website-5/post/preview-the-zodiac-cooks",
-      "badge": "NEW!"
+      "badge": null
     },
     {
       "id": "wix-live-8",
@@ -108,7 +108,7 @@
       "thumbnail": "https://img.youtube.com/vi/HTaWcwy590M/hqdefault.jpg",
       "embedUrl": "https://www.youtube.com/embed/HTaWcwy590M",
       "wixLink": "https://gbpublishingorg.wixsite.com/website-5/post/preview-autobiology-of-a-vet",
-      "badge": "NEW!"
+      "badge": null
     }
   ]
 }
