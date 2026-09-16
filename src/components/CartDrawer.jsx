@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ShoppingBag, Trash2, Plus, Minus, ShieldCheck, Bookmark, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { X, ShoppingBag, Trash2, Plus, Minus, ShieldCheck, HeartHandshake, ArrowRight, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem, onClearCart }) {
@@ -81,7 +81,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                     </div>
                     <h3 className="font-serif text-xl font-bold text-slate-800">Your direct cart is empty</h3>
                     <p className="text-xs text-slate-500 max-w-xs mx-auto">
-                      Explore our catalogue to support indie authors directly and claim free bookmarks with every order!
+                      Explore our catalogue to support indie authors, discover signed editions, and support independent literature!
                     </p>
                     <button 
                       onClick={onClose}
@@ -134,8 +134,8 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
               <form onSubmit={handleCheckoutSubmit} className="space-y-4 text-xs font-sans">
                 <div className="bg-[#F9F2E2] border border-[#C49A45]/40 p-3.5 rounded-xl space-y-1">
                   <span className="font-bold text-[#1A1612] block">✨ Direct Order Benefits Included:</span>
-                  <span className="text-slate-700 block">• Free Custom GB Publishing Bookmark</span>
-                  <span className="text-slate-700 block">• 100% Direct Author Royalty Contribution</span>
+                  <span className="text-slate-700 block">• 100% Direct Support for Indie Authors & Local Events</span>
+                  <span className="text-slate-700 block">• Fair Author Royalty Contribution</span>
                   <span className="text-slate-700 block">• Fast 1-2 Day UK Tracked Dispatch</span>
                 </div>
 
@@ -212,8 +212,8 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                 </p>
                 <div className="bg-amber-50 p-4 rounded-xl border border-amber-200 text-xs text-slate-700 text-left space-y-1">
                   <span className="font-bold block text-[#7A1F1A]">Order Highlights:</span>
-                  <span>• Free custom GB Publishing bookmark included</span>
-                  <span>• Direct dispatch within 1–2 working days</span>
+                  <span>• Direct dispatch within 1–2 working days from UK warehouse</span>
+                  <span>• 100% direct support for indie authors and local events</span>
                 </div>
                 <button 
                   onClick={handleFinish}

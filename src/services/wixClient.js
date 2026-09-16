@@ -57,9 +57,11 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
       .replace(/\s*-\s*wholesale.*$/i, '')
       .replace(/\s*-\s*40%\s*off.*$/i, '')
       .replace(/\s*-\s*buy wholesale.*$/i, '')
+      .replace(/(?:[ÖöOo]{2,3}|\ufffd+)zlem/gi, 'Ozlem')
+      .replace(/Özlem/g, 'Ozlem')
       .trim();
 
-    if (!displayName) displayName = rawName;
+    if (!displayName) displayName = rawName.replace(/(?:[ÖöOo]{2,3}|\ufffd+)zlem/gi, 'Ozlem');
 
     const price = p.price?.price || 14.99;
     
@@ -134,7 +136,9 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
       categories: categories,
       coverImage: coverImage,
       gallery: gallery,
-      description: description.length > 20 ? description.replace(/<[^>]+>/g, ' ').trim() : `A featured indie publication by GB Publishing, available direct with free bookmark.`,
+      description: description.length > 20 
+        ? description.replace(/<[^>]+>/g, ' ').replace(/(?:[ÖöOo]{2,3}|\ufffd+)zlem/gi, 'Ozlem').trim() 
+        : `A featured indie publication by GB Publishing, available direct with fast UK delivery.`,
       isWholesale: isWholesale,
       isSigned: isSigned,
       format: isSigned ? "Signed Edition" : (price > 20 ? "Hardcover" : "Paperback"),
@@ -147,7 +151,7 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
 }
 
 function extractAuthorFromName(name) {
-  if (name.includes('Özlem') || name.includes('Ozlem')) return 'Özlem Warren';
+  if (name.includes('Özlem') || name.includes('Ozlem') || name.includes('zlem')) return 'Ozlem Warren';
   if (name.includes('Kimberley')) return 'Anthony & Wendy Kimberley';
   if (name.includes('Thornton')) return 'P Thornton';
   if (name.includes('Latham')) return 'Clare Latham';

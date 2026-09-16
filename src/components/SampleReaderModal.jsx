@@ -38,7 +38,7 @@ export default function SampleReaderModal({ book, onClose }) {
           </blockquote>
 
           <p>
-            {book.description.slice(300, 700) || "Explore the complete publication directly through GB Publishing for author signed copies, custom bookmark, and fast UK delivery."}
+            {book.description.slice(300, 700) || "Explore the complete publication directly through GB Publishing for select author signed copies, direct author support, and fast UK delivery."}
           </p>
         </div>
 

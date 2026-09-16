@@ -68,16 +68,24 @@ export default function Footer({ onNavClick }) {
           
           {/* Brand Colophon */}
           <div className="md:col-span-4 space-y-4">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <img 
                 src={gbpLogo} 
                 alt="GB Publishing" 
-                className="h-9 object-contain filter brightness-0 invert opacity-90" 
+                className="h-10 w-auto object-contain" 
               />
+              <div className="flex flex-col">
+                <span className="font-serif text-lg font-bold tracking-tight text-white leading-none">
+                  GB PUBLISHING
+                </span>
+                <span className="text-[9px] uppercase tracking-widest text-amber-200/80 font-sans mt-0.5">
+                  Independent Publisher · Surrey, UK
+                </span>
+              </div>
             </div>
 
             <p className="leading-relaxed">
-              Independent indie book publishing house based in the United Kingdom. Dedicated to high-end literary craftsmanship, author-signed editions, and direct reader relationships since 2013.
+              Independent indie book publishing house based in Surrey, United Kingdom. Dedicated to literary craftsmanship, fine art titles, author-signed editions, and direct reader relationships since 2013.
             </p>
 
             <div className="pt-2 space-y-2">
@@ -117,13 +125,13 @@ export default function Footer({ onNavClick }) {
 
           {/* Contact & Direct Perks */}
           <div className="md:col-span-2 space-y-3">
-            <h4 className="font-serif text-sm font-bold text-amber-100 uppercase tracking-wider">Direct Benefits</h4>
+            <h4 className="font-serif text-sm font-bold text-amber-100 uppercase tracking-wider">Why Buy Direct?</h4>
             <ul className="space-y-2 text-[11px]">
-              <li>✨ Free Custom Bookmark</li>
-              <li>✍️ Author Signed Copies</li>
+              <li>🏛️ Support Local Publishers</li>
+              <li>✍️ Many Books Signed by Authors</li>
+              <li>🎉 Fund Local Author Events</li>
               <li>🚚 Free UK Delivery £25+</li>
-              <li>📦 1-2 Day Dispatch</li>
-              <li>❤️ Direct Author Support</li>
+              <li>❤️ Direct Author Royalties</li>
             </ul>
           </div>
 

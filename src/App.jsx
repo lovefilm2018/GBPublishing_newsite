@@ -64,7 +64,7 @@ export default function App() {
 
   // Featured book for Hero banner
   const featuredBook = useMemo(() => {
-    return catalog.find(b => b.title.includes("Özlem") || b.title.includes("Plants & Us")) || catalog[0];
+    return catalog.find(b => b.title.includes("Ozlem") || b.title.includes("Özlem") || b.title.includes("Plants & Us")) || catalog[0];
   }, [catalog]);
 
   // Filtered catalogue logic
@@ -272,7 +272,7 @@ export default function App() {
                   {selectedCategory === 'ALL' ? 'Complete Book Catalogue' : selectedCategory}
                 </h1>
                 <p className="text-xs text-slate-600 font-sans max-w-2xl">
-                  Showing {filteredBooks.length} titles available directly from GB Publishing. Orders include free custom bookmarks, fast UK delivery, and optional author-signed copies.
+                  Showing {filteredBooks.length} titles available directly from GB Publishing. Fast UK delivery, select author-signed editions, and direct support for indie authors and local events.
                 </p>
               </div>
 
@@ -283,26 +283,28 @@ export default function App() {
                 <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
                   {categoriesList.map(cat => (
                     <button 
-                      key={cat.id}
-                      onClick={() => { setSelectedCategory(cat.id); setSelectedAuthor('ALL'); }}
-                      className={`px-4 py-2 rounded-xl text-xs font-bold font-sans whitespace-nowrap transition-all ${selectedCategory === cat.id ? 'bg-[#8C2520] text-white shadow-md' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
+                      key={cat}
+                      onClick={() => setSelectedCategory(cat)}
+                      className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${selectedCategory === cat ? 'bg-[#8C2520] text-white shadow-md shadow-red-950/20' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
                     >
-                      {cat.label}
+                      {cat}
                     </button>
                   ))}
                 </div>
 
-                {/* Secondary Toggles */}
-                <div className="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-slate-100 text-xs font-sans">
-                  <div className="flex items-center gap-4">
-                    <label className="flex items-center gap-2 cursor-pointer font-semibold text-slate-700">
+                {/* Sub-Filters & Quick Toggles */}
+                <div className="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-slate-100 text-xs">
+                  
+                  {/* Left toggles */}
+                  <div className="flex items-center gap-3">
+                    <label className="flex items-center gap-2 cursor-pointer text-slate-700 select-none">
                       <input 
                         type="checkbox" 
                         checked={filterSignedOnly} 
                         onChange={(e) => setFilterSignedOnly(e.target.checked)}
                         className="rounded text-[#8C2520] focus:ring-[#8C2520]" 
                       />
-                      <span>✍️ Signed Copies Only</span>
+                      <span>✍️ Signed Copies Available</span>
                     </label>
 
                     <label className="flex items-center gap-2 cursor-pointer font-semibold text-slate-700">

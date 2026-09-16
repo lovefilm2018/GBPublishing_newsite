@@ -16,9 +16,12 @@ def clean_text(text):
     t = html.unescape(text)
     # Strip HTML tags
     t = re.sub(r'<[^>]+>', ' ', t)
-    # Fix character replacements
-    t = t.replace('\ufffdzlem', 'Özlem').replace('zlem', 'Özlem').replace('Ozlem', 'Özlem')
+    # Normalize Ozlem cleanly without duplicate O's (e.g. OOzlem, ÖÖzlem, \ufffdzlem)
+    t = re.sub(r'(?:[ÖöOo]{1,3}|\ufffd+)zlem', 'Ozlem', t)
     t = t.replace('\ufffd', ' ')
+    # Remove bookmark references
+    t = re.sub(r'(?i)\s*(?:with\s+)?(?:a\s+)?free\s+custom\s+bookmarks?(?:\s+and\s+fast\s+delivery)?', '', t)
+    t = re.sub(r'(?i)\s*(?:with\s+)?(?:a\s+)?free\s+bookmarks?(?:\s+and\s+fast\s+delivery)?', '', t)
     t = re.sub(r'\s+', ' ', t).strip()
     return t
 
@@ -26,8 +29,8 @@ def extract_author(name, collection):
     name_str = clean_text(name)
     coll_str = clean_text(collection)
     
-    if "Özlem" in name_str or "Ozlem" in name_str:
-        return "Özlem Warren"
+    if "Ozlem" in name_str or "Özlem" in name_str:
+        return "Ozlem Warren"
     if "Anthony & Wendy Kimberley" in name_str or "Anthony Kimberley" in name_str or "Kimberley" in name_str:
         return "Anthony & Wendy Kimberley"
     if "Thornton" in name_str or "Zodiac Cooks" in name_str:
@@ -126,7 +129,7 @@ for idx, row in products.iterrows():
         "categories": categories,
         "coverImage": cover_image,
         "gallery": gallery,
-        "description": description if len(description) > 30 else f"A featured indie publication by {author}, available directly from GB Publishing with free bookmark and fast delivery.",
+        "description": description if len(description) > 30 else f"A featured indie publication by {author}, available directly from GB Publishing with fast delivery.",
         "isWholesale": is_wholesale,
         "isSigned": is_signed,
         "format": "Signed Edition" if is_signed else ("Hardcover" if price > 20 else "Paperback"),

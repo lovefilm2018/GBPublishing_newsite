@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ShoppingBag, Bookmark, Feather, Truck, ShieldCheck, ChevronDown, BookOpen, Star, Share2 } from 'lucide-react';
+import { X, ShoppingBag, HeartHandshake, Feather, Truck, ShieldCheck, ChevronDown, BookOpen, Star, Share2 } from 'lucide-react';
 
 export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, relatedBooks, onSelectBook }) {
   if (!book) return null;
@@ -149,10 +149,10 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
 
                 {/* D2C Incentives Bar */}
                 <div className="grid grid-cols-2 gap-2 text-xs text-slate-700 pt-2 border-t border-slate-200/70">
-                  <span className="flex items-center gap-1.5"><Bookmark className="w-4 h-4 text-[#8C2520]" /> Free Bookmark Included</span>
-                  <span className="flex items-center gap-1.5"><Feather className="w-4 h-4 text-[#D4A359]" /> Signed Copy Available</span>
+                  <span className="flex items-center gap-1.5"><HeartHandshake className="w-4 h-4 text-[#2D7D46]" /> Support Local Publishing</span>
+                  <span className="flex items-center gap-1.5"><Feather className="w-4 h-4 text-[#D4A359]" /> {book.isSigned ? 'Signed Copy Available' : 'Direct Publisher Care'}</span>
                   <span className="flex items-center gap-1.5"><Truck className="w-4 h-4 text-[#1D2A44]" /> Free UK Delivery £25+</span>
-                  <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-emerald-600" /> Direct Author Support</span>
+                  <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-emerald-600" /> Direct Author Royalties</span>
                 </div>
               </div>
 
@@ -169,7 +169,7 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                 {showExternalRetailers && (
                   <div className="p-4 bg-white space-y-2 text-xs text-slate-600 border-t border-slate-200">
                     <p className="italic text-slate-500 mb-2">
-                      Note: Ordering directly from GB Publishing includes custom bookmarks, signed copies, and direct author royalties.
+                      Note: Ordering directly from GB Publishing directly supports indie authors, local literary events, and fair author royalties.
                     </p>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                       <a href="https://www.amazon.co.uk" target="_blank" rel="noreferrer" className="p-2 border rounded text-center hover:bg-slate-50 text-slate-800 font-medium">Amazon UK</a>

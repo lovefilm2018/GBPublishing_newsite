@@ -33,16 +33,16 @@ export default function Navbar({
       <div className="bg-[#7A1F1A] text-amber-100 text-xs py-1.5 px-4 font-medium tracking-wide">
         <div className="container mx-auto flex justify-between items-center text-center sm:text-left">
           <div className="flex items-center gap-4 mx-auto sm:mx-0">
-            <span className="flex items-center gap-1"><Sparkles className="w-3.5 h-3.5 text-amber-300" /> ✨ Free Custom Bookmark with Every Direct Order</span>
-            <span className="hidden md:flex items-center gap-1"><Feather className="w-3.5 h-3.5 text-amber-300" /> ✍️ Author Signed Copies Available</span>
+            <span className="flex items-center gap-1.5"><Sparkles className="w-3.5 h-3.5 text-amber-300" /> Support Independent UK Publishing</span>
+            <span className="hidden md:flex items-center gap-1.5"><Feather className="w-3.5 h-3.5 text-amber-300" /> ✍️ Many Books Signed by the Author</span>
             <span className="hidden lg:inline">🚚 Free UK Delivery on Orders £25+</span>
           </div>
           <div className="hidden sm:flex items-center gap-4">
             <SocialLinks variant="compact" />
             <a 
-              href="#perks" 
-              onClick={(e) => { e.preventDefault(); handleNavClick('home'); setTimeout(() => document.getElementById('perks')?.scrollIntoView(), 100); }}
-              className="text-amber-200 hover:text-white underline text-[11px]"
+              href="#why-buy-direct" 
+              onClick={(e) => { e.preventDefault(); handleNavClick('home'); setTimeout(() => document.getElementById('why-buy-direct')?.scrollIntoView({ behavior: 'smooth' }), 100); }}
+              className="text-amber-200 hover:text-white underline text-[11px] font-semibold"
             >
               Why Buy Direct? →
             </a>
@@ -51,18 +51,26 @@ export default function Navbar({
       </div>
 
       {/* Main Header Bar */}
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <div className="container mx-auto px-4 py-2.5 sm:py-3 flex items-center justify-between gap-4">
         {/* Brand Logo & Title */}
         <div className="flex items-center gap-3">
           <button 
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3 text-left focus:outline-none group py-1"
+            className="flex items-center gap-3 text-left focus:outline-none group py-0.5"
           >
             <img 
               src={gbpLogo} 
               alt="GB Publishing" 
-              className="h-10 sm:h-11 object-contain filter brightness-0 invert group-hover:scale-105 transition-transform" 
+              className="h-9 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform" 
             />
+            <div className="hidden sm:flex flex-col">
+              <span className="font-serif text-lg font-bold tracking-tight text-white leading-none">
+                GB PUBLISHING
+              </span>
+              <span className="text-[9px] uppercase tracking-widest text-amber-200/80 font-sans mt-0.5 font-medium">
+                Independent Publisher · UK
+              </span>
+            </div>
           </button>
         </div>
 
