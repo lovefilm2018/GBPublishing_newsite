@@ -49,21 +49,32 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
                      rawName.toLowerCase().includes('signed') || 
                      description.toLowerCase().includes('signed');
 
-    const isWholesale = rawName.toLowerCase().includes('wholesale') || 
-                        rawName.toLowerCase().includes('40% off');
+    const isWholesale = rawName.toLowerCase().includes('wholesale');
 
-    // Strip wholesale suffix cleanly using valid JS regex
     let displayName = rawName
-      .replace(/\s*-\s*wholesale.*$/i, '')
-      .replace(/\s*-\s*40%\s*off.*$/i, '')
-      .replace(/\s*-\s*buy wholesale.*$/i, '')
-      .replace(/(?:[ÖöOo]{2,3}|\ufffd+)zlem/gi, 'Ozlem')
-      .replace(/Özlem/g, 'Ozlem')
+      .replace(/(?:[ÖöOo]{2,3}|\ufffd+)zlem/gi, 'Özlem')
+      .replace(' -by ', ' - by ')
       .trim();
 
-    if (!displayName) displayName = rawName.replace(/(?:[ÖöOo]{2,3}|\ufffd+)zlem/gi, 'Ozlem');
+    if (!displayName) displayName = rawName;
 
-    const price = p.price?.price || 14.99;
+    const priceData = p.priceData || {};
+    const basePrice = priceData.price;
+    const discountedPrice = priceData.discountedPrice;
+
+    let price = 14.99;
+    let originalPrice = null;
+
+    if (discountedPrice !== undefined && discountedPrice !== null && basePrice !== undefined && basePrice !== null && discountedPrice < basePrice) {
+      price = Number(discountedPrice);
+      originalPrice = Number(basePrice);
+    } else if (basePrice !== undefined && basePrice !== null) {
+      price = Number(basePrice);
+      originalPrice = isSigned ? Math.round((price * 1.2) * 100) / 100 : null;
+    } else if (p.price?.price) {
+      price = Number(p.price.price);
+      originalPrice = isSigned ? Math.round((price * 1.2) * 100) / 100 : null;
+    }
     
     // Media handling
     const mediaItems = p.media?.items || [];
@@ -149,7 +160,7 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
       rawTitle: rawName,
       author: p.brand || author,
       price: price,
-      originalPrice: isSigned ? Math.round((price * 1.2) * 100) / 100 : null,
+      originalPrice: originalPrice,
       sku: p.sku || `GBP-${1000 + idx}`,
       ribbon: effectiveRibbon || (isSigned ? "Signed Collector Edition" : ""),
       categories: categories,

@@ -72,14 +72,12 @@ export default function App() {
     return catalog.filter(book => {
       const titleLower = book.title.toLowerCase();
 
-      // Exclude generic Wix placeholder/bundle container entries
+      // Exclude generic empty Wix placeholder/dummy bundle container entries
       if (
-        titleLower.includes("paperbacks") ||
-        titleLower.includes("copy of") ||
-        titleLower.includes("wholesale") ||
-        titleLower.includes("crisis appeal") ||
-        titleLower.includes("black friday") ||
-        titleLower.includes("stunning coffee-table")
+        titleLower.startsWith("copy of") ||
+        titleLower === "non-fiction biography memoir paperbacks" ||
+        titleLower.startsWith("stunning coffee-table cookbooks") ||
+        titleLower.startsWith("gbp crisis appeal")
       ) {
         return false;
       }

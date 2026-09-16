@@ -162,17 +162,29 @@ for idx, p in enumerate(raw_products):
                  'signed' in raw_name.lower() or 
                  'signed' in description.lower())
     
-    is_wholesale = ('wholesale' in raw_name.lower() or 
-                    '40% off' in raw_name.lower())
+    is_wholesale = ('wholesale' in raw_name.lower())
     
-    display_name = re.sub(r'(?i)\s*-\s*wholesale.*$', '', raw_name)
-    display_name = re.sub(r'(?i)\s*-\s*40%\s*off.*$', '', display_name)
-    display_name = re.sub(r'(?i)\s*-\s*buy wholesale.*$', '', display_name).strip()
+    display_name = raw_name
+    # Clean up minor artifacts while preserving edition details
+    display_name = re.sub(r'(?:[ÖöOo]{2,3}|\ufffd+)zlem', 'Özlem', display_name)
+    display_name = display_name.replace(' -by ', ' - by ').strip()
     if not display_name:
         display_name = raw_name
         
-    price_val = p.get('price', {}).get('price')
-    price = float(price_val) if price_val is not None else 14.99
+    price_data = p.get('priceData', {})
+    base_price = price_data.get('price')
+    discounted_price = price_data.get('discountedPrice')
+    
+    if discounted_price is not None and base_price is not None and discounted_price < base_price:
+        price = float(discounted_price)
+        original_price = float(base_price)
+    elif base_price is not None:
+        price = float(base_price)
+        original_price = round(price * 1.2, 2) if is_signed else None
+    else:
+        price_val = p.get('price', {}).get('price')
+        price = float(price_val) if price_val is not None else 14.99
+        original_price = round(price * 1.2, 2) if is_signed else None
     
     media_items = p.get('media', {}).get('items', [])
     image_urls = []
@@ -211,7 +223,7 @@ for idx, p in enumerate(raw_products):
         "rawTitle": raw_name,
         "author": author,
         "price": price,
-        "originalPrice": round(price * 1.2, 2) if is_signed else None,
+        "originalPrice": original_price,
         "sku": sku,
         "ribbon": ribbon if ribbon else ("Signed Collector Edition" if is_signed else ""),
         "categories": categories,
