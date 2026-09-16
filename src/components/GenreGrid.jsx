@@ -22,8 +22,8 @@ export default function GenreGrid({ onSelectCategory }) {
       icon: <BookOpen className="w-7 h-7 text-red-200" />
     },
     {
-      id: "Cookbooks & Food",
-      name: "Cookbooks & Food",
+      id: "Food & Drink",
+      name: "Food & Drink",
       count: "15+ Titles",
       desc: "Award-winning Turkish recipes by Özlem Warren & astrological date-night dining.",
       bg: "from-[#3A2410] to-[#211408]",

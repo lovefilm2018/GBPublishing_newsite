@@ -27,7 +27,7 @@ export default function Hero({ featuredBook, onSelectBook, onExploreClick }) {
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-sans leading-relaxed">
-              Welcome to the direct storefront of GB Publishing. By ordering direct from us, you directly support indie authors, champion local publishers, help fund community literary events, and gain access to select author-signed copies.
+              Welcome to the direct storefront of GB Publishing Org. By ordering direct from us, you directly support indie authors, champion local publishers, help fund community literary events, and gain access to author-signed copies and special offers.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
@@ -55,12 +55,12 @@ export default function Hero({ featuredBook, onSelectBook, onExploreClick }) {
                 <span>Indie Titles</span>
               </div>
               <div>
-                <span className="font-bold text-amber-300 block text-sm">100%</span>
-                <span>Direct Support</span>
+                <span className="font-bold text-amber-300 block text-sm">£15+</span>
+                <span>Free UK Delivery</span>
               </div>
               <div>
                 <span className="font-bold text-amber-300 block text-sm">Signed</span>
-                <span>Editions Available</span>
+                <span>Editions & Offers</span>
               </div>
             </div>
           </div>

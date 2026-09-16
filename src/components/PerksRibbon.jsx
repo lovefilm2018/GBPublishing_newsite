@@ -11,7 +11,7 @@ export default function PerksRibbon() {
     {
       icon: <HeartHandshake className="w-6 h-6 text-[#2D7D46]" />,
       title: "Direct Author Royalties",
-      desc: "Unlike corporate retailers who take up to 60% in distributor margins, buying direct ensures fair, meaningful earnings flow straight to authors."
+      desc: "Unlike corporate retailers who take very large distributor margins, buying direct ensures fair, meaningful earnings flow straight to authors."
     },
     {
       icon: <Calendar className="w-6 h-6 text-[#1C2B40]" />,
@@ -20,8 +20,8 @@ export default function PerksRibbon() {
     },
     {
       icon: <Feather className="w-6 h-6 text-[#D4A359]" />,
-      title: "Many Books Signed by Authors",
-      desc: "Many titles in our catalogue are available hand-signed by the author — look for the signed badge on our featured editions."
+      title: "Author Signed / Special Offers / Charity Supporting",
+      desc: "Many books in our catalogue are author signed, special collector offers, or directly support vital charitable causes."
     }
   ];
 
@@ -36,7 +36,7 @@ export default function PerksRibbon() {
             <span>The Independent Advantage</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-            Why Purchase Direct from GB Publishing?
+            Why Purchase Direct from GB Publishing Org?
           </h2>
           <p className="font-sans text-xs sm:text-sm text-slate-600 leading-relaxed">
             When you purchase directly from an indie press, every book you buy creates a meaningful difference for local literature, authors, and communities.
@@ -66,7 +66,7 @@ export default function PerksRibbon() {
         {/* Reassurance Footer Banner */}
         <div className="mt-8 pt-6 border-t border-[#E5E0DA]/70 flex flex-wrap items-center justify-center gap-6 text-xs font-sans text-slate-600">
           <span className="flex items-center gap-1.5">
-            <Truck className="w-4 h-4 text-[#1C2B40]" /> Free UK tracked delivery on orders £25+
+            <Truck className="w-4 h-4 text-[#1C2B40]" /> Free UK delivery on orders over £15
           </span>
           <span className="hidden sm:inline text-slate-300">•</span>
           <span className="flex items-center gap-1.5">

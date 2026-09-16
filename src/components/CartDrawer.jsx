@@ -10,7 +10,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
   if (!isOpen) return null;
 
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const freeShippingThreshold = 25.0;
+  const freeShippingThreshold = 15.0;
   const remainingForFreeShipping = Math.max(0, freeShippingThreshold - subtotal);
   const isFreeShipping = subtotal >= freeShippingThreshold;
 
@@ -57,7 +57,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
             <div className="bg-amber-50 p-3.5 border-b border-amber-200 text-xs font-sans">
               <div className="flex justify-between items-center mb-1.5">
                 <span className="font-semibold text-slate-800">
-                  {isFreeShipping ? '🎉 You qualify for FREE UK Delivery!' : `Add £${remainingForFreeShipping.toFixed(2)} more for FREE UK Delivery!`}
+                  {isFreeShipping ? '🎉 You qualify for FREE UK Delivery on orders over £15!' : `Add £${remainingForFreeShipping.toFixed(2)} more for FREE UK Delivery!`}
                 </span>
                 <span className="font-bold text-[#7A1F1A]">{Math.min(100, Math.round((subtotal / freeShippingThreshold) * 100))}%</span>
               </div>

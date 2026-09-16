@@ -150,7 +150,7 @@ export default function App() {
     { id: 'ALL', label: 'All Catalogue' },
     { id: 'Fiction, Young Adult & Sci-Fi', label: 'Fiction, Young Adult & Sci-Fi' },
     { id: 'Non-Fiction & Memoir', label: 'Non-Fiction & Memoir' },
-    { id: 'Cookbooks & Food', label: 'Cookbooks & Food' },
+    { id: 'Food & Drink', label: 'Food & Drink' },
     { id: "Children's & Picture Books", label: "Children's & Picture Books" },
     { id: 'Poetry & Fine Art', label: 'Poetry & Fine Art' }
   ];
@@ -272,7 +272,7 @@ export default function App() {
                   {selectedCategory === 'ALL' ? 'Complete Book Catalogue' : selectedCategory}
                 </h1>
                 <p className="text-xs text-slate-600 font-sans max-w-2xl">
-                  Showing {filteredBooks.length} titles available directly from GB Publishing. Fast UK delivery, select author-signed editions, and direct support for indie authors and local events.
+                  Showing {filteredBooks.length} titles available directly from GB Publishing Org. Free UK delivery on orders over £15, author signed editions, and direct royalties for indie creators.
                 </p>
               </div>
 
@@ -281,15 +281,19 @@ export default function App() {
                 
                 {/* Category Pills */}
                 <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-                  {categoriesList.map(cat => (
-                    <button 
-                      key={cat}
-                      onClick={() => setSelectedCategory(cat)}
-                      className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${selectedCategory === cat ? 'bg-[#8C2520] text-white shadow-md shadow-red-950/20' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
-                    >
-                      {cat}
-                    </button>
-                  ))}
+                  {categoriesList.map(cat => {
+                    const catId = typeof cat === 'string' ? cat : cat.id;
+                    const catLabel = typeof cat === 'string' ? cat : cat.label;
+                    return (
+                      <button 
+                        key={catId}
+                        onClick={() => setSelectedCategory(catId)}
+                        className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${selectedCategory === catId ? 'bg-[#8C2520] text-white shadow-md shadow-red-950/20' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
+                      >
+                        {catLabel}
+                      </button>
+                    );
+                  })}
                 </div>
 
                 {/* Sub-Filters & Quick Toggles */}
@@ -304,7 +308,7 @@ export default function App() {
                         onChange={(e) => setFilterSignedOnly(e.target.checked)}
                         className="rounded text-[#8C2520] focus:ring-[#8C2520]" 
                       />
-                      <span>✍️ Signed Copies Available</span>
+                      <span>✍️ Author Signed / Special Offers</span>
                     </label>
 
                     <label className="flex items-center gap-2 cursor-pointer font-semibold text-slate-700">

@@ -62,7 +62,7 @@ export default function AboutView() {
             Our Story & Global Mission
           </h1>
           <p className="text-slate-600 font-sans text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            GB Publishing is an independent publishing house dedicated to bringing extraordinary voices, fine art literature, and impactful stories to readers worldwide.
+            GB Publishing Org is an independent publishing house dedicated to bringing extraordinary voices, fine art literature, and impactful stories to readers worldwide.
           </p>
         </div>
 

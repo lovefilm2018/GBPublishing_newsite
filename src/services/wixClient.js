@@ -12,8 +12,8 @@ const WIX_SITE_ID = import.meta.env.VITE_WIX_SITE_ID || '34002663-ff5b-495e-be4c
 // Based on full audit of all 70+ collections in the Staging Wix Store.
 // Collection names are matched on substrings (case-insensitive).
 const COLLECTION_IMPRINT_MAP = [
-  // Cookbooks & Food
-  { keywords: ['cook', 'food', 'drink', 'ginologist', 'ozlem', 'gin', 'turkish', 'zodiac cooks', 'penny - tzc'], imprint: "Cookbooks & Food" },
+  // Food & Drink (matching live Wix store SEO category)
+  { keywords: ['cook', 'food', 'drink', 'ginologist', 'ozlem', 'gin', 'turkish', 'zodiac cooks', 'penny - tzc'], imprint: "Food & Drink" },
   // Children's & Picture Books
   { keywords: ['picture book', 'children', 'lois', 'latham', 'boughton -alice', 'boughton - alice', 'solonair', 'islam - doogie', 'trivedy', 'pink biscuit', 'morgan - swsw', 'morgan - a2 prints', 'morgan - a3 prints', 'lois art prints', 'children\'s a', 'tillier'], imprint: "Children's & Picture Books" },
   // Poetry & Fine Art
@@ -109,7 +109,7 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
     // ── Step 3: Name-based fallback (if Wix collections returned nothing) ─────
     if (categories.length === 0) {
       if (nameLower.includes('cook') || nameLower.includes('food') || nameLower.includes('recipe') || nameLower.includes('turkish') || nameLower.includes('gin')) {
-        categories.push("Cookbooks & Food");
+        categories.push("Food & Drink");
       } else if (nameLower.includes('picture') || nameLower.includes('children') || nameLower.includes('grandad') || nameLower.includes('erin') || nameLower.includes('dennis') || nameLower.includes('tommy') || nameLower.includes('crumbdog')) {
         categories.push("Children's & Picture Books");
       } else if (nameLower.includes('poetry') || nameLower.includes('pargeter') || nameLower.includes('fine art')) {
@@ -121,24 +121,41 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
       }
     }
 
-    const slug = displayName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    const slug = displayName
+      .toLowerCase()
+      .replace(/ö/g, 'o')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+
+    const author = extractAuthorFromName(rawName);
+    const isPargeter = rawName.toLowerCase().includes('pargeter') || slug.includes('pargeter');
+    
+    let effectiveRibbon = ribbon;
+    let effectiveDescription = description.length > 20 
+      ? description.replace(/<[^>]+>/g, ' ').replace(/(?:[ÖöOo]{2,3}|\ufffd+)zlem/gi, 'Özlem').trim() 
+      : `A featured indie publication by ${author}, available directly from GB Publishing Org with fast UK delivery.`;
+
+    if (isPargeter) {
+      effectiveRibbon = "Free Bookmark Included";
+      if (!effectiveDescription.toLowerCase().includes("free custom gb publishing bookmark")) {
+        effectiveDescription += " ✨ Free custom GB Publishing bookmark included with every copy.";
+      }
+    }
 
     return {
       id: p.id || p.numericId || `wix_${idx}`,
       slug: slug,
       title: displayName,
       rawTitle: rawName,
-      author: p.brand || extractAuthorFromName(rawName),
+      author: p.brand || author,
       price: price,
       originalPrice: isSigned ? Math.round((price * 1.2) * 100) / 100 : null,
       sku: p.sku || `GBP-${1000 + idx}`,
-      ribbon: ribbon || (isSigned ? "Signed Collector Edition" : ""),
+      ribbon: effectiveRibbon || (isSigned ? "Signed Collector Edition" : ""),
       categories: categories,
       coverImage: coverImage,
       gallery: gallery,
-      description: description.length > 20 
-        ? description.replace(/<[^>]+>/g, ' ').replace(/(?:[ÖöOo]{2,3}|\ufffd+)zlem/gi, 'Ozlem').trim() 
-        : `A featured indie publication by GB Publishing, available direct with fast UK delivery.`,
+      description: effectiveDescription,
       isWholesale: isWholesale,
       isSigned: isSigned,
       format: isSigned ? "Signed Edition" : (price > 20 ? "Hardcover" : "Paperback"),
@@ -151,7 +168,8 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
 }
 
 function extractAuthorFromName(name) {
-  if (name.includes('Özlem') || name.includes('Ozlem') || name.includes('zlem')) return 'Ozlem Warren';
+  if (name.includes('Özlem') || name.includes('Ozlem') || name.includes('zlem')) return 'Özlem Warren';
+  if (name.includes('Pargeter') || name.includes('pargeter')) return 'Mary Pargeter';
   if (name.includes('Kimberley')) return 'Anthony & Wendy Kimberley';
   if (name.includes('Thornton')) return 'P Thornton';
   if (name.includes('Latham')) return 'Clare Latham';

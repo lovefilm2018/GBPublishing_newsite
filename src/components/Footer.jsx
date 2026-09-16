@@ -76,7 +76,7 @@ export default function Footer({ onNavClick }) {
               />
               <div className="flex flex-col">
                 <span className="font-serif text-lg font-bold tracking-tight text-white leading-none">
-                  GB PUBLISHING
+                  GB PUBLISHING ORG
                 </span>
                 <span className="text-[9px] uppercase tracking-widest text-amber-200/80 font-sans mt-0.5">
                   Independent Publisher · Surrey, UK
@@ -89,7 +89,7 @@ export default function Footer({ onNavClick }) {
             </p>
 
             <div className="pt-2 space-y-2">
-              <span className="text-[11px] font-bold text-amber-200 uppercase tracking-wider block">Follow GB Publishing:</span>
+              <span className="text-[11px] font-bold text-amber-200 uppercase tracking-wider block">Follow GB Publishing Org:</span>
               <SocialLinks />
             </div>
 
@@ -106,7 +106,7 @@ export default function Footer({ onNavClick }) {
               <li><button onClick={() => onNavClick('home')} className="hover:text-amber-300 transition-colors">Home Page</button></li>
               <li><button onClick={() => onNavClick('books', 'ALL')} className="hover:text-amber-300 transition-colors">Full Book Catalogue (100+ Titles)</button></li>
               <li><button onClick={() => onNavClick('art')} className="hover:text-amber-300 transition-colors">Fine Art & Painting Gallery</button></li>
-              <li><button onClick={() => onNavClick('about')} className="hover:text-amber-300 transition-colors">About GB Publishing</button></li>
+              <li><button onClick={() => onNavClick('about')} className="hover:text-amber-300 transition-colors">About GBP</button></li>
               <li><button onClick={() => onNavClick('news')} className="hover:text-amber-300 transition-colors text-[#F3E5AB]">News, Video Journal & Blog</button></li>
             </ul>
           </div>
@@ -117,7 +117,7 @@ export default function Footer({ onNavClick }) {
             <ul className="space-y-2">
               <li><button onClick={() => onNavClick('books', 'Fiction, Young Adult & Sci-Fi')} className="hover:text-amber-300 transition-colors">Fiction, Young Adult & Sci-Fi</button></li>
               <li><button onClick={() => onNavClick('books', 'Non-Fiction & Memoir')} className="hover:text-amber-300 transition-colors">Non-Fiction & Memoir</button></li>
-              <li><button onClick={() => onNavClick('books', 'Cookbooks & Food')} className="hover:text-amber-300 transition-colors">Cookbooks & Culinary</button></li>
+              <li><button onClick={() => onNavClick('books', 'Food & Drink')} className="hover:text-amber-300 transition-colors">Food & Drink</button></li>
               <li><button onClick={() => onNavClick('books', "Children's & Picture Books")} className="hover:text-amber-300 transition-colors">Children's Picture Books</button></li>
               <li><button onClick={() => onNavClick('books', 'Poetry & Fine Art')} className="hover:text-amber-300 transition-colors">Poetry & Fine Art</button></li>
             </ul>
@@ -128,9 +128,9 @@ export default function Footer({ onNavClick }) {
             <h4 className="font-serif text-sm font-bold text-amber-100 uppercase tracking-wider">Why Buy Direct?</h4>
             <ul className="space-y-2 text-[11px]">
               <li>🏛️ Support Local Publishers</li>
-              <li>✍️ Many Books Signed by Authors</li>
-              <li>🎉 Fund Local Author Events</li>
-              <li>🚚 Free UK Delivery £25+</li>
+              <li>✍️ Many Books Author Signed</li>
+              <li>🎉 Special Offers & Charities</li>
+              <li>🚚 Free UK Delivery £15+</li>
               <li>❤️ Direct Author Royalties</li>
             </ul>
           </div>
@@ -139,7 +139,7 @@ export default function Footer({ onNavClick }) {
 
         {/* Bottom Copyright */}
         <div className="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p>© {new Date().getFullYear()} GB Publishing. All rights reserved. Registered UK Independent Publisher.</p>
+          <p>© {new Date().getFullYear()} GB Publishing Org. All rights reserved. Registered UK Independent Publisher.</p>
           <p className="flex items-center justify-center gap-1 text-[11px] text-slate-400">
             <span>Published with passion from the United Kingdom — supporting independent voices since 2013.</span>
           </p>

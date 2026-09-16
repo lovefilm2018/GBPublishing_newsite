@@ -26,7 +26,7 @@ headers = {
 }
 
 COLLECTION_IMPRINT_MAP = [
-    (['cook', 'food', 'drink', 'ginologist', 'ozlem', 'gin', 'turkish', 'zodiac cooks', 'penny - tzc'], "Cookbooks & Food"),
+    (['cook', 'food', 'drink', 'ginologist', 'ozlem', 'gin', 'turkish', 'zodiac cooks', 'penny - tzc'], "Food & Drink"),
     (['picture book', 'children', 'lois', 'latham', 'boughton -alice', 'boughton - alice', 'solonair', 'islam - doogie', 'trivedy', 'pink biscuit', 'morgan - swsw', 'morgan - a2 prints', 'morgan - a3 prints', 'lois art prints', "children's a", 'tillier'], "Children's & Picture Books"),
     (['poetry', 'pargeter', 'politics & poetry', 'wendy kimberley', 'boughton - art', 'fine art'], "Poetry & Fine Art"),
     (['biography', 'memoir', 'non-fiction', 'sauvage', 'animals & nature', 'nature', 'akeroyd', 'plants', 'murray - n&j', 'seafaring', 'boughton - sf'], "Non-Fiction & Memoir"),
@@ -50,13 +50,10 @@ def clean_text(text):
         return ""
     t = html.unescape(str(text))
     t = re.sub(r'<[^>]+>', ' ', t)
-    # Fix Ozlem name cleanly
-    t = re.sub(r'(?:[ÖöOo]{2,3}|\ufffd+)zlem', 'Ozlem', t)
-    t = t.replace('Özlem', 'Ozlem')
+    # Fix Özlem name cleanly with single Ö
+    t = re.sub(r'(?:[ÖöOo]{2,3}|\ufffd+)zlem', 'Özlem', t)
+    t = re.sub(r'\bOzlem\b', 'Özlem', t)
     t = t.replace('\ufffd', ' ')
-    # Strip any bookmark references
-    t = re.sub(r'(?i)\s*(?:with\s+)?(?:a\s+)?free\s+custom\s+bookmarks?(?:\s+and\s+fast\s+delivery)?', '', t)
-    t = re.sub(r'(?i)\s*(?:with\s+)?(?:a\s+)?free\s+bookmarks?(?:\s+and\s+fast\s+delivery)?', '', t)
     t = re.sub(r'\s+', ' ', t).strip()
     return t
 
@@ -64,8 +61,10 @@ def extract_author(name, brand=""):
     if brand and len(brand) > 2 and brand != "GB Publishing":
         return clean_text(brand)
     n = clean_text(name).lower()
-    if 'ozlem' in n or 'zlem' in n:
-        return 'Ozlem Warren'
+    if 'ozlem' in n or 'zlem' in n or 'özlem' in n:
+        return 'Özlem Warren'
+    if 'pargeter' in n:
+        return 'Mary Pargeter'
     if 'kimberley' in n:
         return 'Anthony & Wendy Kimberley'
     if 'thornton' in n:
@@ -115,7 +114,7 @@ def categorize_product(name, collection_ids, collections_map):
     # 3. Fallback keyword categorization
     if not cats:
         if any(k in n_lower for k in ['cook', 'food', 'recipe', 'turkish', 'gin']):
-            cats.append("Cookbooks & Food")
+            cats.append("Food & Drink")
         elif any(k in n_lower for k in ['picture', 'children', 'grandad', 'erin', 'dennis', 'tommy', 'crumbdog']):
             cats.append("Children's & Picture Books")
         elif any(k in n_lower for k in ['poetry', 'pargeter', 'fine art', 'paintings', 'kimberley bem']):
@@ -199,6 +198,12 @@ for idx, p in enumerate(raw_products):
     handle_id = p.get('id', p.get('numericId', f"wix_{idx}"))
     sku = p.get('sku') or f"GBP-{1000 + idx}"
     
+    # Mary Pargeter exclusive bookmark perk per George's instruction
+    if 'pargeter' in raw_name.lower() or 'pargeter' in slug:
+        ribbon = "Free Bookmark Included"
+        if "free custom gb publishing bookmark" not in description.lower():
+            description = description + " ✨ Free custom GB Publishing bookmark included with every copy."
+    
     catalog.append({
         "id": handle_id,
         "slug": slug,
@@ -212,7 +217,7 @@ for idx, p in enumerate(raw_products):
         "categories": categories,
         "coverImage": cover_image,
         "gallery": gallery,
-        "description": description if len(description) > 25 else f"A featured indie publication by {author}, available directly from GB Publishing with fast UK delivery.",
+        "description": description if len(description) > 25 else f"A featured indie publication by {author}, available directly from GB Publishing Org with fast UK delivery.",
         "isWholesale": is_wholesale,
         "isSigned": is_signed,
         "format": "Signed Edition" if is_signed else ("Hardcover" if price > 20 else "Paperback"),

@@ -34,8 +34,8 @@ export default function Navbar({
         <div className="container mx-auto flex justify-between items-center text-center sm:text-left">
           <div className="flex items-center gap-4 mx-auto sm:mx-0">
             <span className="flex items-center gap-1.5"><Sparkles className="w-3.5 h-3.5 text-amber-300" /> Support Independent UK Publishing</span>
-            <span className="hidden md:flex items-center gap-1.5"><Feather className="w-3.5 h-3.5 text-amber-300" /> ✍️ Many Books Signed by the Author</span>
-            <span className="hidden lg:inline">🚚 Free UK Delivery on Orders £25+</span>
+            <span className="hidden md:flex items-center gap-1.5"><Feather className="w-3.5 h-3.5 text-amber-300" /> ✍️ Many books author signed / special offer / charity supporting</span>
+            <span className="hidden lg:inline">🚚 Free UK delivery on orders over £15</span>
           </div>
           <div className="hidden sm:flex items-center gap-4">
             <SocialLinks variant="compact" />
@@ -60,12 +60,12 @@ export default function Navbar({
           >
             <img 
               src={gbpLogo} 
-              alt="GB Publishing" 
+              alt="GB Publishing Org" 
               className="h-9 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform" 
             />
             <div className="hidden sm:flex flex-col">
               <span className="font-serif text-lg font-bold tracking-tight text-white leading-none">
-                GB PUBLISHING
+                GB PUBLISHING ORG
               </span>
               <span className="text-[9px] uppercase tracking-widest text-amber-200/80 font-sans mt-0.5 font-medium">
                 Independent Publisher · UK

@@ -150,8 +150,8 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                 {/* D2C Incentives Bar */}
                 <div className="grid grid-cols-2 gap-2 text-xs text-slate-700 pt-2 border-t border-slate-200/70">
                   <span className="flex items-center gap-1.5"><HeartHandshake className="w-4 h-4 text-[#2D7D46]" /> Support Local Publishing</span>
-                  <span className="flex items-center gap-1.5"><Feather className="w-4 h-4 text-[#D4A359]" /> {book.isSigned ? 'Signed Copy Available' : 'Direct Publisher Care'}</span>
-                  <span className="flex items-center gap-1.5"><Truck className="w-4 h-4 text-[#1D2A44]" /> Free UK Delivery £25+</span>
+                  <span className="flex items-center gap-1.5"><Feather className="w-4 h-4 text-[#D4A359]" /> {book.isSigned ? 'Signed Copy Available' : (book.ribbon || 'Direct Publisher Care')}</span>
+                  <span className="flex items-center gap-1.5"><Truck className="w-4 h-4 text-[#1D2A44]" /> Free UK Delivery £15+</span>
                   <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-emerald-600" /> Direct Author Royalties</span>
                 </div>
               </div>
