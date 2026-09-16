@@ -1,7 +1,8 @@
 import localCatalog from '../data/catalog.json';
 
 // Live Wix Credentials for GB Publishing (`gbpublishing.co.uk`) - Production Live Store
-const WIX_API_KEY = import.meta.env.VITE_WIX_API_KEY || 'IST.eyJraWQiOiJQb3pIX2FDMiIsImFsZyI6IlJTMjU2In0.eyJkYXRhIjoie1wiaWRcIjpcIjIzNzIzYjA3LTVjMjgtNGQ3ZC1hMTI1LTFmMzFhMzI1YWIyYVwiLFwiaWRlbnRpdHlcIjp7XCJ0eXBlXCI6XCJhcHBsaWNhdGlvblwiLFwiaWRcIjpcIjE0ZjczMjYxLWQ2NDEtNDc3NS1iNzY2LTFkM2Q5ZWU0MjEyZFwifSxcInRlbmFudFwiOntcInR5cGVcIjpcImFjY291bnRcIixcImlkXCI6XCJhZDMzOTFjYi1jMTY4LTQ1MmItYmFjNi0yYzEyOWJmYjUwODRcIn19IiwiaWF0IjoxNzg5NTcyNzg0fQ.eDgE2zW5DISpHu_QJnaHZp8Kuj01sV5QG2yM7o0KAX3FdNQ4r2-cyECiczHK0aPiaBiyCeE3NLLqKbduhVgnutqXnmqs7rNphT_aLjs37BhuDoQjzBgAL1b39MUlO4RZQz2CZhvOxXE6M_YY1XydkImoyVVMa1-Ld9xnag0FEfZp7x3lqKmNTT4qExCnVfm-ty0DiJGb8l2I4AU2-cBYTO7nNVFbMpPrBcm2NvaxLGptqPYW-j9P_v2FpbC9QcCgT_lmQm2K8FbR99p8inmTzwAYhqz-2fdZns6xfg83tR-DH50hYm2SzlX-AuRBVDtrv5ryAPu6VR-YAhsNhZ0azw';
+// Loaded strictly via environment variables (e.g. .env or CI/CD secrets). Never hardcoded.
+const WIX_API_KEY = import.meta.env.VITE_WIX_API_KEY || '';
 const WIX_SITE_ID = import.meta.env.VITE_WIX_SITE_ID || '34002663-ff5b-495e-be4c-53ad0dc3184f';
 
 /**
@@ -195,6 +196,11 @@ function extractAuthorFromName(name) {
  * Falls back seamlessly to verified catalog.json cache on offline or error
  */
 export async function fetchCatalogProducts() {
+  if (!WIX_API_KEY) {
+    // In production client build without exposed secret, serve verified cached catalogue
+    return localCatalog;
+  }
+
   try {
     const headers = {
       'Authorization': WIX_API_KEY,

@@ -15,9 +15,41 @@ import sys
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-# Read from .env if available, else use verified default
-WIX_API_KEY = os.environ.get('VITE_WIX_API_KEY', 'IST.eyJraWQiOiJQb3pIX2FDMiIsImFsZyI6IlJTMjU2In0.eyJkYXRhIjoie1wiaWRcIjpcIjIzNzIzYjA3LTVjMjgtNGQ3ZC1hMTI1LTFmMzFhMzI1YWIyYVwiLFwiaWRlbnRpdHlcIjp7XCJ0eXBlXCI6XCJhcHBsaWNhdGlvblwiLFwiaWRcIjpcIjE0ZjczMjYxLWQ2NDEtNDc3NS1iNzY2LTFkM2Q5ZWU0MjEyZFwifSxcInRlbmFudFwiOntcInR5cGVcIjpcImFjY291bnRcIixcImlkXCI6XCJhZDMzOTFjYi1jMTY4LTQ1MmItYmFjNi0yYzEyOWJmYjUwODRcIn19IiwiaWF0IjoxNzg5NTcyNzg0fQ.eDgE2zW5DISpHu_QJnaHZp8Kuj01sV5QG2yM7o0KAX3FdNQ4r2-cyECiczHK0aPiaBiyCeE3NLLqKbduhVgnutqXnmqs7rNphT_aLjs37BhuDoQjzBgAL1b39MUlO4RZQz2CZhvOxXE6M_YY1XydkImoyVVMa1-Ld9xnag0FEfZp7x3lqKmNTT4qExCnVfm-ty0DiJGb8l2I4AU2-cBYTO7nNVFbMpPrBcm2NvaxLGptqPYW-j9P_v2FpbC9QcCgT_lmQm2K8FbR99p8inmTzwAYhqz-2fdZns6xfg83tR-DH50hYm2SzlX-AuRBVDtrv5ryAPu6VR-YAhsNhZ0azw')
-WIX_SITE_ID = os.environ.get('VITE_WIX_SITE_ID', '34002663-ff5b-495e-be4c-53ad0dc3184f')
+def load_credentials():
+    # 1. Environment variable
+    api_key = os.environ.get('VITE_WIX_API_KEY') or os.environ.get('WIX_API_KEY')
+    site_id = os.environ.get('VITE_WIX_SITE_ID') or os.environ.get('WIX_SITE_ID', '34002663-ff5b-495e-be4c-53ad0dc3184f')
+    
+    # 2. Local .env file
+    if not api_key:
+        env_file = os.path.join(os.path.dirname(__file__), '.env')
+        if os.path.exists(env_file):
+            with open(env_file, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line.startswith('VITE_WIX_API_KEY='):
+                        api_key = line.split('=', 1)[1].strip()
+                    elif line.startswith('VITE_WIX_SITE_ID='):
+                        site_id = line.split('=', 1)[1].strip()
+                        
+    # 3. Local machine credentials vault
+    if not api_key:
+        master_key_file = os.path.expanduser(r'C:\Users\TotalBiz\.wix\auth\master_api_key.json')
+        if os.path.exists(master_key_file):
+            try:
+                with open(master_key_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    api_key = data.get('apiKey')
+                    site_id = data.get('productionSiteId', site_id)
+            except Exception:
+                pass
+                
+    if not api_key:
+        raise ValueError("Missing Wix Master API Key. Please set VITE_WIX_API_KEY in .env or environment.")
+        
+    return api_key, site_id
+
+WIX_API_KEY, WIX_SITE_ID = load_credentials()
 
 headers = {
     'Authorization': WIX_API_KEY,
