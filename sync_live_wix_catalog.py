@@ -77,62 +77,199 @@ PRODUCT_NAME_OVERRIDES = [
     ('dennis to alice', "Children's & Picture Books"),
 ]
 
+# Editorial and Author Credits per George's authoritative instructions
 EDITORIAL_ENRICHMENTS = {
-    '9792a2c8-299a-cf0e-6987-1c32c2df92a4': {
-        'title': "The Ginologist Cook: Dinner Party Recipes",
-        'tagline': "150 delicious recipes with Gin — The world's first craft gin coffee-table cookbook",
-        'author': "Pieter Carter & The Ginologist Team",
+    # 1. Plants & Us (b220ed82-aca4-347e-1fd3-a029e6d655d4)
+    'b220ed82-aca4-347e-1fd3-a029e6d655d4': {
+        'title': "Plants & Us: How They Shape Human History & Society",
+        'tagline': "Plant usage, ethnobotany, and habitat conservation — Foreword by Sir Tim Smit, Co-Founder of The Eden Project",
+        'author': "John Akeroyd, Donough O'Brien & Liz Cowley",
+        'contributors': "Foreword by Sir Tim Smit, The Eden Project Cornwall · Tie-in to You are Noah! Introduction by Hein Prinsloo Curson",
+        'authorSectionTitle': "About the Authors & Botanists",
         'authors': [
             {
-                "name": "Pieter Carter",
-                "role": "Ginologist Distiller & Founder",
-                "bio": "Graduated in law but instead of practising law he took to the stills. It wasn’t long before the 3 Gins in the Ginologist range of Spice, Floral and Citrus entered their first competition, the Michelangelo International Wine and Spirits awards, winning 2 gold medals and a silver. This victory made Pieter one of the youngest distillers to distil an award-winning gin."
+                "name": "John Akeroyd",
+                "role": "Lead Author & Renowned Botanist",
+                "bio": "Leading European field botanist, conservationist, and writer. Co-edited Flora Europaea and has written extensively on ethnobotany, plant usage, and habitat preservation worldwide."
             },
             {
-                "name": "Shane Heldsinger",
-                "role": "Group Executive Chef",
-                "bio": "Studied at Cordon Bleu Chefs School of South Africa and later had the privilege of cooking for Nelson Mandela on his 90th birthday celebrations. Currently Group Executive Chef for Gastronomie, a chain of Restaurants in South Africa featuring Carbon Bistro, Capital P and Kingelato. Trained in Classical French cuisine, he has personalised his own style fusing modern contemporary cuisine with a strong Asian influence."
+                "name": "Donough O'Brien",
+                "role": "Co-Author & Researcher",
+                "bio": "Accomplished non-fiction writer and cultural researcher examining the societal, political, and historical ramifications of agriculture and flora across continents."
             },
             {
-                "name": "Charlotte Letlape",
-                "role": "The Pastry Princess",
-                "bio": "Better known as The Pastry Princess, Charlotte is a former investment banker turned pastry chef from Johannesburg. She specialises in designer desserts, high tea catering and speciality cakes. Her private and corporate clients include former First Lady Zanele Mbeki, T-Systems, Olympic Gold medal winner Wayde van Niekerk, and Kaya FM."
-            },
-            {
-                "name": "Kundi Thai",
-                "role": "Culinary Specialist & Private Chef",
-                "bio": "An attorney whose love for good food swept her from the courtroom and permanently into the kitchen! Self-taught through cook books, cooking shows, and the internet, she founded kundiskitchen.com to share recipe details of her enticing meals. She is a private chef and runs her own premier catering business."
-            },
-            {
-                "name": "Phillip Tlhako",
-                "role": "Professional Cookery Chef",
-                "bio": "His dream of becoming a mine boy after matric didn’t come true. Instead, he won an internship in the hospitality industry where his love of food flourished. After a hotel manager discovered his talent and offered to pay his student fees, he gained his Diploma in Professional Cookery and is now living his dream as a chef in Pretoria."
-            },
-            {
-                "name": "Ahe Jafta",
-                "role": "Master Mixologist",
-                "bio": "A celebrated South African mixologist who competed in MasterChef South Africa 2009 and represented the nation as a contender in top Middle East championships (World Class UAE, Campari, Chivas Masters). A well-established head bartender working with top cocktail experts, he is 'changing the world one cocktail at a time.'"
+                "name": "Liz Cowley",
+                "role": "Co-Author & Literary Contributor",
+                "bio": "Celebrated poet, writer, and commentator whose work explores the human connection to nature, folklore, and the vital importance of plant conservation."
             }
         ],
-        'authorBio': "Crafted by the culinary and distilling team at Ginologist, South Africa's award-winning craft distillery. From savoury mains to sweet desserts and signature cocktails, each recipe explores botanical gin flavour pairings.",
+        'authorBio': "Written by John Akeroyd, Donough O'Brien, and Liz Cowley, with a prestigious Foreword by Sir Tim Smit, Co-Founder of The Eden Project Cornwall.",
         'previewPages': [
-            "https://static.wixstatic.com/media/7c7af8_5b34981d7433437e9a6e1434ca501ec9~mv2.jpg/v1/fill/w_1000,h_1250,q_90/file.jpg",
-            "https://static.wixstatic.com/media/7c7af8_4d81a60c16b8430997ed206d21293311~mv2.jpg/v1/fill/w_1200,h_750,q_90/file.jpg",
-            "https://static.wixstatic.com/media/7c7af8_be677a6802924525b9cef47571d585f7~mv2.jpg/v1/fill/w_1000,h_1250,q_90/file.jpg",
-            "https://static.wixstatic.com/media/7c7af8_702a44fa0a6245669c0affde03d6e57e~mv2_d_1240_1754_s_2.jpg/v1/fill/w_1000,h_1400,q_90/file.jpg",
-            "https://static.wixstatic.com/media/7c7af8_aa2998b42b244a6cad6deb16457ce841~mv2.jpg/v1/fill/w_1000,h_1400,q_90/file.jpg"
+            "https://static.wixstatic.com/media/7c7af8_186ba8567fb84f06914d297d3fb48741~mv2.jpg/v1/fit/w_1200,h_1500,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_2a2dd71014d847c3aa4a3e7a58019650~mv2.png/v1/fit/w_1400,h_900,q_90/file.png",
+            "https://static.wixstatic.com/media/7c7af8_3fb3724e80d2478b908ee1cd62f9f382~mv2.jpg/v1/fit/w_800,h_1000,q_90/file.jpg"
         ],
         'accolades': [
-            {"title": "IWSC Silver Award", "subtitle": "International Wine & Spirit Competition"},
-            {"title": "Expresso TV Show", "subtitle": "National Morning Showcase"}
+            {"title": "The Telegraph", "subtitle": "A Fascinating New Book"},
+            {"title": "Sir Tim Smit Foreword", "subtitle": "The Eden Project Cornwall"},
+            {"title": "Gardens Illustrated & The Countryman", "subtitle": "Press Feature"},
+            {"title": "Hannah Murray Radio", "subtitle": "Talk Radio Europe"}
+        ],
+        'description': "Plants & Us by John Akeroyd, Donough O'Brien, and Liz Cowley explores how plants have defined human civilisation — not only in food, drink, and commerce, but also in medicine, folklore, love, fashion, war, and art.\n\nNot just another gardening book, this is a sweeping exploration of how plants affect humankind for better or worse. From Presidents to pop stars, scientists to explorers, and royalty to pioneers, Plants & Us presents startling facts and compelling stories about our ubiquitous bond with the plant kingdom and the urgent necessity of global botanical conservation."
+    },
+
+    # 2. You are Noah! (76419b0d-f424-c776-9477-d7d9255302f3)
+    '76419b0d-f424-c776-9477-d7d9255302f3': {
+        'title': "You are Noah! Introduction — Wild Animal Conservation",
+        'tagline': "The official book tie-in to the 6-part Sky TV wildlife series — Building the world's greatest nature sanctuary",
+        'author': "Hein Prinsloo Curson",
+        'contributors': "6-part Sky TV series tie-in · Tie-in to Plants & Us by John Akeroyd, Donough O'Brien, Liz Cowley",
+        'authorSectionTitle': "About the Author & Conservation Founder",
+        'authors': [
+            {
+                "name": "Hein Prinsloo Curson",
+                "role": "Founder, The Noah's Ark Foundation",
+                "bio": "Conservation visionary and founder of The Noah's Ark Foundation, a registered charity dedicated to creating a 100-square-kilometre ultra-secure wildlife sanctuary in South Africa to halt species extinction."
+            },
+            {
+                "name": "Richard Prinsloo Curson",
+                "role": "Co-Founder & Producer",
+                "bio": "Creative director and producer behind the 6-part Noah's Ark television documentary broadcast on Sky TV and international networks."
+            }
+        ],
+        'authorBio': "Hein Prinsloo Curson is the founder of The Noah's Ark Foundation. All publisher and author proceeds from direct purchases of this book go directly to charity operations protecting endangered species.",
+        'missionCard': {
+            'badge': "Official Sky TV & Conservation Initiative",
+            'tag': "100% Proceeds Support Charity",
+            'heading': "The Noah's Ark Sanctuary — Africa",
+            'content': "You are Noah! is the official companion to the 6-part wildlife documentary series broadcast on Sky TV. Author and publisher profits from sales of this book directly support The Noah's Ark Foundation in South Africa, building an ultra-secure sanctuary to protect UN Red List endangered species.",
+            'highlights': [
+                "Official 6-part Sky TV wildlife series tie-in",
+                "Directly funds anti-poaching security & veterinary teams",
+                "Eden Project-style biomes for vulnerable wildlife",
+                "Full engagement and upliftment of local indigenous communities"
+            ]
+        },
+        'videoTrailer': {
+            'title': "Noah's Ark TV Series — Official Trailer",
+            'url': "https://video.wixstatic.com/video/7c7af8_952d7f4ee2be48458e51975fea0afcba/720p/mp4/file.mp4",
+            'poster': "https://static.wixstatic.com/media/7c7af8_134a1929da7e4819a99a2af310de89e9~mv2.png/v1/fit/w_1280,h_720,q_90/file.png",
+            'duration': "Trailer"
+        },
+        'previewPages': [
+            "https://static.wixstatic.com/media/7c7af8_134a1929da7e4819a99a2af310de89e9~mv2.png/v1/fit/w_1200,h_1500,q_90/file.png",
+            "https://static.wixstatic.com/media/7c7af8_61fa0963c53d4c98b16aa0079a50e8d9~mv2.jpg/v1/fit/w_1000,h_1200,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_f35bf2d72ef84f36acec365128697d8c~mv2.jpg/v1/fit/w_1000,h_1200,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_bb40f6f11a3946588ca6a20d3d32ae38~mv2.jpg/v1/fit/w_1000,h_1200,q_90/file.jpg"
+        ],
+        'accolades': [
+            {"title": "Sky TV Broadcast", "subtitle": "6-Part Wildlife Documentary Series"},
+            {"title": "Good Morning Britain (ITV)", "subtitle": "National Television Feature"},
+            {"title": "Daily Express & Mail Online", "subtitle": "Press Feature"},
+            {"title": "Jacaranda FM", "subtitle": "Martin Bester Broadcast"}
+        ],
+        'description': "You are Noah! Introduction by Hein Prinsloo Curson.\n\nThe official book tie-in to the 6-part Noah's Ark television series broadcast on Sky TV. This volume captures the opening chapters of a bold global conservation effort: constructing a 100-square-kilometre state-of-the-art wildlife sanctuary in South Africa to protect Earth's most endangered species.\n\nFeaturing behind-the-scenes photography from the TV production, architectural plans for climate-controlled biomes, and insights into high-tech anti-poaching security, You are Noah! is both a compelling visual journey and an urgent call to action. Author profits support The Noah's Ark Foundation registered charity."
+    },
+
+    # 3. Seafaring (bd3fe905-f8dc-a69b-b940-84f606827877)
+    'bd3fe905-f8dc-a69b-b940-84f606827877': {
+        'title': "Seafaring: The Full Story (Edition 2)",
+        'tagline': "Sailing autobiography of a life before the mast in the final days of commercial tall ships",
+        'author': "Captain George P Boughton",
+        'contributors': "Illustrations by renowned maritime artist Kenneth D Shoesmith RI",
+        'authorSectionTitle': "About the Author & Maritime Artist",
+        'authors': [
+            {
+                "name": "Captain George P Boughton",
+                "role": "Master Mariner & Author",
+                "bio": "Captain George P Boughton spent decades navigating oceans under canvas and steam during the heroic era of merchant seamanship."
+            },
+            {
+                "name": "Kenneth D Shoesmith RI",
+                "role": "Renowned Maritime Illustrator",
+                "bio": "Celebrated member of the Royal Institute of Painters in Water Colours, Shoesmith was one of Britain's most legendary maritime poster artists and illustrators."
+            }
         ]
     },
+
+    # 4. Dennis to Alice (33b34cc3-7713-1327-240c-204c99fb52b1)
+    '33b34cc3-7713-1327-240c-204c99fb52b1': {
+        'title': "Dennis to Alice: A Movie in a Book",
+        'tagline': "An interactive wildlife picture book where pages come alive with video — Supporting endangered species conservation",
+        'author': "George S Boughton",
+        'contributors': "Illustrations by Martyn Tillier",
+        'authorSectionTitle': "About the Author & Illustrator",
+        'authors': [
+            {
+                "name": "George S Boughton",
+                "role": "Author & Publisher",
+                "bio": "Founder of GB Publishing Org and author, George documented a chance moment of lockdown mayhem when flooding created a river dam, inspiring this interactive 'movie in a book'."
+            },
+            {
+                "name": "Martyn Tillier",
+                "role": "Wildlife Illustrator",
+                "bio": "Talented wildlife and children's book illustrator whose vibrant artwork brings the river animals, swans, geese, and canoeing mayhem to life."
+            }
+        ],
+        'authorBio': "Written by George S Boughton and illustrated by Martyn Tillier. Conceived as an interactive 'movie in a book' tied to wildlife conservation.",
+        'videoTrailer': {
+            'title': "Dennis to Alice — Official Book Trailer",
+            'url': "https://video.wixstatic.com/video/7c7af8_952d7f4ee2be48458e51975fea0afcba/720p/mp4/file.mp4",
+            'poster': "https://static.wixstatic.com/media/7c7af8_5e0fa6969a2341f1ac6b381cb38258a0f001.jpg/v1/fill/w_1280,h_720,q_90/file.jpg",
+            'duration': "0:31"
+        },
+        'previewPages': [
+            "https://static.wixstatic.com/media/7c7af8_860b6ef537d945dc840dd2f3be408f4d~mv2.jpg/v1/fit/w_1200,h_1200,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_182f71d5a18747c883b388dfc1f02936~mv2.jpeg/v1/fit/w_1200,h_1000,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_41e2dd8b08a44c5b9654eaec7691806a~mv2.png/v1/fit/w_800,h_1000,q_90/file.png"
+        ],
+        'accolades': [
+            {"title": "Sky TV Tie-In", "subtitle": "Noah's Ark Conservation Series"},
+            {"title": "Brooklands Radio Feature", "subtitle": "Author Broadcast Interview"},
+            {"title": "£1 Charity Donation", "subtitle": "Noah's Ark Wildlife Sanctuary"}
+        ],
+        'description': "Dennis to Alice by George S Boughton — Picture book & interactive movie in a book (SIGNED edition).\n\nCaptured is a chance moment of mayhem. Flooding from two strong storms created a dam across an otherwise peaceful river, just before a pandemic swept across the world to isolate this spot along with the author.\n\nBut, also captured along with manmade environmental contaminants, is the transformation that took place from busy contrail skies to blue and verdant water scenes… and a pair of geese that made this their home. Then kayakers tackle the obstacle, boaters try to remove it, a swan performs... and a fox attacks…"
+    },
+
+    # 5. Tulsi the Tiger (4f0a9ef7-8f73-4dad-a64c-1de4e3e405aa)
+    '4f0a9ef7-8f73-4dad-a64c-1de4e3e405aa': {
+        'title': "Tulsi the Tiger",
+        'tagline': "An enchanting tale of conservation, courage, and wildlife protection in India's tiger reserves",
+        'author': "Dr Chet Trivedy",
+        'contributors': "Illustrations by Derek E Pearson",
+        'authorSectionTitle': "About the Author & Illustrator",
+        'authors': [
+            {"name": "Dr Chet Trivedy", "role": "Emergency Medicine Consultant & Wildlife Advocate"},
+            {"name": "Derek E Pearson", "role": "Illustrator & Author"}
+        ]
+    },
+
+    # 6. Crumbdog (ad53e2e6-9058-48c0-ff65-c8b10fdcd401)
+    'ad53e2e6-9058-48c0-ff65-c8b10fdcd401': {
+        'title': "Crumbdog",
+        'tagline': "A heartfelt illustrated children's story about friendship, resilience, and rescue dogs",
+        'author': "Lois Collins",
+        'contributors': "Foreword by Dame Jacqueline Wilson",
+        'authorSectionTitle': "About the Author & Foreword",
+        'authors': [
+            {"name": "Lois Collins", "role": "Author & Artist"},
+            {"name": "Dame Jacqueline Wilson", "role": "Foreword Contributor & Children's Laureate"}
+        ],
+        'accolades': [
+            {"title": "Dame Jacqueline Wilson Foreword", "subtitle": "Distinguished Children's Laureate"},
+            {"title": "Free Fridge Magnet", "subtitle": "Included with Direct Orders"}
+        ]
+    },
+
+    # 7. Özlem's Turkish Table (ec30ad44-30fb-85eb-9725-4259f6c72523)
     'ec30ad44-30fb-85eb-9725-4259f6c72523': {
         'title': "Özlem's Turkish Table: Recipes from My Homeland",
         'tagline': "Winner of the Gourmand World Cookbook Award · Authentic Southern Turkish & Antakya Gastronomy",
         'author': "Özlem Warren",
+        'contributors': "Foreword by Ghillie Basan · Food photography Sian Irvine",
+        'authorSectionTitle': "About the Author & Culinary Ambassador",
         'authors': [
-            {"name": "Özlem Warren", "role": "Author & Culinary Ambassador"}
+            {"name": "Özlem Warren", "role": "Author & Culinary Ambassador", "bio": "Özlem Warren is an internationally acclaimed Turkish culinary expert, author, and food writer born in Antakya, Southern Turkey. She teaches Turkish cookery courses in the UK and USA and is a passionate ambassador for authentic Anatolian gastronomy."}
         ],
         'authorBio': "Özlem Warren is an internationally acclaimed Turkish culinary expert, author, and food writer born in Antakya, Southern Turkey. She teaches Turkish cookery courses in the UK and USA and is a passionate ambassador for authentic Anatolian gastronomy.",
         'accolades': [
@@ -140,10 +277,27 @@ EDITORIAL_ENRICHMENTS = {
             {"title": "BBC Good Food & The Sun", "subtitle": "Featured Cookbook"}
         ]
     },
+
+    # 8. Grandad, let's go for a walk (aef4a66f-8990-8876-b336-b4aa17e8d6f9)
+    'aef4a66f-8990-8876-b336-b4aa17e8d6f9': {
+        'title': "Grandad, let's go for a walk",
+        'tagline': "A gentle intergenerational journey exploring nature through the eyes of a grandchild and grandfather",
+        'author': "Anthony Kimberley",
+        'contributors': "Illustrations by fine artist Wendy Kimberley",
+        'authorSectionTitle': "About the Author & Fine Artist",
+        'authors': [
+            {"name": "Anthony Kimberley", "role": "Author"},
+            {"name": "Wendy Kimberley BEM", "role": "Fine Artist & Illustrator"}
+        ]
+    },
+
+    # 9. The Zodiac Cooks (5aba1fc3-b88f-12d6-37f8-4da625fff3bd)
     '5aba1fc3-b88f-12d6-37f8-4da625fff3bd': {
         'title': "The Zodiac Cooks: Date Night Recipes",
         'tagline': "Recipes for Romance from the Celestial Kitchen of Life — Sensuous cooking tailored to your date's star sign",
-        'author': "Penny Thornton",
+        'author': "renowned astrologer Penny Thornton",
+        'contributors': "Photography by Adrian Lawrence and Sian Irvine",
+        'authorSectionTitle': "About the Author & Astrologer",
         'authors': [
             {
                 "name": "Penny Thornton",
@@ -164,82 +318,61 @@ EDITORIAL_ENRICHMENTS = {
             {"title": "US Food Network & The List TV", "subtitle": "Broadcast Feature"}
         ]
     },
-    '33b34cc3-7713-1327-240c-204c99fb52b1': {
-        'title': "Dennis to Alice: A Movie in a Book",
-        'tagline': "An interactive wildlife picture book where pages come alive with video — Supporting endangered species conservation",
-        'author': "George S Boughton & Martyn Tillier",
-        'authors': [
-            {
-                "name": "George S Boughton",
-                "role": "Author & Publisher",
-                "bio": "Founder of GB Publishing and author, George documented a chance moment of lockdown mayhem when flooding created a river dam, inspiring this interactive 'movie in a book'."
-            },
-            {
-                "name": "Martyn Tillier",
-                "role": "Illustrator",
-                "bio": "Talented wildlife and children's book illustrator whose vibrant artwork brings the river animals, swans, geese, and canoeing mayhem to life."
-            }
-        ],
-        'authorBio': "Written by George S Boughton and illustrated by Martyn Tillier. Conceived as an interactive 'movie in a book' tied to the 12-part Noah's Ark Sky TV series.",
-        'videoTrailer': {
-            'title': "Dennis to Alice — Official Book Trailer",
-            'url': "https://video.wixstatic.com/video/7c7af8_952d7f4ee2be48458e51975fea0afcba/720p/mp4/file.mp4",
-            'poster': "https://static.wixstatic.com/media/7c7af8_5e0fa6969a2341f1ac6b381cb38258a0f001.jpg/v1/fill/w_1280,h_720,q_90/file.jpg",
-            'duration': "0:31"
-        },
-        'previewPages': [
-            "https://static.wixstatic.com/media/7c7af8_860b6ef537d945dc840dd2f3be408f4d~mv2.jpg/v1/fit/w_1200,h_1200,q_90/file.jpg",
-            "https://static.wixstatic.com/media/7c7af8_182f71d5a18747c883b388dfc1f02936~mv2.jpeg/v1/fit/w_1200,h_1000,q_90/file.jpg",
-            "https://static.wixstatic.com/media/7c7af8_41e2dd8b08a44c5b9654eaec7691806a~mv2.png/v1/fit/w_800,h_1000,q_90/file.png"
-        ],
-        'accolades': [
-            {"title": "Sky TV Tie-In", "subtitle": "Noah's Ark 12-Part Conservation Series"},
-            {"title": "Brooklands Radio Feature", "subtitle": "Author Broadcast Interview"},
-            {"title": "£1 Charity Donation", "subtitle": "Noah's Ark Wildlife Sanctuary"}
-        ],
+
+    # 10. Searching With Sam Widges (5d38a779-fb29-5f59-b189-bcab3a8d479e)
+    '5d38a779-fb29-5f59-b189-bcab3a8d479e': {
+        'title': "Searching With Sam Widges",
+        'tagline': "An adventure across continents and imagination with Sam Widges — Free sticker or fridge magnet included",
+        'author': "fine artist Morganico",
+        'contributors': "Author & Illustrator: fine artist Morganico",
         'authorSectionTitle': "About the Author & Illustrator",
-        'description': "Dennis to Alice by George S Boughton — Picture book & interactive movie in a book (SIGNED edition).\n\nCaptured is a chance moment of mayhem. Flooding from two strong storms created a dam across an otherwise peaceful river, just before a pandemic swept across the world to isolate this spot along with the author.\n\nBut, also captured along with manmade environmental contaminants, is the transformation that took place from busy contrail skies to blue and verdant water scenes… and a pair of geese that made this their home. Then kayakers tackle the obstacle, boaters try to remove it, a swan performs... and a fox attacks…"
-    },
-    'b220ed82-aca4-347e-1fd3-a029e6d655d4': {
-        'title': "Plants & Us: How They Shape Human History & Society",
-        'tagline': "Plant usage, ethnobotany, and habitat conservation — Foreword by Sir Tim Smit, Co-Founder of The Eden Project",
-        'author': "Dr John Akeroyd, Donough O'Brien & Liz Cowley",
-        'authorSectionTitle': "About the Authors & Botanists",
         'authors': [
-            {
-                "name": "Dr John Akeroyd",
-                "role": "Lead Author & Renowned Botanist",
-                "bio": "Leading European field botanist, conservationist, and writer. Dr Akeroyd co-edited Flora Europaea and has written extensively on ethnobotany, plant usage, and habitat preservation worldwide."
-            },
-            {
-                "name": "Donough O'Brien",
-                "role": "Co-Author & Researcher",
-                "bio": "Accomplished non-fiction writer and cultural researcher examining the societal, political, and historical ramifications of agriculture and flora across continents."
-            },
-            {
-                "name": "Liz Cowley",
-                "role": "Co-Author & Literary Contributor",
-                "bio": "Celebrated poet, writer, and commentator whose work explores the human connection to nature, folklore, and the vital importance of plant conservation."
-            }
-        ],
-        'authorBio': "Written by Dr John Akeroyd, Donough O'Brien, and Liz Cowley, with a prestigious Foreword by Sir Tim Smit, Co-Founder of The Eden Project Cornwall.",
-        'previewPages': [
-            "https://static.wixstatic.com/media/7c7af8_186ba8567fb84f06914d297d3fb48741~mv2.jpg/v1/fit/w_1200,h_1500,q_90/file.jpg",
-            "https://static.wixstatic.com/media/7c7af8_2a2dd71014d847c3aa4a3e7a58019650~mv2.png/v1/fit/w_1400,h_900,q_90/file.png",
-            "https://static.wixstatic.com/media/7c7af8_3fb3724e80d2478b908ee1cd62f9f382~mv2.jpg/v1/fit/w_800,h_1000,q_90/file.jpg"
-        ],
-        'accolades': [
-            {"title": "The Telegraph", "subtitle": "A Fascinating New Book"},
-            {"title": "Sir Tim Smit Foreword", "subtitle": "The Eden Project Cornwall"},
-            {"title": "Gardens Illustrated & The Countryman", "subtitle": "Press Feature"},
-            {"title": "Hannah Murray Radio", "subtitle": "Talk Radio Europe"}
-        ],
-        'description': "Plants & Us by Dr John Akeroyd, Donough O'Brien, and Liz Cowley explores how plants have defined human civilisation — not only in food, drink, and commerce, but also in medicine, folklore, love, fashion, war, and art.\n\nNot just another gardening book, this is a sweeping exploration of how plants affect humankind for better or worse. From Presidents to pop stars, scientists to explorers, and royalty to pioneers, Plants & Us presents startling facts and compelling stories about our ubiquitous bond with the plant kingdom and the urgent necessity of global botanical conservation."
+            {"name": "Morganico", "role": "Fine Artist, Author & Illustrator"}
+        ]
     },
+
+    # 11. Little Tommy & the Kingdom of Clouds (5c8d41e2-e681-a38d-0cc1-bdd15678664d)
+    '5c8d41e2-e681-a38d-0cc1-bdd15678664d': {
+        'title': "Little Tommy & the Kingdom of Clouds",
+        'tagline': "A magical journey above the skies supporting children's healthcare charity initiatives",
+        'author': "fine artist Solonair",
+        'contributors': "Author & Illustrator: fine artist Solonair",
+        'authorSectionTitle': "About the Author & Illustrator",
+        'authors': [
+            {"name": "Dr Solonair", "role": "Fine Artist, Author & Illustrator"}
+        ]
+    },
+
+    # 12. Spoddle the Frog (78e32832-8930-c891-85ef-2bcc73befdc2)
+    '78e32832-8930-c891-85ef-2bcc73befdc2': {
+        'title': "Spoddle the Frog",
+        'tagline': "A delightfully illustrated wildlife pond adventure following Spoddle the adventurous amphibian",
+        'author': "Martyn Tillier",
+        'contributors': "Author & Illustrator: Martyn Tillier",
+        'authorSectionTitle': "About the Author & Illustrator",
+        'authors': [
+            {"name": "Martyn Tillier", "role": "Wildlife Artist, Author & Illustrator"}
+        ]
+    },
+
+    # 13. Pink Biscuit Zoo (9b74fd4c-a947-a37a-e2a9-db8137513882)
+    '9b74fd4c-a947-a37a-e2a9-db8137513882': {
+        'title': "Pink Biscuit Zoo",
+        'tagline': "Whimsical rhymes and colourful zoo creature illustrations for early young readers",
+        'author': "Derek E Pearson",
+        'contributors': "Author & Illustrator: Derek E Pearson",
+        'authorSectionTitle': "About the Author & Illustrator",
+        'authors': [
+            {"name": "Derek E Pearson", "role": "Author & Illustrator"}
+        ]
+    },
+
+    # 14. Autobiology of a Vet (3cd38c96-a27a-0a03-77c2-93f8a2360fd3)
     '3cd38c96-a27a-0a03-77c2-93f8a2360fd3': {
         'title': "Autobiology of a Vet: A Vet's Life",
         'tagline': "From South London comprehensive to Royal Veterinary College, East Africa under Idi Amin, and rural farmyard surgery",
-        'author': "John Sauvage, MRCVS",
+        'author': "John Sauvage",
+        'contributors': "Veterinary Surgeon & RVC Graduate",
         'authorSectionTitle': "About the Author",
         'authors': [
             {
@@ -262,55 +395,128 @@ EDITORIAL_ENRICHMENTS = {
         ],
         'description': "Autobiology of a Vet by John Sauvage, MRCVS.\n\nOpening with his admission to the Royal College of Veterinary Surgeons, this warm and honest memoir traces John's journey from a South London comprehensive school through family wartime history, rigorous veterinary training, and research adventures in East Africa during Idi Amin's dictatorship.\n\nBack in the UK, John's tales of farm calls, midnight surgeries, equine emergencies, and beloved companion pets are educational, moving, and frequently hilarious. Covering vital debates from vaccination and bovine TB to the devastating heartbreak of foot-and-mouth disease, this is an authentic look behind the clinic doors."
     },
-    '76419b0d-f424-c776-9477-d7d9255302f3': {
-        'title': "You are Noah! Introduction — Wild Animal Conservation",
-        'tagline': "The official book tie-in to the 12-part Sky TV wildlife series — Building the world's greatest nature sanctuary",
-        'author': "Hein Prinsloo Curson",
-        'authorSectionTitle': "About the Author & Conservation Founder",
+
+    # 15. Kingswraith series (95f9aab9-aa63-bb4d-b091-f010f89aa2fb)
+    '95f9aab9-aa63-bb4d-b091-f010f89aa2fb': {
+        'title': "Kingswraith Series",
+        'author': "Derek E Pearson"
+    },
+
+    # 16. The Ordinary (ab1a611d-9061-e0ea-cf14-0c3b43255ebd)
+    'ab1a611d-9061-e0ea-cf14-0c3b43255ebd': {
+        'title': "The Ordinary",
+        'tagline': "A chilling psychological supernatural thriller reminiscent of Stephen King",
+        'author': "Christopher Ritchie"
+    },
+
+    # 17. Adventures of Milla Carter #1 (bb859fbd-7446-7580-8c3d-058c54e1a570)
+    'bb859fbd-7446-7580-8c3d-058c54e1a570': {
+        'title': "Adventures of Milla Carter Series 1",
+        'tagline': "High fantasy series following Milla Carter — Body Holiday, Shadow Players & A Time To Prey",
+        'author': "Derek E Pearson"
+    },
+
+    # 18. Adventures of Milla Carter #2 (0dda819e-726d-32e4-6a43-bb7a3caa5d87)
+    '0dda819e-726d-32e4-6a43-bb7a3caa5d87': {
+        'title': "Adventures of Milla Carter Series 2",
+        'tagline': "Epic dark fantasy series following Milla Carter — Soul's Asylum, Star Weaver & The Swarm",
+        'author': "Derek E Pearson"
+    },
+
+    # 19. Antecedent Series (915c7442-fdf6-d504-ff7f-824704f50343)
+    '915c7442-fdf6-d504-ff7f-824704f50343': {
+        'title': "Antecedent Series",
+        'tagline': "Classic space opera science fiction trilogy — Galahad Suns, Nova Descent & Royal Gambit",
+        'author': "David Kimberley"
+    },
+
+    # 20. Wendy Kimberley Art - Royal Gambit (be269508-8e69-a84c-1206-18619ed63c14)
+    'be269508-8e69-a84c-1206-18619ed63c14': {
+        'title': "Royal Gambit & Antecedent SF Art Prints (Size A2 / A3)",
+        'tagline': "Fine art prints covering books in David Kimberley's Antecedent SF series by Wendy Kimberley",
+        'author': "Wendy Kimberley",
+        'isArt': True
+    },
+
+    # 21. The Gathering of Gods (69d3f6e8-f622-58ef-9679-740461b95b86)
+    '69d3f6e8-f622-58ef-9679-740461b95b86': {
+        'title': "The Gathering of Gods: Anubis & Isis",
+        'tagline': "Epic mythological fantasy series — Anubis & Isis with exclusive series bundle offer",
+        'author': "Derek E Pearson"
+    },
+
+    # 22. Preacher Spindrift (db9b7b04-bb72-0569-010b-ccadbd1eb228)
+    'db9b7b04-bb72-0569-010b-ccadbd1eb228': {
+        'title': "Preacher Spindrift Series",
+        'tagline': "Gods' Enemy, Gods' Fool & Gods' Warrior epic fantasy trilogy",
+        'author': "Derek E Pearson"
+    },
+
+    # 23. Erin & the Mouse (c0215ec8-1058-1b90-549d-1dc35000fda0)
+    'c0215ec8-1058-1b90-549d-1dc35000fda0': {
+        'title': "Erin & the Mouse (Edition 2)",
+        'author': "Clare Latham",
+        'contributors': "Foreword by Lee Ridley (Lost Voice Guy)"
+    },
+
+    # 24. Poetry Collection by Mary Pargeter (cde47029-fa39-eb54-3f55-b986494ac6bf)
+    'cde47029-fa39-eb54-3f55-b986494ac6bf': {
+        'title': "Poetry Collection by Mary Pargeter",
+        'author': "Mary Pargeter",
+        'contributors': "Free custom GB Publishing bookmark included with every copy",
+        'isArt': False
+    },
+
+    # 25. The Ginologist Cook (9792a2c8-299a-cf0e-6987-1c32c2df92a4)
+    '9792a2c8-299a-cf0e-6987-1c32c2df92a4': {
+        'title': "The Ginologist Cook: Dinner Party Recipes",
+        'tagline': "150 delicious recipes with Gin — The world's first craft gin coffee-table cookbook",
+        'author': "Pieter Carter & The Ginologist Team",
+        'contributors': "Craft gin recipes, mixology & botanical pairings from award-winning distillers",
         'authors': [
             {
-                "name": "Hein Prinsloo Curson",
-                "role": "Founder, The Noah's Ark Foundation",
-                "bio": "Conservation visionary and founder of The Noah's Ark Foundation, a registered charity dedicated to creating a 100-square-kilometre ultra-secure wildlife sanctuary in South Africa to halt species extinction."
+                "name": "Pieter Carter",
+                "role": "Ginologist Distiller & Founder",
+                "bio": "Graduated in law but instead of practising law he took to the stills. It wasn’t long before the 3 Gins in the Ginologist range of Spice, Floral and Citrus entered their first competition, the Michelangelo International Wine and Spirits awards, winning 2 gold medals and a silver."
             },
             {
-                "name": "Richard Prinsloo Curson",
-                "role": "Co-Founder & Producer",
-                "bio": "Creative director and producer behind the 12-part Noah's Ark television documentary broadcast on Sky TV and international networks."
+                "name": "Shane Heldsinger",
+                "role": "Group Executive Chef",
+                "bio": "Studied at Cordon Bleu Chefs School of South Africa and later had the privilege of cooking for Nelson Mandela on his 90th birthday celebrations."
+            },
+            {
+                "name": "Charlotte Letlape",
+                "role": "The Pastry Princess",
+                "bio": "Specialises in designer desserts, high tea catering and speciality cakes. Former investment banker turned pastry chef from Johannesburg."
+            },
+            {
+                "name": "Kundi Thai",
+                "role": "Culinary Specialist & Private Chef",
+                "bio": "Private chef and premier catering business owner dedicated to gourmet home cooking."
+            },
+            {
+                "name": "Phillip Tlhako",
+                "role": "Professional Cookery Chef",
+                "bio": "Professional chef in Pretoria with deep passion for contemporary South African gastronomy."
+            },
+            {
+                "name": "Ahe Jafta",
+                "role": "Master Mixologist",
+                "bio": "Celebrated mixologist who competed in MasterChef South Africa and represented the nation in top international cocktail championships."
             }
         ],
-        'authorBio': "Hein Prinsloo Curson is the founder of The Noah's Ark Foundation. All publisher and author proceeds from direct purchases of this book go directly to charity operations protecting endangered species.",
-        'missionCard': {
-            'badge': "Official Sky TV & Conservation Initiative",
-            'tag': "100% Proceeds Support Charity",
-            'heading': "The Noah's Ark Sanctuary — Africa",
-            'content': "You are Noah! is the official companion to the 12-part wildlife documentary series broadcast on Sky TV. Author and publisher profits from sales of this book directly support The Noah's Ark Foundation in South Africa, building an ultra-secure sanctuary to protect UN Red List endangered species.",
-            'highlights': [
-                "Includes access code to stream Noah's Ark TV Series 1",
-                "Directly funds anti-poaching security & veterinary teams",
-                "Eden Project-style biomes for vulnerable wildlife",
-                "Full engagement and upliftment of local indigenous communities"
-            ]
-        },
-        'videoTrailer': {
-            'title': "Noah's Ark TV Series — Official Trailer",
-            'url': "https://video.wixstatic.com/video/7c7af8_952d7f4ee2be48458e51975fea0afcba/720p/mp4/file.mp4",
-            'poster': "https://static.wixstatic.com/media/7c7af8_134a1929da7e4819a99a2af310de89e9~mv2.png/v1/fit/w_1280,h_720,q_90/file.png",
-            'duration': "Trailer"
-        },
+        'authorBio': "Crafted by the culinary and distilling team at Ginologist, South Africa's award-winning craft distillery. From savoury mains to sweet desserts and signature cocktails, each recipe explores botanical gin flavour pairings.",
         'previewPages': [
-            "https://static.wixstatic.com/media/7c7af8_134a1929da7e4819a99a2af310de89e9~mv2.png/v1/fit/w_1200,h_1500,q_90/file.png",
-            "https://static.wixstatic.com/media/7c7af8_61fa0963c53d4c98b16aa0079a50e8d9~mv2.jpg/v1/fit/w_1000,h_1200,q_90/file.jpg",
-            "https://static.wixstatic.com/media/7c7af8_f35bf2d72ef84f36acec365128697d8c~mv2.jpg/v1/fit/w_1000,h_1200,q_90/file.jpg",
-            "https://static.wixstatic.com/media/7c7af8_bb40f6f11a3946588ca6a20d3d32ae38~mv2.jpg/v1/fit/w_1000,h_1200,q_90/file.jpg"
+            "https://static.wixstatic.com/media/7c7af8_5b34981d7433437e9a6e1434ca501ec9~mv2.jpg/v1/fill/w_1000,h_1250,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_4d81a60c16b8430997ed206d21293311~mv2.jpg/v1/fill/w_1200,h_750,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_be677a6802924525b9cef47571d585f7~mv2.jpg/v1/fill/w_1000,h_1250,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_702a44fa0a6245669c0affde03d6e57e~mv2_d_1240_1754_s_2.jpg/v1/fill/w_1000,h_1400,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_aa2998b42b244a6cad6deb16457ce841~mv2.jpg/v1/fill/w_1000,h_1400,q_90/file.jpg"
         ],
         'accolades': [
-            {"title": "Sky TV Broadcast", "subtitle": "12-Part Wildlife Documentary Series"},
-            {"title": "Good Morning Britain (ITV)", "subtitle": "National Television Feature"},
-            {"title": "Daily Express & Mail Online", "subtitle": "Press Feature"},
-            {"title": "Jacaranda FM", "subtitle": "Martin Bester Broadcast"}
-        ],
-        'description': "You are Noah! Introduction by Hein Prinsloo Curson.\n\nThe official book tie-in to the 12-part Noah's Ark television series broadcast on Sky TV. This volume captures the opening chapters of a bold global conservation effort: constructing a 100-square-kilometre state-of-the-art wildlife sanctuary in South Africa to protect Earth's most endangered species.\n\nFeaturing behind-the-scenes photography from the TV production, architectural plans for climate-controlled biomes, and insights into high-tech anti-poaching security, You are Noah! is both a compelling visual journey and an urgent call to action. Author profits support The Noah's Ark Foundation registered charity."
+            {"title": "IWSC Silver Award", "subtitle": "International Wine & Spirit Competition"},
+            {"title": "Expresso TV Show", "subtitle": "National Morning Showcase"}
+        ]
     }
 }
 
@@ -326,7 +532,7 @@ def clean_text(text):
     return t
 
 def extract_author(name, brand=""):
-    if brand and len(brand) > 2 and brand != "GB Publishing":
+    if brand and len(brand) > 2 and brand != "GB Publishing" and brand != "GB Publishing Org":
         return clean_text(brand)
     n = clean_text(name).lower()
     if 'ozlem' in n or 'zlem' in n or 'özlem' in n:
@@ -334,16 +540,22 @@ def extract_author(name, brand=""):
     if 'pargeter' in n:
         return 'Mary Pargeter'
     if 'kimberley' in n:
-        return 'Anthony & Wendy Kimberley'
-    if 'thornton' in n:
-        return 'P Thornton'
+        if 'david kimberley' in n or 'antecedent' in n:
+            return 'David Kimberley'
+        if 'wendy' in n:
+            return 'Wendy Kimberley'
+        return 'Anthony Kimberley'
+    if 'thornton' in n or 'zodiac cooks' in n:
+        return 'renowned astrologer Penny Thornton'
     if 'latham' in n:
         return 'Clare Latham'
     if 'solonair' in n:
-        return 'Dr Solonair'
-    if 'collins' in n:
+        return 'fine artist Solonair'
+    if 'collins' in n or 'crumbdog' in n:
         return 'Lois Collins'
     if 'boughton' in n:
+        if 'cptn' in n or 'captain' in n or 'seafaring' in n:
+            return 'Captain George P Boughton'
         return 'George S Boughton'
     if 'fitzgerald' in n:
         return 'M.A. Fitzgerald'
@@ -351,10 +563,20 @@ def extract_author(name, brand=""):
         return 'Keith Futcher'
     if 'sauvage' in n:
         return 'John Sauvage'
-    if 'trivedy' in n:
+    if 'trivedy' in n or 'tulsi' in n:
         return 'Dr Chet Trivedy'
     if 'morganico' in n or 'sam widges' in n:
-        return 'Morganico'
+        return 'fine artist Morganico'
+    if 'tillier' in n or 'spoddle' in n:
+        return 'Martyn Tillier'
+    if 'pearson' in n or 'kingswraith' in n or 'milla carter' in n or 'spindrift' in n or 'gathering of gods' in n or 'pink biscuit' in n:
+        return 'Derek E Pearson'
+    if 'ritchie' in n or 'the ordinary' in n:
+        return 'Christopher Ritchie'
+    if 'akeroyd' in n or 'plants' in n:
+        return "John Akeroyd, Donough O'Brien & Liz Cowley"
+    if 'noah' in n or 'prinsloo' in n:
+        return 'Hein Prinsloo Curson'
     return 'GB Publishing Author'
 
 def categorize_product(name, collection_ids, collections_map):
@@ -383,11 +605,11 @@ def categorize_product(name, collection_ids, collections_map):
     if not cats:
         if any(k in n_lower for k in ['cook', 'food', 'recipe', 'turkish', 'gin']):
             cats.append("Food & Drink")
-        elif any(k in n_lower for k in ['picture', 'children', 'grandad', 'erin', 'dennis', 'tommy', 'crumbdog']):
+        elif any(k in n_lower for k in ['picture', 'children', 'grandad', 'erin', 'dennis', 'tommy', 'crumbdog', 'widges', 'spoddle']):
             cats.append("Children's & Picture Books")
-        elif any(k in n_lower for k in ['poetry', 'pargeter', 'fine art', 'paintings', 'kimberley bem']):
+        elif any(k in n_lower for k in ['poetry', 'pargeter', 'fine art', 'paintings', 'kimberley bem', 'art print']):
             cats.append("Poetry & Fine Art")
-        elif any(k in n_lower for k in ['memoir', 'biography', 'nature', 'plants', 'vet']):
+        elif any(k in n_lower for k in ['memoir', 'biography', 'nature', 'plants', 'vet', 'seafaring']):
             cats.append("Non-Fiction & Memoir")
         else:
             cats.append("Fiction, Young Adult & Sci-Fi")
@@ -408,10 +630,10 @@ with urllib.request.urlopen(col_req) as resp:
     collections_map = {c['id']: c['name'] for c in cols_data.get('collections', [])}
 print(f"Retrieved {len(collections_map)} collections.")
 
-# 2. Query Products
+# 2. Query Products with includeVariants: True
 prod_req = urllib.request.Request(
     'https://www.wixapis.com/stores/v1/products/query',
-    data=json.dumps({'query': {'paging': {'limit': 100}}}).encode('utf-8'),
+    data=json.dumps({'includeVariants': True, 'query': {'paging': {'limit': 100}}}).encode('utf-8'),
     headers=headers,
     method='POST'
 )
@@ -425,7 +647,22 @@ for idx, p in enumerate(raw_products):
     raw_name = clean_text(p.get('name', ''))
     ribbon = clean_text(p.get('ribbon', ''))
     description = clean_text(p.get('description', ''))
+    handle_id = p.get('id', p.get('numericId', f"wix_{idx}"))
     
+    # Check hidden or Black Friday
+    if p.get('visible', True) is False:
+        continue
+    name_lower = raw_name.lower()
+    if 'black friday' in name_lower:
+        continue
+    if any(dump in name_lower for dump in [
+        'copy of buy these stunning books',
+        'gbp crisis appeal',
+        'non-fiction biography memoir paperbacks',
+        'stunning coffee-table cook-books'
+    ]):
+        continue
+        
     is_signed = ('signed' in ribbon.lower() or 
                  'signed' in raw_name.lower() or 
                  'signed' in description.lower())
@@ -433,12 +670,26 @@ for idx, p in enumerate(raw_products):
     is_wholesale = ('wholesale' in raw_name.lower())
     
     display_name = raw_name
-    # Clean up minor artifacts while preserving edition details
     display_name = re.sub(r'(?:[ÖöOo]{2,3}|\ufffd+)zlem', 'Özlem', display_name)
     display_name = display_name.replace(' -by ', ' - by ').strip()
     if not display_name:
         display_name = raw_name
-        
+
+    # Determine isArt strictly
+    # Mary Pargeter poetry collections are books, not art prints
+    if 'pargeter' in name_lower or 'poetry' in name_lower:
+        is_art = False
+    elif any(k in name_lower for k in [
+        'art print', 'art prints', 'render', '360x300mm', 'size a2', 'size a3', 
+        'a2 prints', 'a3 prints', 'wendy kimberley art', 'wendy kimberley bem art', 
+        'painting 1', 'paintings in anthony', 'tigers in lockdown'
+    ]):
+        is_art = True
+    elif 'prints' in name_lower:
+        is_art = True
+    else:
+        is_art = False
+
     price_data = p.get('priceData', {})
     base_price = price_data.get('price')
     discounted_price = price_data.get('discountedPrice')
@@ -475,23 +726,68 @@ for idx, p in enumerate(raw_products):
     if not slug:
         slug = f"book-{idx+1}"
         
-    handle_id = p.get('id', p.get('numericId', f"wix_{idx}"))
     sku = p.get('sku') or f"GBP-{1000 + idx}"
     
     # Mary Pargeter exclusive bookmark perk per George's instruction
-    if 'pargeter' in raw_name.lower() or 'pargeter' in slug:
+    if 'pargeter' in name_lower or 'pargeter' in slug:
         ribbon = "Free Bookmark Included"
         if "free custom gb publishing bookmark" not in description.lower():
             description = description + " ✨ Free custom GB Publishing bookmark included with every copy."
-    
-    if p.get('visible', True) is False:
-        continue
 
+    # Parse productOptions
+    clean_options = []
+    for opt in p.get('productOptions', []):
+        visible_choices = [c for c in opt.get('choices', []) if c.get('visible', True)]
+        if visible_choices:
+            clean_options.append({
+                'name': opt.get('name', ''),
+                'optionType': opt.get('optionType', 'drop_down'),
+                'choices': [
+                    {
+                        'value': c.get('value', ''),
+                        'description': c.get('description', ''),
+                        'inStock': c.get('inStock', True)
+                    }
+                    for c in visible_choices
+                ]
+            })
+
+    # Parse variants (only visible ones)
+    clean_variants = []
+    for v in p.get('variants', []):
+        v_data = v.get('variant', {})
+        if v_data.get('visible', True) is False:
+            continue
+        p_data = v_data.get('priceData', {})
+        v_price = p_data.get('price')
+        v_discount = p_data.get('discountedPrice')
+        if v_discount is not None and v_price is not None and v_discount < v_price:
+            actual_price = float(v_discount)
+            orig_price = float(v_price)
+        elif v_price is not None:
+            actual_price = float(v_price)
+            orig_price = None
+        else:
+            actual_price = price
+            orig_price = None
+        clean_variants.append({
+            'id': v.get('id', ''),
+            'choices': v.get('choices', {}),
+            'price': actual_price,
+            'originalPrice': orig_price,
+            'sku': v_data.get('sku', ''),
+            'inStock': v.get('stock', {}).get('inStock', True)
+        })
+
+    # Apply editorial enrichments
     enrichment = EDITORIAL_ENRICHMENTS.get(handle_id, {})
     if enrichment.get('title'):
         display_name = enrichment['title']
     if enrichment.get('author'):
         author = enrichment['author']
+    if 'isArt' in enrichment:
+        is_art = enrichment['isArt']
+    contributors = enrichment.get('contributors', '')
 
     catalog.append({
         "id": handle_id,
@@ -499,6 +795,8 @@ for idx, p in enumerate(raw_products):
         "title": display_name,
         "rawTitle": raw_name,
         "author": author,
+        "contributors": contributors,
+        "isArt": is_art,
         "tagline": enrichment.get('tagline', ''),
         "authorSectionTitle": enrichment.get('authorSectionTitle', ''),
         "authors": enrichment.get('authors', []),
@@ -510,7 +808,7 @@ for idx, p in enumerate(raw_products):
         "price": price,
         "originalPrice": original_price,
         "sku": sku,
-        "ribbon": ribbon if ribbon else ("Signed Collector Edition" if is_signed else ""),
+        "ribbon": ribbon if ribbon else ("Signed Copy Available" if is_signed else ""),
         "categories": categories,
         "coverImage": cover_image,
         "gallery": gallery,
@@ -518,8 +816,10 @@ for idx, p in enumerate(raw_products):
         "isWholesale": is_wholesale,
         "isSigned": is_signed,
         "visible": True,
-        "format": "Signed Edition" if is_signed else ("Hardcover" if price > 20 else "Paperback"),
-        "stock": p.get('stock', {}).get('quantity', 25)
+        "format": "Signed Copy" if is_signed else ("Hardcover" if price > 20 else "Paperback"),
+        "stock": p.get('stock', {}).get('quantity', 25),
+        "options": clean_options,
+        "variants": clean_variants
     })
 
 # Save output to both locations
@@ -532,4 +832,7 @@ with open('src/data/catalog.json', 'w', encoding='utf-8') as f:
 with open('public/data/catalog.json', 'w', encoding='utf-8') as f:
     json.dump(catalog, f, indent=2, ensure_ascii=False)
 
-print(f"SUCCESS: Synced {len(catalog)} products from live gbp-publishing-org into catalog.json!")
+books_count = sum(1 for item in catalog if not item['isArt'])
+art_count = sum(1 for item in catalog if item['isArt'])
+
+print(f"SUCCESS: Synced {len(catalog)} products ({books_count} Books, {art_count} Art Prints) from live gbp-publishing-org into catalog.json!")

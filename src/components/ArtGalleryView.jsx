@@ -4,14 +4,8 @@ import { Palette, Eye, ShoppingBag, Sparkles, X } from 'lucide-react';
 export default function ArtGalleryView({ catalog, onAddToCart }) {
   const [selectedArt, setSelectedArt] = useState(null);
 
-  // Filter art items from catalog
-  const artItems = catalog.filter(item => 
-    item.categories.includes("Poetry & Fine Art") || 
-    item.author.includes("Wendy Kimberley") || 
-    item.author.includes("Lois Collins") ||
-    item.title.toLowerCase().includes("art") ||
-    item.title.toLowerCase().includes("painting")
-  );
+  // Strictly filter art items from catalog (no books allowed)
+  const artItems = catalog.filter(item => item.isArt === true);
 
   return (
     <div className="py-16 bg-[#121824] text-white min-h-[85vh]">

@@ -92,39 +92,42 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                   </div>
                 ) : (
                   <div className="space-y-4">
-                    {cartItems.map((item) => (
-                      <div key={item.id} className="flex gap-4 p-3 border border-slate-200 rounded-xl bg-slate-50/50 items-center">
-                        <img src={item.coverImage} alt={item.title} className="w-14 h-20 object-cover rounded shadow-sm" />
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-serif text-sm font-bold text-slate-900 truncate">{item.title}</h4>
-                          <p className="text-[11px] text-slate-500 font-sans">Format: {item.selectedFormat || item.format}</p>
-                          <p className="font-serif text-sm font-bold text-[#7A1F1A] mt-1">£{item.price.toFixed(2)}</p>
-                        </div>
-                        <div className="flex flex-col items-end gap-2">
-                          <div className="flex items-center border border-slate-300 rounded-lg bg-white">
+                    {cartItems.map((item) => {
+                      const itemKey = item.cartKey || `${item.id}-${item.selectedFormat || item.format}`;
+                      return (
+                        <div key={itemKey} className="flex gap-4 p-3 border border-slate-200 rounded-xl bg-slate-50/50 items-center">
+                          <img src={item.coverImage} alt={item.title} className="w-14 h-20 object-cover rounded shadow-sm" />
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-serif text-sm font-bold text-slate-900 truncate">{item.title}</h4>
+                            <p className="text-[11px] text-slate-500 font-sans">Edition: {item.selectedFormat || item.format}</p>
+                            <p className="font-serif text-sm font-bold text-[#7A1F1A] mt-1">£{item.price.toFixed(2)}</p>
+                          </div>
+                          <div className="flex flex-col items-end gap-2">
+                            <div className="flex items-center border border-slate-300 rounded-lg bg-white">
+                              <button 
+                                onClick={() => onUpdateQuantity(itemKey, item.quantity - 1)}
+                                className="p-1 hover:bg-slate-100 text-slate-600"
+                              >
+                                <Minus className="w-3.5 h-3.5" />
+                              </button>
+                              <span className="px-2 text-xs font-bold">{item.quantity}</span>
+                              <button 
+                                onClick={() => onUpdateQuantity(itemKey, item.quantity + 1)}
+                                className="p-1 hover:bg-slate-100 text-slate-600"
+                              >
+                                <Plus className="w-3.5 h-3.5" />
+                              </button>
+                            </div>
                             <button 
-                              onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-                              className="p-1 hover:bg-slate-100 text-slate-600"
+                              onClick={() => onRemoveItem(itemKey)}
+                              className="text-slate-400 hover:text-red-600 p-1"
                             >
-                              <Minus className="w-3.5 h-3.5" />
-                            </button>
-                            <span className="px-2 text-xs font-bold">{item.quantity}</span>
-                            <button 
-                              onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-                              className="p-1 hover:bg-slate-100 text-slate-600"
-                            >
-                              <Plus className="w-3.5 h-3.5" />
+                              <Trash2 className="w-4 h-4" />
                             </button>
                           </div>
-                          <button 
-                            onClick={() => onRemoveItem(item.id)}
-                            className="text-slate-400 hover:text-red-600 p-1"
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </button>
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 )}
               </>

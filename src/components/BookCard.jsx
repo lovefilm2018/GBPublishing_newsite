@@ -57,6 +57,12 @@ export default function BookCard({ book, onSelectBook, onAddToCart }) {
           <p className="text-xs text-slate-600 font-sans font-medium line-clamp-1">
             By <span className="text-slate-800">{book.author}</span>
           </p>
+
+          {book.contributors && (
+            <p className="text-[11px] text-[#8C2520] font-sans font-semibold line-clamp-1">
+              {book.contributors}
+            </p>
+          )}
         </div>
       </div>
 
@@ -80,7 +86,17 @@ export default function BookCard({ book, onSelectBook, onAddToCart }) {
 
         <div className="grid grid-cols-1 gap-2">
           <button 
-            onClick={() => onAddToCart(book)}
+            onClick={() => {
+              const defaultChoice = book.options?.[0]?.choices?.[0]?.value;
+              const defaultVariant = (book.variants || []).find(v => defaultChoice && v.choices && Object.values(v.choices).includes(defaultChoice));
+              onAddToCart({
+                ...book,
+                price: defaultVariant ? defaultVariant.price : book.price,
+                originalPrice: defaultVariant ? defaultVariant.originalPrice : book.originalPrice,
+                selectedFormat: defaultChoice || book.format || "Paperback",
+                variantId: defaultVariant?.id
+              });
+            }}
             className="w-full bg-[#7A1F1A] hover:bg-[#8C2520] text-white py-2.5 px-3 rounded-xl font-sans text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow-sm active:scale-95"
           >
             <ShoppingBag className="w-4 h-4" />

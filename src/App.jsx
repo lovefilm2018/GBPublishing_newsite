@@ -67,11 +67,14 @@ export default function App() {
     return catalog.find(b => b.title.includes("Ozlem") || b.title.includes("Özlem") || b.title.includes("Plants & Us")) || catalog[0];
   }, [catalog]);
 
-  // Filtered catalogue logic
+  // Filtered catalogue logic (Books strictly separated from Art Prints)
   const filteredBooks = useMemo(() => {
     return catalog.filter(book => {
       // Exclude hidden products flagged in Wix
       if (book.visible === false) return false;
+
+      // STRICT: Exclude art prints from book catalogue
+      if (book.isArt === true) return false;
 
       const titleLower = book.title.toLowerCase();
 
@@ -99,7 +102,8 @@ export default function App() {
         const matchTitle = book.title.toLowerCase().includes(q);
         const matchAuthor = book.author.toLowerCase().includes(q);
         const matchSku = book.sku.toLowerCase().includes(q);
-        if (!matchTitle && !matchAuthor && !matchSku) return false;
+        const matchContributors = (book.contributors || '').toLowerCase().includes(q);
+        if (!matchTitle && !matchAuthor && !matchSku && !matchContributors) return false;
       }
       // Signed Only
       if (filterSignedOnly && !book.isSigned) {
@@ -113,32 +117,74 @@ export default function App() {
     });
   }, [catalog, selectedCategory, selectedAuthor, searchQuery, filterSignedOnly, filterUnder15]);
 
+  // Group books by 5 core genre imprints matching the live homepage structure
+  const booksByGenre = useMemo(() => {
+    const genres = [
+      { 
+        id: 'Food & Drink', 
+        title: 'Food & Drink', 
+        description: 'Award-winning Turkish gastronomy, craft gin cookbooks & celestial date night recipes' 
+      },
+      { 
+        id: "Children's & Picture Books", 
+        title: "Children's & Picture Books", 
+        description: 'Delightfully illustrated picture books, conservation wildlife adventures & collector storybooks' 
+      },
+      { 
+        id: 'Non-Fiction & Memoir', 
+        title: 'Non-Fiction & Memoir', 
+        description: 'Veterinary memoirs, heroic tall-ship maritime sagas & ethnobotany exploration' 
+      },
+      { 
+        id: 'Fiction, Young Adult & Sci-Fi', 
+        title: 'Fiction, Young Adult & Sci-Fi', 
+        description: 'Epic mythological fantasy, space opera science fiction & psychological thrillers' 
+      },
+      { 
+        id: 'Poetry & Fine Art', 
+        title: 'Poetry & Literary Collections', 
+        description: 'Moving verse reflections, poetry collections & exclusive author signed gifts' 
+      }
+    ];
+
+    return genres.map(g => ({
+      ...g,
+      books: filteredBooks.filter(b => b.categories.includes(g.id))
+    })).filter(g => g.books.length > 0);
+  }, [filteredBooks]);
+
   // Cart operations
   const handleAddToCart = (bookToAdd) => {
+    const itemKey = `${bookToAdd.id}-${bookToAdd.selectedFormat || bookToAdd.format || 'Standard'}`;
     setCartItems(prev => {
-      const existing = prev.find(item => item.id === bookToAdd.id && item.selectedFormat === bookToAdd.selectedFormat);
+      const existing = prev.find(item => (item.cartKey || item.id) === itemKey);
       if (existing) {
         return prev.map(item => 
-          (item.id === bookToAdd.id && item.selectedFormat === bookToAdd.selectedFormat)
+          (item.cartKey || item.id) === itemKey
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       }
-      return [...prev, { ...bookToAdd, quantity: 1, selectedFormat: bookToAdd.selectedFormat || bookToAdd.format }];
+      return [...prev, { 
+        ...bookToAdd, 
+        cartKey: itemKey,
+        quantity: 1, 
+        selectedFormat: bookToAdd.selectedFormat || bookToAdd.format || 'Standard' 
+      }];
     });
     setIsCartOpen(true);
   };
 
-  const handleUpdateQuantity = (id, quantity) => {
+  const handleUpdateQuantity = (cartKey, quantity) => {
     if (quantity <= 0) {
-      handleRemoveItem(id);
+      handleRemoveItem(cartKey);
       return;
     }
-    setCartItems(prev => prev.map(item => item.id === id ? { ...item, quantity } : item));
+    setCartItems(prev => prev.map(item => (item.cartKey || item.id) === cartKey ? { ...item, quantity } : item));
   };
 
-  const handleRemoveItem = (id) => {
-    setCartItems(prev => prev.filter(item => item.id !== id));
+  const handleRemoveItem = (cartKey) => {
+    setCartItems(prev => prev.filter(item => (item.cartKey || item.id) !== cartKey));
   };
 
   const handleClearCart = () => {
@@ -363,7 +409,48 @@ export default function App() {
                     View All 100+ Books
                   </button>
                 </div>
+              ) : selectedCategory === 'ALL' && !searchQuery && !filterSignedOnly && !filterUnder15 && selectedAuthor === 'ALL' ? (
+                /* Grouped by 5 Core Genre Imprints matching live homepage */
+                <div className="space-y-16">
+                  {booksByGenre.map(group => (
+                    <section key={group.id} className="space-y-6">
+                      <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-[#E5E0DA] pb-4 gap-2">
+                        <div>
+                          <div className="flex items-center gap-3 mb-1">
+                            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-slate-900">
+                              {group.title}
+                            </h2>
+                            <span className="text-xs font-sans font-bold text-[#8C2520] bg-red-50 border border-red-200 px-2.5 py-0.5 rounded-full">
+                              {group.books.length} {group.books.length === 1 ? 'Book' : 'Books'}
+                            </span>
+                          </div>
+                          <p className="text-xs text-slate-500 font-sans max-w-xl">
+                            {group.description}
+                          </p>
+                        </div>
+                        <button
+                          onClick={() => setSelectedCategory(group.id)}
+                          className="text-xs font-bold text-[#8C2520] hover:underline flex items-center gap-1 self-start sm:self-auto"
+                        >
+                          <span>Explore {group.title} →</span>
+                        </button>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {group.books.map((book) => (
+                          <BookCard 
+                            key={book.id} 
+                            book={book} 
+                            onSelectBook={setSelectedBook} 
+                            onAddToCart={handleAddToCart}
+                          />
+                        ))}
+                      </div>
+                    </section>
+                  ))}
+                </div>
               ) : (
+                /* Filtered Single Category or Search Results Grid */
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredBooks.map((book) => (
                     <BookCard 

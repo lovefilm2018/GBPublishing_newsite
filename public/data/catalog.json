@@ -4,7 +4,9 @@
     "slug": "wendy-kimberley-bem-art-paintings-in-anthony-kimberley-s-books",
     "title": "Wendy Kimberley BEM Art - paintings in Anthony Kimberley's books",
     "rawTitle": "Wendy Kimberley BEM Art - paintings in Anthony Kimberley's books",
-    "author": "Anthony & Wendy Kimberley",
+    "author": "Wendy Kimberley",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -40,17 +42,405 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "Grandad let's go for a walk",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Painting 1",
+            "description": "Painting 1",
+            "inStock": true
+          },
+          {
+            "value": "Painting 2",
+            "description": "Painting 2",
+            "inStock": true
+          },
+          {
+            "value": "Painting 3",
+            "description": "Painting 3",
+            "inStock": true
+          },
+          {
+            "value": "Painting 4",
+            "description": "Painting 4",
+            "inStock": true
+          },
+          {
+            "value": "Painting 5",
+            "description": "Painting 5",
+            "inStock": true
+          },
+          {
+            "value": "Painting 6",
+            "description": "Painting 6",
+            "inStock": true
+          },
+          {
+            "value": "Painting 7",
+            "description": "Painting 7",
+            "inStock": true
+          },
+          {
+            "value": "Painting 8",
+            "description": "Painting 8",
+            "inStock": true
+          },
+          {
+            "value": "Painting 9",
+            "description": "Painting 9",
+            "inStock": true
+          },
+          {
+            "value": "Painting 10",
+            "description": "Painting 10",
+            "inStock": true
+          },
+          {
+            "value": "Painting 11",
+            "description": "Painting 11",
+            "inStock": true
+          },
+          {
+            "value": "Painting 12",
+            "description": "Painting 12",
+            "inStock": true
+          },
+          {
+            "value": "Painting 13",
+            "description": "Painting 13",
+            "inStock": true
+          }
+        ]
+      },
+      {
+        "name": "Size",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "A2",
+            "description": "A2",
+            "inStock": true
+          },
+          {
+            "value": "A4",
+            "description": "A4",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "1f004142-2ff2-443e-8d30-72799c8340cd",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 1",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "fe834d5a-8cc1-479b-8e6a-599665099495",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 1",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "0a4a5f1f-a4e1-4a30-9ea4-0b6dd3818d30",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 2",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "273d7127-74c3-4f60-9771-02ec7d62b151",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 2",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "50b5ad54-f005-4306-9952-7356c9b9ccb5",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 3",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "e05656a8-a8bd-48ca-a8eb-053917def07a",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 3",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "5daa8274-1a18-45f6-8a04-962dca7b76b0",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 4",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "2f784d00-f95c-4adb-b965-6b48728251fc",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 4",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "9841d8fd-8a35-40cc-b109-4614a6b41f6b",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 5",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "0b0b07d0-b6e7-44d7-956c-e5131d4f8f5f",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 5",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "f135bc98-d996-4d6a-bf2a-f06cf56090e8",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 6",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "3b30142a-6104-4d5e-ba36-96f1755b106b",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 6",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "7d0034c7-aade-48af-b071-0d08360746a1",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 7",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "61751a5c-c607-41f1-b67a-fe939ffa7e42",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 7",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "a2f5ec9f-9f9c-46d7-a1a2-c7bfbfd2e9ea",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 8",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "e2c03ed1-9489-4dfd-ba3a-6f79ee76fbe5",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 8",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "251053da-c9ce-4a42-bf52-fd6530faed60",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 9",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "42ff32aa-1c41-4cbd-bb4f-c8b1f5c1c7e0",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 9",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "890e36ad-b2a3-4ebd-bab7-316ad0a49b45",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 10",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "7a52439e-fc29-4904-84cf-effc74d78fcb",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 10",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "66dcb4aa-8766-43e1-a524-fa8b97e1ff5c",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 11",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "8923a225-13e7-4a1c-9ec6-f4fd209319bc",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 11",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "9cb4c82b-44e8-44bd-a70b-6bcc95b46608",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 12",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "cc2fc7f1-db2d-41bd-8430-5b755c1395cd",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 12",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "cc1485b7-d9f5-4ea8-8d71-ba5b2ecb7328",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 13",
+          "Size": "A2"
+        },
+        "price": 75.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "2df76c91-e5b6-4d96-9a95-cfedb14bb8ce",
+        "choices": {
+          "Grandad let's go for a walk": "Painting 13",
+          "Size": "A4"
+        },
+        "price": 45.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "aef4a66f-8990-8876-b336-b4aa17e8d6f9",
     "slug": "grandad-let-s-go-for-a-walk-by-anthony-wendy-kimberley-picture-books",
-    "title": "'Grandad, let's go for a walk' by Anthony & Wendy Kimberley, picture books",
+    "title": "Grandad, let's go for a walk",
     "rawTitle": "'Grandad, let's go for a walk' by Anthony & Wendy Kimberley, picture books",
-    "author": "Anthony & Wendy Kimberley",
-    "tagline": "",
-    "authorSectionTitle": "",
-    "authors": [],
+    "author": "Anthony Kimberley",
+    "contributors": "Illustrations by fine artist Wendy Kimberley",
+    "isArt": false,
+    "tagline": "A gentle intergenerational journey exploring nature through the eyes of a grandchild and grandfather",
+    "authorSectionTitle": "About the Author & Fine Artist",
+    "authors": [
+      {
+        "name": "Anthony Kimberley",
+        "role": "Author"
+      },
+      {
+        "name": "Wendy Kimberley BEM",
+        "role": "Fine Artist & Illustrator"
+      }
+    ],
     "authorBio": "",
     "previewPages": [],
     "accolades": [],
@@ -84,14 +474,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 7.99,
+        "originalPrice": null,
+        "sku": "9781912031740",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "c0215ec8-1058-1b90-549d-1dc35000fda0",
     "slug": "erin-the-mouse-ed2-clare-latham-foreword-lee-ridley-a-charity-picture-book",
-    "title": "Erin & the Mouse Ed2, Clare Latham, Foreword Lee Ridley, a CHARITY picture book",
+    "title": "Erin & the Mouse (Edition 2)",
     "rawTitle": "Erin & the Mouse Ed2, Clare Latham, Foreword Lee Ridley, a CHARITY picture book",
     "author": "Clare Latham",
+    "contributors": "Foreword by Lee Ridley (Lost Voice Guy)",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -121,7 +524,18 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 6.99,
+        "originalPrice": 7.99,
+        "sku": "\"9781912031382 \"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "2e44d90a-be72-8264-8a35-9bbea70b09f8",
@@ -129,6 +543,8 @@
     "title": "The War for the Tree - by M.A. Fitzgerald, young adult novel",
     "rawTitle": "The War for the Tree - by M.A. Fitzgerald, young adult novel",
     "author": "M.A. Fitzgerald",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -153,155 +569,18 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
-  },
-  {
-    "id": "b40ecb5d-6647-1632-78bb-515cc5d0db7e",
-    "slug": "non-fiction-biography-memoir-paperbacks",
-    "title": "Non-Fiction Biography Memoir paperbacks",
-    "rawTitle": "Non-Fiction Biography Memoir paperbacks",
-    "author": "GB Publishing Org",
-    "tagline": "",
-    "authorSectionTitle": "",
-    "authors": [],
-    "authorBio": "",
-    "previewPages": [],
-    "accolades": [],
-    "videoTrailer": null,
-    "missionCard": null,
-    "price": 9.99,
-    "originalPrice": 11.99,
-    "sku": "GBP-1004",
-    "ribbon": "Signed Collector Edition",
-    "categories": [
-      "Non-Fiction & Memoir"
-    ],
-    "coverImage": "https://static.wixstatic.com/media/7c7af8_3e7020ab8f6d4eb19cf61ae5abdb33af~mv2.jpeg/v1/fit/w_1144,h_1166,q_90/file.jpg",
-    "gallery": [
-      "https://static.wixstatic.com/media/7c7af8_2a934cee764e43288373d8bd624d78c9~mv2.jpg/v1/fit/w_1070,h_1070,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_925a9ab9fd3d466382f67d7bdd39f458~mv2.jpg/v1/fit/w_930,h_930,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_ae0201ff477d4147ae4ab3bde6bc12d5~mv2.jpg/v1/fit/w_1130,h_1130,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_6b55f723eafe43079fc30fd21c5d28a6~mv2.png/v1/fit/w_140,h_202,q_90/file.png",
-      "https://static.wixstatic.com/media/7c7af8_541a1f50d1784ef3b412c5b682412fa1~mv2.jpg/v1/fit/w_1000,h_1192,q_90/file.jpg"
-    ],
-    "description": "Autobiology of a Vet by John Sauvage – veterinary memoir paperback Photos included Press/Media: Take a Break, Companion Life, Improve Vetinary Practice, Vetclick, Your Dog, Vetinary News, Talk Radio Europe. A graduate of the Royal Veterinary College, John went to East Africa with a research team. His veterinary experience back in the UK ranged from cattle to dog and equine practice, taught local farmers and gained higher qualifications with the Open University and then in veterinary cardiology. Which took him to Australia, Portugal, Republic of Ireland and Norway. Absurd by Keith Futcher -– memoir/travel paperback Photographs by Jason Howe A real life adventure across the deserts of Morocco by seniors on motorbikes. Press/Media: Octane magazine, Bike magazine, Talk Radio Europe, Adventure Rider Radio and more. Interview witht Brooklands Museum (BM) member John Bottomley on Brooklands Radio and BM.tv Livestream. A signature event to which they rode motorcycles from York, their original starting point, in their minds thinking: you are never too old to ride out on your motorbike in search of adventure. Seafaring The Full Story by Captain George P Boughton – SAILING CLASSIC , memoir paperback SIGNED by the author's grandson (bought here) A real life adventure beautifully Illustrated by Kenneth D Shoesmith. Press: The Times Literary Supplement : \"His book is genuine sea salt\"; The Spectator: \"recalls emotions [on life at sea] that have fleeted from the minds of most\"; Surrey Life magazine: \"Captain George P Boughton's maritime career began in 1881 at the age of 12, and now this intriguing memoir of a life at sea is available to a new generation of readers.\" Nora & John by Nora and John Murray – biography paperback A Cold War Best Seller, re-published with more coverage of the couple's incredible escape from Stalin's Soviet Russia, just as Nazi Germany invaded Moscow in WWII. Press: The Times Literary Supplement, People, and many regional press in the UK A dire reflection of what Putin seeks to restore, in the Ukraine and potentially across all of eastern Europe, in the eyes of young Nora. The daughter of the NKVD (secret police) chief, she watched as friends of hers went missing – even simply for wanting to dance the Foxstrot – and then her father disappeared... Black Gold - Black Scorpion by George S Boughton – memoir paperback SIGNED by the author (bought here) The author's memoir as an oil worker in the Biafran War tells of evacuations and news black outs his family endured but also his capture by Brigadier Adekunle, the ruthless 'Black Scorpion' Press/Media: TV Presenter Juiette Foster Plants & Us by John Akeroyd, Donough O'Brien, Liz Cowley – wildlife and culture paperback Foreword by Sir Tim Smit, The Eden Project, Cornwall (UK) The Telegraph: A fascinating new book Press : Countryman, Gardens Illustrated, Garden News, Professional Gardener, Local Gardene, Horticultural Week, Caduceus, WI Life, The American, BSBI News, The Tablet, Scottish Field, The Field, Fine Food Digest A compendium of brief stories on the impact of plants on cultures and societies through time. Included is the Interdependence of Plants and Animals. Which, with the Eden Project's domes, adds a great deal to the understanding needed to embrace the Noah's Ark project in You are Noah!",
-    "isWholesale": false,
-    "isSigned": true,
-    "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
-  },
-  {
-    "id": "9433b146-919b-b3ba-4cba-b6449164dd5c",
-    "slug": "copy-of-buy-these-stunning-books-some-signed-20-goes-to-the-crisis-relief-you",
-    "title": "copy of Buy these stunning books –some signed– 20% goes to the crisis relief you",
-    "rawTitle": "copy of Buy these stunning books –some signed– 20% goes to the crisis relief you",
-    "author": "GB Publishing Org",
-    "tagline": "",
-    "authorSectionTitle": "",
-    "authors": [],
-    "authorBio": "",
-    "previewPages": [],
-    "accolades": [],
-    "videoTrailer": null,
-    "missionCard": null,
-    "price": 25.99,
-    "originalPrice": 31.19,
-    "sku": "GBP-1005",
-    "ribbon": "Signed Collector Edition",
-    "categories": [
-      "Fiction, Young Adult & Sci-Fi"
-    ],
-    "coverImage": "https://static.wixstatic.com/media/7c7af8_ae3043f10dea49cca2a15c243a66d7f0~mv2.jpeg/v1/fit/w_1279,h_1362,q_90/file.jpg",
-    "gallery": [
-      "https://static.wixstatic.com/media/7c7af8_aee3b70824c640ba91fa7478246eead5~mv2.jpeg/v1/fit/w_1182,h_1186,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_2c0b695003dd47cd8254f6f6d9282633~mv2.jpg/v1/fit/w_600,h_467,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_ae0201ff477d4147ae4ab3bde6bc12d5~mv2.jpg/v1/fit/w_1130,h_1130,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_0a2ccfd2ab144dada7c4c1769c45a875~mv2.jpg/v1/fit/w_810,h_810,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_541a1f50d1784ef3b412c5b682412fa1~mv2.jpg/v1/fit/w_1000,h_1192,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_9578c238828b4c0fa0fcbb76410b77ef~mv2.jpeg/v1/fit/w_1101,h_1168,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_fe9361fd70f34b1795d3024e23538ca5~mv2.png/v1/fit/w_800,h_800,q_90/file.png",
-      "https://static.wixstatic.com/media/7c7af8_3e7020ab8f6d4eb19cf61ae5abdb33af~mv2.jpeg/v1/fit/w_1144,h_1166,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_e59f73ffae57436693a28aa353809b71~mv2.png/v1/fit/w_650,h_500,q_90/file.png"
-    ],
-    "description": "Özlem's Turkish Table by Özlem Warren – SIGNED coffee table cookbook hardback Foreword by Ghillie Basan Winner Gourmand World Cookbooks Awards, in Turkish Culture Best Seller: over 10,000 copies sold Özlem's homeland Antakya was devastated in the earthquake and tragically she lost relatives Press/Media : Observer Food Monthly, Washington Post, The Guardian, Sun Travel, Waitrose Food, Time & Leisure, Mediterranean Lifestyle, Mediterranean Living, Londra Gazete, greenprophet, Daiy Sabah, Turkish British, Anglo Turkish Society, Brooklands Radio, Milk Street Radio (USA) Events; Edinburgh International Book Festival This book is Özlem’s tribute to the wonderfully diverse cuisine of Turkey and a celebration of her Southern Turkish roots with local recipes from her home town, Antioch, Antakya. The Zodiac Cooks by world renowned astrologer Penny Thornton – SIGNED coffee table cookbook paperback Recipes for romance. SENSUOUS CELESTIAL COOKING? Yup. Press:/media : ITV Good Morning Britain, Daily Mail Femail, Woman & Home, People, The List (TV, USA), Expresso and Top Billing (TV, Africa) Could serving the right food capture a heart? Yes, according to passionate cook Penny Thornton (author of Suns and Lovers) who believes matching meals to personality types can open the route to happy seduction. Little Tommy and the Kingdom of Clouds series (2 books) by Solonair – children's hardback Illustrations by fine artist Solonair. Solonair (Nick, Mykola) is a Ukrainian British sculptor, artist and intellectual freethinker born in Ternopil (Ukraine). Graduate of the Kensington and Chelsea College of Art (UK) and Member of the Chelsea Art Club. He returned to Ukraine to help in rescue and relief operations. All his proceeds from the book (not just 20%) are to go to the charity you choose. Nora & John by Nora and John Murray – biography paperback A Cold War Best Seller, re-published with more coverage of the couple's incredible escape from Stalin's Soviet Russia, just as Nazi Germany invaded Moscow in WWII. Press: The Times Literary Supplement, People, and many regional press in the UK A dire reflection of what Putin seeks to restore, in the Ukraine and potentially across all of eastern Europe, in the eyes of young Nora. The daughter of the NKVD (secret police) chief, she watched as friends of hers went missing – even simply for wanting to dance the Foxstrot – and then her father disappeared... You are Noah! by Hein Prinzloo Curson – wildlife conservation hardback Content from Noah's Ark TV Series 1 (Sky TV 2021) Press/Media: Kay Burley and Good Morning Britain (ITV), Mail Online, Daily Mail, The National Reporter, Daily Express and many more. Captured on camera are steps taken by the Noah's Ark Foundation (a registered charity) to build the world's most amazing wildlife conservation park: Saving UN's red list of endangered species, with full participation of indigenous people, Eden-Project-like domes for species from other climes, a visitor centre, eco-technology, high level Jurassic Park-like security. To get the word out, the focus now is on the release of music singles, and a series of gala concerts. Time to sing to the world the joy and wellbeing we get from nature and what we'll gain by saving it. Plants & Us by John Akeroyd, Donough O'Brien, Liz Cowley – wildlife and culture paperback Foreword by Sir Tim Smit, The Eden Project, Cornwall (UK) The Telegraph: A fascinating new book Press : Countryman, Gardens Illustrated, Garden News, Professional Gardener, Local Gardene, Horticultural Week, Caduceus, WI Life, The American, BSBI News, The Tablet, Scottish Field, The Field, Fine Food Digest A compendium of brief stories on the impact of plants on cultures and societies through time. Included is the Interdependence of Plants and Animals. Which, with the Eden Project's domes, adds a great deal to the understanding needed to embrace the Noah's Ark project in You are Noah! Tulsi the Tiger by Dr Chet Trivedy – children's and wildlife conservation paperback Foreword by Saba Douglas-Hamilton, Samburu National Reserve, Kenya Illustrations by Derek E Pearson The author's proceeds from the book will support The Tulsi Foundation (a voluntary non-profit organisation) working for the health of frontline staff in the jungles of India. With support of WCT, an Indian wildlife charity, over 1,100 rangers have been trained in 14 tiger reserves across three states in Central India. These staff play a key role in keeping tigers safe and ensuring they are around for many generations to come. Autobiology of a Vet by John Sauvage – veterinary memoir paperback Photos included Press/Media: Take a Break, Companion Life, Improve Vetinary Practice, Vetclick, Your Dog, Vetinary News, Talk Radio Europe. A graduate of the Royal Veterinary College, John went to East Africa with a research team. His veterinary experience back in the UK ranged from cattle to dog and equine practice, taught local farmers and gained higher qualifications with the Open University and then in veterinary cardiology. Which took him to Australia, Portugal, Republic of Ireland and Norway. Dennis to Alice by George S Boughton – SIGNED wildlife conservation paperback. A movie in a book Illustrated by Martyn Tillier, with video clips throughout. Media: Brooklands Radio Captured was a chance moment, when a peaceful river was dammed by the flooding of two strong storms and then was isolated, with the author, as the COVID pandemic swept across the world. On camera is an extraordinary beauty of nature in those weeks, with blue skies free of contrails, wildlife undisturbed, and two geese that made their nest on the dam. Then kayakers tackle the obstacle, boaters try to remove it, a swan performs... and a fox attacks… Searching with Sam Widges by Morganico – artistic (children's) and wildlife paperback Illustrated by fine artist Morganico. A street artist similar to Banksy, Press: Daily Mail, Reviews; Max Somerset (magician from ITV), Geoffrey Matthews (Chelsea Art Club C.E.O/secretary) Young Sam Widges encounters many interesting characters around the world, only to find that home is where he wants to be. The meditative approach is designed to leave story readers in a peaceful tranquil state of mind, feeling they have travelled the world without leaving their armchair. Sam's realisation comes in the same gentle manner a white feather of peace makes contact with a pool of crystal clear-water landing in a slow-motion soft bounce…",
-    "isWholesale": false,
-    "isSigned": true,
-    "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
-  },
-  {
-    "id": "998ef6a7-c105-94ff-5288-da2e125aa969",
-    "slug": "gbp-crisis-appeal-from-sales-here-25-now-goes-to-the-crisis-relief-you-choose",
-    "title": "GBP Crisis Appeal – from sales here 25% now goes to the crisis relief you choose",
-    "rawTitle": "GBP Crisis Appeal – from sales here 25% now goes to the crisis relief you choose",
-    "author": "GB Publishing Org",
-    "tagline": "",
-    "authorSectionTitle": "",
-    "authors": [],
-    "authorBio": "",
-    "previewPages": [],
-    "accolades": [],
-    "videoTrailer": null,
-    "missionCard": null,
-    "price": 25.99,
-    "originalPrice": 31.19,
-    "sku": "GBP-1006",
-    "ribbon": "Signed Collector Edition",
-    "categories": [
-      "Fiction, Young Adult & Sci-Fi"
-    ],
-    "coverImage": "https://static.wixstatic.com/media/7c7af8_ae3043f10dea49cca2a15c243a66d7f0~mv2.jpeg/v1/fit/w_1279,h_1362,q_90/file.jpg",
-    "gallery": [
-      "https://static.wixstatic.com/media/7c7af8_2c0b695003dd47cd8254f6f6d9282633~mv2.jpg/v1/fit/w_600,h_467,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_ae0201ff477d4147ae4ab3bde6bc12d5~mv2.jpg/v1/fit/w_1130,h_1130,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_0a2ccfd2ab144dada7c4c1769c45a875~mv2.jpg/v1/fit/w_810,h_810,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_541a1f50d1784ef3b412c5b682412fa1~mv2.jpg/v1/fit/w_1000,h_1192,q_90/file.jpg"
-    ],
-    "description": "Özlem's Turkish Table by Özlem Warren – SIGNED coffee table cookbook hardback Foreword by Ghillie Basan Winner Gourmand World Cookbooks Awards, in Turkish Culture Best Seller: over 10,000 copies sold Özlem's homeland Antakya was devastated in the earthquake and tragically she lost relatives Press/Media : Observer Food Monthly, Washington Post, The Guardian, Sun Travel, Waitrose Food, Time & Leisure, Mediterranean Lifestyle, Mediterranean Living, Londra Gazete, greenprophet, Daiy Sabah, Turkish British, Anglo Turkish Society, Brooklands Radio, Milk Street Radio (USA) Events; Edinburgh International Book Festival This book is Özlem’s tribute to the wonderfully diverse cuisine of Turkey and a celebration of her Southern Turkish roots with local recipes from her home town, Antioch, Antakya. Little Tommy and the Kingdom of Clouds series (2 books) by Solonair – children's hardback Illustrations by fine artist Solonair. Solonair (Nick, Mykola) is a Ukrainian British sculptor, artist and intellectual freethinker born in Ternopil (Ukraine). Graduate of the Kensington and Chelsea College of Art (UK) and Member of the Chelsea Art Club. He returned to Ukraine to help in rescue and relief operations. All his proceeds from the book (not just 20%) are g oing to the charity you choose . Nora & John by Nora and John Murray – biography paperback A Cold War Best Seller, re-published with more coverage of the couple's incredible escape from Stalin's Soviet Russia, just as Nazi Germany invaded Moscow in WWII. Press: The Times Literary Supplement, People, and many regional press in the UK A dire reflection of what Putin seeks to restore, in the Ukraine and potentially across all of eastern Europe, in the eyes of young Nora. The daughter of the NKVD (secret police) chief, she watched as friends of hers went missing – even simply for wanting to dance the Foxstrot – and then her father disappeared... You are Noah! by Hein Prinzloo Curson – wildlife conservation hardback Content from Noah's Ark TV Series 1 (Sky TV 2021) Press/Media: Kay Burley and Good Morning Britain (ITV), Mail Online, Daily Mail, The National Reporter, Daily Express and many more. The Noah's Ark Foundation is a registered charity so all their procceds (not just 20%) go to the cause in the book . That is to build the world's most amazing wildlife conservation park ever. Captured on camera are steps taken to save UN's red list of endangered species, with full participation of indigenous people, Eden-Project-like domes for species from other climes, a visitor centre, eco-technology, high level Jurassic Park-like security. To get the word out, the focus now is on the release of music singles, and a series of gala concerts. Time to sing to the world the joy and wellbeing we get from nature and what we'll gain by saving it. Plants & Us by John Akeroyd, Donough O'Brien, Liz Cowley – wildlife and culture paperback Foreword by Sir Tim Smit, The Eden Project, Cornwall (UK) The Telegraph: A fascinating new book Press : Countryman, Gardens Illustrated, Garden News, Professional Gardener, Local Gardene, Horticultural Week, Caduceus, WI Life, The American, BSBI News, The Tablet, Scottish Field, The Field, Fine Food Digest A compendium of brief stories on the impact of plants on cultures and societies through time. Included is the Interdependence of Plants and Animals. Which, with the Eden Project's domes, adds a great deal to the understanding needed to embrace the Noah's Ark project in You are Noah!",
-    "isWholesale": false,
-    "isSigned": true,
-    "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
-  },
-  {
-    "id": "dd394b6d-c79e-dc71-ac6c-b17ed40fe4ef",
-    "slug": "black-friday-half-price-you-are-noah-seafaring-ginologist-absurd-more",
-    "title": "BLACK FRIDAY – HALF PRICE : You are Noah, Seafaring, Ginologist, Absurd & more",
-    "rawTitle": "BLACK FRIDAY – HALF PRICE : You are Noah, Seafaring, Ginologist, Absurd & more",
-    "author": "GB Publishing Author",
-    "tagline": "",
-    "authorSectionTitle": "",
-    "authors": [],
-    "authorBio": "",
-    "previewPages": [],
-    "accolades": [],
-    "videoTrailer": null,
-    "missionCard": null,
-    "price": 9.5,
-    "originalPrice": 18.99,
-    "sku": "GBP-1007",
-    "ribbon": "",
-    "categories": [
-      "Food & Drink"
-    ],
-    "coverImage": "https://static.wixstatic.com/media/7c7af8_2e19559da4504eadacc498b10b898c4a~mv2.jpg/v1/fit/w_1500,h_1471,q_90/file.jpg",
-    "gallery": [
-      "https://static.wixstatic.com/media/7c7af8_0a2ccfd2ab144dada7c4c1769c45a875~mv2.jpg/v1/fit/w_810,h_810,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_925a9ab9fd3d466382f67d7bdd39f458~mv2.jpg/v1/fit/w_930,h_930,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_3109037822704ca79d315d71dfb79d7e~mv2.png/v1/fit/w_300,h_404,q_90/file.png",
-      "https://static.wixstatic.com/media/7c7af8_2a934cee764e43288373d8bd624d78c9~mv2.jpg/v1/fit/w_1070,h_1070,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_ae0201ff477d4147ae4ab3bde6bc12d5~mv2.jpg/v1/fit/w_1130,h_1130,q_90/file.jpg",
-      "https://static.wixstatic.com/media/7c7af8_4bfbd373a56d46eaa344a6f66970822c~mv2.jpg/v1/fit/w_600,h_593,q_90/file.jpg"
-    ],
-    "description": "You are Noah! Introduction – YOU can, save the world. And with this book, watch FREE (at least to end Dec) Noah's Ark TV Series 1. Breaking news: Building the Noah's Ark conservation park featured in the book and TV Series – the safest place for all the world's wildlife – is set to start early in 2023 down in South Africa. See what saving endangered species is all about. And enoy: several seasons of the TV series, celebrities and artists getting involved, fabulous music labels in planning (some out already), a major concert event planned for the UK. Most of all join in the fun of making a difference... Featured on Good Morning Britain , Kay Burley , as well as press, TV and radio worldwide. SEE MORE Seafaring The Full Story – A SAILING CLASSIC of real life adventure beautifully Illustrated by Kenneth D Shoesmith. The Times Literary Supplement : \"His book is genuine sea salt\"; The Spectator: \"recalls emotions [on life at sea] that have fleeted from the minds of most\"; Surrey Life magazine: \"Captain George P Boughton's maritime career began in 1881 at the age of 12, and now this intriguing memoir of a life at sea is available to a new generation of readers.\" SEE MORE The Ginologist Cook – The first coffee table cookery book featuring a spirit in all ingredients, gin. Dine with style, using gin for the whole meal – starters, mains, desserts and cocktails. Gin botanicals (flavours) are fantastic for inspirations to treat your guests and loved ones. SEE MORE Absurd – A real life adventure across the deserts of Morocco by seniors on motorbikes. Absurd! After their adventure the author and his compatriots were invited by the Brooklands Museum (BM), to a talk chaired by member John Bottomley – which was captured on Brooklands Radio and on BM.tv Livestream. A signature event to which they rode motorcycles from York, their original starting point, in their minds thinking: you are never too old to ride out on your motorbike in search of adventure. Photographs by Jason Howe. Featured in Octane magazine, Bike magazine, Talk Radio Europe , Adventure Rider Radio and more. SEE MORE Nora & John – Cold War Best Seller truly depicts Stalin's ruthless Soviet Russia. Times Literary Supplement : ‘Narrative that is direct, candid, unpretentious.’ A member of a highly privileged caste in Soviet society... reduced to a 'mozho' girl mixing with foreigners, with instructions to report on them... the real story is in the simple, graphic and almost entirely persuasive account of her observations - some amusing and others horribly or pitifully gruesome. In the unforgiving WWII climate of 1940, 21-year old Nora is faced with a perilous ultimatum: Enlist with Stalin's secret police as a honey trap, or face the death of her family. Despairingly she agrees. Nora finds herself struggling to seduce her target, John Murray, a British Embassy cypher in Moscow. As two disparate lives intertwine, their desperate escape leads the couple through frozen Arctic wastelands, clutching forged papers and hopes not just for survival but for a future together. SEE MORE Dennis to Alice – A beautiful picture book – exceptionally, also a movie in a book (Harry Potter like) – tied to all seven seasons of the Noah's Ark, TV Series and You are Noah book series. All carry the message of saving endangered wildlife. Captured is a chance moment of mayhem. Flooding from two strong storms created a dam across an otherwise peaceful river, just before a pandemic swept across the world to isolate this spot along with the author. But, also captured along with manmade environmental destruction, is the transformation that took place from busy contrail skies to blue and verdant water scenes... and a pair of geese that made this their home. Then kayakers tackle the obstacle, boaters try to remove it, a swan performs... and a fox attacks... SEE MORE",
-    "isWholesale": false,
-    "isSigned": false,
-    "visible": true,
-    "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 9.49,
+        "originalPrice": 11.99,
+        "sku": "\"9781912031191\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "a5ef425d-c014-1bdb-39fc-6c5f24b32514",
@@ -309,6 +588,8 @@
     "title": "Nightmare by Liz Cowley & Donough O'Brien - post apocalyptic fiction novel",
     "rawTitle": "Nightmare by Liz Cowley & Donough O'Brien - post apocalyptic fiction novel",
     "author": "GB Publishing Author",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -319,7 +600,7 @@
     "missionCard": null,
     "price": 10.49,
     "originalPrice": 10.99,
-    "sku": "GBP-1008",
+    "sku": "GBP-1007",
     "ribbon": "",
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
@@ -333,14 +614,56 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "FREE mainland UK delivery on orders over £15",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Paperback",
+            "description": "Paperback",
+            "inStock": true
+          },
+          {
+            "value": "Hardback",
+            "description": "Hardback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "bf32b449-9034-48e3-a80b-d0107a2176e8",
+        "choices": {
+          "FREE mainland UK delivery on orders over £15": "Paperback"
+        },
+        "price": 10.49,
+        "originalPrice": 10.99,
+        "sku": "\"9781912031177\"",
+        "inStock": true
+      },
+      {
+        "id": "d58ec3e8-ff9d-49f3-b2fb-b4bb26b79a32",
+        "choices": {
+          "FREE mainland UK delivery on orders over £15": "Hardback"
+        },
+        "price": 14.49,
+        "originalPrice": 14.99,
+        "sku": "\"9781912031184\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "3cd38c96-a27a-0a03-77c2-93f8a2360fd3",
     "slug": "autobiology-of-a-vet-by-john-sauvage-a-vet-s-life",
     "title": "Autobiology of a Vet: A Vet's Life",
     "rawTitle": "Autobiology of a Vet - by John Sauvage, A vet's life",
-    "author": "John Sauvage, MRCVS",
+    "author": "John Sauvage",
+    "contributors": "Veterinary Surgeon & RVC Graduate",
+    "isArt": false,
     "tagline": "From South London comprehensive to Royal Veterinary College, East Africa under Idi Amin, and rural farmyard surgery",
     "authorSectionTitle": "About the Author",
     "authors": [
@@ -378,7 +701,7 @@
     "missionCard": null,
     "price": 9.49,
     "originalPrice": 9.99,
-    "sku": "GBP-1009",
+    "sku": "GBP-1008",
     "ribbon": "",
     "categories": [
       "Non-Fiction & Memoir"
@@ -393,17 +716,64 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "Format",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Paperback",
+            "description": "Paperback",
+            "inStock": true
+          },
+          {
+            "value": "Hardback",
+            "description": "Hardback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "405894ab-6c3d-4104-abe8-1993e8315a9f",
+        "choices": {
+          "Format": "Paperback"
+        },
+        "price": 9.49,
+        "originalPrice": 9.99,
+        "sku": "\"9781912576296\"",
+        "inStock": true
+      },
+      {
+        "id": "6d773d31-a22e-4a61-a30c-0c39bc4852c8",
+        "choices": {
+          "Format": "Hardback"
+        },
+        "price": 17.49,
+        "originalPrice": 17.99,
+        "sku": "\"9781912576289\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "5c8d41e2-e681-a38d-0cc1-bdd15678664d",
     "slug": "little-tommy-the-kingdom-of-clouds-solonair-charity-picture-book-series-offer",
-    "title": "Little Tommy & the Kingdom of Clouds, Solonair CHARITY picture book+series OFFER",
+    "title": "Little Tommy & the Kingdom of Clouds",
     "rawTitle": "Little Tommy & the Kingdom of Clouds, Solonair CHARITY picture book+series OFFER",
-    "author": "Dr Solonair",
-    "tagline": "",
-    "authorSectionTitle": "",
-    "authors": [],
+    "author": "fine artist Solonair",
+    "contributors": "Author & Illustrator: fine artist Solonair",
+    "isArt": false,
+    "tagline": "A magical journey above the skies supporting children's healthcare charity initiatives",
+    "authorSectionTitle": "About the Author & Illustrator",
+    "authors": [
+      {
+        "name": "Dr Solonair",
+        "role": "Fine Artist, Author & Illustrator"
+      }
+    ],
     "authorBio": "",
     "previewPages": [],
     "accolades": [],
@@ -411,7 +781,7 @@
     "missionCard": null,
     "price": 12.49,
     "originalPrice": 12.99,
-    "sku": "GBP-1010",
+    "sku": "GBP-1009",
     "ribbon": "Charity fine art book",
     "categories": [
       "Children's & Picture Books"
@@ -426,14 +796,116 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "FREE mainland UK delivery over £15. Choose title ",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "#1 Crossing the Rainbow Bridge - paperback",
+            "description": "#1 Crossing the Rainbow Bridge - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#1 Crossing the Rainbow Bridge - hardback",
+            "description": "#1 Crossing the Rainbow Bridge - hardback",
+            "inStock": true
+          },
+          {
+            "value": "#2 Adventure in Sports and the Arts - paperback",
+            "description": "#2 Adventure in Sports and the Arts - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#2 Adventure in Sports and the Arts - hardback",
+            "description": "#2 Adventure in Sports and the Arts - hardback",
+            "inStock": true
+          },
+          {
+            "value": "#1 Crossing Bridge & #2 Adventure - paperback",
+            "description": "#1 Crossing Bridge & #2 Adventure - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#1 Crossing Bridge & #2 Adventure - hardback",
+            "description": "#1 Crossing Bridge & #2 Adventure - hardback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "29fd0687-3132-4ffd-a98d-8abee03741f3",
+        "choices": {
+          "FREE mainland UK delivery over £15. Choose title ": "#1 Crossing the Rainbow Bridge - paperback"
+        },
+        "price": 12.49,
+        "originalPrice": 12.99,
+        "sku": "\"9781912576807\"",
+        "inStock": true
+      },
+      {
+        "id": "77a087f3-e3c3-475e-bcfe-18b12068149b",
+        "choices": {
+          "FREE mainland UK delivery over £15. Choose title ": "#1 Crossing the Rainbow Bridge - hardback"
+        },
+        "price": 20.49,
+        "originalPrice": 20.99,
+        "sku": "\"9781912576791\"",
+        "inStock": true
+      },
+      {
+        "id": "4987b3ef-26e8-4c52-823a-6b8846d9c0a5",
+        "choices": {
+          "FREE mainland UK delivery over £15. Choose title ": "#2 Adventure in Sports and the Arts - paperback"
+        },
+        "price": 13.49,
+        "originalPrice": 13.99,
+        "sku": "\"9781912576883\"",
+        "inStock": true
+      },
+      {
+        "id": "60eccf3b-4db3-4c1c-933b-d0397797c9da",
+        "choices": {
+          "FREE mainland UK delivery over £15. Choose title ": "#2 Adventure in Sports and the Arts - hardback"
+        },
+        "price": 21.49,
+        "originalPrice": 21.99,
+        "sku": "\"9781912576876\"",
+        "inStock": true
+      },
+      {
+        "id": "20e40499-d38e-4755-84c7-753fd2c7e816",
+        "choices": {
+          "FREE mainland UK delivery over £15. Choose title ": "#1 Crossing Bridge & #2 Adventure - paperback"
+        },
+        "price": 23.99,
+        "originalPrice": 24.49,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "8df45704-7de4-4500-991a-923d586213f0",
+        "choices": {
+          "FREE mainland UK delivery over £15. Choose title ": "#1 Crossing Bridge & #2 Adventure - hardback"
+        },
+        "price": 40.49,
+        "originalPrice": 40.99,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "95f9aab9-aa63-bb4d-b091-f010f89aa2fb",
     "slug": "kingswraith-series-by-derek-e-pearson-young-adult-novels-series-offer",
-    "title": "Kingswraith series - by Derek E Pearson, young adult novels + series OFFER",
+    "title": "Kingswraith Series",
     "rawTitle": "Kingswraith series - by Derek E Pearson, young adult novels + series OFFER",
-    "author": "GB Publishing Author",
+    "author": "Derek E Pearson",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -444,7 +916,7 @@
     "missionCard": null,
     "price": 9.99,
     "originalPrice": 11.49,
-    "sku": "GBP-1011",
+    "sku": "GBP-1010",
     "ribbon": "",
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
@@ -458,7 +930,62 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "Title and format",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "book #2 And the Vadhaka - paperback",
+            "description": "book #2 And the Vadhaka - paperback",
+            "inStock": true
+          },
+          {
+            "value": "book #1 Taste no Pity - paperback",
+            "description": "book #1 Taste no Pity - paperback",
+            "inStock": true
+          },
+          {
+            "value": "books #1 + #2 Vadhaka & Taste no Pity paperback",
+            "description": "books #1 + #2 Vadhaka & Taste no Pity paperback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "b4404a59-5339-4589-bc23-5ec6b12a657f",
+        "choices": {
+          "Title and format": "book #2 And the Vadhaka - paperback"
+        },
+        "price": 9.99,
+        "originalPrice": 11.49,
+        "sku": "\"9781912031153\"",
+        "inStock": true
+      },
+      {
+        "id": "8ed78534-af7f-484b-b00d-676af7310a76",
+        "choices": {
+          "Title and format": "book #1 Taste no Pity - paperback"
+        },
+        "price": 10.49,
+        "originalPrice": 11.99,
+        "sku": "\"9781912576135\"",
+        "inStock": true
+      },
+      {
+        "id": "cf3c4256-aade-416c-affb-0c41e4da1261",
+        "choices": {
+          "Title and format": "books #1 + #2 Vadhaka & Taste no Pity paperback"
+        },
+        "price": 18.99,
+        "originalPrice": 20.49,
+        "sku": "\"9781912031986\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "8936d9d1-058c-a475-7ba0-033604f27f65",
@@ -466,6 +993,8 @@
     "title": "Absurd - by Keith Futcher - Motorcycle ride books",
     "rawTitle": "Absurd - by Keith Futcher - Motorcycle ride books",
     "author": "Keith Futcher",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -476,7 +1005,7 @@
     "missionCard": null,
     "price": 12.99,
     "originalPrice": 16.99,
-    "sku": "GBP-1012",
+    "sku": "GBP-1011",
     "ribbon": "",
     "categories": [
       "Fiction, Young Adult & Sci-Fi",
@@ -492,21 +1021,63 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "Format",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Paperback",
+            "description": "Paperback",
+            "inStock": true
+          },
+          {
+            "value": "Hardback",
+            "description": "Hardback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "c2baee7e-c6bc-467b-910f-382d3450e0b5",
+        "choices": {
+          "Format": "Paperback"
+        },
+        "price": 12.99,
+        "originalPrice": 16.99,
+        "sku": "\"9781912576968\"",
+        "inStock": true
+      },
+      {
+        "id": "ef7a1c09-6e05-4e21-9b8b-3f0f33a9c77d",
+        "choices": {
+          "Format": "Hardback"
+        },
+        "price": 19.99,
+        "originalPrice": 23.99,
+        "sku": "\"9781912576951\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "b220ed82-aca4-347e-1fd3-a029e6d655d4",
     "slug": "plants-us-j-akeroyd-d-o-brien-l-cowley-plant-usage",
     "title": "Plants & Us: How They Shape Human History & Society",
     "rawTitle": "Plants & Us - J Akeroyd, D O'Brien, L Cowley – Plant usage",
-    "author": "Dr John Akeroyd, Donough O'Brien & Liz Cowley",
+    "author": "John Akeroyd, Donough O'Brien & Liz Cowley",
+    "contributors": "Foreword by Sir Tim Smit, The Eden Project Cornwall · Tie-in to You are Noah! Introduction by Hein Prinsloo Curson",
+    "isArt": false,
     "tagline": "Plant usage, ethnobotany, and habitat conservation — Foreword by Sir Tim Smit, Co-Founder of The Eden Project",
     "authorSectionTitle": "About the Authors & Botanists",
     "authors": [
       {
-        "name": "Dr John Akeroyd",
+        "name": "John Akeroyd",
         "role": "Lead Author & Renowned Botanist",
-        "bio": "Leading European field botanist, conservationist, and writer. Dr Akeroyd co-edited Flora Europaea and has written extensively on ethnobotany, plant usage, and habitat preservation worldwide."
+        "bio": "Leading European field botanist, conservationist, and writer. Co-edited Flora Europaea and has written extensively on ethnobotany, plant usage, and habitat preservation worldwide."
       },
       {
         "name": "Donough O'Brien",
@@ -519,7 +1090,7 @@
         "bio": "Celebrated poet, writer, and commentator whose work explores the human connection to nature, folklore, and the vital importance of plant conservation."
       }
     ],
-    "authorBio": "Written by Dr John Akeroyd, Donough O'Brien, and Liz Cowley, with a prestigious Foreword by Sir Tim Smit, Co-Founder of The Eden Project Cornwall.",
+    "authorBio": "Written by John Akeroyd, Donough O'Brien, and Liz Cowley, with a prestigious Foreword by Sir Tim Smit, Co-Founder of The Eden Project Cornwall.",
     "previewPages": [
       "https://static.wixstatic.com/media/7c7af8_186ba8567fb84f06914d297d3fb48741~mv2.jpg/v1/fit/w_1200,h_1500,q_90/file.jpg",
       "https://static.wixstatic.com/media/7c7af8_2a2dd71014d847c3aa4a3e7a58019650~mv2.png/v1/fit/w_1400,h_900,q_90/file.png",
@@ -547,7 +1118,7 @@
     "missionCard": null,
     "price": 15.49,
     "originalPrice": 19.99,
-    "sku": "GBP-1013",
+    "sku": "GBP-1012",
     "ribbon": "Tie-in to You are Noah!",
     "categories": [
       "Non-Fiction & Memoir"
@@ -557,19 +1128,61 @@
       "https://static.wixstatic.com/media/7c7af8_2a2dd71014d847c3aa4a3e7a58019650~mv2.png/v1/fit/w_2121,h_1333,q_90/file.png",
       "https://static.wixstatic.com/media/7c7af8_3fb3724e80d2478b908ee1cd62f9f382~mv2.jpg/v1/fit/w_500,h_709,q_90/file.jpg"
     ],
-    "description": "Plants & Us by Dr John Akeroyd, Donough O'Brien, and Liz Cowley explores how plants have defined human civilisation — not only in food, drink, and commerce, but also in medicine, folklore, love, fashion, war, and art.\n\nNot just another gardening book, this is a sweeping exploration of how plants affect humankind for better or worse. From Presidents to pop stars, scientists to explorers, and royalty to pioneers, Plants & Us presents startling facts and compelling stories about our ubiquitous bond with the plant kingdom and the urgent necessity of global botanical conservation.",
+    "description": "Plants & Us by John Akeroyd, Donough O'Brien, and Liz Cowley explores how plants have defined human civilisation — not only in food, drink, and commerce, but also in medicine, folklore, love, fashion, war, and art.\n\nNot just another gardening book, this is a sweeping exploration of how plants affect humankind for better or worse. From Presidents to pop stars, scientists to explorers, and royalty to pioneers, Plants & Us presents startling facts and compelling stories about our ubiquitous bond with the plant kingdom and the urgent necessity of global botanical conservation.",
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "Format",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Paperback",
+            "description": "Paperback",
+            "inStock": true
+          },
+          {
+            "value": "Hardback",
+            "description": "Hardback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "c5a796ff-188f-4645-8014-505913f1d27e",
+        "choices": {
+          "Format": "Paperback"
+        },
+        "price": 15.49,
+        "originalPrice": 19.99,
+        "sku": "\"9781912576760\"",
+        "inStock": true
+      },
+      {
+        "id": "8e71adc1-7418-4ecc-bdad-7ba7859e452a",
+        "choices": {
+          "Format": "Hardback"
+        },
+        "price": 25.49,
+        "originalPrice": 29.99,
+        "sku": "\"9781912576753\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "287d65cd-d698-2cd3-7fe5-6a41c046ba66",
     "slug": "art-prints-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Art Prints size A2 - Searching With Sam Widges by Morganico",
     "rawTitle": "Art Prints size A2 - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -580,8 +1193,8 @@
     "missionCard": null,
     "price": 30.0,
     "originalPrice": 36.0,
-    "sku": "GBP-1014",
-    "ribbon": "Signed Collector Edition",
+    "sku": "GBP-1013",
+    "ribbon": "Signed Copy Available",
     "categories": [
       "Children's & Picture Books"
     ],
@@ -606,15 +1219,312 @@
     "isWholesale": false,
     "isSigned": true,
     "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
+    "format": "Signed Copy",
+    "stock": 25,
+    "options": [
+      {
+        "name": "Choose illustration",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Map page 4",
+            "description": "Map page 4",
+            "inStock": true
+          },
+          {
+            "value": "Map page 5",
+            "description": "Map page 5",
+            "inStock": true
+          },
+          {
+            "value": "Sam at home page",
+            "description": "Sam at home page",
+            "inStock": true
+          },
+          {
+            "value": "Ocean island",
+            "description": "Ocean island",
+            "inStock": true
+          },
+          {
+            "value": "In space",
+            "description": "In space",
+            "inStock": true
+          },
+          {
+            "value": "Jungle",
+            "description": "Jungle",
+            "inStock": true
+          },
+          {
+            "value": "Windy city",
+            "description": "Windy city",
+            "inStock": true
+          },
+          {
+            "value": "French farm",
+            "description": "French farm",
+            "inStock": true
+          },
+          {
+            "value": "Bank",
+            "description": "Bank",
+            "inStock": true
+          },
+          {
+            "value": "Market",
+            "description": "Market",
+            "inStock": true
+          },
+          {
+            "value": "Emerald isle",
+            "description": "Emerald isle",
+            "inStock": true
+          },
+          {
+            "value": "Surfing",
+            "description": "Surfing",
+            "inStock": true
+          },
+          {
+            "value": "Cloud people",
+            "description": "Cloud people",
+            "inStock": true
+          },
+          {
+            "value": "Japan",
+            "description": "Japan",
+            "inStock": true
+          },
+          {
+            "value": "Australia",
+            "description": "Australia",
+            "inStock": true
+          },
+          {
+            "value": "Airport",
+            "description": "Airport",
+            "inStock": true
+          },
+          {
+            "value": "Sam back home",
+            "description": "Sam back home",
+            "inStock": true
+          },
+          {
+            "value": "Feathers page 40",
+            "description": "Feathers page 40",
+            "inStock": true
+          },
+          {
+            "value": "Feathers page 41",
+            "description": "Feathers page 41",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "7e59ef8a-9acc-4d8a-b82b-601683a952cd",
+        "choices": {
+          "Choose illustration": "Map page 4"
+        },
+        "price": 25.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "fad05887-edef-40f4-9c71-db1f78788b18",
+        "choices": {
+          "Choose illustration": "Map page 5"
+        },
+        "price": 25.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "3a6f7d66-7fc1-4141-94c1-c87ab28c6236",
+        "choices": {
+          "Choose illustration": "Sam at home page"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "4342939d-b608-4b84-88f9-829d443a11f8",
+        "choices": {
+          "Choose illustration": "Ocean island"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "5a9729cf-9b4b-4ea0-aa30-185b736b3e15",
+        "choices": {
+          "Choose illustration": "In space"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "3c2ba5a4-e112-4c97-a8fb-4d5610756f5c",
+        "choices": {
+          "Choose illustration": "Jungle"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "9ace5e2a-a0f0-4208-833c-fe53ba12d755",
+        "choices": {
+          "Choose illustration": "Windy city"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "9cf10284-3a8a-41f6-aa71-1d93c009f5be",
+        "choices": {
+          "Choose illustration": "French farm"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "ee21cc4b-50c3-434d-bd42-4f53c0cd5b50",
+        "choices": {
+          "Choose illustration": "Bank"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "2a3e79db-8047-48ca-b0b7-4dcfbc733f5e",
+        "choices": {
+          "Choose illustration": "Market"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "90750bba-0789-4224-b271-ff8970697851",
+        "choices": {
+          "Choose illustration": "Emerald isle"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "f8af889e-172b-48d5-aee3-2873101dedd7",
+        "choices": {
+          "Choose illustration": "Surfing"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "73cdc011-7fa9-4c87-945b-fdff64ecef84",
+        "choices": {
+          "Choose illustration": "Cloud people"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "9a5d354c-ffc3-4803-b8fa-64f9f2de9d3e",
+        "choices": {
+          "Choose illustration": "Japan"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "b7789d8e-2f64-4d4c-afec-4215d64c70d6",
+        "choices": {
+          "Choose illustration": "Australia"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "353a964e-1bf2-4d58-a7f5-a9a13e80eda5",
+        "choices": {
+          "Choose illustration": "Airport"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "507de018-ef43-40a2-857c-e2a41aa73069",
+        "choices": {
+          "Choose illustration": "Sam back home"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "d7ccadda-3929-403a-87cb-c6d53409ddb0",
+        "choices": {
+          "Choose illustration": "Feathers page 40"
+        },
+        "price": 25.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "8809126b-64d5-43cc-8f97-b3ada3fa12a9",
+        "choices": {
+          "Choose illustration": "Feathers page 41"
+        },
+        "price": 25.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "b0c9fae8-cb7b-838e-29d5-4ba80ac7b20d",
     "slug": "art-prints-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Art Prints size A3 - Searching With Sam Widges by Morganico",
     "rawTitle": "Art Prints size A3 - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -625,8 +1535,8 @@
     "missionCard": null,
     "price": 20.0,
     "originalPrice": 24.0,
-    "sku": "GBP-1015",
-    "ribbon": "Signed Collector Edition",
+    "sku": "GBP-1014",
+    "ribbon": "Signed Copy Available",
     "categories": [
       "Children's & Picture Books"
     ],
@@ -651,30 +1561,327 @@
     "isWholesale": false,
     "isSigned": true,
     "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
+    "format": "Signed Copy",
+    "stock": 25,
+    "options": [
+      {
+        "name": "Choose illustration",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Map page 4",
+            "description": "Map page 4",
+            "inStock": true
+          },
+          {
+            "value": "Map page 5",
+            "description": "Map page 5",
+            "inStock": true
+          },
+          {
+            "value": "Sam at home page",
+            "description": "Sam at home page",
+            "inStock": true
+          },
+          {
+            "value": "Ocean island",
+            "description": "Ocean island",
+            "inStock": true
+          },
+          {
+            "value": "In space",
+            "description": "In space",
+            "inStock": true
+          },
+          {
+            "value": "Jungle",
+            "description": "Jungle",
+            "inStock": true
+          },
+          {
+            "value": "Windy city",
+            "description": "Windy city",
+            "inStock": true
+          },
+          {
+            "value": "French farm",
+            "description": "French farm",
+            "inStock": true
+          },
+          {
+            "value": "Bank",
+            "description": "Bank",
+            "inStock": true
+          },
+          {
+            "value": "Market",
+            "description": "Market",
+            "inStock": true
+          },
+          {
+            "value": "Emerald isle",
+            "description": "Emerald isle",
+            "inStock": true
+          },
+          {
+            "value": "Surfing",
+            "description": "Surfing",
+            "inStock": true
+          },
+          {
+            "value": "Cloud people",
+            "description": "Cloud people",
+            "inStock": true
+          },
+          {
+            "value": "Japan",
+            "description": "Japan",
+            "inStock": true
+          },
+          {
+            "value": "Australia",
+            "description": "Australia",
+            "inStock": true
+          },
+          {
+            "value": "Airport",
+            "description": "Airport",
+            "inStock": true
+          },
+          {
+            "value": "Sam back home",
+            "description": "Sam back home",
+            "inStock": true
+          },
+          {
+            "value": "Feathers page 40",
+            "description": "Feathers page 40",
+            "inStock": true
+          },
+          {
+            "value": "Feathers page 41",
+            "description": "Feathers page 41",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "85889d78-b446-4413-9751-7c136ff92ece",
+        "choices": {
+          "Choose illustration": "Map page 4"
+        },
+        "price": 15.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "66c0b6db-fa57-4e47-b049-0a344b10ba7c",
+        "choices": {
+          "Choose illustration": "Map page 5"
+        },
+        "price": 15.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "e13470dc-2be5-47d3-8aa0-b4450b5ba16f",
+        "choices": {
+          "Choose illustration": "Sam at home page"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "03f6df87-174d-4ac5-8d9c-e77249e87157",
+        "choices": {
+          "Choose illustration": "Ocean island"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "5d2efa2e-dd4c-4670-be70-75245154b02c",
+        "choices": {
+          "Choose illustration": "In space"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "11416d23-50a6-4709-88ed-cf9351c8ea05",
+        "choices": {
+          "Choose illustration": "Jungle"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "2a450e36-6ed7-4b39-b01b-0cd00b87f292",
+        "choices": {
+          "Choose illustration": "Windy city"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "a0f6bf6d-0a1a-49c1-8d66-57da6cb5060e",
+        "choices": {
+          "Choose illustration": "French farm"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "f09948a9-7616-4f70-aff8-5ce75656f59f",
+        "choices": {
+          "Choose illustration": "Bank"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "bacd65a8-dd28-470f-8da2-5cd53ce54856",
+        "choices": {
+          "Choose illustration": "Market"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "c150fe17-8deb-49f3-b4b7-63cd31d7a047",
+        "choices": {
+          "Choose illustration": "Emerald isle"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "a8d3da11-7629-4633-bca3-6aad0b46c50c",
+        "choices": {
+          "Choose illustration": "Surfing"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "252f9136-d360-43f2-8eaf-afe5aec1df1a",
+        "choices": {
+          "Choose illustration": "Cloud people"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "9063474b-8a55-4ebb-9398-6bba33ca2c37",
+        "choices": {
+          "Choose illustration": "Japan"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "e23de35f-52de-452b-98d4-a51a6f3fc96a",
+        "choices": {
+          "Choose illustration": "Australia"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "94bd10dd-4e0d-40b6-9fbc-21eef19c561c",
+        "choices": {
+          "Choose illustration": "Airport"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "ea448337-450c-4643-8739-10924eac09ff",
+        "choices": {
+          "Choose illustration": "Sam back home"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "b780c3e8-5bde-4a11-93b9-340b532b4839",
+        "choices": {
+          "Choose illustration": "Feathers page 40"
+        },
+        "price": 15.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "d2da28f1-e02f-40e8-b1eb-887f3804d1ea",
+        "choices": {
+          "Choose illustration": "Feathers page 41"
+        },
+        "price": 15.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "33b34cc3-7713-1327-240c-204c99fb52b1",
     "slug": "dennis-to-alice-by-george-s-boughton-signed-picture-books",
     "title": "Dennis to Alice: A Movie in a Book",
     "rawTitle": "Dennis to Alice by George S Boughton - SIGNED - picture books",
-    "author": "George S Boughton & Martyn Tillier",
+    "author": "George S Boughton",
+    "contributors": "Illustrations by Martyn Tillier",
+    "isArt": false,
     "tagline": "An interactive wildlife picture book where pages come alive with video — Supporting endangered species conservation",
     "authorSectionTitle": "About the Author & Illustrator",
     "authors": [
       {
         "name": "George S Boughton",
         "role": "Author & Publisher",
-        "bio": "Founder of GB Publishing and author, George documented a chance moment of lockdown mayhem when flooding created a river dam, inspiring this interactive 'movie in a book'."
+        "bio": "Founder of GB Publishing Org and author, George documented a chance moment of lockdown mayhem when flooding created a river dam, inspiring this interactive 'movie in a book'."
       },
       {
         "name": "Martyn Tillier",
-        "role": "Illustrator",
+        "role": "Wildlife Illustrator",
         "bio": "Talented wildlife and children's book illustrator whose vibrant artwork brings the river animals, swans, geese, and canoeing mayhem to life."
       }
     ],
-    "authorBio": "Written by George S Boughton and illustrated by Martyn Tillier. Conceived as an interactive 'movie in a book' tied to the 12-part Noah's Ark Sky TV series.",
+    "authorBio": "Written by George S Boughton and illustrated by Martyn Tillier. Conceived as an interactive 'movie in a book' tied to wildlife conservation.",
     "previewPages": [
       "https://static.wixstatic.com/media/7c7af8_860b6ef537d945dc840dd2f3be408f4d~mv2.jpg/v1/fit/w_1200,h_1200,q_90/file.jpg",
       "https://static.wixstatic.com/media/7c7af8_182f71d5a18747c883b388dfc1f02936~mv2.jpeg/v1/fit/w_1200,h_1000,q_90/file.jpg",
@@ -683,7 +1890,7 @@
     "accolades": [
       {
         "title": "Sky TV Tie-In",
-        "subtitle": "Noah's Ark 12-Part Conservation Series"
+        "subtitle": "Noah's Ark Conservation Series"
       },
       {
         "title": "Brooklands Radio Feature",
@@ -703,7 +1910,7 @@
     "missionCard": null,
     "price": 7.49,
     "originalPrice": 7.99,
-    "sku": "GBP-1016",
+    "sku": "GBP-1015",
     "ribbon": "Charity Nature book",
     "categories": [
       "Children's & Picture Books"
@@ -716,18 +1923,50 @@
     "isWholesale": false,
     "isSigned": true,
     "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
+    "format": "Signed Copy",
+    "stock": 25,
+    "options": [
+      {
+        "name": "Signed, FREE mainland UK delivery orders over £15",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Paperback",
+            "description": "Paperback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "bf24f9d1-eb28-4bd6-826e-ed76ce64f7ef",
+        "choices": {
+          "Signed, FREE mainland UK delivery orders over £15": "Paperback"
+        },
+        "price": 7.49,
+        "originalPrice": 7.99,
+        "sku": "\"9781912031207\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "78e32832-8930-c891-85ef-2bcc73befdc2",
     "slug": "spoddle-the-frog-by-martyn-tillier-illustrated-by-martyn-tillier-picture-books",
-    "title": "Spoddle the Frog by Martyn Tillier, illustrated by Martyn Tillier, picture books",
+    "title": "Spoddle the Frog",
     "rawTitle": "Spoddle the Frog by Martyn Tillier, illustrated by Martyn Tillier, picture books",
-    "author": "GB Publishing Author",
-    "tagline": "",
-    "authorSectionTitle": "",
-    "authors": [],
+    "author": "Martyn Tillier",
+    "contributors": "Author & Illustrator: Martyn Tillier",
+    "isArt": false,
+    "tagline": "A delightfully illustrated wildlife pond adventure following Spoddle the adventurous amphibian",
+    "authorSectionTitle": "About the Author & Illustrator",
+    "authors": [
+      {
+        "name": "Martyn Tillier",
+        "role": "Wildlife Artist, Author & Illustrator"
+      }
+    ],
     "authorBio": "",
     "previewPages": [],
     "accolades": [],
@@ -735,7 +1974,7 @@
     "missionCard": null,
     "price": 5.99,
     "originalPrice": null,
-    "sku": "GBP-1017",
+    "sku": "GBP-1016",
     "ribbon": "Picture book",
     "categories": [
       "Children's & Picture Books"
@@ -750,7 +1989,18 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 5.99,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "76419b0d-f424-c776-9477-d7d9255302f3",
@@ -758,7 +2008,9 @@
     "title": "You are Noah! Introduction — Wild Animal Conservation",
     "rawTitle": "You are Noah! Introduction, H Prinsloo, Wild animal conservation, a CHARITY book",
     "author": "Hein Prinsloo Curson",
-    "tagline": "The official book tie-in to the 12-part Sky TV wildlife series — Building the world's greatest nature sanctuary",
+    "contributors": "6-part Sky TV series tie-in · Tie-in to Plants & Us by John Akeroyd, Donough O'Brien, Liz Cowley",
+    "isArt": false,
+    "tagline": "The official book tie-in to the 6-part Sky TV wildlife series — Building the world's greatest nature sanctuary",
     "authorSectionTitle": "About the Author & Conservation Founder",
     "authors": [
       {
@@ -769,7 +2021,7 @@
       {
         "name": "Richard Prinsloo Curson",
         "role": "Co-Founder & Producer",
-        "bio": "Creative director and producer behind the 12-part Noah's Ark television documentary broadcast on Sky TV and international networks."
+        "bio": "Creative director and producer behind the 6-part Noah's Ark television documentary broadcast on Sky TV and international networks."
       }
     ],
     "authorBio": "Hein Prinsloo Curson is the founder of The Noah's Ark Foundation. All publisher and author proceeds from direct purchases of this book go directly to charity operations protecting endangered species.",
@@ -782,7 +2034,7 @@
     "accolades": [
       {
         "title": "Sky TV Broadcast",
-        "subtitle": "12-Part Wildlife Documentary Series"
+        "subtitle": "6-Part Wildlife Documentary Series"
       },
       {
         "title": "Good Morning Britain (ITV)",
@@ -807,9 +2059,9 @@
       "badge": "Official Sky TV & Conservation Initiative",
       "tag": "100% Proceeds Support Charity",
       "heading": "The Noah's Ark Sanctuary — Africa",
-      "content": "You are Noah! is the official companion to the 12-part wildlife documentary series broadcast on Sky TV. Author and publisher profits from sales of this book directly support The Noah's Ark Foundation in South Africa, building an ultra-secure sanctuary to protect UN Red List endangered species.",
+      "content": "You are Noah! is the official companion to the 6-part wildlife documentary series broadcast on Sky TV. Author and publisher profits from sales of this book directly support The Noah's Ark Foundation in South Africa, building an ultra-secure sanctuary to protect UN Red List endangered species.",
       "highlights": [
-        "Includes access code to stream Noah's Ark TV Series 1",
+        "Official 6-part Sky TV wildlife series tie-in",
         "Directly funds anti-poaching security & veterinary teams",
         "Eden Project-style biomes for vulnerable wildlife",
         "Full engagement and upliftment of local indigenous communities"
@@ -838,19 +2090,32 @@
       "https://static.wixstatic.com/media/7c7af8_5592e6ec83cf43708efed4794558aa9e~mv2.jpg/v1/fit/w_793,h_961,q_90/file.jpg",
       "https://static.wixstatic.com/media/7c7af8_79ed29a56f344fe5ae47637b625b3062~mv2.jpg/v1/fit/w_793,h_961,q_90/file.jpg"
     ],
-    "description": "You are Noah! Introduction by Hein Prinsloo Curson.\n\nThe official book tie-in to the 12-part Noah's Ark television series broadcast on Sky TV. This volume captures the opening chapters of a bold global conservation effort: constructing a 100-square-kilometre state-of-the-art wildlife sanctuary in South Africa to protect Earth's most endangered species.\n\nFeaturing behind-the-scenes photography from the TV production, architectural plans for climate-controlled biomes, and insights into high-tech anti-poaching security, You are Noah! is both a compelling visual journey and an urgent call to action. Author profits support The Noah's Ark Foundation registered charity.",
+    "description": "You are Noah! Introduction by Hein Prinsloo Curson.\n\nThe official book tie-in to the 6-part Noah's Ark television series broadcast on Sky TV. This volume captures the opening chapters of a bold global conservation effort: constructing a 100-square-kilometre state-of-the-art wildlife sanctuary in South Africa to protect Earth's most endangered species.\n\nFeaturing behind-the-scenes photography from the TV production, architectural plans for climate-controlled biomes, and insights into high-tech anti-poaching security, You are Noah! is both a compelling visual journey and an urgent call to action. Author profits support The Noah's Ark Foundation registered charity.",
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 16.99,
+        "originalPrice": 18.99,
+        "sku": "9781912576715",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "df277b0f-e176-ca36-344f-72354c95ba9c",
     "slug": "time-s-up-edition-2-coming-soon-by-david-ritchie",
     "title": "Time's Up! Edition 2 - Coming soon - by David Ritchie",
     "rawTitle": "Time's Up! Edition 2 - Coming soon - by David Ritchie",
-    "author": "GB Publishing Author",
+    "author": "Christopher Ritchie",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -861,7 +2126,7 @@
     "missionCard": null,
     "price": 8.49,
     "originalPrice": 9.99,
-    "sku": "GBP-1019",
+    "sku": "GBP-1018",
     "ribbon": "",
     "categories": [
       "Fiction, Young Adult & Sci-Fi",
@@ -876,7 +2141,18 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 8.49,
+        "originalPrice": 9.99,
+        "sku": "",
+        "inStock": false
+      }
+    ]
   },
   {
     "id": "04178441-e1aa-16ef-af34-6a49c8254750",
@@ -884,6 +2160,8 @@
     "title": "Tigers in lockdown – Size A2 not framed",
     "rawTitle": "Tigers in lockdown – Size A2 not framed",
     "author": "GB Publishing Author",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -894,7 +2172,7 @@
     "missionCard": null,
     "price": 30.0,
     "originalPrice": null,
-    "sku": "GBP-1020",
+    "sku": "GBP-1019",
     "ribbon": "",
     "categories": [
       "Poetry & Fine Art"
@@ -908,15 +2186,28 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "be269508-8e69-a84c-1206-18619ed63c14",
     "slug": "wendy-kimberley-art-art-covering-books-in-d-kimberley-s-antecedent-sf-series",
-    "title": "Wendy Kimberley Art - art covering books in D Kimberley's Antecedent SF series",
+    "title": "Royal Gambit & Antecedent SF Art Prints (Size A2 / A3)",
     "rawTitle": "Wendy Kimberley Art - art covering books in D Kimberley's Antecedent SF series",
-    "author": "Anthony & Wendy Kimberley",
-    "tagline": "",
+    "author": "Wendy Kimberley",
+    "contributors": "",
+    "isArt": true,
+    "tagline": "Fine art prints covering books in David Kimberley's Antecedent SF series by Wendy Kimberley",
     "authorSectionTitle": "",
     "authors": [],
     "authorBio": "",
@@ -926,7 +2217,7 @@
     "missionCard": null,
     "price": 20.0,
     "originalPrice": null,
-    "sku": "GBP-1021",
+    "sku": "GBP-1020",
     "ribbon": "",
     "categories": [
       "Poetry & Fine Art"
@@ -941,17 +2232,128 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "Illustrations",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Royal Gambit  size A3",
+            "description": "Royal Gambit  size A3",
+            "inStock": true
+          },
+          {
+            "value": "Royal Gambit size A2",
+            "description": "Royal Gambit size A2",
+            "inStock": true
+          },
+          {
+            "value": "Nova Descent size A3",
+            "description": "Nova Descent size A3",
+            "inStock": true
+          },
+          {
+            "value": "Nova Descent size A2",
+            "description": "Nova Descent size A2",
+            "inStock": true
+          },
+          {
+            "value": "Galahad Suns size A3",
+            "description": "Galahad Suns size A3",
+            "inStock": true
+          },
+          {
+            "value": "Galahad Suns size A2",
+            "description": "Galahad Suns size A2",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "8022a9b9-336a-43e8-8ad6-fbfecc2d5567",
+        "choices": {
+          "Illustrations": "Royal Gambit  size A3"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "5746b362-3743-4d14-b88f-b3596b38c897",
+        "choices": {
+          "Illustrations": "Royal Gambit size A2"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "a0416f62-ad5e-4ec6-8359-121307100071",
+        "choices": {
+          "Illustrations": "Nova Descent size A3"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "67290853-62c0-4a18-9695-fd0b2667f821",
+        "choices": {
+          "Illustrations": "Nova Descent size A2"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "e93dcde6-86d1-4384-9508-39f97f8c494f",
+        "choices": {
+          "Illustrations": "Galahad Suns size A3"
+        },
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "2a0256ca-da13-4ec5-9df4-7342654f6b7a",
+        "choices": {
+          "Illustrations": "Galahad Suns size A2"
+        },
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "4f0a9ef7-8f73-4dad-a64c-1de4e3e405aa",
     "slug": "tulsi-the-tiger-by-dr-chet-trivedy-picture-books",
-    "title": "Tulsi the Tiger by Dr Chet Trivedy - Picture books",
+    "title": "Tulsi the Tiger",
     "rawTitle": "Tulsi the Tiger by Dr Chet Trivedy - Picture books",
     "author": "Dr Chet Trivedy",
-    "tagline": "",
-    "authorSectionTitle": "",
-    "authors": [],
+    "contributors": "Illustrations by Derek E Pearson",
+    "isArt": false,
+    "tagline": "An enchanting tale of conservation, courage, and wildlife protection in India's tiger reserves",
+    "authorSectionTitle": "About the Author & Illustrator",
+    "authors": [
+      {
+        "name": "Dr Chet Trivedy",
+        "role": "Emergency Medicine Consultant & Wildlife Advocate"
+      },
+      {
+        "name": "Derek E Pearson",
+        "role": "Illustrator & Author"
+      }
+    ],
     "authorBio": "",
     "previewPages": [],
     "accolades": [],
@@ -959,7 +2361,7 @@
     "missionCard": null,
     "price": 7.49,
     "originalPrice": 7.99,
-    "sku": "GBP-1022",
+    "sku": "GBP-1021",
     "ribbon": "Charity picture book",
     "categories": [
       "Children's & Picture Books",
@@ -978,15 +2380,28 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 7.49,
+        "originalPrice": 7.99,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "69d3f6e8-f622-58ef-9679-740461b95b86",
     "slug": "the-gathering-of-gods-by-derek-e-pearson-great-fantasy-book-series-series-offer",
-    "title": "The Gathering of Gods, by Derek E Pearson great fantasy book series+series OFFER",
+    "title": "The Gathering of Gods: Anubis & Isis",
     "rawTitle": "The Gathering of Gods, by Derek E Pearson great fantasy book series+series OFFER",
-    "author": "GB Publishing Author",
-    "tagline": "",
+    "author": "Derek E Pearson",
+    "contributors": "",
+    "isArt": false,
+    "tagline": "Epic mythological fantasy series — Anubis & Isis with exclusive series bundle offer",
     "authorSectionTitle": "",
     "authors": [],
     "authorBio": "",
@@ -996,7 +2411,7 @@
     "missionCard": null,
     "price": 9.99,
     "originalPrice": 10.99,
-    "sku": "GBP-1023",
+    "sku": "GBP-1022",
     "ribbon": "",
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
@@ -1010,7 +2425,62 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "FREE mainland UK delivery over £15, Choose title ",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "#1 Anubis - paperback",
+            "description": "#1 Anubis - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#2 Isis - paperback",
+            "description": "#2 Isis - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#1 Anubis & #2 Isis paperback",
+            "description": "#1 Anubis & #2 Isis paperback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "bbb21df5-3858-406b-828c-fc596bb3b59c",
+        "choices": {
+          "FREE mainland UK delivery over £15, Choose title ": "#1 Anubis - paperback"
+        },
+        "price": 9.99,
+        "originalPrice": 10.99,
+        "sku": "\"9781912031146\"",
+        "inStock": true
+      },
+      {
+        "id": "59d1f531-75ee-4ee1-b78d-aa7f82d477a1",
+        "choices": {
+          "FREE mainland UK delivery over £15, Choose title ": "#2 Isis - paperback"
+        },
+        "price": 10.49,
+        "originalPrice": 11.49,
+        "sku": "\"9781912576418\"",
+        "inStock": true
+      },
+      {
+        "id": "8a868161-b65b-47e9-9f9f-c06163cf3cc5",
+        "choices": {
+          "FREE mainland UK delivery over £15, Choose title ": "#1 Anubis & #2 Isis paperback"
+        },
+        "price": 18.99,
+        "originalPrice": 19.99,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "96371015-1d5d-4d0e-4239-313d90ffc405",
@@ -1018,6 +2488,8 @@
     "title": "Redemption in Eden - by Patricia Jones, woman author",
     "rawTitle": "Redemption in Eden - by Patricia Jones, woman author",
     "author": "GB Publishing Author",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1042,14 +2514,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 7.99,
+        "originalPrice": 10.49,
+        "sku": "PJX-RIEXX-9781912576333",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "bf0637fe-a102-f05b-3c56-0f19dcc5704e",
     "slug": "crumbdog-art-print-360x300mm",
     "title": "Crumbdog art print 360x300mm",
     "rawTitle": "Crumbdog art print 360x300mm",
-    "author": "GB Publishing Author",
+    "author": "Lois Collins",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1060,7 +2545,7 @@
     "missionCard": null,
     "price": 20.0,
     "originalPrice": null,
-    "sku": "GBP-1025",
+    "sku": "GBP-1024",
     "ribbon": "",
     "categories": [
       "Children's & Picture Books"
@@ -1074,14 +2559,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "272de0b9-a223-ea19-58fc-4cc9bd78457b",
     "slug": "page-41-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 41 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 41 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1106,14 +2604,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576708",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "5fad6638-e74b-321a-14e7-530614264020",
     "slug": "page-40-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 40 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 40 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1138,14 +2649,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "SWSWX-9781912576692",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "e1074ba7-36df-01a2-667f-b386b910e941",
     "slug": "page-35-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 35 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 35 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1170,14 +2694,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576685",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "385aeff6-0c28-6679-2be3-c707fde68159",
     "slug": "page-33-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 33 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 33 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1202,14 +2739,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576678",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "94163373-eef8-7e0d-d6a7-936f21aa4f3c",
     "slug": "page-31-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 31 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 31 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1234,14 +2784,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576661",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "7fcd77fc-0045-9903-73e2-4e2f2d2bd18e",
     "slug": "page-29-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 29 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 29 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1266,14 +2829,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576654",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "bf113df3-236f-34cf-9e66-a454a6fb26e0",
     "slug": "page-27-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 27 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 27 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1298,14 +2874,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576647",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "c586bf46-c72d-a409-34a5-4e5886d37bd6",
     "slug": "page-25-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 25 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 25 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1330,14 +2919,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576630",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "7448adff-4243-d160-244e-ecd2c6539670",
     "slug": "page-23-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 23 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 23 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1362,14 +2964,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576623",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "08a0e13c-dac3-a111-fa5e-cf072107c2cb",
     "slug": "page-21-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 21 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 21 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1394,14 +3009,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576616",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "714d0ff9-28cf-d490-32c8-5b3c8b1093fb",
     "slug": "page-19-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 19 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 19 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1426,14 +3054,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576609",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "c8f708b6-19b6-7115-a1cf-769e11ae426c",
     "slug": "page-17-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 17 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 17 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1458,14 +3099,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576593",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "cda22d21-b27e-9196-5ad5-ced39cd776ac",
     "slug": "page-15-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 15 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 15 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1490,14 +3144,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576586",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "b052e522-3a3f-8ba1-b89f-3c6098b62f75",
     "slug": "page-13-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 13 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 13 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1522,14 +3189,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576579",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "0ca03068-97c3-0512-0a2d-902bcd80b849",
     "slug": "page-11-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 11 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 11 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1554,14 +3234,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576562",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "953df9cf-a95c-d01e-e574-f069f6d45334",
     "slug": "page-9-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 9 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 9 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1586,14 +3279,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576555",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "ec9e5719-41d6-b330-69e8-f648565dd5a7",
     "slug": "page-7-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 7 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 7 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1618,14 +3324,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576548",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "67295107-5e40-9c37-3ffe-19df901d0105",
     "slug": "page-5-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 5 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 5 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1650,14 +3369,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 15.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576531",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "e53dd4b6-f3d1-5c05-a496-016d656044f8",
     "slug": "page-4-print-size-a3-searching-with-sam-widges-by-morganico",
     "title": "Page 4 print (size A3) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 4 print (size A3) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1682,14 +3414,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 15.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-9781912576524",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "5ba8d49c-7633-d242-209f-926ce2a3d0ad",
     "slug": "page-5-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 5 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 5 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1714,14 +3459,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 20.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-53-1",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "d5bbf8d7-34d8-d95d-8e73-4fabeb4148a5",
     "slug": "page-7-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 7 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 7 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1746,14 +3504,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-54-8",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "ca55c2a6-638f-e150-c52f-d54691cfa6a2",
     "slug": "page-9-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 9 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 9 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1778,14 +3549,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "SWSW-9781912576555",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "3aea99ab-e11c-4045-f1fa-bf75aa807288",
     "slug": "page-11-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 11 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 11 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1810,14 +3594,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "SWSWX-9781912576562",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "ed06498b-0a1d-61d7-04e7-213f2a7199bf",
     "slug": "page-13-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 13 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 13 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1842,14 +3639,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-57-9",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "2e23ccc2-6156-fd59-0d31-69116f0e3554",
     "slug": "page-15-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 15 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 15 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1874,14 +3684,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-58-6",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "e930cc4e-2e57-eb2f-c25a-7f18d694b7ac",
     "slug": "page-17-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 17 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 17 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1906,14 +3729,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-59-3",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "fd357731-89c0-c22d-e590-8831aee21012",
     "slug": "page-19-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 19 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 19 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1938,14 +3774,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-60-9",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "532403bb-3144-815c-1bc4-e757bb18f4b9",
     "slug": "page-21-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 21 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 21 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -1970,14 +3819,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-61-6",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "b899db24-b4dd-a806-d6a3-fd789df7becd",
     "slug": "page-23-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 23 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 23 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2002,14 +3864,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-62-3",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "e287a475-9cda-4651-c51b-95f158078ab0",
     "slug": "page-25-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 25 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 25 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2034,14 +3909,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-63-0",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "b166e1f0-ed34-2d8d-c7eb-58bf5a9acaf9",
     "slug": "page-27-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 27 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 27 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2066,14 +3954,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-64-7",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "d096d69d-ca95-0f89-1068-3c405fcec13e",
     "slug": "page-29-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 29 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 29 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2098,14 +3999,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-65-4",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "10c03a2d-33e2-a56d-ad89-f38a727a41df",
     "slug": "page-31-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 31 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 31 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2130,14 +4044,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-66-1",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "db4248e2-e554-34c1-5d86-efb359cad5f9",
     "slug": "page-33-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 33 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 33 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2162,14 +4089,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-67-8",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "da85ea08-2a31-bb36-b07f-9e352a390439",
     "slug": "page-35-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 35 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 35 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2194,14 +4134,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 30.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-68-5",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "d95d3255-d4ab-9b28-b902-3ac37ebfaf28",
     "slug": "page-40-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 40 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 40 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2226,14 +4179,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 25.0,
+        "originalPrice": null,
+        "sku": "MPX-SWSWX-978-1-912576-69-2",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "628c33d0-7a1e-e443-49e4-182ec3a8be41",
     "slug": "page-41-print-size-a2-searching-with-sam-widges-by-morganico",
     "title": "Page 41 print (size A2) - Searching With Sam Widges by Morganico",
     "rawTitle": "Page 41 print (size A2) - Searching With Sam Widges by Morganico",
-    "author": "Morganico",
+    "author": "fine artist Morganico",
+    "contributors": "",
+    "isArt": true,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2258,14 +4224,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Hardcover",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 25.0,
+        "originalPrice": null,
+        "sku": "978-1-912576-70-8",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "a8c00d48-1738-e36b-d621-5d1f49fe775c",
     "slug": "celluloid-peach-by-derek-e-pearson-good-historical-fiction-books",
     "title": "Celluloid Peach - by Derek E Pearson, good historical fiction books",
     "rawTitle": "Celluloid Peach - by Derek E Pearson, good historical fiction books",
-    "author": "GB Publishing Author",
+    "author": "Derek E Pearson",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2290,14 +4269,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 9.99,
+        "originalPrice": 11.99,
+        "sku": "DEP-CPXXX-9781912576845",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "84ca6fe1-1e1b-e4b6-0ef2-4814226518d1",
     "slug": "the-stone-gospel-by-derek-e-pearson-young-adult-novel",
     "title": "The Stone Gospel - by Derek E Pearson, young adult novel",
     "rawTitle": "The Stone Gospel - by Derek E Pearson, young adult novel",
-    "author": "GB Publishing Author",
+    "author": "Derek E Pearson",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2322,15 +4314,28 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 8.99,
+        "originalPrice": 10.99,
+        "sku": "DEP-TSGXX-",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "db9b7b04-bb72-0569-010b-ccadbd1eb228",
     "slug": "preacher-spindrift-by-d-e-pearson-best-fantasy-novel-series-series-offer",
-    "title": "Preacher Spindrift, by D E Pearson, best fantasy novel series, + series OFFER",
+    "title": "Preacher Spindrift Series",
     "rawTitle": "Preacher Spindrift, by D E Pearson, best fantasy novel series, + series OFFER",
-    "author": "GB Publishing Author",
-    "tagline": "",
+    "author": "Derek E Pearson",
+    "contributors": "",
+    "isArt": false,
+    "tagline": "Gods' Enemy, Gods' Fool & Gods' Warrior epic fantasy trilogy",
     "authorSectionTitle": "",
     "authors": [],
     "authorBio": "",
@@ -2340,7 +4345,7 @@
     "missionCard": null,
     "price": 9.49,
     "originalPrice": 10.49,
-    "sku": "GBP-1065",
+    "sku": "GBP-1064",
     "ribbon": "INDIES award FINALISTS",
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
@@ -2357,25 +4362,115 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "FREE mainland UK delivery orders over £15, Choose:",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "#1 GODS' Enemy - paperback",
+            "description": "#1 GODS' Enemy - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#2 GODS' Fool - paperback",
+            "description": "#2 GODS' Fool - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#3 GODS' Warrior - paperback",
+            "description": "#3 GODS' Warrior - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#1-3 GODS' Enemy Fool & Warrior - paperback",
+            "description": "#1-3 GODS' Enemy Fool & Warrior - paperback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "f5d8ac33-7f66-4727-9cfd-992356de7046",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#1 GODS' Enemy - paperback"
+        },
+        "price": 9.49,
+        "originalPrice": 10.49,
+        "sku": "\"9780993507229\"",
+        "inStock": true
+      },
+      {
+        "id": "d2dcc62b-8f77-4da9-964b-b5efa35912a1",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#2 GODS' Fool - paperback"
+        },
+        "price": 9.99,
+        "originalPrice": 10.99,
+        "sku": "\"9781912031726\"",
+        "inStock": true
+      },
+      {
+        "id": "910f0e92-657c-4c16-98ba-acd89bd25e40",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#3 GODS' Warrior - paperback"
+        },
+        "price": 9.49,
+        "originalPrice": 10.49,
+        "sku": "\"9781912031276\"",
+        "inStock": true
+      },
+      {
+        "id": "e2dde125-77c3-4e8d-b22b-0ea6d672ee97",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#1-3 GODS' Enemy Fool & Warrior - paperback"
+        },
+        "price": 28.0,
+        "originalPrice": 29.0,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "ad53e2e6-9058-48c0-ff65-c8b10fdcd401",
     "slug": "crumbdog-by-lois-collins-foreword-dame-j-wilson-picture-book-free-fridgemagnet",
-    "title": "Crumbdog by Lois Collins, Foreword Dame J Wilson, picture book+FREE fridgemagnet",
+    "title": "Crumbdog",
     "rawTitle": "Crumbdog by Lois Collins, Foreword Dame J Wilson, picture book+FREE fridgemagnet",
     "author": "Lois Collins",
-    "tagline": "",
-    "authorSectionTitle": "",
-    "authors": [],
+    "contributors": "Foreword by Dame Jacqueline Wilson",
+    "isArt": false,
+    "tagline": "A heartfelt illustrated children's story about friendship, resilience, and rescue dogs",
+    "authorSectionTitle": "About the Author & Foreword",
+    "authors": [
+      {
+        "name": "Lois Collins",
+        "role": "Author & Artist"
+      },
+      {
+        "name": "Dame Jacqueline Wilson",
+        "role": "Foreword Contributor & Children's Laureate"
+      }
+    ],
     "authorBio": "",
     "previewPages": [],
-    "accolades": [],
+    "accolades": [
+      {
+        "title": "Dame Jacqueline Wilson Foreword",
+        "subtitle": "Distinguished Children's Laureate"
+      },
+      {
+        "title": "Free Fridge Magnet",
+        "subtitle": "Included with Direct Orders"
+      }
+    ],
     "videoTrailer": null,
     "missionCard": null,
     "price": 9.99,
     "originalPrice": 11.49,
-    "sku": "GBP-1066",
+    "sku": "GBP-1065",
     "ribbon": "Picture book",
     "categories": [
       "Children's & Picture Books"
@@ -2397,17 +4492,61 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "FREE mainland UK delivery over £15 + fridge magnet",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Book cover fridge magnet",
+            "description": "Book cover fridge magnet",
+            "inStock": true
+          }
+        ]
+      },
+      {
+        "name": "Format",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Paperback",
+            "description": "Paperback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "53374f45-bb6a-4ba1-8355-89d3a072d1e1",
+        "choices": {
+          "FREE mainland UK delivery over £15 + fridge magnet": "Book cover fridge magnet",
+          "Format": "Paperback"
+        },
+        "price": 9.99,
+        "originalPrice": 11.49,
+        "sku": "9781912576050b",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "5d38a779-fb29-5f59-b189-bcab3a8d479e",
     "slug": "searching-with-sam-widges-by-morganico-signed-picture-book-free-sticker-magnet",
-    "title": "Searching With Sam Widges - by Morganico SIGNED picture book+FREE sticker/magnet",
+    "title": "Searching With Sam Widges",
     "rawTitle": "Searching With Sam Widges - by Morganico SIGNED picture book+FREE sticker/magnet",
-    "author": "Morganico",
-    "tagline": "",
-    "authorSectionTitle": "",
-    "authors": [],
+    "author": "fine artist Morganico",
+    "contributors": "Author & Illustrator: fine artist Morganico",
+    "isArt": false,
+    "tagline": "An adventure across continents and imagination with Sam Widges — Free sticker or fridge magnet included",
+    "authorSectionTitle": "About the Author & Illustrator",
+    "authors": [
+      {
+        "name": "Morganico",
+        "role": "Fine Artist, Author & Illustrator"
+      }
+    ],
     "authorBio": "",
     "previewPages": [],
     "accolades": [],
@@ -2415,7 +4554,7 @@
     "missionCard": null,
     "price": 10.49,
     "originalPrice": 10.99,
-    "sku": "GBP-1067",
+    "sku": "GBP-1066",
     "ribbon": "Fine art picture book",
     "categories": [
       "Children's & Picture Books"
@@ -2437,8 +4576,250 @@
     "isWholesale": false,
     "isSigned": true,
     "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
+    "format": "Signed Copy",
+    "stock": 25,
+    "options": [
+      {
+        "name": "Choose format + FREE sticker/fridge magnet",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "None",
+            "description": "None",
+            "inStock": true
+          },
+          {
+            "value": "Sam open ocean p9 sticker",
+            "description": "Sam open ocean p9 sticker",
+            "inStock": true
+          },
+          {
+            "value": "Sam space p11 sticker",
+            "description": "Sam space p11 sticker",
+            "inStock": true
+          },
+          {
+            "value": "Sam Ireland dance p23 sticker",
+            "description": "Sam Ireland dance p23 sticker",
+            "inStock": true
+          },
+          {
+            "value": "Sam Japan p29 sticker",
+            "description": "Sam Japan p29 sticker",
+            "inStock": true
+          },
+          {
+            "value": "Sam Australian desert p31 sticker",
+            "description": "Sam Australian desert p31 sticker",
+            "inStock": true
+          },
+          {
+            "value": "Sam meditation p35 sticker",
+            "description": "Sam meditation p35 sticker",
+            "inStock": true
+          },
+          {
+            "value": "Searching with Sam Widges fridge magnet",
+            "description": "Searching with Sam Widges fridge magnet",
+            "inStock": true
+          }
+        ]
+      },
+      {
+        "name": "Format",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Paperback signed",
+            "description": "Paperback signed",
+            "inStock": true
+          },
+          {
+            "value": "Hardback signed",
+            "description": "Hardback signed",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "96b29ee8-46b0-4bd7-bf83-1a2ff35e5a3a",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "None",
+          "Format": "Paperback signed"
+        },
+        "price": 10.49,
+        "originalPrice": 10.99,
+        "sku": "MPX-SWSWX-9781912576203",
+        "inStock": true
+      },
+      {
+        "id": "16941c89-f4b9-418a-9e7f-db9ebd120375",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "None",
+          "Format": "Hardback signed"
+        },
+        "price": 18.49,
+        "originalPrice": 18.99,
+        "sku": "\"9781912576203\"",
+        "inStock": true
+      },
+      {
+        "id": "8b364c42-a7d6-45b2-8e4b-425384375a23",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Sam open ocean p9 sticker",
+          "Format": "Paperback signed"
+        },
+        "price": 10.49,
+        "originalPrice": 10.99,
+        "sku": "MPX-SWSWX-9781912576203",
+        "inStock": true
+      },
+      {
+        "id": "5a1a1196-ad22-4376-9633-23a5db5c79e8",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Sam open ocean p9 sticker",
+          "Format": "Hardback signed"
+        },
+        "price": 18.49,
+        "originalPrice": 18.99,
+        "sku": "\"9781912576203a\"",
+        "inStock": true
+      },
+      {
+        "id": "eb46b1bb-ffd0-4c48-9a54-8da4f7c06ecf",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Sam space p11 sticker",
+          "Format": "Paperback signed"
+        },
+        "price": 10.49,
+        "originalPrice": 10.99,
+        "sku": "MPX-SWSWX-9781912576203",
+        "inStock": true
+      },
+      {
+        "id": "c96d8d95-6f2e-41ad-8504-7118a00f1e16",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Sam space p11 sticker",
+          "Format": "Hardback signed"
+        },
+        "price": 18.49,
+        "originalPrice": 18.99,
+        "sku": "\"9781912576203b\"",
+        "inStock": true
+      },
+      {
+        "id": "c9bc9c9e-530c-4c3a-b753-a181400de151",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Sam Ireland dance p23 sticker",
+          "Format": "Paperback signed"
+        },
+        "price": 10.49,
+        "originalPrice": 10.99,
+        "sku": "MPX-SWSWX-9781912576203",
+        "inStock": true
+      },
+      {
+        "id": "dc08d194-48d9-4451-994e-c3fade911e05",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Sam Ireland dance p23 sticker",
+          "Format": "Hardback signed"
+        },
+        "price": 18.49,
+        "originalPrice": 18.99,
+        "sku": "\"9781912576203c\"",
+        "inStock": true
+      },
+      {
+        "id": "a38f22f6-604b-45d2-9eb5-a27e6342c0fa",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Sam Japan p29 sticker",
+          "Format": "Paperback signed"
+        },
+        "price": 10.49,
+        "originalPrice": 10.99,
+        "sku": "MPX-SWSWX-9781912576203",
+        "inStock": true
+      },
+      {
+        "id": "46fdad0f-02ec-467d-b174-aef45f6c4c91",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Sam Japan p29 sticker",
+          "Format": "Hardback signed"
+        },
+        "price": 18.49,
+        "originalPrice": 18.99,
+        "sku": "\"9781912576203d\"",
+        "inStock": true
+      },
+      {
+        "id": "e431ab22-9cb7-421b-b66f-dfd583542563",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Sam Australian desert p31 sticker",
+          "Format": "Paperback signed"
+        },
+        "price": 10.49,
+        "originalPrice": 10.99,
+        "sku": "MPX-SWSWX-9781912576203",
+        "inStock": true
+      },
+      {
+        "id": "39d5d0f1-a86b-4b83-886f-7af3454f36f1",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Sam Australian desert p31 sticker",
+          "Format": "Hardback signed"
+        },
+        "price": 18.49,
+        "originalPrice": 18.99,
+        "sku": "\"9781912576203e\"",
+        "inStock": true
+      },
+      {
+        "id": "ddbb7c9a-d3f4-46f8-b323-7082219e384d",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Sam meditation p35 sticker",
+          "Format": "Paperback signed"
+        },
+        "price": 10.49,
+        "originalPrice": 10.99,
+        "sku": "MPX-SWSWX-9781912576203",
+        "inStock": true
+      },
+      {
+        "id": "ddcb2f2e-ffb0-4cf8-ba5e-8162a31e64ad",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Sam meditation p35 sticker",
+          "Format": "Hardback signed"
+        },
+        "price": 18.49,
+        "originalPrice": 18.99,
+        "sku": "\"9781912576203f\"",
+        "inStock": true
+      },
+      {
+        "id": "3f2b1970-2667-4107-bf0d-f7bfe4d3d0a0",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Searching with Sam Widges fridge magnet",
+          "Format": "Paperback signed"
+        },
+        "price": 10.49,
+        "originalPrice": 10.99,
+        "sku": "MPX-SWSWX-9781912576203",
+        "inStock": true
+      },
+      {
+        "id": "c88e8b24-fce5-46f1-8f9e-455f0206c63f",
+        "choices": {
+          "Choose format + FREE sticker/fridge magnet": "Searching with Sam Widges fridge magnet",
+          "Format": "Hardback signed"
+        },
+        "price": 10.49,
+        "originalPrice": 10.99,
+        "sku": "MPX-SWSWX-9781912576203",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "9792a2c8-299a-cf0e-6987-1c32c2df92a4",
@@ -2446,38 +4827,40 @@
     "title": "The Ginologist Cook: Dinner Party Recipes",
     "rawTitle": "The Ginologist Cook by Craft Gin - cookery with gin, dinner party recipes",
     "author": "Pieter Carter & The Ginologist Team",
+    "contributors": "Craft gin recipes, mixology & botanical pairings from award-winning distillers",
+    "isArt": false,
     "tagline": "150 delicious recipes with Gin — The world's first craft gin coffee-table cookbook",
     "authorSectionTitle": "",
     "authors": [
       {
         "name": "Pieter Carter",
         "role": "Ginologist Distiller & Founder",
-        "bio": "Graduated in law but instead of practising law he took to the stills. It wasn’t long before the 3 Gins in the Ginologist range of Spice, Floral and Citrus entered their first competition, the Michelangelo International Wine and Spirits awards, winning 2 gold medals and a silver. This victory made Pieter one of the youngest distillers to distil an award-winning gin."
+        "bio": "Graduated in law but instead of practising law he took to the stills. It wasn’t long before the 3 Gins in the Ginologist range of Spice, Floral and Citrus entered their first competition, the Michelangelo International Wine and Spirits awards, winning 2 gold medals and a silver."
       },
       {
         "name": "Shane Heldsinger",
         "role": "Group Executive Chef",
-        "bio": "Studied at Cordon Bleu Chefs School of South Africa and later had the privilege of cooking for Nelson Mandela on his 90th birthday celebrations. Currently Group Executive Chef for Gastronomie, a chain of Restaurants in South Africa featuring Carbon Bistro, Capital P and Kingelato. Trained in Classical French cuisine, he has personalised his own style fusing modern contemporary cuisine with a strong Asian influence."
+        "bio": "Studied at Cordon Bleu Chefs School of South Africa and later had the privilege of cooking for Nelson Mandela on his 90th birthday celebrations."
       },
       {
         "name": "Charlotte Letlape",
         "role": "The Pastry Princess",
-        "bio": "Better known as The Pastry Princess, Charlotte is a former investment banker turned pastry chef from Johannesburg. She specialises in designer desserts, high tea catering and speciality cakes. Her private and corporate clients include former First Lady Zanele Mbeki, T-Systems, Olympic Gold medal winner Wayde van Niekerk, and Kaya FM."
+        "bio": "Specialises in designer desserts, high tea catering and speciality cakes. Former investment banker turned pastry chef from Johannesburg."
       },
       {
         "name": "Kundi Thai",
         "role": "Culinary Specialist & Private Chef",
-        "bio": "An attorney whose love for good food swept her from the courtroom and permanently into the kitchen! Self-taught through cook books, cooking shows, and the internet, she founded kundiskitchen.com to share recipe details of her enticing meals. She is a private chef and runs her own premier catering business."
+        "bio": "Private chef and premier catering business owner dedicated to gourmet home cooking."
       },
       {
         "name": "Phillip Tlhako",
         "role": "Professional Cookery Chef",
-        "bio": "His dream of becoming a mine boy after matric didn’t come true. Instead, he won an internship in the hospitality industry where his love of food flourished. After a hotel manager discovered his talent and offered to pay his student fees, he gained his Diploma in Professional Cookery and is now living his dream as a chef in Pretoria."
+        "bio": "Professional chef in Pretoria with deep passion for contemporary South African gastronomy."
       },
       {
         "name": "Ahe Jafta",
         "role": "Master Mixologist",
-        "bio": "A celebrated South African mixologist who competed in MasterChef South Africa 2009 and represented the nation as a contender in top Middle East championships (World Class UAE, Campari, Chivas Masters). A well-established head bartender working with top cocktail experts, he is 'changing the world one cocktail at a time.'"
+        "bio": "Celebrated mixologist who competed in MasterChef South Africa and represented the nation in top international cocktail championships."
       }
     ],
     "authorBio": "Crafted by the culinary and distilling team at Ginologist, South Africa's award-winning craft distillery. From savoury mains to sweet desserts and signature cocktails, each recipe explores botanical gin flavour pairings.",
@@ -2524,7 +4907,18 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 18.49,
+        "originalPrice": 22.99,
+        "sku": "\"9781912576005\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "b712d89b-9a9a-17fa-04c7-83bd48661ca9",
@@ -2532,6 +4926,8 @@
     "title": "OutTack - by George S Boughton, great sci fi books, SIGNED",
     "rawTitle": "OutTack - by George S Boughton, great sci fi books, SIGNED",
     "author": "George S Boughton",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2555,8 +4951,19 @@
     "isWholesale": false,
     "isSigned": true,
     "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
+    "format": "Signed Copy",
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 12.99,
+        "originalPrice": 14.49,
+        "sku": "\"9780957297081\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "03c552dd-01a4-6936-4c4f-9331b972271b",
@@ -2564,6 +4971,8 @@
     "title": "The Adventures of Doogie - by Sharif Islam, story books + series OFFER",
     "rawTitle": "The Adventures of Doogie - by Sharif Islam, story books + series OFFER",
     "author": "GB Publishing Author",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2574,7 +4983,7 @@
     "missionCard": null,
     "price": 6.99,
     "originalPrice": 7.99,
-    "sku": "GBP-1070",
+    "sku": "GBP-1069",
     "ribbon": "Blue Peter Awards entry",
     "categories": [
       "Children's & Picture Books"
@@ -2588,14 +4997,71 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "FREE mainland UK delivery over £15, Choose title ",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "#1 Doogie and the Rollers",
+            "description": "#1 Doogie and the Rollers",
+            "inStock": true
+          },
+          {
+            "value": "#2 Doogie and the Pyramid of Dungalore",
+            "description": "#2 Doogie and the Pyramid of Dungalore",
+            "inStock": true
+          },
+          {
+            "value": "#1 Rollers & #2 Pyramid of Dungalore",
+            "description": "#1 Rollers & #2 Pyramid of Dungalore",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "b611dbae-0464-4a0e-9b78-8d7fb73fc3fc",
+        "choices": {
+          "FREE mainland UK delivery over £15, Choose title ": "#1 Doogie and the Rollers"
+        },
+        "price": 6.99,
+        "originalPrice": 7.99,
+        "sku": "\"9780957297098\"",
+        "inStock": true
+      },
+      {
+        "id": "e5711c4b-c601-458a-9d44-c59ea07ade00",
+        "choices": {
+          "FREE mainland UK delivery over £15, Choose title ": "#2 Doogie and the Pyramid of Dungalore"
+        },
+        "price": 8.49,
+        "originalPrice": 9.49,
+        "sku": "\"9780957672857\"",
+        "inStock": true
+      },
+      {
+        "id": "84a46747-9afe-42d7-99b2-200df40948b7",
+        "choices": {
+          "FREE mainland UK delivery over £15, Choose title ": "#1 Rollers & #2 Pyramid of Dungalore"
+        },
+        "price": 13.99,
+        "originalPrice": 14.99,
+        "sku": "SIX-DOOG1-9780957297098",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "4c4c4d72-9abe-69fe-5069-8915adb835a8",
     "slug": "stop-the-pocalypse-i-wanna-get-off-christopher-ritchie-great-sci-fi-books",
     "title": "Stop The 'Pocalypse! I Wanna Get Off!, Christopher Ritchie - great sci fi books",
     "rawTitle": "Stop The 'Pocalypse! I Wanna Get Off!, Christopher Ritchie - great sci fi books",
-    "author": "GB Publishing Author",
+    "author": "Christopher Ritchie",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2620,15 +5086,28 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 10.49,
+        "originalPrice": 11.49,
+        "sku": "9781912031535",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "ab1a611d-9061-e0ea-cf14-0c3b43255ebd",
     "slug": "the-ordinary-by-c-ritchie-reminiscent-of-stephen-king-books-series-offer",
-    "title": "The Ordinary by C Ritchie \"reminiscent of Stephen King books\" +series OFFER",
+    "title": "The Ordinary",
     "rawTitle": "The Ordinary by C Ritchie \"reminiscent of Stephen King books\" +series OFFER",
-    "author": "GB Publishing Author",
-    "tagline": "",
+    "author": "Christopher Ritchie",
+    "contributors": "",
+    "isArt": false,
+    "tagline": "A chilling psychological supernatural thriller reminiscent of Stephen King",
     "authorSectionTitle": "",
     "authors": [],
     "authorBio": "",
@@ -2638,7 +5117,7 @@
     "missionCard": null,
     "price": 11.49,
     "originalPrice": 12.99,
-    "sku": "GBP-1072",
+    "sku": "GBP-1071",
     "ribbon": "INDIES Awards WINNER",
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
@@ -2653,17 +5132,94 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "FREE mainland UK delivery over £15, Choose title ",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "#1 House of Pigs - paperback",
+            "description": "#1 House of Pigs - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#2 The ordinary - paperback",
+            "description": "#2 The ordinary - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#1a Der Schatten der Schweine - paperback",
+            "description": "#1a Der Schatten der Schweine - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#1 House of Pigs & #2 The Ordinary - paperback",
+            "description": "#1 House of Pigs & #2 The Ordinary - paperback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "4310cf18-1313-4d3c-8553-589c0a815b9d",
+        "choices": {
+          "FREE mainland UK delivery over £15, Choose title ": "#1 House of Pigs - paperback"
+        },
+        "price": 8.49,
+        "originalPrice": 9.99,
+        "sku": "\"9780957297050\"",
+        "inStock": true
+      },
+      {
+        "id": "ef0a3926-f355-4db7-a7d2-a7d5c239b7ac",
+        "choices": {
+          "FREE mainland UK delivery over £15, Choose title ": "#2 The ordinary - paperback"
+        },
+        "price": 11.49,
+        "originalPrice": 12.99,
+        "sku": "\"9780993163975\"",
+        "inStock": true
+      },
+      {
+        "id": "8e05b0e3-4e51-4b69-b1f5-de1c7db1e1ee",
+        "choices": {
+          "FREE mainland UK delivery over £15, Choose title ": "#1a Der Schatten der Schweine - paperback"
+        },
+        "price": 9.99,
+        "originalPrice": 11.49,
+        "sku": "\"9781912576456\"",
+        "inStock": true
+      },
+      {
+        "id": "fa8c34c4-27ba-42c0-96bf-251d9025b1c7",
+        "choices": {
+          "FREE mainland UK delivery over £15, Choose title ": "#1 House of Pigs & #2 The Ordinary - paperback"
+        },
+        "price": 18.99,
+        "originalPrice": 20.49,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "9b74fd4c-a947-a37a-e2a9-db8137513882",
     "slug": "pink-biscuit-zoo-derek-e-pearson-illustrated-by-de-pearson-picture-books",
-    "title": "Pink Biscuit Zoo - Derek E Pearson, illustrated by DE Pearson, picture books",
+    "title": "Pink Biscuit Zoo",
     "rawTitle": "Pink Biscuit Zoo - Derek E Pearson, illustrated by DE Pearson, picture books",
-    "author": "GB Publishing Author",
-    "tagline": "",
-    "authorSectionTitle": "",
-    "authors": [],
+    "author": "Derek E Pearson",
+    "contributors": "Author & Illustrator: Derek E Pearson",
+    "isArt": false,
+    "tagline": "Whimsical rhymes and colourful zoo creature illustrations for early young readers",
+    "authorSectionTitle": "About the Author & Illustrator",
+    "authors": [
+      {
+        "name": "Derek E Pearson",
+        "role": "Author & Illustrator"
+      }
+    ],
     "authorBio": "",
     "previewPages": [],
     "accolades": [],
@@ -2686,14 +5242,27 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 8.49,
+        "originalPrice": 8.99,
+        "sku": "\"9781912031351\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "17a3b6b1-f3ab-5237-a004-1f4bc7405cb3",
     "slug": "slave-skin-by-derek-e-pearson-great-fantasy-novels",
     "title": "Slave Skin - by Derek E Pearson, great fantasy novels",
     "rawTitle": "Slave Skin - by Derek E Pearson, great fantasy novels",
-    "author": "GB Publishing Author",
+    "author": "Derek E Pearson",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2718,15 +5287,28 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 9.49,
+        "originalPrice": 10.99,
+        "sku": "\"9780993507281\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "0dda819e-726d-32e4-6a43-bb7a3caa5d87",
     "slug": "adventures-of-milla-carter-2-de-pearson-best-mature-fantasy-books-series-offers",
-    "title": "Adventures of Milla Carter #2 DE Pearson best mature fantasy books+series OFFERS",
+    "title": "Adventures of Milla Carter Series 2",
     "rawTitle": "Adventures of Milla Carter #2 DE Pearson best mature fantasy books+series OFFERS",
-    "author": "GB Publishing Author",
-    "tagline": "",
+    "author": "Derek E Pearson",
+    "contributors": "",
+    "isArt": false,
+    "tagline": "Epic dark fantasy series following Milla Carter — Soul's Asylum, Star Weaver & The Swarm",
     "authorSectionTitle": "",
     "authors": [],
     "authorBio": "",
@@ -2736,7 +5318,7 @@
     "missionCard": null,
     "price": 10.49,
     "originalPrice": 12.49,
-    "sku": "GBP-1075",
+    "sku": "GBP-1074",
     "ribbon": "ADULT fiction INDIES Finalist",
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
@@ -2753,15 +5335,102 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "FREE mainland UK delivery orders over £15, Choose:",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "#1 Soul's Asylum - paperback",
+            "description": "#1 Soul's Asylum - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#2 Star Weaver - paperback",
+            "description": "#2 Star Weaver - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#3 The Swarm - paperback",
+            "description": "#3 The Swarm - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#1-3 - all 3 paperbacks",
+            "description": "#1-3 - all 3 paperbacks",
+            "inStock": true
+          },
+          {
+            "value": "#1-3 of Series 1 - all 3 paperbacks",
+            "description": "#1-3 of Series 1 - all 3 paperbacks",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "ca3683f1-d140-4cc7-8a29-2c3b0cf00c04",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#1 Soul's Asylum - paperback"
+        },
+        "price": 10.49,
+        "originalPrice": 12.49,
+        "sku": "\"9780993275630\"",
+        "inStock": true
+      },
+      {
+        "id": "934db18e-6ba2-487a-b075-0b0254418b7f",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#2 Star Weaver - paperback"
+        },
+        "price": 10.49,
+        "originalPrice": 12.49,
+        "sku": "\"9780993275661\"",
+        "inStock": true
+      },
+      {
+        "id": "0502e08f-c2cb-4e91-82ac-b844fd56593f",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#3 The Swarm - paperback"
+        },
+        "price": 10.99,
+        "originalPrice": 12.99,
+        "sku": "\"9780993275692\"",
+        "inStock": true
+      },
+      {
+        "id": "3f601642-4ca9-452a-be43-6d5ec7a21d1e",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#1-3 - all 3 paperbacks"
+        },
+        "price": 29.99,
+        "originalPrice": 31.99,
+        "sku": "",
+        "inStock": true
+      },
+      {
+        "id": "6e5ec020-c705-45e6-a6b8-2ade99a646a0",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#1-3 of Series 1 - all 3 paperbacks"
+        },
+        "price": 34.99,
+        "originalPrice": 36.99,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "bb859fbd-7446-7580-8c3d-058c54e1a570",
     "slug": "adventures-of-milla-carter-1-de-pearson-steamy-high-fantasy-books-series-offers",
-    "title": "Adventures of Milla Carter #1 DE Pearson Steamy high fantasy books+series OFFERS",
+    "title": "Adventures of Milla Carter Series 1",
     "rawTitle": "Adventures of Milla Carter #1 DE Pearson Steamy high fantasy books+series OFFERS",
-    "author": "GB Publishing Author",
-    "tagline": "",
+    "author": "Derek E Pearson",
+    "contributors": "",
+    "isArt": false,
+    "tagline": "High fantasy series following Milla Carter — Body Holiday, Shadow Players & A Time To Prey",
     "authorSectionTitle": "",
     "authors": [],
     "authorBio": "",
@@ -2771,7 +5440,7 @@
     "missionCard": null,
     "price": 12.99,
     "originalPrice": 13.99,
-    "sku": "GBP-1076",
+    "sku": "GBP-1075",
     "ribbon": "ADULT Fiction",
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
@@ -2788,7 +5457,92 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "FREE mainland UK delivery orders over £15, Choose:",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "#1 Body Holiday - paperback",
+            "description": "#1 Body Holiday - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#2 Shadow Players - paperback",
+            "description": "#2 Shadow Players - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#3 A Time To Prey - paperback",
+            "description": "#3 A Time To Prey - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#1-3 - all 3 volumes",
+            "description": "#1-3 - all 3 volumes",
+            "inStock": true
+          },
+          {
+            "value": "#1-3 of Series 2 - all 3 volumes",
+            "description": "#1-3 of Series 2 - all 3 volumes",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "81e7e5cf-fae3-4bfe-aca2-446a377b3caa",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#1 Body Holiday - paperback"
+        },
+        "price": 12.99,
+        "originalPrice": 13.99,
+        "sku": "\"9780957672864\"",
+        "inStock": true
+      },
+      {
+        "id": "8c57b712-6c01-4514-853b-ef85534a5d25",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#2 Shadow Players - paperback"
+        },
+        "price": 12.99,
+        "originalPrice": 13.99,
+        "sku": "\"9780957672895\"",
+        "inStock": true
+      },
+      {
+        "id": "9da4c150-c1c4-4827-b26d-3de96b71b0df",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#3 A Time To Prey - paperback"
+        },
+        "price": 12.99,
+        "originalPrice": 13.99,
+        "sku": "\"9780993163920\"",
+        "inStock": true
+      },
+      {
+        "id": "16f57aa7-87a6-4838-896c-acc7e159cbd0",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#1-3 - all 3 volumes"
+        },
+        "price": 34.99,
+        "originalPrice": 35.99,
+        "sku": "DEP-BH-BH-9780957672864",
+        "inStock": true
+      },
+      {
+        "id": "d5d1b07a-4f96-44dc-aec3-73cbe08cc77c",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#1-3 of Series 2 - all 3 volumes"
+        },
+        "price": 29.99,
+        "originalPrice": 30.99,
+        "sku": "DEP-BH-BH-9780957672864",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "f980a175-4733-1c49-aaed-1f9495b0033f",
@@ -2796,6 +5550,8 @@
     "title": "The Catalyst - by Bradley Walker, young adult novel",
     "rawTitle": "The Catalyst - by Bradley Walker, young adult novel",
     "author": "GB Publishing Author",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2820,15 +5576,28 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 10.49,
+        "originalPrice": 11.49,
+        "sku": "BWX-TCXXX-9781912031979",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "915c7442-fdf6-d504-ff7f-824704f50343",
     "slug": "antecedent-series-by-david-kimberley-great-fantasy-book-series-series-offer",
-    "title": "Antecedent Series - by David Kimberley. great fantasy book series + series OFFER",
+    "title": "Antecedent Series",
     "rawTitle": "Antecedent Series - by David Kimberley. great fantasy book series + series OFFER",
-    "author": "GB Publishing Org",
-    "tagline": "",
+    "author": "David Kimberley",
+    "contributors": "",
+    "isArt": false,
+    "tagline": "Classic space opera science fiction trilogy — Galahad Suns, Nova Descent & Royal Gambit",
     "authorSectionTitle": "",
     "authors": [],
     "authorBio": "",
@@ -2838,8 +5607,8 @@
     "missionCard": null,
     "price": 9.99,
     "originalPrice": 10.99,
-    "sku": "GBP-1078",
-    "ribbon": "Signed Collector Edition",
+    "sku": "GBP-1077",
+    "ribbon": "Signed Copy Available",
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -2852,15 +5621,87 @@
     "isWholesale": false,
     "isSigned": true,
     "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
+    "format": "Signed Copy",
+    "stock": 25,
+    "options": [
+      {
+        "name": "FREE mainland UK delivery orders over £15, Choose:",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "#3 Royal Gambit - paperback",
+            "description": "#3 Royal Gambit - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#2 Nova Descent - paperback",
+            "description": "#2 Nova Descent - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#1 Galahad Suns - paperback",
+            "description": "#1 Galahad Suns - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#1-3 Galahad Suns - Nova Descent - Royal Gambit",
+            "description": "#1-3 Galahad Suns - Nova Descent - Royal Gambit",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "6da64d7f-d63f-4fbc-aaa5-5bbc503bc7f7",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#3 Royal Gambit - paperback"
+        },
+        "price": 9.99,
+        "originalPrice": 10.99,
+        "sku": "\"9781912031290\"",
+        "inStock": true
+      },
+      {
+        "id": "35b33c69-93f5-4040-8bb8-4835d795afa6",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#2 Nova Descent - paperback"
+        },
+        "price": 9.99,
+        "originalPrice": 10.99,
+        "sku": "\"9781912576494\"",
+        "inStock": true
+      },
+      {
+        "id": "009ab937-3874-4226-893d-393404c4ec0b",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#1 Galahad Suns - paperback"
+        },
+        "price": 13.49,
+        "originalPrice": 14.49,
+        "sku": "\"9781912031610\"",
+        "inStock": true
+      },
+      {
+        "id": "313a854d-42a8-42b0-ad24-44365d7bcd26",
+        "choices": {
+          "FREE mainland UK delivery orders over £15, Choose:": "#1-3 Galahad Suns - Nova Descent - Royal Gambit"
+        },
+        "price": 29.99,
+        "originalPrice": 30.99,
+        "sku": "\"9781912576319\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "cde47029-fa39-eb54-3f55-b986494ac6bf",
     "slug": "poetry-collection-by-mary-pargeter-great-poetry-collection-2-book-offer",
-    "title": "Poetry Collection by Mary Pargeter, great poetry collection + 2 book OFFER",
+    "title": "Poetry Collection by Mary Pargeter",
     "rawTitle": "Poetry Collection by Mary Pargeter, great poetry collection + 2 book OFFER",
     "author": "Mary Pargeter",
+    "contributors": "Free custom GB Publishing bookmark included with every copy",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2871,7 +5712,7 @@
     "missionCard": null,
     "price": 6.49,
     "originalPrice": 6.99,
-    "sku": "GBP-1079",
+    "sku": "GBP-1078",
     "ribbon": "Free Bookmark Included",
     "categories": [
       "Poetry & Fine Art"
@@ -2887,7 +5728,62 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "Choose title ",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "#1 journey in shades - paperback",
+            "description": "#1 journey in shades - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#2 leaving traces - paperback",
+            "description": "#2 leaving traces - paperback",
+            "inStock": true
+          },
+          {
+            "value": "#1 journey & #2 leaving - paperback",
+            "description": "#1 journey & #2 leaving - paperback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "fe386310-9cbb-48f3-b37d-273ab560eac1",
+        "choices": {
+          "Choose title ": "#1 journey in shades - paperback"
+        },
+        "price": 6.49,
+        "originalPrice": 6.99,
+        "sku": "\"9780957297043\"",
+        "inStock": true
+      },
+      {
+        "id": "6a908bcc-a5b7-4fc6-906b-52b6f8e0ebea",
+        "choices": {
+          "Choose title ": "#2 leaving traces - paperback"
+        },
+        "price": 7.49,
+        "originalPrice": 7.99,
+        "sku": "\"9781912576258\"",
+        "inStock": true
+      },
+      {
+        "id": "c8eb8e38-43e7-4fdc-83ef-03c5ce91bb64",
+        "choices": {
+          "Choose title ": "#1 journey & #2 leaving - paperback"
+        },
+        "price": 12.99,
+        "originalPrice": 13.49,
+        "sku": "",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "31475034-ae01-d1cb-73e3-6dcf687de768",
@@ -2895,6 +5791,8 @@
     "title": "Black Gold Black Scorpion - by George S Boughton, Biafran War bio, SIGNED",
     "rawTitle": "Black Gold Black Scorpion - by George S Boughton, Biafran War bio, SIGNED",
     "author": "George S Boughton",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2905,7 +5803,7 @@
     "missionCard": null,
     "price": 8.49,
     "originalPrice": 8.99,
-    "sku": "GBP-1080",
+    "sku": "GBP-1079",
     "ribbon": "Oilman in Biafran War",
     "categories": [
       "Fiction, Young Adult & Sci-Fi",
@@ -2919,18 +5817,71 @@
     "isWholesale": false,
     "isSigned": true,
     "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
+    "format": "Signed Copy",
+    "stock": 25,
+    "options": [
+      {
+        "name": "Format",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Paperback",
+            "description": "Paperback",
+            "inStock": true
+          },
+          {
+            "value": "Hardback",
+            "description": "Hardback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "7cb770b2-d803-47fc-b8c3-3edfb793185d",
+        "choices": {
+          "Format": "Paperback"
+        },
+        "price": 8.49,
+        "originalPrice": 8.99,
+        "sku": "\"9780993275609\"",
+        "inStock": true
+      },
+      {
+        "id": "8650829b-a1ef-4343-9059-b8785c1d30e5",
+        "choices": {
+          "Format": "Hardback"
+        },
+        "price": 15.49,
+        "originalPrice": 15.99,
+        "sku": "\"9781912031467\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "bd3fe905-f8dc-a69b-b940-84f606827877",
     "slug": "seafaring-the-full-story-ed2-cptn-g-p-boughton-sailing-autobiography-signed",
-    "title": "Seafaring: The Full Story Ed2, Cptn G P Boughton sailing autobiography, SIGNED",
+    "title": "Seafaring: The Full Story (Edition 2)",
     "rawTitle": "Seafaring: The Full Story Ed2, Cptn G P Boughton sailing autobiography, SIGNED",
-    "author": "George S Boughton",
-    "tagline": "",
-    "authorSectionTitle": "",
-    "authors": [],
+    "author": "Captain George P Boughton",
+    "contributors": "Illustrations by renowned maritime artist Kenneth D Shoesmith RI",
+    "isArt": false,
+    "tagline": "Sailing autobiography of a life before the mast in the final days of commercial tall ships",
+    "authorSectionTitle": "About the Author & Maritime Artist",
+    "authors": [
+      {
+        "name": "Captain George P Boughton",
+        "role": "Master Mariner & Author",
+        "bio": "Captain George P Boughton spent decades navigating oceans under canvas and steam during the heroic era of merchant seamanship."
+      },
+      {
+        "name": "Kenneth D Shoesmith RI",
+        "role": "Renowned Maritime Illustrator",
+        "bio": "Celebrated member of the Royal Institute of Painters in Water Colours, Shoesmith was one of Britain's most legendary maritime poster artists and illustrators."
+      }
+    ],
     "authorBio": "",
     "previewPages": [],
     "accolades": [],
@@ -2938,7 +5889,7 @@
     "missionCard": null,
     "price": 12.99,
     "originalPrice": 13.99,
-    "sku": "GBP-1081",
+    "sku": "GBP-1080",
     "ribbon": "Sailing CLASSIC",
     "categories": [
       "Non-Fiction & Memoir"
@@ -2951,8 +5902,48 @@
     "isWholesale": false,
     "isSigned": true,
     "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
+    "format": "Signed Copy",
+    "stock": 25,
+    "options": [
+      {
+        "name": "Format",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Paperback",
+            "description": "Paperback",
+            "inStock": true
+          },
+          {
+            "value": "Hardback",
+            "description": "Hardback",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "1584c9b6-9fb0-450d-ae52-1e3d718a78cd",
+        "choices": {
+          "Format": "Paperback"
+        },
+        "price": 12.99,
+        "originalPrice": 13.99,
+        "sku": "\"9780957672840\"",
+        "inStock": true
+      },
+      {
+        "id": "29720735-4f28-485a-8ddf-b35928446c80",
+        "choices": {
+          "Format": "Hardback"
+        },
+        "price": 22.99,
+        "originalPrice": 23.99,
+        "sku": "\"9781912031092\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "92a63bda-ac59-c829-3555-556efea2db63",
@@ -2960,6 +5951,8 @@
     "title": "Nora & John by Nora & John Murray - Spy story book + 2 book OFFER",
     "rawTitle": "Nora & John by Nora & John Murray - Spy story book + 2 book OFFER",
     "author": "GB Publishing Author",
+    "contributors": "",
+    "isArt": false,
     "tagline": "",
     "authorSectionTitle": "",
     "authors": [],
@@ -2970,7 +5963,7 @@
     "missionCard": null,
     "price": 14.49,
     "originalPrice": 15.49,
-    "sku": "GBP-1082",
+    "sku": "GBP-1081",
     "ribbon": "Cold War BEST SELLER",
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
@@ -2996,16 +5989,88 @@
     "isSigned": false,
     "visible": true,
     "format": "Paperback",
-    "stock": 25
+    "stock": 25,
+    "options": [
+      {
+        "name": "FREE mainland UK delivery over £15, choose book",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Nora & John paperback",
+            "description": "Nora & John paperback",
+            "inStock": true
+          },
+          {
+            "value": "I Spied for Stalin paperback",
+            "description": "I Spied for Stalin paperback",
+            "inStock": true
+          },
+          {
+            "value": "A Spy Called Swallow paperback",
+            "description": "A Spy Called Swallow paperback",
+            "inStock": true
+          },
+          {
+            "value": "I Spied for Stalin & Spy Called Swallow - paperack",
+            "description": "I Spied for Stalin & Spy Called Swallow - paperack",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "7cf35bfe-4f38-45ad-8eba-119eab2fa7c6",
+        "choices": {
+          "FREE mainland UK delivery over £15, choose book": "Nora & John paperback"
+        },
+        "price": 14.49,
+        "originalPrice": 15.49,
+        "sku": "\"9781912031672\"",
+        "inStock": true
+      },
+      {
+        "id": "40562a40-29f6-437b-bfa8-5bbe3d22aea5",
+        "choices": {
+          "FREE mainland UK delivery over £15, choose book": "I Spied for Stalin paperback"
+        },
+        "price": 10.49,
+        "originalPrice": 11.49,
+        "sku": "\"9781912031696\"",
+        "inStock": true
+      },
+      {
+        "id": "fab0a64b-f2bf-4bad-803b-77550b90dcfa",
+        "choices": {
+          "FREE mainland UK delivery over £15, choose book": "A Spy Called Swallow paperback"
+        },
+        "price": 9.49,
+        "originalPrice": 10.49,
+        "sku": "\"9781912031689\"",
+        "inStock": true
+      },
+      {
+        "id": "ff9d3db8-6a8e-465a-b47b-4997bf284645",
+        "choices": {
+          "FREE mainland UK delivery over £15, choose book": "I Spied for Stalin & Spy Called Swallow - paperack"
+        },
+        "price": 17.99,
+        "originalPrice": 18.99,
+        "sku": "NMJ-NJXXX-9781912031672",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "5aba1fc3-b88f-12d6-37f8-4da625fff3bd",
     "slug": "the-zodiac-cooks-by-renowned-astrologer-penny-thornton-date-night-recipes",
     "title": "The Zodiac Cooks: Date Night Recipes",
     "rawTitle": "The Zodiac Cooks -by renowned astrologer Penny Thornton - date night recipes",
-    "author": "Penny Thornton",
+    "author": "renowned astrologer Penny Thornton",
+    "contributors": "Photography by Adrian Lawrence and Sian Irvine",
+    "isArt": false,
     "tagline": "Recipes for Romance from the Celestial Kitchen of Life — Sensuous cooking tailored to your date's star sign",
-    "authorSectionTitle": "",
+    "authorSectionTitle": "About the Author & Astrologer",
     "authors": [
       {
         "name": "Penny Thornton",
@@ -3056,8 +6121,19 @@
     "isWholesale": false,
     "isSigned": true,
     "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
+    "format": "Signed Copy",
+    "stock": 25,
+    "options": [],
+    "variants": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "choices": {},
+        "price": 22.49,
+        "originalPrice": 29.99,
+        "sku": "\"9781912031641\"",
+        "inStock": true
+      }
+    ]
   },
   {
     "id": "ec30ad44-30fb-85eb-9725-4259f6c72523",
@@ -3065,12 +6141,15 @@
     "title": "Özlem's Turkish Table: Recipes from My Homeland",
     "rawTitle": "Özlem's Turkish Table, Özlem Warren, best Turkish dishes Hardback SIGNED & apron",
     "author": "Özlem Warren",
+    "contributors": "Foreword by Ghillie Basan · Food photography Sian Irvine",
+    "isArt": false,
     "tagline": "Winner of the Gourmand World Cookbook Award · Authentic Southern Turkish & Antakya Gastronomy",
-    "authorSectionTitle": "",
+    "authorSectionTitle": "About the Author & Culinary Ambassador",
     "authors": [
       {
         "name": "Özlem Warren",
-        "role": "Author & Culinary Ambassador"
+        "role": "Author & Culinary Ambassador",
+        "bio": "Özlem Warren is an internationally acclaimed Turkish culinary expert, author, and food writer born in Antakya, Southern Turkey. She teaches Turkish cookery courses in the UK and USA and is a passionate ambassador for authentic Anatolian gastronomy."
       }
     ],
     "authorBio": "Özlem Warren is an internationally acclaimed Turkish culinary expert, author, and food writer born in Antakya, Southern Turkey. She teaches Turkish cookery courses in the UK and USA and is a passionate ambassador for authentic Anatolian gastronomy.",
@@ -3089,7 +6168,7 @@
     "missionCard": null,
     "price": 20.99,
     "originalPrice": 25.99,
-    "sku": "GBP-1084",
+    "sku": "GBP-1083",
     "ribbon": "Gourmand award winner",
     "categories": [
       "Food & Drink"
@@ -3114,7 +6193,62 @@
     "isWholesale": false,
     "isSigned": true,
     "visible": true,
-    "format": "Signed Edition",
-    "stock": 25
+    "format": "Signed Copy",
+    "stock": 25,
+    "options": [
+      {
+        "name": "Book, apron or both - FREE mainland UK delivery",
+        "optionType": "drop_down",
+        "choices": [
+          {
+            "value": "Book",
+            "description": "Book",
+            "inStock": true
+          },
+          {
+            "value": "Book + Apron",
+            "description": "Book + Apron",
+            "inStock": true
+          },
+          {
+            "value": "Apron",
+            "description": "Apron",
+            "inStock": true
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": "dbfa7bc0-ad65-459b-8364-e5c102cff386",
+        "choices": {
+          "Book, apron or both - FREE mainland UK delivery": "Book"
+        },
+        "price": 20.99,
+        "originalPrice": 25.99,
+        "sku": "\"9781912031948\"",
+        "inStock": true
+      },
+      {
+        "id": "663e0c04-093b-4008-bc2c-cc973199841c",
+        "choices": {
+          "Book, apron or both - FREE mainland UK delivery": "Book + Apron"
+        },
+        "price": 38.99,
+        "originalPrice": 43.99,
+        "sku": "\"9781912576012\"",
+        "inStock": true
+      },
+      {
+        "id": "78aaa32b-f35b-4ad5-af75-b1e2c041bab5",
+        "choices": {
+          "Book, apron or both - FREE mainland UK delivery": "Apron"
+        },
+        "price": 18.99,
+        "originalPrice": 23.99,
+        "sku": "\"9781912031993\"",
+        "inStock": true
+      }
+    ]
   }
 ]

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { X, ShoppingBag, HeartHandshake, Feather, Truck, ShieldCheck, ChevronDown, BookOpen, Star, Share2, Play, Film } from 'lucide-react';
 
 export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, relatedBooks, onSelectBook }) {
@@ -10,6 +10,47 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
   const [selectedAuthorIdx, setSelectedAuthorIdx] = useState(0);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+
+  // Dynamic Wix Product Options & Variants
+  const [selectedChoices, setSelectedChoices] = useState(() => {
+    const initial = {};
+    if (book.options && book.options.length > 0) {
+      book.options.forEach(opt => {
+        if (opt.choices && opt.choices.length > 0) {
+          initial[opt.name] = opt.choices[0].value;
+        }
+      });
+    }
+    return initial;
+  });
+
+  useEffect(() => {
+    setActiveImage(book.coverImage);
+    setSelectedFormat(book.format || "Paperback");
+    if (book.options && book.options.length > 0) {
+      const initial = {};
+      book.options.forEach(opt => {
+        if (opt.choices && opt.choices.length > 0) {
+          initial[opt.name] = opt.choices[0].value;
+        }
+      });
+      setSelectedChoices(initial);
+    }
+  }, [book]);
+
+  // Find matching variant based on selected choices
+  const matchedVariant = useMemo(() => {
+    if (!book.variants || book.variants.length === 0) return null;
+    return book.variants.find(v => {
+      if (!v.choices) return false;
+      return Object.entries(v.choices).every(([optName, optVal]) => {
+        return selectedChoices[optName] === optVal;
+      });
+    }) || book.variants[0];
+  }, [book, selectedChoices]);
+
+  const currentPrice = matchedVariant?.price !== undefined ? matchedVariant.price : book.price;
+  const currentOriginalPrice = matchedVariant?.originalPrice !== undefined ? matchedVariant.originalPrice : book.originalPrice;
 
   const images = book.gallery && book.gallery.length > 0 ? [book.coverImage, ...book.gallery] : [book.coverImage];
 
@@ -121,27 +162,98 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                 )}
 
                 <p className="text-sm text-slate-600 font-sans font-semibold mt-1">
-                  Published by GB Publishing · Author: <span className="text-slate-900 underline">{book.author}</span>
+                  Published by GB Publishing Org · Author: <span className="text-slate-900 underline">{book.author}</span>
                 </p>
+
+                {book.contributors && (
+                  <p className="text-xs text-[#8C2520] font-sans font-semibold mt-1">
+                    {book.contributors}
+                  </p>
+                )}
               </div>
 
-              {/* Format Selector */}
-              <div className="space-y-2">
-                <label className="text-xs font-bold font-sans text-slate-700 uppercase tracking-wide">
-                  Select Format:
-                </label>
-                <div className="grid grid-cols-3 gap-3">
-                  {['Paperback', 'Hardcover', 'Signed Edition'].map((fmt) => (
-                    <button 
-                      key={fmt}
-                      onClick={() => setSelectedFormat(fmt)}
-                      className={`py-2.5 px-3 rounded-xl text-xs font-bold font-sans border text-center transition-all ${selectedFormat === fmt ? 'border-[#8C2520] bg-red-50 text-[#8C2520] shadow-sm' : 'border-slate-200 text-slate-700 hover:border-slate-300'}`}
-                    >
-                      {fmt}
-                    </button>
-                  ))}
+              {/* Dynamic Wix Product Options & Variations */}
+              {book.options && book.options.length > 0 ? (
+                <div className="space-y-4">
+                  {book.options.map((opt, oIdx) => {
+                    const cleanOptTitle = opt.name
+                      .replace(/FREE mainland UK delivery[^\,]*,?\s*/i, '')
+                      .replace(/Choose[:\s]*/i, '')
+                      .trim() || 'Select';
+
+                    return (
+                      <div key={oIdx} className="space-y-1.5">
+                        <label className="text-xs font-bold font-sans text-slate-700 uppercase tracking-wide flex items-center justify-between">
+                          <span>Select: {cleanOptTitle}</span>
+                          <span className="text-[11px] font-normal text-slate-500 lowercase">Choose edition</span>
+                        </label>
+
+                        {opt.choices.length <= 4 ? (
+                          <div className={`grid ${opt.choices.length === 2 ? 'grid-cols-2' : opt.choices.length === 3 ? 'grid-cols-1 sm:grid-cols-3' : 'grid-cols-2 sm:grid-cols-4'} gap-2`}>
+                            {opt.choices.map((choice) => {
+                              const isSelected = selectedChoices[opt.name] === choice.value;
+                              // Match variant to display price preview
+                              const vMatch = (book.variants || []).find(v => v.choices && v.choices[opt.name] === choice.value);
+                              const choicePrice = vMatch ? vMatch.price : null;
+
+                              return (
+                                <button 
+                                  key={choice.value}
+                                  type="button"
+                                  onClick={() => setSelectedChoices(prev => ({ ...prev, [opt.name]: choice.value }))}
+                                  className={`p-2.5 rounded-xl text-xs font-bold font-sans border text-left sm:text-center transition-all flex sm:flex-col items-center sm:justify-center justify-between gap-1 ${isSelected ? 'border-[#8C2520] bg-red-50/70 text-[#8C2520] ring-1 ring-[#8C2520] shadow-xs' : 'border-slate-200 text-slate-700 bg-white hover:border-slate-300'}`}
+                                >
+                                  <span className="truncate">{choice.value}</span>
+                                  {choicePrice !== null && (
+                                    <span className={`text-[11px] font-medium ${isSelected ? 'text-[#8C2520]' : 'text-slate-500'}`}>
+                                      £{choicePrice.toFixed(2)}
+                                    </span>
+                                  )}
+                                </button>
+                              );
+                            })}
+                          </div>
+                        ) : (
+                          <select
+                            value={selectedChoices[opt.name] || opt.choices[0]?.value}
+                            onChange={(e) => setSelectedChoices(prev => ({ ...prev, [opt.name]: e.target.value }))}
+                            className="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 focus:ring-[#8C2520] focus:border-[#8C2520]"
+                          >
+                            {opt.choices.map((choice) => {
+                              const vMatch = (book.variants || []).find(v => v.choices && v.choices[opt.name] === choice.value);
+                              const choicePrice = vMatch ? ` (£${vMatch.price.toFixed(2)})` : '';
+                              return (
+                                <option key={choice.value} value={choice.value}>
+                                  {choice.value}{choicePrice}
+                                </option>
+                              );
+                            })}
+                          </select>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
-              </div>
+              ) : (
+                /* Fallback Format Selector */
+                <div className="space-y-2">
+                  <label className="text-xs font-bold font-sans text-slate-700 uppercase tracking-wide">
+                    Select:
+                  </label>
+                  <div className="grid grid-cols-3 gap-3">
+                    {['Paperback', 'Hardcover', 'Signed Copy'].map((fmt) => (
+                      <button 
+                        key={fmt}
+                        type="button"
+                        onClick={() => setSelectedFormat(fmt)}
+                        className={`py-2.5 px-3 rounded-xl text-xs font-bold font-sans border text-center transition-all ${selectedFormat === fmt ? 'border-[#8C2520] bg-red-50 text-[#8C2520] shadow-sm' : 'border-slate-200 text-slate-700 hover:border-slate-300'}`}
+                      >
+                        {fmt}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Price & Primary CTA */}
               <div className="bg-[#FBF9F5] p-5 rounded-2xl border border-[#E5E0DA] space-y-4">
@@ -149,11 +261,11 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                   <div>
                     <span className="text-xs text-slate-500 block font-sans">Direct Publisher Price</span>
                     <span className="font-serif text-3xl font-bold text-[#8C2520]">
-                      £{book.price.toFixed(2)}
+                      £{currentPrice.toFixed(2)}
                     </span>
-                    {book.originalPrice && (
+                    {currentOriginalPrice && (
                       <span className="text-sm text-slate-400 line-through ml-2">
-                        £{book.originalPrice.toFixed(2)}
+                        £{currentOriginalPrice.toFixed(2)}
                       </span>
                     )}
                   </div>
@@ -164,11 +276,23 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
 
                 {/* Primary CTA */}
                 <button 
-                  onClick={() => { onAddToCart({ ...book, selectedFormat }); onClose(); }}
+                  onClick={() => { 
+                    const variationLabel = book.options && book.options.length > 0
+                      ? Object.values(selectedChoices).join(' · ')
+                      : selectedFormat;
+                    onAddToCart({ 
+                      ...book, 
+                      price: currentPrice,
+                      originalPrice: currentOriginalPrice,
+                      selectedFormat: variationLabel,
+                      variantId: matchedVariant?.id
+                    }); 
+                    onClose(); 
+                  }}
                   className="w-full bg-[#8C2520] hover:bg-[#A62D27] text-white py-3.5 px-6 rounded-xl font-sans text-base font-bold transition-all shadow-lg flex items-center justify-center gap-2"
                 >
                   <ShoppingBag className="w-5 h-5" />
-                  <span>BUY DIRECT FROM GBP — £{book.price.toFixed(2)}</span>
+                  <span>BUY DIRECT FROM GBP — £{currentPrice.toFixed(2)}</span>
                 </button>
 
                 {/* D2C Incentives Bar */}
