@@ -77,6 +77,47 @@ PRODUCT_NAME_OVERRIDES = [
     ('dennis to alice', "Children's & Picture Books"),
 ]
 
+EDITORIAL_ENRICHMENTS = {
+    '9792a2c8-299a-cf0e-6987-1c32c2df92a4': {
+        'title': "The Ginologist Cook: Dinner Party Recipes",
+        'tagline': "150 delicious recipes with Gin — The world's first craft gin coffee-table cookbook",
+        'author': "Pieter Carter & The Ginologist Team",
+        'authors': [
+            {"name": "Pieter Carter", "role": "Chief Distiller & Founder"},
+            {"name": "Shane Heldsinger", "role": "Executive Chef"},
+            {"name": "Charlotte Letlape", "role": "Pastry Princess"},
+            {"name": "Chef Kundi Thai", "role": "Culinary Specialist"},
+            {"name": "Phillip Tlhako", "role": "Sous Chef"},
+            {"name": "Ahe Jafta", "role": "Master Mixologist"}
+        ],
+        'authorBio': "Crafted by the culinary and distilling team at Ginologist, South Africa's award-winning craft distillery. From savoury mains to sweet desserts and signature cocktails, each recipe explores botanical gin flavour pairings.",
+        'previewPages': [
+            "https://static.wixstatic.com/media/7c7af8_5b34981d7433437e9a6e1434ca501ec9~mv2.jpg/v1/fill/w_1000,h_1250,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_4d81a60c16b8430997ed206d21293311~mv2.jpg/v1/fill/w_1200,h_750,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_be677a6802924525b9cef47571d585f7~mv2.jpg/v1/fill/w_1000,h_1250,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_702a44fa0a6245669c0affde03d6e57e~mv2_d_1240_1754_s_2.jpg/v1/fill/w_1000,h_1400,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_aa2998b42b244a6cad6deb16457ce841~mv2.jpg/v1/fill/w_1000,h_1400,q_90/file.jpg"
+        ],
+        'accolades': [
+            {"title": "IWSC Silver Award", "subtitle": "International Wine & Spirit Competition"},
+            {"title": "Expresso TV Show", "subtitle": "National Morning Showcase"}
+        ]
+    },
+    'ec30ad44-30fb-85eb-9725-4259f6c72523': {
+        'title': "Özlem's Turkish Table: Recipes from My Homeland",
+        'tagline': "Winner of the Gourmand World Cookbook Award · Authentic Southern Turkish & Antakya Gastronomy",
+        'author': "Özlem Warren",
+        'authors': [
+            {"name": "Özlem Warren", "role": "Author & Culinary Ambassador"}
+        ],
+        'authorBio': "Özlem Warren is an internationally acclaimed Turkish culinary expert, author, and food writer born in Antakya, Southern Turkey. She teaches Turkish cookery courses in the UK and USA and is a passionate ambassador for authentic Anatolian gastronomy.",
+        'accolades': [
+            {"title": "Gourmand World Award", "subtitle": "Best Heritage Cookery Book"},
+            {"title": "BBC Good Food & The Sun", "subtitle": "Featured Cookbook"}
+        ]
+    }
+}
+
 def clean_text(text):
     if not text:
         return ""
@@ -250,12 +291,23 @@ for idx, p in enumerate(raw_products):
     if p.get('visible', True) is False:
         continue
 
+    enrichment = EDITORIAL_ENRICHMENTS.get(handle_id, {})
+    if enrichment.get('title'):
+        display_name = enrichment['title']
+    if enrichment.get('author'):
+        author = enrichment['author']
+
     catalog.append({
         "id": handle_id,
         "slug": slug,
         "title": display_name,
         "rawTitle": raw_name,
         "author": author,
+        "tagline": enrichment.get('tagline', ''),
+        "authors": enrichment.get('authors', []),
+        "authorBio": enrichment.get('authorBio', ''),
+        "previewPages": enrichment.get('previewPages', []),
+        "accolades": enrichment.get('accolades', []),
         "price": price,
         "originalPrice": original_price,
         "sku": sku,

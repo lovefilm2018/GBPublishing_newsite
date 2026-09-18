@@ -70,7 +70,11 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                 className="w-full py-2.5 px-4 rounded-xl bg-amber-50 hover:bg-amber-100 text-[#8C2520] border border-amber-200 font-sans text-xs font-bold transition-colors flex items-center justify-center gap-2"
               >
                 <BookOpen className="w-4 h-4 text-[#8C2520]" />
-                <span>Read Sample Chapter / Excerpt</span>
+                <span>
+                  {book.previewPages && book.previewPages.length > 0
+                    ? `Look Inside: View ${book.previewPages.length} Sample Pages`
+                    : 'Read Sample Chapter / Excerpt'}
+                </span>
               </button>
             </div>
 
@@ -96,6 +100,12 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                   {book.title}
                 </h1>
                 
+                {book.tagline && (
+                  <p className="font-serif italic text-sm sm:text-base text-[#8C2520] font-medium leading-snug mt-1">
+                    {book.tagline}
+                  </p>
+                )}
+
                 <p className="text-sm text-slate-600 font-sans font-semibold mt-1">
                   Published by GB Publishing · Author: <span className="text-slate-900 underline">{book.author}</span>
                 </p>
@@ -179,6 +189,55 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                   </div>
                 )}
               </div>
+
+              {/* Accolades & Awards Badges */}
+              {book.accolades && book.accolades.length > 0 && (
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {book.accolades.map((acc, i) => (
+                    <div key={i} className="inline-flex items-center gap-1.5 bg-amber-50/70 border border-amber-200/80 px-3 py-1.5 rounded-xl text-xs">
+                      <Star className="w-3.5 h-3.5 text-[#C49A45] fill-[#C49A45]" />
+                      <span className="font-bold text-slate-900">{acc.title}</span>
+                      {acc.subtitle && <span className="text-slate-600 text-[11px]">({acc.subtitle})</span>}
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Author Showcase / Creative Team */}
+              {(book.authorBio || (book.authors && book.authors.length > 0)) && (
+                <div className="bg-[#FAF8F4] border border-[#E5E0DA] rounded-2xl p-4 sm:p-5 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-serif text-lg font-bold text-slate-900 flex items-center gap-2">
+                      <Feather className="w-4 h-4 text-[#C49A45]" />
+                      <span>{book.authors && book.authors.length > 1 ? 'About the Authors & Culinary Team' : 'About the Author'}</span>
+                    </h3>
+                  </div>
+
+                  {/* Team Members Grid (if collaborative team book) */}
+                  {book.authors && book.authors.length > 1 && (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                      {book.authors.map((a, i) => (
+                        <div key={i} className="flex items-center gap-2.5 bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-xs">
+                          <div className="w-7 h-7 rounded-full bg-amber-100/80 flex items-center justify-center font-serif font-bold text-xs text-[#8C2520] flex-shrink-0">
+                            {a.name.slice(0, 1)}
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-xs font-bold text-slate-900 font-sans truncate">{a.name}</p>
+                            <p className="text-[11px] text-slate-500 font-sans truncate">{a.role}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Bio Paragraph */}
+                  {book.authorBio && (
+                    <p className="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed pt-1">
+                      {book.authorBio}
+                    </p>
+                  )}
+                </div>
+              )}
 
               {/* Synopsis & Details */}
               <div className="space-y-3">
