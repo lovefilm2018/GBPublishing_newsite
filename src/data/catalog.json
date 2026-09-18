@@ -2100,27 +2100,33 @@
     "authors": [
       {
         "name": "Pieter Carter",
-        "role": "Chief Distiller & Founder"
+        "role": "Ginologist Distiller & Founder",
+        "bio": "Graduated in law but instead of practising law he took to the stills. It wasn’t long before the 3 Gins in the Ginologist range of Spice, Floral and Citrus entered their first competition, the Michelangelo International Wine and Spirits awards, winning 2 gold medals and a silver. This victory made Pieter one of the youngest distillers to distil an award-winning gin."
       },
       {
         "name": "Shane Heldsinger",
-        "role": "Executive Chef"
+        "role": "Group Executive Chef",
+        "bio": "Studied at Cordon Bleu Chefs School of South Africa and later had the privilege of cooking for Nelson Mandela on his 90th birthday celebrations. Currently Group Executive Chef for Gastronomie, a chain of Restaurants in South Africa featuring Carbon Bistro, Capital P and Kingelato. Trained in Classical French cuisine, he has personalised his own style fusing modern contemporary cuisine with a strong Asian influence."
       },
       {
         "name": "Charlotte Letlape",
-        "role": "Pastry Princess"
+        "role": "The Pastry Princess",
+        "bio": "Better known as The Pastry Princess, Charlotte is a former investment banker turned pastry chef from Johannesburg. She specialises in designer desserts, high tea catering and speciality cakes. Her private and corporate clients include former First Lady Zanele Mbeki, T-Systems, Olympic Gold medal winner Wayde van Niekerk, and Kaya FM."
       },
       {
-        "name": "Chef Kundi Thai",
-        "role": "Culinary Specialist"
+        "name": "Kundi Thai",
+        "role": "Culinary Specialist & Private Chef",
+        "bio": "An attorney whose love for good food swept her from the courtroom and permanently into the kitchen! Self-taught through cook books, cooking shows, and the internet, she founded kundiskitchen.com to share recipe details of her enticing meals. She is a private chef and runs her own premier catering business."
       },
       {
         "name": "Phillip Tlhako",
-        "role": "Sous Chef"
+        "role": "Professional Cookery Chef",
+        "bio": "His dream of becoming a mine boy after matric didn’t come true. Instead, he won an internship in the hospitality industry where his love of food flourished. After a hotel manager discovered his talent and offered to pay his student fees, he gained his Diploma in Professional Cookery and is now living his dream as a chef in Pretoria."
       },
       {
         "name": "Ahe Jafta",
-        "role": "Master Mixologist"
+        "role": "Master Mixologist",
+        "bio": "A celebrated South African mixologist who competed in MasterChef South Africa 2009 and represented the nation as a contender in top Middle East championships (World Class UAE, Campari, Chivas Masters). A well-established head bartender working with top cocktail experts, he is 'changing the world one cocktail at a time.'"
       }
     ],
     "authorBio": "Crafted by the culinary and distilling team at Ginologist, South Africa's award-winning craft distillery. From savoury mains to sweet desserts and signature cocktails, each recipe explores botanical gin flavour pairings.",

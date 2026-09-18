@@ -7,6 +7,7 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
   const [activeImage, setActiveImage] = useState(book.coverImage);
   const [selectedFormat, setSelectedFormat] = useState(book.format || "Paperback");
   const [showExternalRetailers, setShowExternalRetailers] = useState(false);
+  const [selectedAuthorIdx, setSelectedAuthorIdx] = useState(0);
   const [copied, setCopied] = useState(false);
 
   const images = book.gallery && book.gallery.length > 0 ? [book.coverImage, ...book.gallery] : [book.coverImage];
@@ -213,28 +214,55 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                     </h3>
                   </div>
 
-                  {/* Team Members Grid (if collaborative team book) */}
-                  {book.authors && book.authors.length > 1 && (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
-                      {book.authors.map((a, i) => (
-                        <div key={i} className="flex items-center gap-2.5 bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-xs">
-                          <div className="w-7 h-7 rounded-full bg-amber-100/80 flex items-center justify-center font-serif font-bold text-xs text-[#8C2520] flex-shrink-0">
-                            {a.name.slice(0, 1)}
-                          </div>
-                          <div className="min-w-0">
-                            <p className="text-xs font-bold text-slate-900 font-sans truncate">{a.name}</p>
-                            <p className="text-[11px] text-slate-500 font-sans truncate">{a.role}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                  {/* Team Members Selector & Bio Spotlight */}
+                  {book.authors && book.authors.length > 1 ? (
+                    <div className="space-y-3 pt-1">
+                      {/* Interactive Author Selector Tabs */}
+                      <div className="flex flex-wrap gap-1.5">
+                        {book.authors.map((a, i) => (
+                          <button
+                            key={i}
+                            onClick={() => setSelectedAuthorIdx(i)}
+                            className={`px-3 py-1.5 rounded-xl text-xs font-sans font-semibold transition-all flex items-center gap-1.5 ${selectedAuthorIdx === i ? 'bg-[#8C2520] text-white shadow-sm scale-[1.02]' : 'bg-white text-slate-700 border border-slate-200 hover:border-slate-300'}`}
+                          >
+                            <span className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] ${selectedAuthorIdx === i ? 'bg-white/20 text-white' : 'bg-amber-100 text-[#8C2520]'}`}>
+                              {a.name.slice(0, 1)}
+                            </span>
+                            <span>{a.name}</span>
+                          </button>
+                        ))}
+                      </div>
 
-                  {/* Bio Paragraph */}
-                  {book.authorBio && (
-                    <p className="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed pt-1">
-                      {book.authorBio}
-                    </p>
+                      {/* Selected Author Spotlight Card */}
+                      {book.authors[selectedAuthorIdx] && (
+                        <div className="bg-white p-4 rounded-xl border border-amber-200/80 shadow-xs space-y-2 animate-fade-in">
+                          <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-2">
+                            <div>
+                              <h4 className="font-serif font-bold text-base text-slate-900">
+                                {book.authors[selectedAuthorIdx].name}
+                              </h4>
+                              <p className="text-xs font-sans text-[#8C2520] font-semibold">
+                                {book.authors[selectedAuthorIdx].role}
+                              </p>
+                            </div>
+                            <span className="text-[11px] font-sans text-slate-400">
+                              Contributor {selectedAuthorIdx + 1} of {book.authors.length}
+                            </span>
+                          </div>
+
+                          <p className="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed">
+                            {book.authors[selectedAuthorIdx].bio || book.authorBio}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    /* Single Author Display */
+                    book.authorBio && (
+                      <p className="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed pt-1">
+                        {book.authorBio}
+                      </p>
+                    )
                   )}
                 </div>
               )}
