@@ -70,6 +70,9 @@ export default function App() {
   // Filtered catalogue logic
   const filteredBooks = useMemo(() => {
     return catalog.filter(book => {
+      // Exclude hidden products flagged in Wix
+      if (book.visible === false) return false;
+
       const titleLower = book.title.toLowerCase();
 
       // Exclude generic empty Wix placeholder/dummy bundle container entries

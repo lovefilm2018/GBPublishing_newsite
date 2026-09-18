@@ -83,8 +83,7 @@ def clean_text(text):
     t = html.unescape(str(text))
     t = re.sub(r'<[^>]+>', ' ', t)
     # Fix Özlem name cleanly with single Ö
-    t = re.sub(r'(?:[ÖöOo]{2,3}|\ufffd+)zlem', 'Özlem', t)
-    t = re.sub(r'\bOzlem\b', 'Özlem', t)
+    t = re.sub(r'(?i)(?:[ÖöOo]{1,3}|\ufffd+|[^\x00-\x7F])?zlem', 'Özlem', t)
     t = t.replace('\ufffd', ' ')
     t = re.sub(r'\s+', ' ', t).strip()
     return t
@@ -248,6 +247,9 @@ for idx, p in enumerate(raw_products):
         if "free custom gb publishing bookmark" not in description.lower():
             description = description + " ✨ Free custom GB Publishing bookmark included with every copy."
     
+    if p.get('visible', True) is False:
+        continue
+
     catalog.append({
         "id": handle_id,
         "slug": slug,
@@ -264,6 +266,7 @@ for idx, p in enumerate(raw_products):
         "description": description if len(description) > 25 else f"A featured indie publication by {author}, available directly from GB Publishing Org with fast UK delivery.",
         "isWholesale": is_wholesale,
         "isSigned": is_signed,
+        "visible": True,
         "format": "Signed Edition" if is_signed else ("Hardcover" if price > 20 else "Paperback"),
         "stock": p.get('stock', {}).get('quantity', 25)
     })

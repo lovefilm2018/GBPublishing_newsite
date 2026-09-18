@@ -170,6 +170,7 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
       description: effectiveDescription,
       isWholesale: isWholesale,
       isSigned: isSigned,
+      visible: p.visible !== false,
       format: isSigned ? "Signed Edition" : (price > 20 ? "Hardcover" : "Paperback"),
       stock: p.stock?.quantity || 25
     };
@@ -242,7 +243,10 @@ export async function fetchCatalogProducts() {
     if (response.ok) {
       const data = await response.json();
       if (data.products && data.products.length > 0) {
-        const normalized = data.products.map((p, idx) => normalizeWixRestProduct(p, idx, collectionsMap)).filter(Boolean);
+        const normalized = data.products
+          .filter(p => p.visible !== false)
+          .map((p, idx) => normalizeWixRestProduct(p, idx, collectionsMap))
+          .filter(Boolean);
         if (normalized.length > 0) {
           console.log(`[Wix Headless Live API] Successfully fetched ${normalized.length} live products with dynamic collections!`);
           return normalized;
