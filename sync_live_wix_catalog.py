@@ -196,7 +196,121 @@ EDITORIAL_ENRICHMENTS = {
             {"title": "Sky TV Tie-In", "subtitle": "Noah's Ark 12-Part Conservation Series"},
             {"title": "Brooklands Radio Feature", "subtitle": "Author Broadcast Interview"},
             {"title": "£1 Charity Donation", "subtitle": "Noah's Ark Wildlife Sanctuary"}
-        ]
+        ],
+        'authorSectionTitle': "About the Author & Illustrator",
+        'description': "Dennis to Alice by George S Boughton — Picture book & interactive movie in a book (SIGNED edition).\n\nCaptured is a chance moment of mayhem. Flooding from two strong storms created a dam across an otherwise peaceful river, just before a pandemic swept across the world to isolate this spot along with the author.\n\nBut, also captured along with manmade environmental contaminants, is the transformation that took place from busy contrail skies to blue and verdant water scenes… and a pair of geese that made this their home. Then kayakers tackle the obstacle, boaters try to remove it, a swan performs... and a fox attacks…"
+    },
+    'b220ed82-aca4-347e-1fd3-a029e6d655d4': {
+        'title': "Plants & Us: How They Shape Human History & Society",
+        'tagline': "Plant usage, ethnobotany, and habitat conservation — Foreword by Sir Tim Smit, Co-Founder of The Eden Project",
+        'author': "Dr John Akeroyd, Donough O'Brien & Liz Cowley",
+        'authorSectionTitle': "About the Authors & Botanists",
+        'authors': [
+            {
+                "name": "Dr John Akeroyd",
+                "role": "Lead Author & Renowned Botanist",
+                "bio": "Leading European field botanist, conservationist, and writer. Dr Akeroyd co-edited Flora Europaea and has written extensively on ethnobotany, plant usage, and habitat preservation worldwide."
+            },
+            {
+                "name": "Donough O'Brien",
+                "role": "Co-Author & Researcher",
+                "bio": "Accomplished non-fiction writer and cultural researcher examining the societal, political, and historical ramifications of agriculture and flora across continents."
+            },
+            {
+                "name": "Liz Cowley",
+                "role": "Co-Author & Literary Contributor",
+                "bio": "Celebrated poet, writer, and commentator whose work explores the human connection to nature, folklore, and the vital importance of plant conservation."
+            }
+        ],
+        'authorBio': "Written by Dr John Akeroyd, Donough O'Brien, and Liz Cowley, with a prestigious Foreword by Sir Tim Smit, Co-Founder of The Eden Project Cornwall.",
+        'previewPages': [
+            "https://static.wixstatic.com/media/7c7af8_186ba8567fb84f06914d297d3fb48741~mv2.jpg/v1/fit/w_1200,h_1500,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_2a2dd71014d847c3aa4a3e7a58019650~mv2.png/v1/fit/w_1400,h_900,q_90/file.png",
+            "https://static.wixstatic.com/media/7c7af8_3fb3724e80d2478b908ee1cd62f9f382~mv2.jpg/v1/fit/w_800,h_1000,q_90/file.jpg"
+        ],
+        'accolades': [
+            {"title": "The Telegraph", "subtitle": "A Fascinating New Book"},
+            {"title": "Sir Tim Smit Foreword", "subtitle": "The Eden Project Cornwall"},
+            {"title": "Gardens Illustrated & The Countryman", "subtitle": "Press Feature"},
+            {"title": "Hannah Murray Radio", "subtitle": "Talk Radio Europe"}
+        ],
+        'description': "Plants & Us by Dr John Akeroyd, Donough O'Brien, and Liz Cowley explores how plants have defined human civilisation — not only in food, drink, and commerce, but also in medicine, folklore, love, fashion, war, and art.\n\nNot just another gardening book, this is a sweeping exploration of how plants affect humankind for better or worse. From Presidents to pop stars, scientists to explorers, and royalty to pioneers, Plants & Us presents startling facts and compelling stories about our ubiquitous bond with the plant kingdom and the urgent necessity of global botanical conservation."
+    },
+    '3cd38c96-a27a-0a03-77c2-93f8a2360fd3': {
+        'title': "Autobiology of a Vet: A Vet's Life",
+        'tagline': "From South London comprehensive to Royal Veterinary College, East Africa under Idi Amin, and rural farmyard surgery",
+        'author': "John Sauvage, MRCVS",
+        'authorSectionTitle': "About the Author",
+        'authors': [
+            {
+                "name": "John Sauvage, MRCVS",
+                "role": "Veterinary Surgeon & Author",
+                "bio": "Graduate of the Royal Veterinary College (London) and member of the Royal College of Veterinary Surgeons. His diverse veterinary career spanned rural cattle, equine practice, small-animal surgery, and veterinary cardiology across the UK, Australia, Portugal, and Norway. He served with an East African research team during Idi Amin's dictatorship."
+            }
+        ],
+        'authorBio': "John Sauvage MRCVS graduated from the Royal Veterinary College after growing up in South London. Over four decades his practice spanned farm animals, equine medicine, and domestic pets across Britain and abroad.",
+        'previewPages': [
+            "https://static.wixstatic.com/media/7c7af8_f7bb75cddb6246249104d45bd1140696~mv2.jpg/v1/fit/w_1200,h_1600,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_a71fb7ce410d408398486a8f363bf860~mv2.jpg/v1/fit/w_800,h_1000,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_2e292d907e2a4a2d978aa1384fb00f1d~mv2.jpg/v1/fit/w_1000,h_800,q_90/file.jpg"
+        ],
+        'accolades': [
+            {"title": "Take a Break Magazine", "subtitle": "National Feature"},
+            {"title": "Companion Life & Your Dog", "subtitle": "Industry Review"},
+            {"title": "Improve Veterinary Practice", "subtitle": "Clinical & Memoir Spotlight"},
+            {"title": "RVC Alumni Eclipse", "subtitle": "Royal Veterinary College"}
+        ],
+        'description': "Autobiology of a Vet by John Sauvage, MRCVS.\n\nOpening with his admission to the Royal College of Veterinary Surgeons, this warm and honest memoir traces John's journey from a South London comprehensive school through family wartime history, rigorous veterinary training, and research adventures in East Africa during Idi Amin's dictatorship.\n\nBack in the UK, John's tales of farm calls, midnight surgeries, equine emergencies, and beloved companion pets are educational, moving, and frequently hilarious. Covering vital debates from vaccination and bovine TB to the devastating heartbreak of foot-and-mouth disease, this is an authentic look behind the clinic doors."
+    },
+    '76419b0d-f424-c776-9477-d7d9255302f3': {
+        'title': "You are Noah! Introduction — Wild Animal Conservation",
+        'tagline': "The official book tie-in to the 12-part Sky TV wildlife series — Building the world's greatest nature sanctuary",
+        'author': "Hein Prinsloo Curson",
+        'authorSectionTitle': "About the Author & Conservation Founder",
+        'authors': [
+            {
+                "name": "Hein Prinsloo Curson",
+                "role": "Founder, The Noah's Ark Foundation",
+                "bio": "Conservation visionary and founder of The Noah's Ark Foundation, a registered charity dedicated to creating a 100-square-kilometre ultra-secure wildlife sanctuary in South Africa to halt species extinction."
+            },
+            {
+                "name": "Richard Prinsloo Curson",
+                "role": "Co-Founder & Producer",
+                "bio": "Creative director and producer behind the 12-part Noah's Ark television documentary broadcast on Sky TV and international networks."
+            }
+        ],
+        'authorBio': "Hein Prinsloo Curson is the founder of The Noah's Ark Foundation. All publisher and author proceeds from direct purchases of this book go directly to charity operations protecting endangered species.",
+        'missionCard': {
+            'badge': "Official Sky TV & Conservation Initiative",
+            'tag': "100% Proceeds Support Charity",
+            'heading': "The Noah's Ark Sanctuary — Africa",
+            'content': "You are Noah! is the official companion to the 12-part wildlife documentary series broadcast on Sky TV. Author and publisher profits from sales of this book directly support The Noah's Ark Foundation in South Africa, building an ultra-secure sanctuary to protect UN Red List endangered species.",
+            'highlights': [
+                "Includes access code to stream Noah's Ark TV Series 1",
+                "Directly funds anti-poaching security & veterinary teams",
+                "Eden Project-style biomes for vulnerable wildlife",
+                "Full engagement and upliftment of local indigenous communities"
+            ]
+        },
+        'videoTrailer': {
+            'title': "Noah's Ark TV Series — Official Trailer",
+            'url': "https://video.wixstatic.com/video/7c7af8_952d7f4ee2be48458e51975fea0afcba/720p/mp4/file.mp4",
+            'poster': "https://static.wixstatic.com/media/7c7af8_134a1929da7e4819a99a2af310de89e9~mv2.png/v1/fit/w_1280,h_720,q_90/file.png",
+            'duration': "Trailer"
+        },
+        'previewPages': [
+            "https://static.wixstatic.com/media/7c7af8_134a1929da7e4819a99a2af310de89e9~mv2.png/v1/fit/w_1200,h_1500,q_90/file.png",
+            "https://static.wixstatic.com/media/7c7af8_61fa0963c53d4c98b16aa0079a50e8d9~mv2.jpg/v1/fit/w_1000,h_1200,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_f35bf2d72ef84f36acec365128697d8c~mv2.jpg/v1/fit/w_1000,h_1200,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_bb40f6f11a3946588ca6a20d3d32ae38~mv2.jpg/v1/fit/w_1000,h_1200,q_90/file.jpg"
+        ],
+        'accolades': [
+            {"title": "Sky TV Broadcast", "subtitle": "12-Part Wildlife Documentary Series"},
+            {"title": "Good Morning Britain (ITV)", "subtitle": "National Television Feature"},
+            {"title": "Daily Express & Mail Online", "subtitle": "Press Feature"},
+            {"title": "Jacaranda FM", "subtitle": "Martin Bester Broadcast"}
+        ],
+        'description': "You are Noah! Introduction by Hein Prinsloo Curson.\n\nThe official book tie-in to the 12-part Noah's Ark television series broadcast on Sky TV. This volume captures the opening chapters of a bold global conservation effort: constructing a 100-square-kilometre state-of-the-art wildlife sanctuary in South Africa to protect Earth's most endangered species.\n\nFeaturing behind-the-scenes photography from the TV production, architectural plans for climate-controlled biomes, and insights into high-tech anti-poaching security, You are Noah! is both a compelling visual journey and an urgent call to action. Author profits support The Noah's Ark Foundation registered charity."
     }
 }
 
@@ -386,11 +500,13 @@ for idx, p in enumerate(raw_products):
         "rawTitle": raw_name,
         "author": author,
         "tagline": enrichment.get('tagline', ''),
+        "authorSectionTitle": enrichment.get('authorSectionTitle', ''),
         "authors": enrichment.get('authors', []),
         "authorBio": enrichment.get('authorBio', ''),
         "previewPages": enrichment.get('previewPages', []),
         "accolades": enrichment.get('accolades', []),
         "videoTrailer": enrichment.get('videoTrailer', None),
+        "missionCard": enrichment.get('missionCard', None),
         "price": price,
         "originalPrice": original_price,
         "sku": sku,
@@ -398,7 +514,7 @@ for idx, p in enumerate(raw_products):
         "categories": categories,
         "coverImage": cover_image,
         "gallery": gallery,
-        "description": description if len(description) > 25 else f"A featured indie publication by {author}, available directly from GB Publishing Org with fast UK delivery.",
+        "description": enrichment.get('description') or (description if len(description) > 25 else f"A featured indie publication by {author}, available directly from GB Publishing Org with fast UK delivery."),
         "isWholesale": is_wholesale,
         "isSigned": is_signed,
         "visible": True,

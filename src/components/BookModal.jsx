@@ -223,7 +223,7 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                   <div className="flex items-center justify-between">
                     <h3 className="font-serif text-lg font-bold text-slate-900 flex items-center gap-2">
                       <Feather className="w-4 h-4 text-[#C49A45]" />
-                      <span>{book.authors && book.authors.length > 1 ? 'About the Authors & Culinary Team' : 'About the Author'}</span>
+                      <span>{book.authorSectionTitle || (book.authors && book.authors.length > 1 ? 'About the Authors & Creative Team' : 'About the Author')}</span>
                     </h3>
                   </div>
 
@@ -280,6 +280,38 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                       <p className="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed">
                         {book.authors?.[0]?.bio || book.authorBio}
                       </p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Special Campaign / Conservation Mission Spotlight */}
+              {book.missionCard && (
+                <div className="bg-emerald-900 text-white rounded-2xl p-5 sm:p-6 space-y-3 shadow-md border border-emerald-800">
+                  <div className="flex items-center justify-between gap-2 border-b border-emerald-700/60 pb-3">
+                    <span className="text-xs font-bold font-sans uppercase tracking-widest text-emerald-300">
+                      {book.missionCard.badge || 'Official Wildlife & Conservation Initiative'}
+                    </span>
+                    {book.missionCard.tag && (
+                      <span className="bg-emerald-800 text-emerald-200 text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-emerald-700">
+                        {book.missionCard.tag}
+                      </span>
+                    )}
+                  </div>
+                  <h4 className="font-serif text-lg sm:text-xl font-bold text-amber-300 leading-snug">
+                    {book.missionCard.heading}
+                  </h4>
+                  <p className="text-xs sm:text-sm text-emerald-100 font-sans leading-relaxed">
+                    {book.missionCard.content}
+                  </p>
+                  {book.missionCard.highlights && (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-xs text-emerald-200">
+                      {book.missionCard.highlights.map((h, i) => (
+                        <div key={i} className="flex items-center gap-2">
+                          <span className="text-amber-400">✓</span>
+                          <span>{h}</span>
+                        </div>
+                      ))}
                     </div>
                   )}
                 </div>
