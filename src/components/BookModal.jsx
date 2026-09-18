@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ShoppingBag, HeartHandshake, Feather, Truck, ShieldCheck, ChevronDown, BookOpen, Star, Share2 } from 'lucide-react';
+import { X, ShoppingBag, HeartHandshake, Feather, Truck, ShieldCheck, ChevronDown, BookOpen, Star, Share2, Play, Film } from 'lucide-react';
 
 export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, relatedBooks, onSelectBook }) {
   if (!book) return null;
@@ -8,6 +8,7 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
   const [selectedFormat, setSelectedFormat] = useState(book.format || "Paperback");
   const [showExternalRetailers, setShowExternalRetailers] = useState(false);
   const [selectedAuthorIdx, setSelectedAuthorIdx] = useState(0);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const images = book.gallery && book.gallery.length > 0 ? [book.coverImage, ...book.gallery] : [book.coverImage];
@@ -65,18 +66,30 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                 </div>
               )}
 
-              {/* Sample Excerpt Lightbox Trigger */}
-              <button 
-                onClick={() => onOpenExcerpt(book)}
-                className="w-full py-2.5 px-4 rounded-xl bg-amber-50 hover:bg-amber-100 text-[#8C2520] border border-amber-200 font-sans text-xs font-bold transition-colors flex items-center justify-center gap-2"
-              >
-                <BookOpen className="w-4 h-4 text-[#8C2520]" />
-                <span>
-                  {book.previewPages && book.previewPages.length > 0
-                    ? `Look Inside: View ${book.previewPages.length} Sample Pages`
-                    : 'Read Sample Chapter / Excerpt'}
-                </span>
-              </button>
+              {/* Sample Excerpt & Video Trailer Action Bar */}
+              <div className="space-y-2">
+                <button 
+                  onClick={() => onOpenExcerpt(book)}
+                  className="w-full py-2.5 px-4 rounded-xl bg-amber-50 hover:bg-amber-100 text-[#8C2520] border border-amber-200 font-sans text-xs font-bold transition-colors flex items-center justify-center gap-2"
+                >
+                  <BookOpen className="w-4 h-4 text-[#8C2520]" />
+                  <span>
+                    {book.previewPages && book.previewPages.length > 0
+                      ? `Look Inside: View ${book.previewPages.length} Sample Pages`
+                      : 'Read Sample Chapter / Excerpt'}
+                  </span>
+                </button>
+
+                {book.videoTrailer && (
+                  <button 
+                    onClick={() => setIsVideoOpen(true)}
+                    className="w-full py-2.5 px-4 rounded-xl bg-red-50 hover:bg-red-100 text-[#8C2520] border border-red-200 font-sans text-xs font-bold transition-colors flex items-center justify-center gap-2 shadow-xs"
+                  >
+                    <Play className="w-4 h-4 text-[#8C2520] fill-[#8C2520]" />
+                    <span>Watch Book Trailer ({book.videoTrailer.duration || '0:31'})</span>
+                  </button>
+                )}
+              </div>
             </div>
 
             {/* Right Column: Book Metadata & Buy Direct Action */}
@@ -323,6 +336,53 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
           )}
 
         </div>
+
+        {/* Cinema Video Trailer Lightbox Modal */}
+        {isVideoOpen && book.videoTrailer && (
+          <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in">
+            <div className="bg-stone-900 rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl border border-stone-700 relative">
+              <div className="p-4 flex items-center justify-between border-b border-stone-800 text-white">
+                <div className="flex items-center gap-2">
+                  <Film className="w-4 h-4 text-[#D4A359]" />
+                  <span className="font-serif font-bold text-sm sm:text-base">
+                    {book.videoTrailer.title || `${book.title} — Book Trailer`}
+                  </span>
+                </div>
+                <button 
+                  onClick={() => setIsVideoOpen(false)}
+                  className="p-1.5 bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white rounded-full transition-colors"
+                  title="Close trailer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="relative aspect-video bg-black flex items-center justify-center">
+                <video 
+                  controls 
+                  autoPlay 
+                  playsInline 
+                  src={book.videoTrailer.url} 
+                  poster={book.videoTrailer.poster}
+                  className="w-full h-full object-contain"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <div className="p-4 bg-stone-950 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-stone-400">
+                <p>Interactive "Movie in a Book" — Scan QR codes inside the book to watch real wildlife video clips.</p>
+                <button 
+                  onClick={() => setIsVideoOpen(false)}
+                  className="bg-[#8C2520] hover:bg-[#A62D27] text-white px-4 py-2 rounded-lg font-bold transition-colors whitespace-nowrap"
+                >
+                  Back to Book
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
       </div>
     </div>
   );

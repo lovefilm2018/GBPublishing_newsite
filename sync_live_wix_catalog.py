@@ -163,6 +163,40 @@ EDITORIAL_ENRICHMENTS = {
             {"title": "Woman & Home", "subtitle": "Featured Astrologer & Chef"},
             {"title": "US Food Network & The List TV", "subtitle": "Broadcast Feature"}
         ]
+    },
+    '33b34cc3-7713-1327-240c-204c99fb52b1': {
+        'title': "Dennis to Alice: A Movie in a Book",
+        'tagline': "An interactive wildlife picture book where pages come alive with video — Supporting endangered species conservation",
+        'author': "George S Boughton & Martyn Tillier",
+        'authors': [
+            {
+                "name": "George S Boughton",
+                "role": "Author & Publisher",
+                "bio": "Founder of GB Publishing and author, George documented a chance moment of lockdown mayhem when flooding created a river dam, inspiring this interactive 'movie in a book'."
+            },
+            {
+                "name": "Martyn Tillier",
+                "role": "Illustrator",
+                "bio": "Talented wildlife and children's book illustrator whose vibrant artwork brings the river animals, swans, geese, and canoeing mayhem to life."
+            }
+        ],
+        'authorBio': "Written by George S Boughton and illustrated by Martyn Tillier. Conceived as an interactive 'movie in a book' tied to the 12-part Noah's Ark Sky TV series.",
+        'videoTrailer': {
+            'title': "Dennis to Alice — Official Book Trailer",
+            'url': "https://video.wixstatic.com/video/7c7af8_952d7f4ee2be48458e51975fea0afcba/720p/mp4/file.mp4",
+            'poster': "https://static.wixstatic.com/media/7c7af8_5e0fa6969a2341f1ac6b381cb38258a0f001.jpg/v1/fill/w_1280,h_720,q_90/file.jpg",
+            'duration': "0:31"
+        },
+        'previewPages': [
+            "https://static.wixstatic.com/media/7c7af8_860b6ef537d945dc840dd2f3be408f4d~mv2.jpg/v1/fit/w_1200,h_1200,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_182f71d5a18747c883b388dfc1f02936~mv2.jpeg/v1/fit/w_1200,h_1000,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_41e2dd8b08a44c5b9654eaec7691806a~mv2.png/v1/fit/w_800,h_1000,q_90/file.png"
+        ],
+        'accolades': [
+            {"title": "Sky TV Tie-In", "subtitle": "Noah's Ark 12-Part Conservation Series"},
+            {"title": "Brooklands Radio Feature", "subtitle": "Author Broadcast Interview"},
+            {"title": "£1 Charity Donation", "subtitle": "Noah's Ark Wildlife Sanctuary"}
+        ]
     }
 }
 
@@ -356,6 +390,7 @@ for idx, p in enumerate(raw_products):
         "authorBio": enrichment.get('authorBio', ''),
         "previewPages": enrichment.get('previewPages', []),
         "accolades": enrichment.get('accolades', []),
+        "videoTrailer": enrichment.get('videoTrailer', None),
         "price": price,
         "originalPrice": original_price,
         "sku": sku,
