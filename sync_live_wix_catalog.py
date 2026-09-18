@@ -139,6 +139,30 @@ EDITORIAL_ENRICHMENTS = {
             {"title": "Gourmand World Award", "subtitle": "Best Heritage Cookery Book"},
             {"title": "BBC Good Food & The Sun", "subtitle": "Featured Cookbook"}
         ]
+    },
+    '5aba1fc3-b88f-12d6-37f8-4da625fff3bd': {
+        'title': "The Zodiac Cooks: Date Night Recipes",
+        'tagline': "Recipes for Romance from the Celestial Kitchen of Life — Sensuous cooking tailored to your date's star sign",
+        'author': "Penny Thornton",
+        'authors': [
+            {
+                "name": "Penny Thornton",
+                "role": "Princess Diana's Astrologer & Author",
+                "bio": "Penny Thornton has been an astrologer for over thirty years, with a global clientele and one of the top astrology authorities in the world (Astrolutely.com). Formerly personal astrologer to Princess Diana, she is the author of Suns and Lovers and hosted a six-month daily spot on the US Food Network blending culinary art with astrology. She divides her time between the UK, USA, and Sweden."
+            }
+        ],
+        'authorBio': "Penny Thornton has been an astrologer for over thirty years, with a global clientele and one of the top astrology authorities in the world (Astrolutely.com). Formerly personal astrologer to Princess Diana, she hosted a daily spot on the US Food Network blending culinary art with astrology.",
+        'previewPages': [
+            "https://static.wixstatic.com/media/7c7af8_408884359f964e3984000304aa9c5ddf~mv2.jpg/v1/fill/w_1000,h_1300,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_a2e9d9ffe9ae4000959643eca805a309~mv2.jpg/v1/fill/w_1000,h_1300,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_bbbf9a776e4c4db5bfadacb2b937fd0f~mv2.jpg/v1/fill/w_1000,h_1300,q_90/file.jpg",
+            "https://static.wixstatic.com/media/7c7af8_d4f4a95298f64cc281648386ba6a9511~mv2.png/v1/fill/w_800,h_900,q_90/file.png"
+        ],
+        'accolades': [
+            {"title": "Daily Mail (Femail)", "subtitle": "How Your Star Sign Rules Your Diet"},
+            {"title": "Woman & Home", "subtitle": "Featured Astrologer & Chef"},
+            {"title": "US Food Network & The List TV", "subtitle": "Broadcast Feature"}
+        ]
     }
 }
 

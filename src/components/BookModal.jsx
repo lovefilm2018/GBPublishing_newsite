@@ -258,11 +258,16 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                     </div>
                   ) : (
                     /* Single Author Display */
-                    book.authorBio && (
-                      <p className="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed pt-1">
-                        {book.authorBio}
+                    <div className="space-y-1.5 pt-1">
+                      {book.authors?.[0]?.role && (
+                        <p className="text-xs font-sans text-[#8C2520] font-semibold">
+                          {book.authors[0].role}
+                        </p>
+                      )}
+                      <p className="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed">
+                        {book.authors?.[0]?.bio || book.authorBio}
                       </p>
-                    )
+                    </div>
                   )}
                 </div>
               )}
