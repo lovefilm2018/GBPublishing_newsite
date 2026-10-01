@@ -16,6 +16,8 @@ import Footer from './components/Footer';
 
 import catalogData from './data/catalog.json';
 import { fetchCatalogProducts } from './services/wixClient';
+import { Filter, Sparkles, Feather, Search, RotateCcw, Check, ShoppingBag, ArrowRight } from 'lucide-react';
+
 // George's authoritative order specification for each curated menu (Sept 2026)
 const MENU_ORDER_MAP = {
   "Non-Fiction": [
