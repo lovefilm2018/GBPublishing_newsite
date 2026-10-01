@@ -71,12 +71,22 @@ export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
 
-  // Sync activeTab state with URL hash (#home, #books, #art, #news, #about)
+  // Sync activeTab & selectedCategory state with URL hash (#home, #books?category=..., #art, #news, #about)
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '').toLowerCase();
-      if (['home', 'books', 'art', 'news', 'about'].includes(hash)) {
-        setActiveTab(hash);
+      const raw = window.location.hash.replace('#', '');
+      if (!raw) return;
+      const [tabPart, queryPart] = raw.split('?');
+      const tab = tabPart.toLowerCase();
+      if (['home', 'books', 'art', 'news', 'about'].includes(tab)) {
+        setActiveTab(tab);
+        if (tab === 'books' && queryPart) {
+          const params = new URLSearchParams(queryPart);
+          const cat = params.get('category');
+          if (cat) {
+            setSelectedCategory(decodeURIComponent(cat));
+          }
+        }
       }
     };
     handleHashChange();
@@ -84,9 +94,24 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  const handleSetActiveTab = (tab) => {
+  const handleSetActiveTab = (tab, category = null) => {
     setActiveTab(tab);
-    window.location.hash = `#${tab}`;
+    if (tab === 'books' && category) {
+      setSelectedCategory(category);
+      window.location.hash = category === 'ALL' ? '#books' : `#books?category=${encodeURIComponent(category)}`;
+    } else {
+      window.location.hash = `#${tab}`;
+    }
+  };
+
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+    setActiveTab('books');
+    if (category === 'ALL') {
+      window.location.hash = '#books';
+    } else {
+      window.location.hash = `#books?category=${encodeURIComponent(category)}`;
+    }
   };
 
   // Fetch live products from Wix Headless API on mount with resilient fallback
@@ -107,7 +132,7 @@ export default function App() {
 
   // Filtered catalogue logic (Books strictly separated from Art Prints)
   const filteredBooks = useMemo(() => {
-    return catalog.filter(book => {
+    let result = catalog.filter(book => {
       // Exclude hidden products flagged in Wix
       if (book.visible === false) return false;
 
@@ -293,7 +318,7 @@ export default function App() {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
+        setSelectedCategory={handleCategorySelect}
       />
 
       <main className="flex-1">
@@ -303,8 +328,8 @@ export default function App() {
             {/* Hero Section */}
             <Hero 
               featuredBook={featuredBook} 
-              onSelectBook={setSelectedBook}
-              onExploreClick={() => { setActiveTab('books'); setSelectedCategory('ALL'); }}
+              onSelectBook={setSelectedBook} 
+              onExploreClick={() => handleCategorySelect('ALL')}
             />
 
             {/* Direct DTC Perks Strip */}
@@ -313,8 +338,7 @@ export default function App() {
             {/* Genre Discovery Grid */}
             <GenreGrid 
               onSelectCategory={(catId) => {
-                setSelectedCategory(catId);
-                setActiveTab('books');
+                handleCategorySelect(catId);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             />
@@ -348,7 +372,7 @@ export default function App() {
                       <span>Under £15</span>
                     </button>
                     <button 
-                      onClick={() => { setActiveTab('books'); setSelectedCategory('ALL'); }}
+                      onClick={() => handleCategorySelect('ALL')}
                       className="bg-[#1D2A44] text-white px-4 py-2 rounded-xl hover:bg-[#263859] transition-colors flex items-center gap-1"
                     >
                       <span>View All 100+ Titles →</span>
@@ -413,7 +437,7 @@ export default function App() {
                     return (
                       <button 
                         key={catId}
-                        onClick={() => setSelectedCategory(catId)}
+                        onClick={() => handleCategorySelect(catId)}
                         className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${selectedCategory === catId ? 'bg-[#8C2520] text-white shadow-md shadow-red-950/20' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
                       >
                         {catLabel}
@@ -451,7 +475,7 @@ export default function App() {
                   {(selectedCategory !== 'ALL' || selectedAuthor !== 'ALL' || searchQuery || filterSignedOnly || filterUnder15) && (
                     <button 
                       onClick={() => {
-                        setSelectedCategory('ALL');
+                        handleCategorySelect('ALL');
                         setSelectedAuthor('ALL');
                         setSearchQuery('');
                         setFilterSignedOnly(false);
@@ -477,7 +501,7 @@ export default function App() {
                   </p>
                   <button 
                     onClick={() => {
-                      setSelectedCategory('ALL');
+                      handleCategorySelect('ALL');
                       setSelectedAuthor('ALL');
                       setSearchQuery('');
                       setFilterSignedOnly(false);
@@ -508,7 +532,7 @@ export default function App() {
                           </p>
                         </div>
                         <button
-                          onClick={() => setSelectedCategory(group.id)}
+                          onClick={() => handleCategorySelect(group.id)}
                           className="text-xs font-bold text-[#8C2520] hover:underline flex items-center gap-1 self-start sm:self-auto"
                         >
                           <span>Explore {group.title} →</span>

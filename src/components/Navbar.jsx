@@ -20,9 +20,11 @@ export default function Navbar({
 
   const handleNavClick = (tab, category = null) => {
     setActiveTab(tab);
-    window.location.hash = `#${tab}`;
     if (category !== null) {
       setSelectedCategory(category);
+      window.location.hash = category === 'ALL' ? '#books' : `#books?category=${encodeURIComponent(category)}`;
+    } else {
+      window.location.hash = `#${tab}`;
     }
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
