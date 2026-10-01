@@ -164,6 +164,7 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
       originalPrice: originalPrice,
       sku: p.sku || `GBP-${1000 + idx}`,
       ribbon: effectiveRibbon || (isSigned ? "Signed Collector Edition" : ""),
+      ribbons: effectiveRibbon ? effectiveRibbon.split(' · ') : (isSigned ? ["Signed Collector Edition"] : []),
       categories: categories,
       coverImage: coverImage,
       gallery: gallery,
@@ -181,14 +182,31 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
 }
 
 function extractAuthorFromName(name) {
-  if (name.includes('Özlem') || name.includes('Ozlem') || name.includes('zlem')) return 'Özlem Warren';
-  if (name.includes('Pargeter') || name.includes('pargeter')) return 'Mary Pargeter';
-  if (name.includes('Kimberley')) return 'Anthony & Wendy Kimberley';
-  if (name.includes('Thornton')) return 'P Thornton';
-  if (name.includes('Latham')) return 'Clare Latham';
-  if (name.includes('Solonair')) return 'Dr Solonair';
-  if (name.includes('Collins')) return 'Lois Collins';
-  if (name.includes('Boughton')) return 'George S Boughton';
+  const n = (name || '').toLowerCase();
+  if (n.includes('ozlem') || n.includes('özlem') || n.includes('zlem')) return 'Özlem Warren';
+  if (n.includes('pargeter')) return 'Mary Pargeter';
+  if (n.includes('walker') || n.includes('catalyst')) return 'Bradley Walker';
+  if (n.includes('murray') || n.includes('nora & john')) return 'Nora & John Murray';
+  if (n.includes('islam') || n.includes('doogie')) return 'Sharif Islam';
+  if (n.includes('kimberley')) {
+    if (n.includes('david') || n.includes('antecedent')) return 'David Kimberley';
+    if (n.includes('wendy')) return 'Wendy Kimberley';
+    return 'Anthony Kimberley';
+  }
+  if (n.includes('thornton') || n.includes('zodiac')) return 'renowned astrologer Penny Thornton';
+  if (n.includes('latham')) return 'Clare Latham';
+  if (n.includes('solonair')) return 'fine artist Solonair';
+  if (n.includes('collins') || n.includes('crumbdog')) return 'Lois Collins';
+  if (n.includes('boughton')) {
+    if (n.includes('cptn') || n.includes('captain') || n.includes('seafaring')) return 'Captain George P Boughton';
+    return 'George S Boughton';
+  }
+  if (n.includes('sauvage') || n.includes('vet')) return 'John Sauvage';
+  if (n.includes('trivedy') || n.includes('tulsi')) return 'Dr Chet Trivedy';
+  if (n.includes('ritchie') || n.includes('the ordinary')) return 'Christopher Ritchie';
+  if (n.includes('pearson') || n.includes('kingswraith') || n.includes('milla carter')) return 'Derek E Pearson';
+  if (n.includes('akeroyd') || n.includes('plants')) return "John Akeroyd, Donough O'Brien & Liz Cowley";
+  if (n.includes('noah') || n.includes('prinsloo')) return 'Hein Prinsloo Curson';
   return 'GB Publishing Author';
 }
 

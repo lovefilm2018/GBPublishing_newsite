@@ -22,12 +22,20 @@ export default function BookCard({ book, onSelectBook, onAddToCart }) {
           <div className="book-spine-effect" />
 
           {/* Ribbon Badge Overlay */}
-          {ribbonText && (
-            <div className="absolute top-2.5 right-2.5 z-10">
-              <span className={`ribbon-badge ${isSigned ? 'ribbon-gold' : 'ribbon-burgundy'} shadow-md`}>
-                {isSigned && <Feather className="w-3 h-3" />}
-                {ribbonText}
-              </span>
+          {((book.ribbons && book.ribbons.length > 0) ? book.ribbons : (ribbonText ? ribbonText.split(' · ') : [])).length > 0 && (
+            <div className="absolute top-2.5 right-2.5 z-10 flex flex-col items-end gap-1 pointer-events-none">
+              {((book.ribbons && book.ribbons.length > 0) ? book.ribbons : ribbonText.split(' · ')).map((badge, idx) => {
+                const isBadgeSigned = badge.toLowerCase().includes('signed');
+                return (
+                  <span 
+                    key={idx} 
+                    className={`ribbon-badge ${isBadgeSigned ? 'ribbon-gold' : 'ribbon-burgundy'} shadow-md text-[10px] sm:text-[11px] py-1 px-2.5`}
+                  >
+                    {isBadgeSigned && <Feather className="w-3 h-3 inline mr-1" />}
+                    {badge}
+                  </span>
+                );
+              })}
             </div>
           )}
 

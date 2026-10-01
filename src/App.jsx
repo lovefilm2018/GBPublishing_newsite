@@ -16,7 +16,43 @@ import Footer from './components/Footer';
 
 import catalogData from './data/catalog.json';
 import { fetchCatalogProducts } from './services/wixClient';
-import { Filter, Sparkles, Feather, Search, RotateCcw, Check, ShoppingBag, ArrowRight } from 'lucide-react';
+// George's authoritative order specification for each curated menu (Sept 2026)
+const MENU_ORDER_MAP = {
+  "Non-Fiction": [
+    "b220ed82-aca4-347e-1fd3-a029e6d655d4", // Plants & Us
+    "76419b0d-f424-c776-9477-d7d9255302f3", // You are Noah
+    "bd3fe905-f8dc-a69b-b940-84f606827877", // Seafaring
+    "ec30ad44-30fb-85eb-9725-4259f6c72523", // Ozlem's Turkish Table
+    "92a63bda-ac59-c829-3555-556efea2db63", // Nora & John
+    "8936d9d1-058c-a475-7ba0-033604f27f65", // Absurd
+    "5aba1fc3-b88f-12d6-37f8-4da625fff3bd", // The Zodiac Cooks
+    "3cd38c96-a27a-0a03-77c2-93f8a2360fd3", // Autobiology of a Vet
+    "4f0a9ef7-8f73-4dad-a64c-1de4e3e405aa", // Tulsi the Tiger
+    "9792a2c8-299a-cf0e-6987-1c32c2df92a4", // The Ginologist Cook
+    "df277b0f-e176-ca36-344f-72354c95ba9c", // Time's Up
+    "31475034-ae01-d1cb-73e3-6dcf687de768", // Black Gold - Black Scorpion
+    "33b34cc3-7713-1327-240c-204c99fb52b1", // Dennis to Alice
+  ],
+  "Nature & Biodiversity": [
+    "76419b0d-f424-c776-9477-d7d9255302f3", // You are Noah
+    "b220ed82-aca4-347e-1fd3-a029e6d655d4", // Plants & Us
+    "3cd38c96-a27a-0a03-77c2-93f8a2360fd3", // Autobiology of a Vet
+    "4f0a9ef7-8f73-4dad-a64c-1de4e3e405aa", // Tulsi the Tiger
+    "33b34cc3-7713-1327-240c-204c99fb52b1", // Dennis to Alice
+  ],
+  "Autobiography & Memoir": [
+    "92a63bda-ac59-c829-3555-556efea2db63", // Nora & John
+    "bd3fe905-f8dc-a69b-b940-84f606827877", // Seafaring
+    "8936d9d1-058c-a475-7ba0-033604f27f65", // Absurd
+    "3cd38c96-a27a-0a03-77c2-93f8a2360fd3", // Autobiology of a Vet
+    "31475034-ae01-d1cb-73e3-6dcf687de768", // Black Gold - Black Scorpion
+  ],
+  "Adult Sci-Fi": [
+    "bb859fbd-7446-7580-8c3d-058c54e1a570", // Adventures of Milla Carter Series 1
+    "0dda819e-726d-32e4-6a43-bb7a3caa5d87", // Adventures of Milla Carter Series 2
+    "ab1a611d-9061-e0ea-cf14-0c3b43255ebd", // The Ordinary
+  ]
+};
 
 export default function App() {
   const [catalog, setCatalog] = useState(catalogData);
@@ -115,15 +151,45 @@ export default function App() {
       }
       return true;
     });
+
+    // Apply George's curated book ordering if viewing a specific menu
+    if (selectedCategory !== 'ALL' && MENU_ORDER_MAP[selectedCategory]) {
+      const order = MENU_ORDER_MAP[selectedCategory];
+      result = [...result].sort((a, b) => {
+        const idxA = order.indexOf(a.id);
+        const idxB = order.indexOf(b.id);
+        if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+        if (idxA !== -1) return -1;
+        if (idxB !== -1) return 1;
+        return 0;
+      });
+    }
+
+    return result;
   }, [catalog, selectedCategory, selectedAuthor, searchQuery, filterSignedOnly, filterUnder15]);
 
-  // Group books by 5 core genre imprints matching the live homepage structure
+  // Group books by 7 core curated menus in George's exact order
   const booksByGenre = useMemo(() => {
     const genres = [
       { 
-        id: 'Food & Drink', 
-        title: 'Food & Drink', 
-        description: 'Award-winning Turkish gastronomy, craft gin cookbooks & celestial date night recipes' 
+        id: 'Non-Fiction', 
+        title: 'Non-Fiction', 
+        description: 'Botany, world culinary heritage, veterinary life, Biafran war memoirs & true accounts' 
+      },
+      { 
+        id: 'Nature & Biodiversity', 
+        title: 'Nature & Biodiversity', 
+        description: 'Endangered wildlife conservation, official Sky TV companion & botanical exploration' 
+      },
+      { 
+        id: 'Autobiography & Memoir', 
+        title: 'Autobiography & Memoir', 
+        description: 'Heroic seafaring tall ships, Cold War espionage, motorcycle journeys & veterinary life' 
+      },
+      { 
+        id: 'Poetry & Politics', 
+        title: 'Poetry & Politics', 
+        description: 'Moving verse reflections, reflective poetry collections & thought-provoking commentary' 
       },
       { 
         id: "Children's & Picture Books", 
@@ -131,26 +197,35 @@ export default function App() {
         description: 'Delightfully illustrated picture books, conservation wildlife adventures & collector storybooks' 
       },
       { 
-        id: 'Non-Fiction & Memoir', 
-        title: 'Non-Fiction & Memoir', 
-        description: 'Veterinary memoirs, heroic tall-ship maritime sagas & ethnobotany exploration' 
-      },
-      { 
         id: 'Fiction, Young Adult & Sci-Fi', 
         title: 'Fiction, Young Adult & Sci-Fi', 
         description: 'Epic mythological fantasy, space opera science fiction & psychological thrillers' 
       },
       { 
-        id: 'Poetry & Fine Art', 
-        title: 'Poetry & Literary Collections', 
-        description: 'Moving verse reflections, poetry collections & exclusive author signed gifts' 
+        id: 'Adult Sci-Fi', 
+        title: 'Adult Sci-Fi', 
+        description: 'Dark, provocative science fiction, psychological thrillers & deep space odysseys' 
       }
     ];
 
-    return genres.map(g => ({
-      ...g,
-      books: filteredBooks.filter(b => b.categories.includes(g.id))
-    })).filter(g => g.books.length > 0);
+    return genres.map(g => {
+      let bks = filteredBooks.filter(b => b.categories.includes(g.id));
+      if (MENU_ORDER_MAP[g.id]) {
+        const order = MENU_ORDER_MAP[g.id];
+        bks = [...bks].sort((a, b) => {
+          const idxA = order.indexOf(a.id);
+          const idxB = order.indexOf(b.id);
+          if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+          if (idxA !== -1) return -1;
+          if (idxB !== -1) return 1;
+          return 0;
+        });
+      }
+      return {
+        ...g,
+        books: bks
+      };
+    }).filter(g => g.books.length > 0);
   }, [filteredBooks]);
 
   // Cart operations
@@ -195,11 +270,13 @@ export default function App() {
 
   const categoriesList = [
     { id: 'ALL', label: 'All Catalogue' },
-    { id: 'Fiction, Young Adult & Sci-Fi', label: 'Fiction, Young Adult & Sci-Fi' },
-    { id: 'Non-Fiction & Memoir', label: 'Non-Fiction & Memoir' },
-    { id: 'Food & Drink', label: 'Food & Drink' },
+    { id: 'Non-Fiction', label: 'Non-Fiction' },
+    { id: 'Nature & Biodiversity', label: 'Nature & Biodiversity' },
+    { id: 'Autobiography & Memoir', label: 'Autobiography & Memoir' },
+    { id: 'Poetry & Politics', label: 'Poetry & Politics' },
     { id: "Children's & Picture Books", label: "Children's & Picture Books" },
-    { id: 'Poetry & Fine Art', label: 'Poetry & Fine Art' }
+    { id: 'Fiction, Young Adult & Sci-Fi', label: 'Fiction, Young Adult & Sci-Fi' },
+    { id: 'Adult Sci-Fi', label: 'Adult Sci-Fi' }
   ];
 
   return (

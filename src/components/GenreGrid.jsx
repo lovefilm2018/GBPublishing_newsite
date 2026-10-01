@@ -1,52 +1,70 @@
 import React from 'react';
-import { BookOpen, Utensils, Smile, Palette, Compass, ArrowRight } from 'lucide-react';
+import { BookOpen, Leaf, Compass, Feather, Smile, Palette, ArrowRight, Sparkles } from 'lucide-react';
 
 export default function GenreGrid({ onSelectCategory }) {
   const genres = [
     {
-      id: "Fiction, Young Adult & Sci-Fi",
-      name: "Fiction, Young Adult & Sci-Fi",
-      count: "25+ Titles",
-      desc: "Captivating novels, imaginative sci-fi sagas, and gripping young adult stories.",
-      bg: "from-[#1D2A44] to-[#121A29]",
-      accent: "text-amber-300",
-      icon: <Compass className="w-7 h-7 text-amber-300" />
-    },
-    {
-      id: "Non-Fiction & Memoir",
-      name: "Non-Fiction & Memoir",
-      count: "20+ Titles",
-      desc: "Inspiring life stories, veterinary memoirs, historical accounts & emergency crisis appeals.",
+      id: "Non-Fiction",
+      name: "Non-Fiction",
+      count: "13 Titles",
+      desc: "Botany, world culinary heritage, veterinary memoirs, Biafran war history & true accounts.",
       bg: "from-[#8C2520] to-[#5C1613]",
       accent: "text-red-200",
       icon: <BookOpen className="w-7 h-7 text-red-200" />
     },
     {
-      id: "Food & Drink",
-      name: "Food & Drink",
-      count: "15+ Titles",
-      desc: "Award-winning Turkish recipes by Özlem Warren & astrological date-night dining.",
-      bg: "from-[#3A2410] to-[#211408]",
-      accent: "text-amber-400",
-      icon: <Utensils className="w-7 h-7 text-amber-400" />
+      id: "Nature & Biodiversity",
+      name: "Nature & Biodiversity",
+      count: "5 Titles",
+      desc: "Endangered wildlife conservation, official Sky TV rewilding companion & botanical ecology.",
+      bg: "from-[#1B4332] to-[#081C15]",
+      accent: "text-emerald-300",
+      icon: <Leaf className="w-7 h-7 text-emerald-300" />
+    },
+    {
+      id: "Autobiography & Memoir",
+      name: "Autobiography & Memoir",
+      count: "5 Titles",
+      desc: "Heroic seafaring tall ships, Cold War espionage, motorcycle journeys & veterinary life.",
+      bg: "from-[#2A3B5C] to-[#141E30]",
+      accent: "text-cyan-200",
+      icon: <Compass className="w-7 h-7 text-cyan-200" />
+    },
+    {
+      id: "Poetry & Politics",
+      name: "Poetry & Politics",
+      count: "Curated Verse",
+      desc: "Moving verse reflections, reflective poetry collections & thought-provoking commentary.",
+      bg: "from-[#4A1E3E] to-[#2B0E23]",
+      accent: "text-purple-300",
+      icon: <Palette className="w-7 h-7 text-purple-300" />
     },
     {
       id: "Children's & Picture Books",
       name: "Children's & Picture Books",
-      count: "20+ Titles",
-      desc: "Delightful illustrated tales for young readers, Sam Widges, Erin & Cloud Kingdoms.",
+      count: "10 Titles",
+      desc: "Delightful illustrated tales for young readers, Sam Widges, Erin & rescue dog adventures.",
       bg: "from-[#1C3A27] to-[#0E2015]",
       accent: "text-emerald-300",
       icon: <Smile className="w-7 h-7 text-emerald-300" />
     },
     {
-      id: "Poetry & Fine Art",
-      name: "Poetry & Fine Art",
-      count: "15+ Titles",
-      desc: "Stunning fine art coffee-table collections by Wendy Kimberley BEM & Lois Collins.",
-      bg: "from-[#2A1C3A] to-[#160E21]",
-      accent: "text-purple-300",
-      icon: <Palette className="w-7 h-7 text-purple-300" />
+      id: "Fiction, Young Adult & Sci-Fi",
+      name: "Fiction, Young Adult & Sci-Fi",
+      count: "13 Titles",
+      desc: "Epic mythological fantasy, space opera sagas, psychological thrillers & young adult fiction.",
+      bg: "from-[#1D2A44] to-[#121A29]",
+      accent: "text-amber-300",
+      icon: <Feather className="w-7 h-7 text-amber-300" />
+    },
+    {
+      id: "Adult Sci-Fi",
+      name: "Adult Sci-Fi",
+      count: "3 Titles",
+      desc: "Dark, provocative science fiction, psychological thrillers & deep space odysseys.",
+      bg: "from-[#0F172A] to-[#020617]",
+      accent: "text-violet-300",
+      icon: <Sparkles className="w-7 h-7 text-violet-300" />
     }
   ];
 

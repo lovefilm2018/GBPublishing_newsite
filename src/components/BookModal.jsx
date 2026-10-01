@@ -85,10 +85,18 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                   className="book-cover w-full max-h-[380px] object-contain mx-auto rounded-lg shadow-xl"
                 />
                 <div className="book-spine-effect" />
-                {book.ribbon && (
-                  <span className="absolute top-6 right-6 ribbon-badge ribbon-gold shadow-md">
-                    {book.ribbon}
-                  </span>
+                {((book.ribbons && book.ribbons.length > 0) ? book.ribbons : (book.ribbon ? book.ribbon.split(' · ') : [])).length > 0 && (
+                  <div className="absolute top-6 right-6 flex flex-col items-end gap-1.5 z-10 pointer-events-none">
+                    {((book.ribbons && book.ribbons.length > 0) ? book.ribbons : book.ribbon.split(' · ')).map((badge, idx) => {
+                      const isBadgeSigned = badge.toLowerCase().includes('signed');
+                      return (
+                        <span key={idx} className={`ribbon-badge ${isBadgeSigned ? 'ribbon-gold' : 'ribbon-burgundy'} shadow-md text-xs py-1 px-3`}>
+                          {isBadgeSigned && <Feather className="w-3.5 h-3.5 inline mr-1" />}
+                          {badge}
+                        </span>
+                      );
+                    })}
+                  </div>
                 )}
               </div>
 

@@ -123,6 +123,7 @@ EDITORIAL_ENRICHMENTS = {
         'title': "You are Noah! Introduction — Wild Animal Conservation",
         'tagline': "The official book tie-in to the 6-part Sky TV wildlife series — Building the world's greatest nature sanctuary",
         'author': "Hein Prinsloo Curson",
+        'ribbon': "TV Tie-In",
         'contributors': "6-part Sky TV series tie-in · Tie-in to Plants & Us by John Akeroyd, Donough O'Brien, Liz Cowley",
         'authorSectionTitle': "About the Author & Conservation Founder",
         'authors': [
@@ -249,6 +250,7 @@ EDITORIAL_ENRICHMENTS = {
         'title': "Crumbdog",
         'tagline': "A heartfelt illustrated children's story about friendship, resilience, and rescue dogs",
         'author': "Lois Collins",
+        'ribbon': "Free Fridge Magnet included",
         'contributors': "Foreword by Dame Jacqueline Wilson",
         'authorSectionTitle': "About the Author & Foreword",
         'authors': [
@@ -266,6 +268,9 @@ EDITORIAL_ENRICHMENTS = {
         'title': "Özlem's Turkish Table: Recipes from My Homeland",
         'tagline': "Winner of the Gourmand World Cookbook Award · Authentic Southern Turkish & Antakya Gastronomy",
         'author': "Özlem Warren",
+        'ribbon': "Gourmand Award Winner · Signed Copy Available",
+        'ribbons': ["Gourmand Award Winner", "Signed Copy Available"],
+        'isSigned': True,
         'contributors': "Foreword by Ghillie Basan · Food photography Sian Irvine",
         'authorSectionTitle': "About the Author & Culinary Ambassador",
         'authors': [
@@ -283,7 +288,7 @@ EDITORIAL_ENRICHMENTS = {
         'title': "Grandad, let's go for a walk",
         'tagline': "A gentle intergenerational journey exploring nature through the eyes of a grandchild and grandfather",
         'author': "Anthony Kimberley",
-        'contributors': "Illustrations by fine artist Wendy Kimberley",
+        'contributors': "Illustrations by fine artist Wendy Kimberley BEM",
         'authorSectionTitle': "About the Author & Fine Artist",
         'authors': [
             {"name": "Anthony Kimberley", "role": "Author"},
@@ -296,6 +301,7 @@ EDITORIAL_ENRICHMENTS = {
         'title': "The Zodiac Cooks: Date Night Recipes",
         'tagline': "Recipes for Romance from the Celestial Kitchen of Life — Sensuous cooking tailored to your date's star sign",
         'author': "renowned astrologer Penny Thornton",
+        'ribbon': "Romantic Recipes",
         'contributors': "Photography by Adrian Lawrence and Sian Irvine",
         'authorSectionTitle': "About the Author & Astrologer",
         'authors': [
@@ -324,6 +330,8 @@ EDITORIAL_ENRICHMENTS = {
         'title': "Searching With Sam Widges",
         'tagline': "An adventure across continents and imagination with Sam Widges — Free sticker or fridge magnet included",
         'author': "fine artist Morganico",
+        'ribbon': "Fine Art Picture Book · Free Sticker included",
+        'ribbons': ["Fine Art Picture Book", "Free Sticker included"],
         'contributors': "Author & Illustrator: fine artist Morganico",
         'authorSectionTitle': "About the Author & Illustrator",
         'authors': [
@@ -360,6 +368,7 @@ EDITORIAL_ENRICHMENTS = {
         'title': "Pink Biscuit Zoo",
         'tagline': "Whimsical rhymes and colourful zoo creature illustrations for early young readers",
         'author': "Derek E Pearson",
+        'ribbon': "Picture Book with Recipe",
         'contributors': "Author & Illustrator: Derek E Pearson",
         'authorSectionTitle': "About the Author & Illustrator",
         'authors': [
@@ -427,7 +436,10 @@ EDITORIAL_ENRICHMENTS = {
     '915c7442-fdf6-d504-ff7f-824704f50343': {
         'title': "Antecedent Series",
         'tagline': "Classic space opera science fiction trilogy — Galahad Suns, Nova Descent & Royal Gambit",
-        'author': "David Kimberley"
+        'author': "David Kimberley",
+        'ribbon': "",
+        'ribbons': [],
+        'isSigned': False
     },
 
     # 20. Wendy Kimberley Art - Royal Gambit (be269508-8e69-a84c-1206-18619ed63c14)
@@ -517,6 +529,27 @@ EDITORIAL_ENRICHMENTS = {
             {"title": "IWSC Silver Award", "subtitle": "International Wine & Spirit Competition"},
             {"title": "Expresso TV Show", "subtitle": "National Morning Showcase"}
         ]
+    },
+
+    # 26. The Catalyst (f980a175-4733-1c49-aaed-1f9495b0033f)
+    'f980a175-4733-1c49-aaed-1f9495b0033f': {
+        'title': "The Catalyst",
+        'tagline': "A gripping young adult sci-fi thriller",
+        'author': "Bradley Walker"
+    },
+
+    # 27. Nora & John (92a63bda-ac59-c829-3555-556efea2db63)
+    '92a63bda-ac59-c829-3555-556efea2db63': {
+        'title': "Nora & John",
+        'tagline': "Cold War espionage and covert operations — True life memoir and spy story",
+        'author': "Nora & John Murray"
+    },
+
+    # 28. The Adventures of Doogie (03c552dd-01a4-6936-4c4f-9331b972271b)
+    '03c552dd-01a4-6936-4c4f-9331b972271b': {
+        'title': "The Adventures of Doogie",
+        'tagline': "Charming illustrated children's stories — Blue Peter Book Awards entry",
+        'author': "Sharif Islam"
     }
 }
 
@@ -573,11 +606,59 @@ def extract_author(name, brand=""):
         return 'Derek E Pearson'
     if 'ritchie' in n or 'the ordinary' in n:
         return 'Christopher Ritchie'
+    if 'walker' in n or 'catalyst' in n:
+        return 'Bradley Walker'
+    if 'murray' in n or 'nora & john' in n:
+        return 'Nora & John Murray'
+    if 'islam' in n or 'doogie' in n:
+        return 'Sharif Islam'
     if 'akeroyd' in n or 'plants' in n:
         return "John Akeroyd, Donough O'Brien & Liz Cowley"
     if 'noah' in n or 'prinsloo' in n:
         return 'Hein Prinsloo Curson'
     return 'GB Publishing Author'
+
+# George's Curated Imprints and Categories Specification (Sept 2026)
+CURATED_BOOK_CATEGORIES = {
+    '8936d9d1-058c-a475-7ba0-033604f27f65': ['Non-Fiction', 'Autobiography & Memoir'],  # Absurd
+    'bb859fbd-7446-7580-8c3d-058c54e1a570': ['Adult Sci-Fi'],  # Adventures of Milla Carter Series 1
+    '0dda819e-726d-32e4-6a43-bb7a3caa5d87': ['Adult Sci-Fi'],  # Adventures of Milla Carter Series 2
+    '915c7442-fdf6-d504-ff7f-824704f50343': ['Fiction, Young Adult & Sci-Fi'],  # Antecedent Series
+    '3cd38c96-a27a-0a03-77c2-93f8a2360fd3': ['Non-Fiction', 'Nature & Biodiversity', 'Autobiography & Memoir'],  # Autobiology of a Vet
+    '31475034-ae01-d1cb-73e3-6dcf687de768': ['Non-Fiction', 'Autobiography & Memoir'],  # Black Gold Black Scorpion
+    'a8c00d48-1738-e36b-d621-5d1f49fe775c': ['Fiction, Young Adult & Sci-Fi'],  # Celluloid Peach
+    'ad53e2e6-9058-48c0-ff65-c8b10fdcd401': ["Children's & Picture Books"],  # Crumbdog
+    '33b34cc3-7713-1327-240c-204c99fb52b1': ["Children's & Picture Books", 'Non-Fiction', 'Nature & Biodiversity'],  # Dennis to Alice
+    'c0215ec8-1058-1b90-549d-1dc35000fda0': ["Children's & Picture Books"],  # Erin & the Mouse (Edition 2)
+    'aef4a66f-8990-8876-b336-b4aa17e8d6f9': ["Children's & Picture Books"],  # Grandad, let's go for a walk
+    '95f9aab9-aa63-bb4d-b091-f010f89aa2fb': ['Fiction, Young Adult & Sci-Fi'],  # Kingswraith Series
+    '5c8d41e2-e681-a38d-0cc1-bdd15678664d': ["Children's & Picture Books"],  # Little Tommy & the Kingdom of Clouds
+    'a5ef425d-c014-1bdb-39fc-6c5f24b32514': ['Fiction, Young Adult & Sci-Fi'],  # Nightmare
+    '92a63bda-ac59-c829-3555-556efea2db63': ['Non-Fiction', 'Autobiography & Memoir'],  # Nora & John
+    'b712d89b-9a9a-17fa-04c7-83bd48661ca9': ['Fiction, Young Adult & Sci-Fi'],  # OutTack
+    '9b74fd4c-a947-a37a-e2a9-db8137513882': ["Children's & Picture Books"],  # Pink Biscuit Zoo
+    'b220ed82-aca4-347e-1fd3-a029e6d655d4': ['Non-Fiction', 'Nature & Biodiversity'],  # Plants & Us
+    'cde47029-fa39-eb54-3f55-b986494ac6bf': ['Poetry & Politics'],  # Poetry Collection by Mary Pargeter
+    'db9b7b04-bb72-0569-010b-ccadbd1eb228': ['Fiction, Young Adult & Sci-Fi'],  # Preacher Spindrift Series
+    '96371015-1d5d-4d0e-4239-313d90ffc405': ['Fiction, Young Adult & Sci-Fi'],  # Redemption in Eden
+    'bd3fe905-f8dc-a69b-b940-84f606827877': ['Non-Fiction', 'Autobiography & Memoir'],  # Seafaring: The Full Story
+    '5d38a779-fb29-5f59-b189-bcab3a8d479e': ["Children's & Picture Books"],  # Searching With Sam Widges
+    '17a3b6b1-f3ab-5237-a004-1f4bc7405cb3': ['Fiction, Young Adult & Sci-Fi'],  # Slave Skin
+    '78e32832-8930-c891-85ef-2bcc73befdc2': ["Children's & Picture Books"],  # Spoddle the Frog
+    '4c4c4d72-9abe-69fe-5069-8915adb835a8': ['Fiction, Young Adult & Sci-Fi'],  # Stop The 'Pocalypse! I Wanna Get Off!
+    '03c552dd-01a4-6936-4c4f-9331b972271b': ["Children's & Picture Books"],  # The Adventures of Doogie
+    'f980a175-4733-1c49-aaed-1f9495b0033f': ['Fiction, Young Adult & Sci-Fi'],  # The Catalyst
+    '69d3f6e8-f622-58ef-9679-740461b95b86': ['Fiction, Young Adult & Sci-Fi'],  # The Gathering of Gods: Anubis & Isis
+    '9792a2c8-299a-cf0e-6987-1c32c2df92a4': ['Non-Fiction', 'Food & Drink'],  # The Ginologist Cook
+    'ab1a611d-9061-e0ea-cf14-0c3b43255ebd': ['Adult Sci-Fi'],  # The Ordinary
+    '84ca6fe1-1e1b-e4b6-0ef2-4814226518d1': ['Fiction, Young Adult & Sci-Fi'],  # The Stone Gospel
+    '2e44d90a-be72-8264-8a35-9bbea70b09f8': ['Fiction, Young Adult & Sci-Fi'],  # The War for the Tree
+    '5aba1fc3-b88f-12d6-37f8-4da625fff3bd': ['Non-Fiction', 'Food & Drink'],  # The Zodiac Cooks
+    'df277b0f-e176-ca36-344f-72354c95ba9c': ['Non-Fiction', 'Poetry & Politics'],  # Time's Up! Edition 2
+    '4f0a9ef7-8f73-4dad-a64c-1de4e3e405aa': ["Children's & Picture Books", 'Non-Fiction', 'Nature & Biodiversity'],  # Tulsi the Tiger
+    '76419b0d-f424-c776-9477-d7d9255302f3': ['Non-Fiction', 'Nature & Biodiversity'],  # You are Noah!
+    'ec30ad44-30fb-85eb-9725-4259f6c72523': ['Non-Fiction', 'Food & Drink'],  # Özlem's Turkish Table
+}
 
 def categorize_product(name, collection_ids, collections_map):
     n_lower = clean_text(name).lower()
@@ -787,7 +868,21 @@ for idx, p in enumerate(raw_products):
         author = enrichment['author']
     if 'isArt' in enrichment:
         is_art = enrichment['isArt']
+    if 'isSigned' in enrichment:
+        is_signed = enrichment['isSigned']
     contributors = enrichment.get('contributors', '')
+
+    if 'ribbon' in enrichment:
+        ribbon = enrichment['ribbon']
+    elif not ribbon and is_signed:
+        ribbon = "Signed Copy Available"
+
+    ribbons = enrichment.get('ribbons')
+    if ribbons is None:
+        ribbons = [r.strip() for r in ribbon.split(' · ') if r.strip()] if ribbon else []
+
+    if handle_id in CURATED_BOOK_CATEGORIES:
+        categories = list(CURATED_BOOK_CATEGORIES[handle_id])
 
     catalog.append({
         "id": handle_id,
@@ -808,7 +903,8 @@ for idx, p in enumerate(raw_products):
         "price": price,
         "originalPrice": original_price,
         "sku": sku,
-        "ribbon": ribbon if ribbon else ("Signed Copy Available" if is_signed else ""),
+        "ribbon": ribbon,
+        "ribbons": ribbons,
         "categories": categories,
         "coverImage": cover_image,
         "gallery": gallery,

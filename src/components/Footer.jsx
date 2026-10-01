@@ -114,12 +114,14 @@ export default function Footer({ onNavClick }) {
           {/* Imprints & Categories */}
           <div className="md:col-span-3 space-y-3">
             <h4 className="font-serif text-sm font-bold text-amber-100 uppercase tracking-wider">Book Genres</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-xs">
+              <li><button onClick={() => onNavClick('books', 'Non-Fiction')} className="hover:text-amber-300 transition-colors">Non-Fiction</button></li>
+              <li><button onClick={() => onNavClick('books', 'Nature & Biodiversity')} className="hover:text-amber-300 transition-colors">Nature & Biodiversity</button></li>
+              <li><button onClick={() => onNavClick('books', 'Autobiography & Memoir')} className="hover:text-amber-300 transition-colors">Autobiography & Memoir</button></li>
+              <li><button onClick={() => onNavClick('books', 'Poetry & Politics')} className="hover:text-amber-300 transition-colors">Poetry & Politics</button></li>
+              <li><button onClick={() => onNavClick('books', "Children's & Picture Books")} className="hover:text-amber-300 transition-colors">Children's & Picture Books</button></li>
               <li><button onClick={() => onNavClick('books', 'Fiction, Young Adult & Sci-Fi')} className="hover:text-amber-300 transition-colors">Fiction, Young Adult & Sci-Fi</button></li>
-              <li><button onClick={() => onNavClick('books', 'Non-Fiction & Memoir')} className="hover:text-amber-300 transition-colors">Non-Fiction & Memoir</button></li>
-              <li><button onClick={() => onNavClick('books', 'Food & Drink')} className="hover:text-amber-300 transition-colors">Food & Drink</button></li>
-              <li><button onClick={() => onNavClick('books', "Children's & Picture Books")} className="hover:text-amber-300 transition-colors">Children's Picture Books</button></li>
-              <li><button onClick={() => onNavClick('books', 'Poetry & Fine Art')} className="hover:text-amber-300 transition-colors">Poetry & Fine Art</button></li>
+              <li><button onClick={() => onNavClick('books', 'Adult Sci-Fi')} className="hover:text-amber-300 transition-colors">Adult Sci-Fi</button></li>
             </ul>
           </div>
 

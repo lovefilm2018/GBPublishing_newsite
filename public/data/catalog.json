@@ -19,6 +19,7 @@
     "originalPrice": null,
     "sku": "GBP-1000",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Poetry & Fine Art"
     ],
@@ -427,7 +428,7 @@
     "title": "Grandad, let's go for a walk",
     "rawTitle": "'Grandad, let's go for a walk' by Anthony & Wendy Kimberley, picture books",
     "author": "Anthony Kimberley",
-    "contributors": "Illustrations by fine artist Wendy Kimberley",
+    "contributors": "Illustrations by fine artist Wendy Kimberley BEM",
     "isArt": false,
     "tagline": "A gentle intergenerational journey exploring nature through the eyes of a grandchild and grandfather",
     "authorSectionTitle": "About the Author & Fine Artist",
@@ -450,6 +451,9 @@
     "originalPrice": null,
     "sku": "9781912031740",
     "ribbon": "Fine art picture book",
+    "ribbons": [
+      "Fine art picture book"
+    ],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -507,6 +511,9 @@
     "originalPrice": 7.99,
     "sku": "\"9781912031382 \"",
     "ribbon": "Charity picture book",
+    "ribbons": [
+      "Charity picture book"
+    ],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -557,6 +564,7 @@
     "originalPrice": 11.99,
     "sku": "\"9781912031191\"",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -602,6 +610,7 @@
     "originalPrice": 10.99,
     "sku": "GBP-1007",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -703,8 +712,11 @@
     "originalPrice": 9.99,
     "sku": "GBP-1008",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
-      "Non-Fiction & Memoir"
+      "Non-Fiction",
+      "Nature & Biodiversity",
+      "Autobiography & Memoir"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_f7bb75cddb6246249104d45bd1140696~mv2.jpg/v1/fit/w_1500,h_2128,q_90/file.jpg",
     "gallery": [
@@ -783,6 +795,9 @@
     "originalPrice": 12.99,
     "sku": "GBP-1009",
     "ribbon": "Charity fine art book",
+    "ribbons": [
+      "Charity fine art book"
+    ],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -918,6 +933,7 @@
     "originalPrice": 11.49,
     "sku": "GBP-1010",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -1007,9 +1023,10 @@
     "originalPrice": 16.99,
     "sku": "GBP-1011",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
-      "Fiction, Young Adult & Sci-Fi",
-      "Non-Fiction & Memoir"
+      "Non-Fiction",
+      "Autobiography & Memoir"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_6b3485290d8c42358464ffbbc3dffa55~mv2.jpg/v1/fit/w_600,h_856,q_90/file.jpg",
     "gallery": [
@@ -1120,8 +1137,12 @@
     "originalPrice": 19.99,
     "sku": "GBP-1012",
     "ribbon": "Tie-in to You are Noah!",
+    "ribbons": [
+      "Tie-in to You are Noah!"
+    ],
     "categories": [
-      "Non-Fiction & Memoir"
+      "Non-Fiction",
+      "Nature & Biodiversity"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_186ba8567fb84f06914d297d3fb48741~mv2.jpg/v1/fit/w_1591,h_2269,q_90/file.jpg",
     "gallery": [
@@ -1195,6 +1216,9 @@
     "originalPrice": 36.0,
     "sku": "GBP-1013",
     "ribbon": "Signed Copy Available",
+    "ribbons": [
+      "Signed Copy Available"
+    ],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -1537,6 +1561,9 @@
     "originalPrice": 24.0,
     "sku": "GBP-1014",
     "ribbon": "Signed Copy Available",
+    "ribbons": [
+      "Signed Copy Available"
+    ],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -1912,8 +1939,13 @@
     "originalPrice": 7.99,
     "sku": "GBP-1015",
     "ribbon": "Charity Nature book",
+    "ribbons": [
+      "Charity Nature book"
+    ],
     "categories": [
-      "Children's & Picture Books"
+      "Children's & Picture Books",
+      "Non-Fiction",
+      "Nature & Biodiversity"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_860b6ef537d945dc840dd2f3be408f4d~mv2.jpg/v1/fit/w_2539,h_2508,q_90/file.jpg",
     "gallery": [
@@ -1976,6 +2008,9 @@
     "originalPrice": null,
     "sku": "GBP-1016",
     "ribbon": "Picture book",
+    "ribbons": [
+      "Picture book"
+    ],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -2070,9 +2105,13 @@
     "price": 16.99,
     "originalPrice": 18.99,
     "sku": "9781912576715",
-    "ribbon": "TV Tie-In - Rewilding",
+    "ribbon": "TV Tie-In",
+    "ribbons": [
+      "TV Tie-In"
+    ],
     "categories": [
-      "Non-Fiction & Memoir"
+      "Non-Fiction",
+      "Nature & Biodiversity"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_134a1929da7e4819a99a2af310de89e9~mv2.png/v1/fit/w_1600,h_2084,q_90/file.png",
     "gallery": [
@@ -2128,9 +2167,10 @@
     "originalPrice": 9.99,
     "sku": "GBP-1018",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
-      "Fiction, Young Adult & Sci-Fi",
-      "Poetry & Fine Art"
+      "Non-Fiction",
+      "Poetry & Politics"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_71e19b083005473db00af4c9d1a85bc8~mv2.jpg/v1/fit/w_500,h_758,q_90/file.jpg",
     "gallery": [
@@ -2174,6 +2214,7 @@
     "originalPrice": null,
     "sku": "GBP-1019",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Poetry & Fine Art"
     ],
@@ -2219,6 +2260,7 @@
     "originalPrice": null,
     "sku": "GBP-1020",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Poetry & Fine Art"
     ],
@@ -2363,9 +2405,13 @@
     "originalPrice": 7.99,
     "sku": "GBP-1021",
     "ribbon": "Charity picture book",
+    "ribbons": [
+      "Charity picture book"
+    ],
     "categories": [
       "Children's & Picture Books",
-      "Non-Fiction & Memoir"
+      "Non-Fiction",
+      "Nature & Biodiversity"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_6d3c490bf4d9416aaf1de0f2a42cb991~mv2.png/v1/fit/w_1600,h_2013,q_90/file.png",
     "gallery": [
@@ -2413,6 +2459,7 @@
     "originalPrice": 10.99,
     "sku": "GBP-1022",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -2502,6 +2549,7 @@
     "originalPrice": 10.49,
     "sku": "PJX-RIEXX-9781912576333",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -2547,6 +2595,7 @@
     "originalPrice": null,
     "sku": "GBP-1024",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -2592,6 +2641,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576708",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -2637,6 +2687,7 @@
     "originalPrice": null,
     "sku": "SWSWX-9781912576692",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -2682,6 +2733,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576685",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -2727,6 +2779,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576678",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -2772,6 +2825,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576661",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -2817,6 +2871,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576654",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -2862,6 +2917,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576647",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -2907,6 +2963,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576630",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -2952,6 +3009,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576623",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -2997,6 +3055,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576616",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3042,6 +3101,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576609",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3087,6 +3147,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576593",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3132,6 +3193,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576586",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3177,6 +3239,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576579",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3222,6 +3285,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576562",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3267,6 +3331,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576555",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3312,6 +3377,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576548",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3357,6 +3423,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576531",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3402,6 +3469,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576524",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3447,6 +3515,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-53-1",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3492,6 +3561,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-54-8",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3537,6 +3607,7 @@
     "originalPrice": null,
     "sku": "SWSW-9781912576555",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3582,6 +3653,7 @@
     "originalPrice": null,
     "sku": "SWSWX-9781912576562",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3627,6 +3699,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-57-9",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3672,6 +3745,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-58-6",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3717,6 +3791,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-59-3",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3762,6 +3837,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-60-9",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3807,6 +3883,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-61-6",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3852,6 +3929,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-62-3",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3897,6 +3975,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-63-0",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3942,6 +4021,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-64-7",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -3987,6 +4067,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-65-4",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -4032,6 +4113,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-66-1",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -4077,6 +4159,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-67-8",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -4122,6 +4205,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-68-5",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -4167,6 +4251,7 @@
     "originalPrice": null,
     "sku": "MPX-SWSWX-978-1-912576-69-2",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -4212,6 +4297,7 @@
     "originalPrice": null,
     "sku": "978-1-912576-70-8",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -4257,6 +4343,7 @@
     "originalPrice": 11.99,
     "sku": "DEP-CPXXX-9781912576845",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -4302,6 +4389,7 @@
     "originalPrice": 10.99,
     "sku": "DEP-TSGXX-",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -4347,6 +4435,9 @@
     "originalPrice": 10.49,
     "sku": "GBP-1064",
     "ribbon": "INDIES award FINALISTS",
+    "ribbons": [
+      "INDIES award FINALISTS"
+    ],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -4471,7 +4562,10 @@
     "price": 9.99,
     "originalPrice": 11.49,
     "sku": "GBP-1065",
-    "ribbon": "Picture book",
+    "ribbon": "Free Fridge Magnet included",
+    "ribbons": [
+      "Free Fridge Magnet included"
+    ],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -4555,7 +4649,11 @@
     "price": 10.49,
     "originalPrice": 10.99,
     "sku": "GBP-1066",
-    "ribbon": "Fine art picture book",
+    "ribbon": "Fine Art Picture Book · Free Sticker included",
+    "ribbons": [
+      "Fine Art Picture Book",
+      "Free Sticker included"
+    ],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -4887,7 +4985,11 @@
     "originalPrice": 22.99,
     "sku": "\"9781912576005\"",
     "ribbon": "Recipes with GIN",
+    "ribbons": [
+      "Recipes with GIN"
+    ],
     "categories": [
+      "Non-Fiction",
       "Food & Drink"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_230e0aa5c6ab4ff8a772c186cc2c8515~mv2.jpg/v1/fit/w_1000,h_1289,q_90/file.jpg",
@@ -4940,6 +5042,9 @@
     "originalPrice": 14.49,
     "sku": "\"9780957297081\"",
     "ribbon": "HARD SCI-FI",
+    "ribbons": [
+      "HARD SCI-FI"
+    ],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -4968,12 +5073,12 @@
   {
     "id": "03c552dd-01a4-6936-4c4f-9331b972271b",
     "slug": "the-adventures-of-doogie-by-sharif-islam-story-books-series-offer",
-    "title": "The Adventures of Doogie - by Sharif Islam, story books + series OFFER",
+    "title": "The Adventures of Doogie",
     "rawTitle": "The Adventures of Doogie - by Sharif Islam, story books + series OFFER",
-    "author": "GB Publishing Author",
+    "author": "Sharif Islam",
     "contributors": "",
     "isArt": false,
-    "tagline": "",
+    "tagline": "Charming illustrated children's stories — Blue Peter Book Awards entry",
     "authorSectionTitle": "",
     "authors": [],
     "authorBio": "",
@@ -4985,6 +5090,9 @@
     "originalPrice": 7.99,
     "sku": "GBP-1069",
     "ribbon": "Blue Peter Awards entry",
+    "ribbons": [
+      "Blue Peter Awards entry"
+    ],
     "categories": [
       "Children's & Picture Books"
     ],
@@ -5074,6 +5182,7 @@
     "originalPrice": 11.49,
     "sku": "9781912031535",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -5119,8 +5228,11 @@
     "originalPrice": 12.99,
     "sku": "GBP-1071",
     "ribbon": "INDIES Awards WINNER",
+    "ribbons": [
+      "INDIES Awards WINNER"
+    ],
     "categories": [
-      "Fiction, Young Adult & Sci-Fi"
+      "Adult Sci-Fi"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_32ef22736ce14491afaadcf9e81ae551~mv2.png/v1/fit/w_369,h_500,q_90/file.png",
     "gallery": [
@@ -5228,10 +5340,12 @@
     "price": 8.49,
     "originalPrice": 8.99,
     "sku": "\"9781912031351\"",
-    "ribbon": "Picture book",
+    "ribbon": "Picture Book with Recipe",
+    "ribbons": [
+      "Picture Book with Recipe"
+    ],
     "categories": [
-      "Children's & Picture Books",
-      "Fiction, Young Adult & Sci-Fi"
+      "Children's & Picture Books"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_5d892ed1e1c04f4d9519dd0adc406118~mv2.png/v1/fit/w_3310,h_2546,q_90/file.png",
     "gallery": [
@@ -5275,6 +5389,7 @@
     "originalPrice": 10.99,
     "sku": "\"9780993507281\"",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -5320,8 +5435,11 @@
     "originalPrice": 12.49,
     "sku": "GBP-1074",
     "ribbon": "ADULT fiction INDIES Finalist",
+    "ribbons": [
+      "ADULT fiction INDIES Finalist"
+    ],
     "categories": [
-      "Fiction, Young Adult & Sci-Fi"
+      "Adult Sci-Fi"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_1bf4aa51494642dba35c939efa322bfe~mv2.png/v1/fit/w_369,h_500,q_90/file.png",
     "gallery": [
@@ -5442,8 +5560,11 @@
     "originalPrice": 13.99,
     "sku": "GBP-1075",
     "ribbon": "ADULT Fiction",
+    "ribbons": [
+      "ADULT Fiction"
+    ],
     "categories": [
-      "Fiction, Young Adult & Sci-Fi"
+      "Adult Sci-Fi"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_7e85a762b3604927a1b869ffcbe68678~mv2.png/v1/fit/w_367,h_500,q_90/file.png",
     "gallery": [
@@ -5547,12 +5668,12 @@
   {
     "id": "f980a175-4733-1c49-aaed-1f9495b0033f",
     "slug": "the-catalyst-by-bradley-walker-young-adult-novel",
-    "title": "The Catalyst - by Bradley Walker, young adult novel",
+    "title": "The Catalyst",
     "rawTitle": "The Catalyst - by Bradley Walker, young adult novel",
-    "author": "GB Publishing Author",
+    "author": "Bradley Walker",
     "contributors": "",
     "isArt": false,
-    "tagline": "",
+    "tagline": "A gripping young adult sci-fi thriller",
     "authorSectionTitle": "",
     "authors": [],
     "authorBio": "",
@@ -5564,6 +5685,7 @@
     "originalPrice": 11.49,
     "sku": "BWX-TCXXX-9781912031979",
     "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -5608,7 +5730,8 @@
     "price": 9.99,
     "originalPrice": 10.99,
     "sku": "GBP-1077",
-    "ribbon": "Signed Copy Available",
+    "ribbon": "",
+    "ribbons": [],
     "categories": [
       "Fiction, Young Adult & Sci-Fi"
     ],
@@ -5619,9 +5742,9 @@
     ],
     "description": "Great fantasy book series BOOK TRAILER – GALAHAD SUNS (Antecedent series BOOK #1) In the Press TV Presenter JULIETTE FOSTER: \"Not a film script but a novel with a credible plot, strong characters and powerful screen writing... “shoot from the hip” dialogue... brooding with menace and cinematic quality that encompasses the darkness of Blade Runner, the freneticism of Battlestar Galactica and the time overlap scenes of Star Wars.\" B-C-ing-U!: \"written in such an engaging style that you soon become entranced by the core of intrigue and edge-of-the-seat suspense that whisks the reader through subsequent chapters at light speed. Galahad Suns could be turned readily into an excellent film script.\" Synopsis Mercenary Davian Kurcher always had two simple choices in his line of work, but when a request from one of Taurus Galahad’s most senior commanders sends him on a frantic hunt across known space and beyond, his life suddenly becomes much more complicated. Tasked with hunting down and recruiting seven of the universe’s most dangerous criminals, Kurcher finds himself embroiled in a ruthless plot to seize control, but who do you turn to when there is nobody left to trust? In this compelling new sci-fi classic in the making, David Kimberley creates a complex universe of intelligent warfare, intrigue, and suspense as Kurcher takes on his most dangerous mission yet.\" Galahad Suns (book #1) introduces you to the human empire spanning the known galaxy along with the wars being fought between corporations while mercenaries, pirates and terrorists wreaked havoc of their own. When exploration finds remnants of alien technology, it leads to a race to harness the unknown power that ultimately awakens a new horror in the void of deep space. Nova Descent (book #2) bringsyou the fallout of the epic battle between a rogue fleet and those reluctant saviours standing in their way. When one corporation declares all-out war, it can only lead to death, destruction and the rise of new powers across the galaxy, including a threat to the whole human race the likes of which they have never seen. Royal Gambit (book #3) brings you the next thrilling instalment where it is the end for some but only the beginning for others. Corporations head towards a destructive endgame while those in the shadows finally emerge to wrestle control and establish themselves as new powers in the galaxy, and the mystery of the alien technology is solved, creating a new nightmare. Format : Paperback About the author Sci-fi author David Kimberley lives in the British county of Norfolk. The peacefulness of the area is the perfect backdrop for his writing, which initially embraced the genres of fantasy and horror before David made the switch to science fiction. The idea for Galahad Suns, his first novel, came to him in 2012 after he underwent life changing heart surgery. In 2016 David signed with GB Publishing Org and soon after Galahad Suns was released. He followed with Nova Descent and his third novel in the Antecedent series Royal Gambit will be releeased in February 2023. He is now working on his fourth novel. Classifications Science Fiction | Cyberpunk Science Fiction | Adventure Science Fiction | Space Opera Galahad Suns isbn: 9781912031610 Paperback | 9781912031603 eBook Nova Descent isbn: 9781912576494 Paperback | 9781912576500 eBook Royal Gambit isbn: 9781912576074 Paperback | 9781912576111 eBook",
     "isWholesale": false,
-    "isSigned": true,
+    "isSigned": false,
     "visible": true,
-    "format": "Signed Copy",
+    "format": "Paperback",
     "stock": 25,
     "options": [
       {
@@ -5714,8 +5837,11 @@
     "originalPrice": 6.99,
     "sku": "GBP-1078",
     "ribbon": "Free Bookmark Included",
+    "ribbons": [
+      "Free Bookmark Included"
+    ],
     "categories": [
-      "Poetry & Fine Art"
+      "Poetry & Politics"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_55e9a1f462e541089031def058a526ab~mv2.png/v1/fit/w_1200,h_1200,q_90/file.png",
     "gallery": [
@@ -5805,9 +5931,12 @@
     "originalPrice": 8.99,
     "sku": "GBP-1079",
     "ribbon": "Oilman in Biafran War",
+    "ribbons": [
+      "Oilman in Biafran War"
+    ],
     "categories": [
-      "Fiction, Young Adult & Sci-Fi",
-      "Non-Fiction & Memoir"
+      "Non-Fiction",
+      "Autobiography & Memoir"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_ed5c5ab58eb749838f02682382fc183c~mv2.jpg/v1/fit/w_1611,h_2475,q_90/file.jpg",
     "gallery": [
@@ -5891,8 +6020,12 @@
     "originalPrice": 13.99,
     "sku": "GBP-1080",
     "ribbon": "Sailing CLASSIC",
+    "ribbons": [
+      "Sailing CLASSIC"
+    ],
     "categories": [
-      "Non-Fiction & Memoir"
+      "Non-Fiction",
+      "Autobiography & Memoir"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_07bfdf97260d44339de60f040e5486ba~mv2.png/v1/fit/w_1000,h_1550,q_90/file.png",
     "gallery": [
@@ -5948,12 +6081,12 @@
   {
     "id": "92a63bda-ac59-c829-3555-556efea2db63",
     "slug": "nora-john-by-nora-john-murray-spy-story-book-2-book-offer",
-    "title": "Nora & John by Nora & John Murray - Spy story book + 2 book OFFER",
+    "title": "Nora & John",
     "rawTitle": "Nora & John by Nora & John Murray - Spy story book + 2 book OFFER",
-    "author": "GB Publishing Author",
+    "author": "Nora & John Murray",
     "contributors": "",
     "isArt": false,
-    "tagline": "",
+    "tagline": "Cold War espionage and covert operations — True life memoir and spy story",
     "authorSectionTitle": "",
     "authors": [],
     "authorBio": "",
@@ -5965,8 +6098,12 @@
     "originalPrice": 15.49,
     "sku": "GBP-1081",
     "ribbon": "Cold War BEST SELLER",
+    "ribbons": [
+      "Cold War BEST SELLER"
+    ],
     "categories": [
-      "Fiction, Young Adult & Sci-Fi"
+      "Non-Fiction",
+      "Autobiography & Memoir"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_e51f3719b4284310983338bcfd9b9379~mv2.jpg/v1/fit/w_1600,h_2427,q_90/file.jpg",
     "gallery": [
@@ -6104,8 +6241,12 @@
     "price": 22.49,
     "originalPrice": 29.99,
     "sku": "\"9781912031641\"",
-    "ribbon": "Romantic recipes Signed",
+    "ribbon": "Romantic Recipes",
+    "ribbons": [
+      "Romantic Recipes"
+    ],
     "categories": [
+      "Non-Fiction",
       "Food & Drink"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_12677724088b4ed1af8a70a7bc987e7d~mv2.jpg/v1/fit/w_1000,h_1182,q_90/file.jpg",
@@ -6169,8 +6310,13 @@
     "price": 20.99,
     "originalPrice": 25.99,
     "sku": "GBP-1083",
-    "ribbon": "Gourmand award winner",
+    "ribbon": "Gourmand Award Winner · Signed Copy Available",
+    "ribbons": [
+      "Gourmand Award Winner",
+      "Signed Copy Available"
+    ],
     "categories": [
+      "Non-Fiction",
       "Food & Drink"
     ],
     "coverImage": "https://static.wixstatic.com/media/7c7af8_a981779d022c4bce99ef1ceaab990dec~mv2.jpg/v1/fit/w_1519,h_2000,q_90/file.jpg",
