@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ShoppingBag, Search, Menu, X, BookOpen, Sparkles, Feather, ArrowUpRight, ChevronDown } from 'lucide-react';
 
 import SocialLinks from './SocialLinks';
+import gbpLogo from '../assets/GBPLogo.png';
 
 export default function Navbar({ 
   activeTab, 
