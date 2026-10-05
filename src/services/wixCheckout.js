@@ -1,9 +1,13 @@
 import { createClient, OAuthStrategy } from '@wix/sdk';
 import { checkout } from '@wix/ecom';
 import { redirects } from '@wix/redirects';
+import sandboxIdMap from '../data/sandbox_id_map.json';
 
 // Public OAuth Client ID for Wix Headless SPA (Safe for frontend bundles)
 const WIX_CLIENT_ID = import.meta.env.VITE_WIX_CLIENT_ID || 'e81e1720-5622-4e36-b9d1-f12870b2f5ac';
+
+// Official Wix Stores Catalog Application ID
+const WIX_STORES_APP_ID = '215238eb-22a5-4c36-9e7b-e7c08025e04e';
 
 const wixClient = createClient({
   modules: { checkout, redirects },
@@ -22,18 +26,35 @@ export async function createWixCheckoutSession(cartItems) {
     throw new Error('Your cart is empty');
   }
 
-  // 1. Format line items for Wix eCommerce catalog
+  // 1. Format line items for Wix eCommerce catalog (with automated sandbox mapping for test site)
   const lineItems = cartItems.map(item => {
+    const mapEntry = sandboxIdMap[item.id];
+    const targetItemId = mapEntry ? mapEntry.sandboxId : item.id;
+
+    let targetVariantId = (mapEntry && mapEntry.variants && item.variantId) 
+      ? (mapEntry.variants[item.variantId] || item.variantId)
+      : item.variantId;
+
+    // Fallback: If product has variants in Wix but none explicitly passed, select first variant
+    if ((!targetVariantId || targetVariantId === '00000000-0000-0000-0000-000000000000') && mapEntry?.variants) {
+      const vList = Object.values(mapEntry.variants);
+      if (vList.length > 0) {
+        targetVariantId = vList[0];
+      }
+    }
+
     const lineItem = {
       quantity: item.quantity || 1,
       catalogReference: {
-        appId: '215238eb-2247-427d-8e7f-e771e5082618', // Standard Wix Stores catalog app ID
-        catalogItemId: item.id
+        appId: WIX_STORES_APP_ID,
+        catalogItemId: targetItemId
       }
     };
-    if (item.variantId && item.variantId !== '00000000-0000-0000-0000-000000000000') {
-      lineItem.catalogReference.options = { variantId: item.variantId };
+
+    if (targetVariantId && targetVariantId !== '00000000-0000-0000-0000-000000000000') {
+      lineItem.catalogReference.options = { variantId: targetVariantId };
     }
+
     return lineItem;
   });
 
