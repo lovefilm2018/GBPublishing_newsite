@@ -1,10 +1,9 @@
 import { createClient, OAuthStrategy } from '@wix/sdk';
 import { checkout } from '@wix/ecom';
 import { redirects } from '@wix/redirects';
-import sandboxIdMap from '../data/sandbox_id_map.json';
 
-// Public OAuth Client ID for Wix Headless SPA (Safe for frontend bundles)
-const WIX_CLIENT_ID = import.meta.env.VITE_WIX_CLIENT_ID || 'e81e1720-5622-4e36-b9d1-f12870b2f5ac';
+// Public OAuth Client ID for GB Publishing Production Storefront (Safe for frontend bundles)
+const WIX_CLIENT_ID = import.meta.env.VITE_WIX_CLIENT_ID || '842a5a1c-fbbe-46e2-97cf-96bb7f6d1d2a';
 
 // Official Wix Stores Catalog Application ID
 const WIX_STORES_APP_ID = '215238eb-22a5-4c36-9e7b-e7c08025e04e';
@@ -26,33 +25,25 @@ export async function createWixCheckoutSession(cartItems) {
     throw new Error('Your cart is empty');
   }
 
-  // 1. Format line items for Wix eCommerce catalog (with automated sandbox mapping for test site)
+  // 1. Format line items for live Wix Stores production catalog
   const lineItems = cartItems.map(item => {
-    const mapEntry = sandboxIdMap[item.id];
-    const targetItemId = mapEntry ? mapEntry.sandboxId : item.id;
+    let variantId = item.variantId;
 
-    let targetVariantId = (mapEntry && mapEntry.variants && item.variantId) 
-      ? (mapEntry.variants[item.variantId] || item.variantId)
-      : item.variantId;
-
-    // Fallback: If product has variants in Wix but none explicitly passed, select first variant
-    if ((!targetVariantId || targetVariantId === '00000000-0000-0000-0000-000000000000') && mapEntry?.variants) {
-      const vList = Object.values(mapEntry.variants);
-      if (vList.length > 0) {
-        targetVariantId = vList[0];
-      }
+    // Fallback: If product has variants but none explicitly selected, use first variant
+    if ((!variantId || variantId === '00000000-0000-0000-0000-000000000000') && item.variants && item.variants.length > 0) {
+      variantId = item.variants[0].id;
     }
 
     const lineItem = {
       quantity: item.quantity || 1,
       catalogReference: {
         appId: WIX_STORES_APP_ID,
-        catalogItemId: targetItemId
+        catalogItemId: item.id
       }
     };
 
-    if (targetVariantId && targetVariantId !== '00000000-0000-0000-0000-000000000000') {
-      lineItem.catalogReference.options = { variantId: targetVariantId };
+    if (variantId && variantId !== '00000000-0000-0000-0000-000000000000') {
+      lineItem.catalogReference.options = { variantId };
     }
 
     return lineItem;
@@ -67,7 +58,7 @@ export async function createWixCheckoutSession(cartItems) {
     throw new Error('The selected item(s) are upcoming pre-releases not yet active in the Wix online store.');
   }
 
-  // 3. Create the checkout session in Wix
+  // 3. Create the checkout session on Wix Live Production
   const createdCheckout = await wixClient.checkout.createCheckout({
     channelType: checkout.ChannelType.WEB,
     lineItems: validItems
@@ -82,7 +73,7 @@ export async function createWixCheckoutSession(cartItems) {
     throw new Error('The items in your cart could not be found in this Wix store catalogue.');
   }
 
-  // 4. Generate the redirect session with return URL
+  // 4. Generate the redirect session with postFlowUrl callback
   const postFlowUrl = window.location.origin + window.location.pathname + '#thank-you';
   const redirectResult = await wixClient.redirects.createRedirectSession({
     ecomCheckout: { checkoutId },
