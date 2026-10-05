@@ -83,7 +83,7 @@ export default function AboutView() {
             <div className="pt-2">
               <h3 className="font-serif text-2xl font-bold text-[#1A1612]">George S Boughton</h3>
               <span className="text-xs font-bold text-[#7A1F1A] block uppercase tracking-wider mt-0.5">
-                Founder & CEO · GB Publishing
+                Founder & CEO · GB Publishing Org
               </span>
               <span className="text-[11px] text-slate-500 font-sans block mt-0.5">Chartered Engineer (MIMechE) · Author & Publisher</span>
             </div>
@@ -100,7 +100,7 @@ export default function AboutView() {
             </div>
             
             <p>
-              Born in Eritrea to English parents, <strong>George S Boughton</strong> grew up across Rome, New York, and the UK. Before establishing GB Publishing in Surrey in 2013, his global engineering career spanned landmark international assignments:
+              Born in Eritrea to English parents, <strong>George S Boughton</strong> grew up across Rome, New York, and the UK. Before establishing GB Publishing Org in Surrey in 2013, his global engineering career spanned landmark international assignments:
             </p>
 
             <ul className="space-y-1.5 text-xs text-slate-600 pl-3 border-l-2 border-[#C49A45]">
@@ -110,7 +110,7 @@ export default function AboutView() {
             </ul>
 
             <p>
-              Now based in Surrey, his deep passion for nature, art, and storytelling drives GB Publishing's commitment to craftsman-quality books and author-first publishing.
+              Now based in Surrey, his deep passion for nature, art, and storytelling drives GB Publishing Org's commitment to craftsman-quality books and author-first publishing.
             </p>
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function AboutView() {
               The self-publishing boom has made book publishing bigger than ever — with over 1 million new releases globally each year. While this explosion of writing reflects an incredible human appetite to tell stories, the volume of new releases is simply overwhelming traditional review channels and bookstore buyers.
             </p>
             <p>
-              At GB Publishing, keeping the reading word and the creativity of minds alive despite these challenges is what drives everything we do. We believe authors and illustrators hold the key to connecting directly with readers — for they alone can speak to the heart of what their story is all about.
+              At GB Publishing Org, keeping the reading word and the creativity of minds alive despite these challenges is what drives everything we do. We believe authors and illustrators hold the key to connecting directly with readers — for they alone can speak to the heart of what their story is all about.
             </p>
             <p className="text-amber-200 italic font-serif text-base border-t border-slate-700/60 pt-4">
               "We only publish authors and illustrators of exceptional talent. In April 2022, we celebrated this at the Riverhouse Barn Arts Centre in Surrey with an exhibition of original Cover Art Prints alongside our titles — proving that fine books are true works of art."
@@ -182,7 +182,7 @@ export default function AboutView() {
         {/* Direct Contact & Submissions */}
         <div className="bg-white p-8 md:p-10 rounded-2xl border border-[#E2DDD6] shadow-sm text-center space-y-4">
           <Mail className="w-10 h-10 text-[#7A1F1A] mx-auto" />
-          <h3 className="font-serif text-2xl font-bold text-[#1A1612]">Contact GB Publishing</h3>
+          <h3 className="font-serif text-2xl font-bold text-[#1A1612]">Contact GB Publishing Org</h3>
           <p className="text-xs text-slate-600 font-sans max-w-lg mx-auto leading-relaxed">
             Whether you are a reader, reviewer, book trade representative, or an author with a manuscript, we welcome hearing from you.
           </p>
@@ -195,7 +195,7 @@ export default function AboutView() {
             </a>
           </div>
           <p className="text-[11px] text-slate-400 font-sans pt-2">
-            GB Publishing · Surrey, United Kingdom
+            GB Publishing Org · Surrey, United Kingdom
           </p>
         </div>
 

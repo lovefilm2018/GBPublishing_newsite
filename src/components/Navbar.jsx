@@ -32,6 +32,7 @@ export default function Navbar({
 
   const navCategories = [
     { name: "Non-Fiction", desc: "13 Titles" },
+    { name: "Food & Drink", desc: "3 Titles" },
     { name: "Nature & Biodiversity", desc: "5 Titles" },
     { name: "Autobiography & Memoir", desc: "5 Titles" },
     { name: "Poetry & Politics", desc: "Curated" },

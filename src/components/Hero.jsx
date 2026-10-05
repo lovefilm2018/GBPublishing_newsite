@@ -27,7 +27,7 @@ export default function Hero({ featuredBook, onSelectBook, onExploreClick }) {
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-sans leading-relaxed">
-              Welcome to the direct storefront of GB Publishing Org. By ordering direct from us, you directly support indie authors, champion local publishers, help fund community literary events, and gain access to author-signed copies and special offers.
+              Welcome to the direct storefront of GB Publishing Org. By ordering direct from us, you directly support indie authors, champion local publishers, support charity and community literary causes, and gain access to author-signed copies and special offers.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">

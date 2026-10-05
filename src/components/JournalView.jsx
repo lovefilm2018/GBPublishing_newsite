@@ -89,13 +89,13 @@ export default function JournalView() {
         {/* Header Title */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#7A1F1A] uppercase tracking-widest bg-red-100/60 border border-red-200 px-3.5 py-1 rounded-full">
-            <Video className="w-4 h-4 text-[#7A1F1A]" /> GB Publishing Journal & Video Gallery
+            <Video className="w-4 h-4 text-[#7A1F1A]" /> GB Publishing Org Journal & Video Gallery
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-[#1A1612] leading-tight">
             News, Documentaries & Author Broadcasts
           </h1>
           <p className="text-slate-600 font-sans text-base sm:text-lg leading-relaxed">
-            Watch author interviews, river documentary films, fine art exhibition highlights, and publisher updates.
+            Watch author interviews, book previews, fine art exhibition highlights, and official publisher updates.
           </p>
         </div>
 

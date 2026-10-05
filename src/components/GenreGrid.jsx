@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Leaf, Compass, Feather, Smile, Palette, ArrowRight, Sparkles } from 'lucide-react';
+import { BookOpen, Leaf, Compass, Feather, Smile, Palette, ArrowRight, Sparkles, Utensils } from 'lucide-react';
 
 export default function GenreGrid({ onSelectCategory }) {
   const genres = [
@@ -11,6 +11,15 @@ export default function GenreGrid({ onSelectCategory }) {
       bg: "from-[#8C2520] to-[#5C1613]",
       accent: "text-red-200",
       icon: <BookOpen className="w-7 h-7 text-red-200" />
+    },
+    {
+      id: "Food & Drink",
+      name: "Food & Drink",
+      count: "3 Titles",
+      desc: "World culinary heritage, Turkish family feasts, Ginologist recipes & Zodiac dinner party cooking.",
+      bg: "from-[#8C4A20] to-[#5C2E13]",
+      accent: "text-amber-200",
+      icon: <Utensils className="w-7 h-7 text-amber-200" />
     },
     {
       id: "Nature & Biodiversity",
@@ -52,7 +61,7 @@ export default function GenreGrid({ onSelectCategory }) {
       id: "Fiction, Young Adult & Sci-Fi",
       name: "Fiction, Young Adult & Sci-Fi",
       count: "13 Titles",
-      desc: "Epic mythological fantasy, space opera sagas, psychological thrillers & young adult fiction.",
+      desc: "Epic mythological fantasy, space opera sagas, old hollywood history, psychological thrillers & young adult fiction.",
       bg: "from-[#1D2A44] to-[#121A29]",
       accent: "text-amber-300",
       icon: <Feather className="w-7 h-7 text-amber-300" />

@@ -35,6 +35,11 @@ const MENU_ORDER_MAP = {
     "31475034-ae01-d1cb-73e3-6dcf687de768", // Black Gold - Black Scorpion
     "33b34cc3-7713-1327-240c-204c99fb52b1", // Dennis to Alice
   ],
+  "Food & Drink": [
+    "ec30ad44-30fb-85eb-9725-4259f6c72523", // Ozlem's Turkish Table
+    "9792a2c8-299a-cf0e-6987-1c32c2df92a4", // The Ginologist Cook
+    "5aba1fc3-b88f-12d6-37f8-4da625fff3bd", // The Zodiac Cooks
+  ],
   "Nature & Biodiversity": [
     "76419b0d-f424-c776-9477-d7d9255302f3", // You are Noah
     "b220ed82-aca4-347e-1fd3-a029e6d655d4", // Plants & Us
@@ -125,9 +130,27 @@ export default function App() {
     loadLiveCatalog();
   }, []);
 
-  // Featured book for Hero banner
+  // Featured book for Hero banner (Scheduled per George's release roadmap)
   const featuredBook = useMemo(() => {
-    return catalog.find(b => b.title.includes("Ozlem") || b.title.includes("Özlem") || b.title.includes("Plants & Us")) || catalog[0];
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth(); // 0-indexed: 9=Oct, 10=Nov, 11=Dec, 0=Jan, 1=Feb, 2=Mar, 4=May, 5=Jun
+    
+    let targetKeyword = "Time's Up";
+    if (year === 2026) {
+      if (month === 9) targetKeyword = "Time's Up"; // Oct 26
+      else if (month === 10) targetKeyword = "Neighbourhood Matters"; // Nov 26
+      else if (month >= 11) targetKeyword = "Ozlem"; // Dec 26
+    } else if (year >= 2027) {
+      if (month === 0) targetKeyword = "Ginologist"; // Jan 27
+      else if (month === 1 || month === 2) targetKeyword = "Time's Up"; // Feb-Mar 27
+      else if (month === 4 || month === 5) targetKeyword = "Neighbourhood Matters"; // May-Jun 27
+    }
+
+    return catalog.find(b => b.title.toLowerCase().includes(targetKeyword.toLowerCase())) 
+      || catalog.find(b => b.title.includes("Time's Up"))
+      || catalog.find(b => b.title.includes("Ozlem") || b.title.includes("Özlem")) 
+      || catalog[0];
   }, [catalog]);
 
   // Filtered catalogue logic (Books strictly separated from Art Prints)
@@ -202,6 +225,11 @@ export default function App() {
         id: 'Non-Fiction', 
         title: 'Non-Fiction', 
         description: 'Botany, world culinary heritage, veterinary life, Biafran war memoirs & true accounts' 
+      },
+      { 
+        id: 'Food & Drink', 
+        title: 'Food & Drink', 
+        description: 'Award-winning international cookbooks, Turkish culinary heritage, gin recipes & Zodiac entertaining' 
       },
       { 
         id: 'Nature & Biodiversity', 
@@ -298,6 +326,7 @@ export default function App() {
   const categoriesList = [
     { id: 'ALL', label: 'All Catalogue' },
     { id: 'Non-Fiction', label: 'Non-Fiction' },
+    { id: 'Food & Drink', label: 'Food & Drink' },
     { id: 'Nature & Biodiversity', label: 'Nature & Biodiversity' },
     { id: 'Autobiography & Memoir', label: 'Autobiography & Memoir' },
     { id: 'Poetry & Politics', label: 'Poetry & Politics' },
@@ -458,7 +487,7 @@ export default function App() {
                         onChange={(e) => setFilterSignedOnly(e.target.checked)}
                         className="rounded text-[#8C2520] focus:ring-[#8C2520]" 
                       />
-                      <span>✍️ Author Signed / Special Offers</span>
+                      <span>✍️ Signed Copies & Offers</span>
                     </label>
 
                     <label className="flex items-center gap-2 cursor-pointer font-semibold text-slate-700">

@@ -16,10 +16,10 @@ export default function ArtGalleryView({ catalog, onAddToCart }) {
             <Palette className="w-4 h-4 text-amber-400" /> Fine Art & Illustration Imprint
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-amber-50">
-            GB Publishing Fine Art Gallery
+            GB Publishing Org Fine Art Gallery
           </h1>
           <p className="text-slate-300 font-sans text-base leading-relaxed max-w-2xl mx-auto">
-            Discover original oil paintings, fine art coffee-table collections, and bespoke book illustrations by Wendy Kimberley BEM & Lois Collins.
+            Discover original paintings, fine art coffee-table collections, and bespoke book illustrations by Wendy Kimberley BEM, Morganico & Lois Collins.
           </p>
         </div>
 

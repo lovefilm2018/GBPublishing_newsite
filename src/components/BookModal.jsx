@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { X, ShoppingBag, HeartHandshake, Feather, Truck, ShieldCheck, ChevronDown, BookOpen, Star, Share2, Play, Film } from 'lucide-react';
+import { X, ShoppingBag, HeartHandshake, Feather, Truck, ShieldCheck, ChevronDown, BookOpen, Star, Share2, Play, Film, ExternalLink } from 'lucide-react';
 
 export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, relatedBooks, onSelectBook }) {
   if (!book) return null;
@@ -189,18 +189,19 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                       .replace(/Choose[:\s]*/i, '')
                       .trim() || 'Select';
 
+                    const hasLongText = opt.choices.some(c => (c.value || '').length > 18);
+
                     return (
-                      <div key={oIdx} className="space-y-1.5">
+                      <div key={oIdx} className="space-y-2">
                         <label className="text-xs font-bold font-sans text-slate-700 uppercase tracking-wide flex items-center justify-between">
                           <span>Select: {cleanOptTitle}</span>
-                          <span className="text-[11px] font-normal text-slate-500 lowercase">Choose edition</span>
+                          <span className="text-[11px] font-normal text-slate-500 lowercase">Choose format</span>
                         </label>
 
-                        {opt.choices.length <= 4 ? (
+                        {opt.choices.length <= 4 && !hasLongText ? (
                           <div className={`grid ${opt.choices.length === 2 ? 'grid-cols-2' : opt.choices.length === 3 ? 'grid-cols-1 sm:grid-cols-3' : 'grid-cols-2 sm:grid-cols-4'} gap-2`}>
                             {opt.choices.map((choice) => {
                               const isSelected = selectedChoices[opt.name] === choice.value;
-                              // Match variant to display price preview
                               const vMatch = (book.variants || []).find(v => v.choices && v.choices[opt.name] === choice.value);
                               const choicePrice = vMatch ? vMatch.price : null;
 
@@ -222,44 +223,62 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                             })}
                           </div>
                         ) : (
-                          <select
-                            value={selectedChoices[opt.name] || opt.choices[0]?.value}
-                            onChange={(e) => setSelectedChoices(prev => ({ ...prev, [opt.name]: e.target.value }))}
-                            className="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 focus:ring-[#8C2520] focus:border-[#8C2520]"
-                          >
+                          /* Responsive full cards for multi-book series and long variant strings */
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                             {opt.choices.map((choice) => {
+                              const isSelected = selectedChoices[opt.name] === choice.value;
                               const vMatch = (book.variants || []).find(v => v.choices && v.choices[opt.name] === choice.value);
-                              const choicePrice = vMatch ? ` (£${vMatch.price.toFixed(2)})` : '';
+                              const choicePrice = vMatch ? vMatch.price : null;
+
                               return (
-                                <option key={choice.value} value={choice.value}>
-                                  {choice.value}{choicePrice}
-                                </option>
+                                <button
+                                  key={choice.value}
+                                  type="button"
+                                  onClick={() => setSelectedChoices(prev => ({ ...prev, [opt.name]: choice.value }))}
+                                  className={`p-3 rounded-xl text-xs font-sans border text-left transition-all flex items-center justify-between gap-3 ${isSelected ? 'border-[#8C2520] bg-red-50/80 text-[#8C2520] ring-1 ring-[#8C2520] font-bold shadow-xs' : 'border-slate-200 text-slate-700 bg-white hover:border-slate-300 font-medium'}`}
+                                >
+                                  <span className="leading-snug flex-1 break-words">{choice.value}</span>
+                                  {choicePrice !== null && (
+                                    <span className={`shrink-0 text-xs font-bold ${isSelected ? 'text-[#8C2520]' : 'text-slate-900'}`}>
+                                      £{choicePrice.toFixed(2)}
+                                    </span>
+                                  )}
+                                </button>
                               );
                             })}
-                          </select>
+                          </div>
                         )}
                       </div>
                     );
                   })}
                 </div>
               ) : (
-                /* Fallback Format Selector */
+                /* Format Display & Multi-format Selector */
                 <div className="space-y-2">
-                  <label className="text-xs font-bold font-sans text-slate-700 uppercase tracking-wide">
-                    Select:
+                  <label className="text-xs font-bold font-sans text-slate-700 uppercase tracking-wide flex items-center justify-between">
+                    <span>Available Format:</span>
+                    <span className="text-[11px] font-normal text-slate-500 lowercase">Choose format</span>
                   </label>
-                  <div className="grid grid-cols-3 gap-3">
-                    {['Paperback', 'Hardcover', 'Signed Copy'].map((fmt) => (
-                      <button 
-                        key={fmt}
-                        type="button"
-                        onClick={() => setSelectedFormat(fmt)}
-                        className={`py-2.5 px-3 rounded-xl text-xs font-bold font-sans border text-center transition-all ${selectedFormat === fmt ? 'border-[#8C2520] bg-red-50 text-[#8C2520] shadow-sm' : 'border-slate-200 text-slate-700 hover:border-slate-300'}`}
-                      >
-                        {fmt}
-                      </button>
-                    ))}
-                  </div>
+                  {book.availableFormats && book.availableFormats.length > 1 ? (
+                    <div className="grid grid-cols-2 gap-2">
+                      {book.availableFormats.map((fmt) => (
+                        <button 
+                          key={fmt}
+                          type="button"
+                          onClick={() => setSelectedFormat(fmt)}
+                          className={`p-2.5 rounded-xl text-xs font-bold font-sans border text-center transition-all ${selectedFormat === fmt ? 'border-[#8C2520] bg-red-50 text-[#8C2520] shadow-sm' : 'border-slate-200 text-slate-700 hover:border-slate-300'}`}
+                        >
+                          {fmt}
+                        </button>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100 border border-slate-200 text-xs font-bold text-slate-800">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+                      <span>{book.format ? `${book.format} Edition` : 'Paperback Edition'}</span>
+                      {book.isSigned && <span className="text-[#8C2520] font-semibold">(Author Signed Copy)</span>}
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -412,6 +431,20 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                       <p className="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed">
                         {book.authors?.[0]?.bio || book.authorBio}
                       </p>
+                    </div>
+                  )}
+
+                  {book.authorWebsite && (
+                    <div className="pt-2 border-t border-slate-200/60 mt-2">
+                      <a 
+                        href={book.authorWebsite}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs text-[#8C2520] hover:text-[#5C1613] font-bold underline transition-colors"
+                      >
+                        <span>{book.authorWebsiteTitle || 'Visit Author / Artist Website'}</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
                     </div>
                   )}
                 </div>

@@ -25,7 +25,7 @@ export default function Footer({ onNavClick }) {
         <div className="bg-gradient-to-r from-[#8C2520] to-[#5C1613] rounded-2xl p-8 md:p-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border border-amber-400/20">
           <div className="space-y-2 text-center md:text-left max-w-lg">
             <span className="text-amber-300 font-sans font-bold text-xs uppercase tracking-widest block">
-              GB PUBLISHING READER CIRCLE
+              GB PUBLISHING ORG READER CIRCLE
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-amber-50">
               Join for 10% Off Your First Direct Order
@@ -85,7 +85,7 @@ export default function Footer({ onNavClick }) {
             </div>
 
             <p className="leading-relaxed">
-              Independent indie book publishing house based in Surrey, United Kingdom. Dedicated to literary craftsmanship, fine art titles, author-signed editions, and direct reader relationships since 2013.
+              Indie book publishing house based in Surrey, United Kingdom. Dedicated to literary craftsmanship, fine art titles, author-signed copies, and direct reader relationships since 2013.
             </p>
 
             <div className="pt-2 space-y-2">
@@ -106,7 +106,7 @@ export default function Footer({ onNavClick }) {
               <li><button onClick={() => onNavClick('home')} className="hover:text-amber-300 transition-colors">Home Page</button></li>
               <li><button onClick={() => onNavClick('books', 'ALL')} className="hover:text-amber-300 transition-colors">Full Book Catalogue (100+ Titles)</button></li>
               <li><button onClick={() => onNavClick('art')} className="hover:text-amber-300 transition-colors">Fine Art & Painting Gallery</button></li>
-              <li><button onClick={() => onNavClick('about')} className="hover:text-amber-300 transition-colors">About GBP</button></li>
+              <li><button onClick={() => onNavClick('about')} className="hover:text-amber-300 transition-colors">About GB Publishing Org</button></li>
               <li><button onClick={() => onNavClick('news')} className="hover:text-amber-300 transition-colors text-[#F3E5AB]">News, Video Journal & Blog</button></li>
             </ul>
           </div>
@@ -116,6 +116,7 @@ export default function Footer({ onNavClick }) {
             <h4 className="font-serif text-sm font-bold text-amber-100 uppercase tracking-wider">Book Genres</h4>
             <ul className="space-y-2 text-xs">
               <li><button onClick={() => onNavClick('books', 'Non-Fiction')} className="hover:text-amber-300 transition-colors">Non-Fiction</button></li>
+              <li><button onClick={() => onNavClick('books', 'Food & Drink')} className="hover:text-amber-300 transition-colors">Food & Drink</button></li>
               <li><button onClick={() => onNavClick('books', 'Nature & Biodiversity')} className="hover:text-amber-300 transition-colors">Nature & Biodiversity</button></li>
               <li><button onClick={() => onNavClick('books', 'Autobiography & Memoir')} className="hover:text-amber-300 transition-colors">Autobiography & Memoir</button></li>
               <li><button onClick={() => onNavClick('books', 'Poetry & Politics')} className="hover:text-amber-300 transition-colors">Poetry & Politics</button></li>
@@ -131,7 +132,7 @@ export default function Footer({ onNavClick }) {
             <ul className="space-y-2 text-[11px]">
               <li>🏛️ Support Local Publishers</li>
               <li>✍️ Many Books Author Signed</li>
-              <li>🎉 Special Offers & Charities</li>
+              <li>🎉 Special Offers & Support Charity</li>
               <li>🚚 Free UK Delivery £15+</li>
               <li>❤️ Direct Author Royalties</li>
             </ul>
