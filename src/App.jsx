@@ -16,7 +16,8 @@ import Footer from './components/Footer';
 
 import catalogData from './data/catalog.json';
 import { fetchCatalogProducts } from './services/wixClient';
-import { Filter, Sparkles, Feather, Search, RotateCcw, Check, ShoppingBag, ArrowRight } from 'lucide-react';
+import { Filter, Sparkles, Feather, Search, RotateCcw, Check, ShoppingBag, ArrowRight, CheckCircle2, X } from 'lucide-react';
+import confetti from 'canvas-confetti';
 
 // George's authoritative order specification for each curated menu (Sept 2026)
 const MENU_ORDER_MAP = {
@@ -75,12 +76,27 @@ export default function App() {
   const [excerptBook, setExcerptBook] = useState(null);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
+  const [showThankYouModal, setShowThankYouModal] = useState(false);
 
-  // Sync activeTab & selectedCategory state with URL hash (#home, #books?category=..., #art, #news, #about)
+  // Sync activeTab & selectedCategory state with URL hash (#home, #books?category=..., #art, #news, #about, #thank-you)
   useEffect(() => {
     const handleHashChange = () => {
       const raw = window.location.hash.replace('#', '');
       if (!raw) return;
+
+      if (raw.toLowerCase().includes('thank-you')) {
+        setCartItems([]);
+        setShowThankYouModal(true);
+        setActiveTab('home');
+        confetti({
+          particleCount: 120,
+          spread: 80,
+          origin: { y: 0.6 }
+        });
+        window.history.replaceState(null, '', window.location.pathname + window.location.search);
+        return;
+      }
+
       const [tabPart, queryPart] = raw.split('?');
       const tab = tabPart.toLowerCase();
       if (['home', 'books', 'art', 'news', 'about'].includes(tab)) {
@@ -647,6 +663,41 @@ export default function App() {
         onRemoveItem={handleRemoveItem}
         onClearCart={handleClearCart}
       />
+
+      {/* Post-Checkout Thank You Modal */}
+      {showThankYouModal && (
+        <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in">
+          <div className="bg-white rounded-2xl max-w-lg w-full p-8 shadow-2xl relative text-center space-y-5 animate-scale-in">
+            <button 
+              onClick={() => setShowThankYouModal(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded-lg"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto shadow-inner">
+              <CheckCircle2 className="w-10 h-10" />
+            </div>
+            <div>
+              <span className="text-xs uppercase font-bold tracking-widest text-[#7A1F1A]">Order Confirmed</span>
+              <h2 className="font-serif text-2xl font-bold text-slate-900 mt-1">Thank You for Supporting Indie Publishing!</h2>
+            </div>
+            <p className="text-xs text-slate-600 leading-relaxed max-w-md mx-auto">
+              Your direct order has been confirmed by Wix Stores. An official order receipt and delivery updates will arrive directly in your inbox.
+            </p>
+            <div className="bg-[#F9F2E2] p-4 rounded-xl border border-[#C49A45]/30 text-xs text-slate-800 text-left space-y-1.5 font-sans">
+              <span className="font-bold block text-[#1A1612]">📦 What happens next?</span>
+              <p className="text-slate-700">• Order dispatched from our UK warehouse within 1–2 working days.</p>
+              <p className="text-slate-700">• 100% direct support for GB Publishing independent authors & illustrators.</p>
+            </div>
+            <button
+              onClick={() => setShowThankYouModal(false)}
+              className="w-full bg-[#1C2B40] hover:bg-[#283C56] text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-colors shadow-md"
+            >
+              Continue Browsing Catalogue
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <Footer 

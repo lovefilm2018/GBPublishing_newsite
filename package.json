@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@wix/ecom": "^1.0.2533",
+    "@wix/redirects": "^1.0.131",
     "@wix/sdk": "^1.21.14",
     "@wix/stores": "^1.0.852",
     "canvas-confetti": "^1.9.4",

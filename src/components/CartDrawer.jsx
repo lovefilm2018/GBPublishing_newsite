@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { X, ShoppingBag, Trash2, Plus, Minus, ShieldCheck, HeartHandshake, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { X, ShoppingBag, Trash2, Plus, Minus, ShieldCheck, HeartHandshake, ArrowRight, CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { createWixCheckoutSession } from '../services/wixCheckout';
 
 export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantity, onRemoveItem, onClearCart }) {
   const [checkoutStep, setCheckoutStep] = useState('cart'); // 'cart', 'checkout', 'success'
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
+  const [isCheckingOut, setIsCheckingOut] = useState(false);
+  const [checkoutError, setCheckoutError] = useState(null);
 
   if (!isOpen) return null;
 
@@ -13,6 +16,20 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
   const freeShippingThreshold = 15.0;
   const remainingForFreeShipping = Math.max(0, freeShippingThreshold - subtotal);
   const isFreeShipping = subtotal >= freeShippingThreshold;
+
+  const handleProceedToWixCheckout = async (e) => {
+    if (e) e.preventDefault();
+    setIsCheckingOut(true);
+    setCheckoutError(null);
+    try {
+      const redirectUrl = await createWixCheckoutSession(cartItems);
+      window.location.href = redirectUrl;
+    } catch (err) {
+      console.error('Wix checkout session error:', err);
+      setCheckoutError(err.message || 'Unable to connect to Wix Checkout. Please try again.');
+      setIsCheckingOut(false);
+    }
+  };
 
   const handleCheckoutSubmit = (e) => {
     e.preventDefault();
@@ -246,12 +263,41 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                 </div>
               </div>
 
+              {checkoutError && (
+                <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-900 flex items-start gap-2 animate-fade-in">
+                  <AlertCircle className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <p className="font-semibold text-slate-900">Checkout Notice</p>
+                    <p className="text-[11px] mt-0.5 text-slate-700">{checkoutError}</p>
+                    <button
+                      type="button"
+                      onClick={() => setCheckoutStep('checkout')}
+                      className="mt-1.5 text-[11px] font-bold text-[#7A1F1A] hover:underline block"
+                    >
+                      Preview Order Form Details Instead →
+                    </button>
+                  </div>
+                </div>
+              )}
+
               <button 
-                onClick={() => setCheckoutStep('checkout')}
-                className="w-full bg-[#7A1F1A] hover:bg-[#8C2520] text-white py-3.5 rounded-xl font-sans font-bold text-sm shadow-lg flex items-center justify-center gap-2"
+                type="button"
+                onClick={handleProceedToWixCheckout}
+                disabled={isCheckingOut}
+                className="w-full bg-[#7A1F1A] hover:bg-[#8C2520] disabled:bg-slate-400 text-white py-3.5 rounded-xl font-sans font-bold text-sm shadow-lg flex items-center justify-center gap-2 transition-all cursor-pointer"
               >
-                <span>Proceed to Direct Checkout</span>
-                <ArrowRight className="w-4 h-4" />
+                {isCheckingOut ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin text-amber-300" />
+                    <span>Connecting to Secure Wix Checkout...</span>
+                  </>
+                ) : (
+                  <>
+                    <ShieldCheck className="w-4 h-4 text-amber-300" />
+                    <span>Proceed to Secure Wix Checkout</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </>
+                )}
               </button>
             </div>
           )}
