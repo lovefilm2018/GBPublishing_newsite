@@ -37,7 +37,7 @@ export default function Navbar({
     { name: "Autobiography & Memoir", desc: "5 Titles" },
     { name: "Poetry & Politics", desc: "Curated" },
     { name: "Children's & Picture Books", desc: "10 Titles" },
-    { name: "Fiction, Young Adult & Sci-Fi", desc: "13 Titles" },
+    { name: "Fiction, Young Adult & Sci-Fi", desc: "14 Titles" },
     { name: "Adult Sci-Fi", desc: "3 Titles" },
   ];
 

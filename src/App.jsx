@@ -59,6 +59,22 @@ const MENU_ORDER_MAP = {
     "bb859fbd-7446-7580-8c3d-058c54e1a570", // Adventures of Milla Carter Series 1
     "0dda819e-726d-32e4-6a43-bb7a3caa5d87", // Adventures of Milla Carter Series 2
     "ab1a611d-9061-e0ea-cf14-0c3b43255ebd", // The Ordinary
+  ],
+  "Fiction, Young Adult & Sci-Fi": [
+    "neighbourhood-matters-2027", // Neighbourhood Matters (1st place per George Oct 2026)
+    "2e44d90a-be72-8264-8a35-9bbea70b09f8", // The War for the Tree
+    "a5ef425d-c014-1bdb-39fc-6c5f24b32514", // Nightmare
+    "95f9aab9-aa63-bb4d-b091-f010f89aa2fb", // Kingswraith Series
+    "69d3f6e8-f622-58ef-9679-740461b95b86", // The Gathering of Gods
+    "96371015-1d5d-4d0e-4239-313d90ffc405", // Redemption in Eden
+    "a8c00d48-1738-e36b-d621-5d1f49fe775c", // Celluloid Peach
+    "84ca6fe1-1e1b-e4b6-0ef2-4814226518d1", // The Stone Gospel
+    "db9b7b04-bb72-0569-010b-ccadbd1eb228", // Preacher Spindrift Series
+    "b712d89b-9a9a-17fa-04c7-83bd48661ca9", // OutTack
+    "4c4c4d72-9abe-69fe-5069-8915adb835a8", // Stop The 'Pocalypse!
+    "17a3b6b1-f3ab-5237-a004-1f4bc7405cb3", // Slave Skin
+    "f980a175-4733-1c49-aaed-1f9495b0033f", // The Catalyst
+    "915c7442-fdf6-d504-ff7f-824704f50343", // Antecedent Series
   ]
 };
 

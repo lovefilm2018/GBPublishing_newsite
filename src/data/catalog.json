@@ -15,7 +15,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 75.0,
+    "price": 75,
     "originalPrice": null,
     "sku": "GBP-1000",
     "ribbon": "",
@@ -140,7 +140,7 @@
           "Grandad let's go for a walk": "Painting 1",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -151,7 +151,7 @@
           "Grandad let's go for a walk": "Painting 1",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -162,7 +162,7 @@
           "Grandad let's go for a walk": "Painting 2",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -173,7 +173,7 @@
           "Grandad let's go for a walk": "Painting 2",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -184,7 +184,7 @@
           "Grandad let's go for a walk": "Painting 3",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -195,7 +195,7 @@
           "Grandad let's go for a walk": "Painting 3",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -206,7 +206,7 @@
           "Grandad let's go for a walk": "Painting 4",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -217,7 +217,7 @@
           "Grandad let's go for a walk": "Painting 4",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -228,7 +228,7 @@
           "Grandad let's go for a walk": "Painting 5",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -239,7 +239,7 @@
           "Grandad let's go for a walk": "Painting 5",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -250,7 +250,7 @@
           "Grandad let's go for a walk": "Painting 6",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -261,7 +261,7 @@
           "Grandad let's go for a walk": "Painting 6",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -272,7 +272,7 @@
           "Grandad let's go for a walk": "Painting 7",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -283,7 +283,7 @@
           "Grandad let's go for a walk": "Painting 7",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -294,7 +294,7 @@
           "Grandad let's go for a walk": "Painting 8",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -305,7 +305,7 @@
           "Grandad let's go for a walk": "Painting 8",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -316,7 +316,7 @@
           "Grandad let's go for a walk": "Painting 9",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -327,7 +327,7 @@
           "Grandad let's go for a walk": "Painting 9",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -338,7 +338,7 @@
           "Grandad let's go for a walk": "Painting 10",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -349,7 +349,7 @@
           "Grandad let's go for a walk": "Painting 10",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -360,7 +360,7 @@
           "Grandad let's go for a walk": "Painting 11",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -371,7 +371,7 @@
           "Grandad let's go for a walk": "Painting 11",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -382,7 +382,7 @@
           "Grandad let's go for a walk": "Painting 12",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -393,7 +393,7 @@
           "Grandad let's go for a walk": "Painting 12",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -404,7 +404,7 @@
           "Grandad let's go for a walk": "Painting 13",
           "Size": "A2"
         },
-        "price": 75.0,
+        "price": 75,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -415,7 +415,7 @@
           "Grandad let's go for a walk": "Painting 13",
           "Size": "A4"
         },
-        "price": 45.0,
+        "price": 45,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1227,8 +1227,8 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
-    "originalPrice": 36.0,
+    "price": 30,
+    "originalPrice": 36,
     "sku": "GBP-1013",
     "ribbon": "Signed Copy Available",
     "ribbons": [
@@ -1369,7 +1369,7 @@
         "choices": {
           "Choose illustration": "Map page 4"
         },
-        "price": 25.0,
+        "price": 25,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1379,7 +1379,7 @@
         "choices": {
           "Choose illustration": "Map page 5"
         },
-        "price": 25.0,
+        "price": 25,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1389,7 +1389,7 @@
         "choices": {
           "Choose illustration": "Sam at home page"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1399,7 +1399,7 @@
         "choices": {
           "Choose illustration": "Ocean island"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1409,7 +1409,7 @@
         "choices": {
           "Choose illustration": "In space"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1419,7 +1419,7 @@
         "choices": {
           "Choose illustration": "Jungle"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1429,7 +1429,7 @@
         "choices": {
           "Choose illustration": "Windy city"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1439,7 +1439,7 @@
         "choices": {
           "Choose illustration": "French farm"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1449,7 +1449,7 @@
         "choices": {
           "Choose illustration": "Bank"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1459,7 +1459,7 @@
         "choices": {
           "Choose illustration": "Market"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1469,7 +1469,7 @@
         "choices": {
           "Choose illustration": "Emerald isle"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1479,7 +1479,7 @@
         "choices": {
           "Choose illustration": "Surfing"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1489,7 +1489,7 @@
         "choices": {
           "Choose illustration": "Cloud people"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1499,7 +1499,7 @@
         "choices": {
           "Choose illustration": "Japan"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1509,7 +1509,7 @@
         "choices": {
           "Choose illustration": "Australia"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1519,7 +1519,7 @@
         "choices": {
           "Choose illustration": "Airport"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1529,7 +1529,7 @@
         "choices": {
           "Choose illustration": "Sam back home"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1539,7 +1539,7 @@
         "choices": {
           "Choose illustration": "Feathers page 40"
         },
-        "price": 25.0,
+        "price": 25,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1549,7 +1549,7 @@
         "choices": {
           "Choose illustration": "Feathers page 41"
         },
-        "price": 25.0,
+        "price": 25,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1574,8 +1574,8 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
-    "originalPrice": 24.0,
+    "price": 20,
+    "originalPrice": 24,
     "sku": "GBP-1014",
     "ribbon": "Signed Copy Available",
     "ribbons": [
@@ -1716,7 +1716,7 @@
         "choices": {
           "Choose illustration": "Map page 4"
         },
-        "price": 15.0,
+        "price": 15,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1726,7 +1726,7 @@
         "choices": {
           "Choose illustration": "Map page 5"
         },
-        "price": 15.0,
+        "price": 15,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1736,7 +1736,7 @@
         "choices": {
           "Choose illustration": "Sam at home page"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1746,7 +1746,7 @@
         "choices": {
           "Choose illustration": "Ocean island"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1756,7 +1756,7 @@
         "choices": {
           "Choose illustration": "In space"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1766,7 +1766,7 @@
         "choices": {
           "Choose illustration": "Jungle"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1776,7 +1776,7 @@
         "choices": {
           "Choose illustration": "Windy city"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1786,7 +1786,7 @@
         "choices": {
           "Choose illustration": "French farm"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1796,7 +1796,7 @@
         "choices": {
           "Choose illustration": "Bank"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1806,7 +1806,7 @@
         "choices": {
           "Choose illustration": "Market"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1816,7 +1816,7 @@
         "choices": {
           "Choose illustration": "Emerald isle"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1826,7 +1826,7 @@
         "choices": {
           "Choose illustration": "Surfing"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1836,7 +1836,7 @@
         "choices": {
           "Choose illustration": "Cloud people"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1846,7 +1846,7 @@
         "choices": {
           "Choose illustration": "Japan"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1856,7 +1856,7 @@
         "choices": {
           "Choose illustration": "Australia"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1866,7 +1866,7 @@
         "choices": {
           "Choose illustration": "Airport"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1876,7 +1876,7 @@
         "choices": {
           "Choose illustration": "Sam back home"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1886,7 +1886,7 @@
         "choices": {
           "Choose illustration": "Feathers page 40"
         },
-        "price": 15.0,
+        "price": 15,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -1896,7 +1896,7 @@
         "choices": {
           "Choose illustration": "Feathers page 41"
         },
-        "price": 15.0,
+        "price": 15,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -2241,7 +2241,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "GBP-1019",
     "ribbon": "",
@@ -2264,7 +2264,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -2287,7 +2287,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "GBP-1020",
     "ribbon": "",
@@ -2350,7 +2350,7 @@
         "choices": {
           "Illustrations": "Royal Gambit  size A3"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -2360,7 +2360,7 @@
         "choices": {
           "Illustrations": "Royal Gambit size A2"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -2370,7 +2370,7 @@
         "choices": {
           "Illustrations": "Nova Descent size A3"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -2380,7 +2380,7 @@
         "choices": {
           "Illustrations": "Nova Descent size A2"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -2390,7 +2390,7 @@
         "choices": {
           "Illustrations": "Galahad Suns size A3"
         },
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -2400,7 +2400,7 @@
         "choices": {
           "Illustrations": "Galahad Suns size A2"
         },
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -2625,7 +2625,7 @@
   {
     "id": "bf0637fe-a102-f05b-3c56-0f19dcc5704e",
     "slug": "crumbdog-art-print-360x300mm",
-    "title": "Crumbdog art print 360x300mm",
+    "title": "Crumbdog art print 360x300mm (without frame)",
     "rawTitle": "Crumbdog art print 360x300mm",
     "author": "Lois Collins",
     "contributors": "",
@@ -2638,7 +2638,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "GBP-1024",
     "ribbon": "",
@@ -2650,7 +2650,7 @@
     "gallery": [
       "https://static.wixstatic.com/media/7c7af8_299be141f8984938b401eff89f0c7d9f~mv2.jpg/v1/fit/w_800,h_971,q_90/file.jpg"
     ],
-    "description": "Lois Collins with Lula and Crumbdog",
+    "description": "Lois Collins with Lula and Crumbdog. Print size 360x300mm (without frame).",
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
@@ -2661,7 +2661,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "",
         "inStock": true
@@ -2684,7 +2684,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576708",
     "ribbon": "",
@@ -2707,7 +2707,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576708",
         "inStock": true
@@ -2732,7 +2732,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "SWSWX-9781912576692",
     "ribbon": "",
@@ -2755,7 +2755,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "SWSWX-9781912576692",
         "inStock": true
@@ -2780,7 +2780,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576685",
     "ribbon": "",
@@ -2803,7 +2803,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576685",
         "inStock": true
@@ -2828,7 +2828,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576678",
     "ribbon": "",
@@ -2851,7 +2851,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576678",
         "inStock": true
@@ -2876,7 +2876,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576661",
     "ribbon": "",
@@ -2899,7 +2899,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576661",
         "inStock": true
@@ -2924,7 +2924,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576654",
     "ribbon": "",
@@ -2947,7 +2947,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576654",
         "inStock": true
@@ -2972,7 +2972,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576647",
     "ribbon": "",
@@ -2995,7 +2995,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576647",
         "inStock": true
@@ -3020,7 +3020,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576630",
     "ribbon": "",
@@ -3043,7 +3043,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576630",
         "inStock": true
@@ -3068,7 +3068,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576623",
     "ribbon": "",
@@ -3091,7 +3091,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576623",
         "inStock": true
@@ -3116,7 +3116,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576616",
     "ribbon": "",
@@ -3139,7 +3139,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576616",
         "inStock": true
@@ -3164,7 +3164,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576609",
     "ribbon": "",
@@ -3187,7 +3187,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576609",
         "inStock": true
@@ -3212,7 +3212,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576593",
     "ribbon": "",
@@ -3235,7 +3235,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576593",
         "inStock": true
@@ -3260,7 +3260,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576586",
     "ribbon": "",
@@ -3283,7 +3283,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576586",
         "inStock": true
@@ -3308,7 +3308,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576579",
     "ribbon": "",
@@ -3331,7 +3331,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576579",
         "inStock": true
@@ -3356,7 +3356,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576562",
     "ribbon": "",
@@ -3379,7 +3379,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576562",
         "inStock": true
@@ -3404,7 +3404,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576555",
     "ribbon": "",
@@ -3427,7 +3427,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576555",
         "inStock": true
@@ -3452,7 +3452,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576548",
     "ribbon": "",
@@ -3475,7 +3475,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576548",
         "inStock": true
@@ -3500,7 +3500,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 15.0,
+    "price": 15,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576531",
     "ribbon": "",
@@ -3523,7 +3523,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 15.0,
+        "price": 15,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576531",
         "inStock": true
@@ -3548,7 +3548,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 15.0,
+    "price": 15,
     "originalPrice": null,
     "sku": "MPX-SWSWX-9781912576524",
     "ribbon": "",
@@ -3571,7 +3571,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 15.0,
+        "price": 15,
         "originalPrice": null,
         "sku": "MPX-SWSWX-9781912576524",
         "inStock": true
@@ -3596,7 +3596,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 20.0,
+    "price": 20,
     "originalPrice": null,
     "sku": "978-1-912576-53-1",
     "ribbon": "",
@@ -3619,7 +3619,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 20.0,
+        "price": 20,
         "originalPrice": null,
         "sku": "978-1-912576-53-1",
         "inStock": true
@@ -3644,7 +3644,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-54-8",
     "ribbon": "",
@@ -3667,7 +3667,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-54-8",
         "inStock": true
@@ -3692,7 +3692,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "SWSW-9781912576555",
     "ribbon": "",
@@ -3715,7 +3715,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "SWSW-9781912576555",
         "inStock": true
@@ -3740,7 +3740,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "SWSWX-9781912576562",
     "ribbon": "",
@@ -3763,7 +3763,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "SWSWX-9781912576562",
         "inStock": true
@@ -3788,7 +3788,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-57-9",
     "ribbon": "",
@@ -3811,7 +3811,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-57-9",
         "inStock": true
@@ -3836,7 +3836,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-58-6",
     "ribbon": "",
@@ -3859,7 +3859,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-58-6",
         "inStock": true
@@ -3884,7 +3884,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-59-3",
     "ribbon": "",
@@ -3907,7 +3907,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-59-3",
         "inStock": true
@@ -3932,7 +3932,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-60-9",
     "ribbon": "",
@@ -3955,7 +3955,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-60-9",
         "inStock": true
@@ -3980,7 +3980,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-61-6",
     "ribbon": "",
@@ -4003,7 +4003,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-61-6",
         "inStock": true
@@ -4028,7 +4028,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-62-3",
     "ribbon": "",
@@ -4051,7 +4051,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-62-3",
         "inStock": true
@@ -4076,7 +4076,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-63-0",
     "ribbon": "",
@@ -4099,7 +4099,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-63-0",
         "inStock": true
@@ -4124,7 +4124,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-64-7",
     "ribbon": "",
@@ -4147,7 +4147,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-64-7",
         "inStock": true
@@ -4172,7 +4172,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-65-4",
     "ribbon": "",
@@ -4195,7 +4195,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-65-4",
         "inStock": true
@@ -4220,7 +4220,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-66-1",
     "ribbon": "",
@@ -4243,7 +4243,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-66-1",
         "inStock": true
@@ -4268,7 +4268,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-67-8",
     "ribbon": "",
@@ -4291,7 +4291,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-67-8",
         "inStock": true
@@ -4316,7 +4316,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 30.0,
+    "price": 30,
     "originalPrice": null,
     "sku": "978-1-912576-68-5",
     "ribbon": "",
@@ -4339,7 +4339,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 30.0,
+        "price": 30,
         "originalPrice": null,
         "sku": "978-1-912576-68-5",
         "inStock": true
@@ -4364,7 +4364,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 25.0,
+    "price": 25,
     "originalPrice": null,
     "sku": "MPX-SWSWX-978-1-912576-69-2",
     "ribbon": "",
@@ -4387,7 +4387,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 25.0,
+        "price": 25,
         "originalPrice": null,
         "sku": "MPX-SWSWX-978-1-912576-69-2",
         "inStock": true
@@ -4412,7 +4412,7 @@
     "accolades": [],
     "videoTrailer": null,
     "missionCard": null,
-    "price": 25.0,
+    "price": 25,
     "originalPrice": null,
     "sku": "978-1-912576-70-8",
     "ribbon": "",
@@ -4435,7 +4435,7 @@
       {
         "id": "00000000-0000-0000-0000-000000000000",
         "choices": {},
-        "price": 25.0,
+        "price": 25,
         "originalPrice": null,
         "sku": "978-1-912576-70-8",
         "inStock": true
@@ -4649,8 +4649,8 @@
         "choices": {
           "FREE mainland UK delivery orders over £15, Choose:": "#1-3 GODS' Enemy Fool & Warrior - paperback"
         },
-        "price": 28.0,
-        "originalPrice": 29.0,
+        "price": 28,
+        "originalPrice": 29,
         "sku": "",
         "inStock": true
       }
@@ -6597,8 +6597,7 @@
       "PRE-BUY"
     ],
     "categories": [
-      "Fiction, Young Adult & Sci-Fi",
-      "Adult Sci-Fi"
+      "Fiction, Young Adult & Sci-Fi"
     ],
     "coverImage": "./covers/neighbourhood_matters.webp",
     "gallery": [],
