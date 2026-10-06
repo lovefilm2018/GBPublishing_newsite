@@ -163,8 +163,8 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
       price: price,
       originalPrice: originalPrice,
       sku: p.sku || `GBP-${1000 + idx}`,
-      ribbon: effectiveRibbon || (isSigned ? "Signed Collector Edition" : ""),
-      ribbons: effectiveRibbon ? effectiveRibbon.split(' · ') : (isSigned ? ["Signed Collector Edition"] : []),
+      ribbon: effectiveRibbon || (isSigned ? "Signed Copy Available" : ""),
+      ribbons: effectiveRibbon ? effectiveRibbon.split(' · ') : (isSigned ? ["Signed Copy Available"] : []),
       categories: categories,
       coverImage: coverImage,
       gallery: gallery,
@@ -172,7 +172,7 @@ export function normalizeWixRestProduct(p, idx, collectionsMap = {}) {
       isWholesale: isWholesale,
       isSigned: isSigned,
       visible: p.visible !== false,
-      format: isSigned ? "Signed Edition" : (price > 20 ? "Hardcover" : "Paperback"),
+      format: isSigned ? "Signed Copy" : (price > 20 ? "Hardback" : "Paperback"),
       stock: p.stock?.quantity || 25
     };
   } catch (err) {

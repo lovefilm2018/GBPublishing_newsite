@@ -184,12 +184,28 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
               {book.options && book.options.length > 0 ? (
                 <div className="space-y-4">
                   {book.options.map((opt, oIdx) => {
-                    const cleanOptTitle = opt.name
+                    let cleanOptTitle = opt.name
                       .replace(/FREE mainland UK delivery[^\,]*,?\s*/i, '')
                       .replace(/Choose[:\s]*/i, '')
-                      .trim() || 'Select';
+                      .trim();
 
-                    const hasLongText = opt.choices.some(c => (c.value || '').length > 18);
+                    if (!cleanOptTitle || /select/i.test(cleanOptTitle)) {
+                      cleanOptTitle = (/fridge magnet|free sticker|free gift/i.test(opt.name) || /crumbdog/i.test(book.title)) ? 'Free' : 'Option';
+                    } else if (/fridge magnet|free sticker/i.test(opt.name) && !/format|title/i.test(opt.name)) {
+                      cleanOptTitle = 'Free';
+                    }
+
+                    const getDisplayChoiceLabel = (val) => {
+                      if (!val) return '';
+                      if (val === 'Book') return 'Hardback';
+                      if (val === 'Book + Apron') return 'Hardback + Apron';
+                      if (/doogie/i.test(book.title) && !/paperback/i.test(val)) {
+                        return `${val} - Paperback`;
+                      }
+                      return val;
+                    };
+
+                    const hasLongText = opt.choices.some(c => (getDisplayChoiceLabel(c.value) || '').length > 18);
 
                     return (
                       <div key={oIdx} className="space-y-2">
@@ -204,6 +220,7 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                               const isSelected = selectedChoices[opt.name] === choice.value;
                               const vMatch = (book.variants || []).find(v => v.choices && v.choices[opt.name] === choice.value);
                               const choicePrice = vMatch ? vMatch.price : null;
+                              const displayLabel = getDisplayChoiceLabel(choice.value);
 
                               return (
                                 <button 
@@ -212,7 +229,7 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                                   onClick={() => setSelectedChoices(prev => ({ ...prev, [opt.name]: choice.value }))}
                                   className={`p-2.5 rounded-xl text-xs font-bold font-sans border text-left sm:text-center transition-all flex sm:flex-col items-center sm:justify-center justify-between gap-1 ${isSelected ? 'border-[#8C2520] bg-red-50/70 text-[#8C2520] ring-1 ring-[#8C2520] shadow-xs' : 'border-slate-200 text-slate-700 bg-white hover:border-slate-300'}`}
                                 >
-                                  <span className="truncate">{choice.value}</span>
+                                  <span className="truncate">{displayLabel}</span>
                                   {choicePrice !== null && (
                                     <span className={`text-[11px] font-medium ${isSelected ? 'text-[#8C2520]' : 'text-slate-500'}`}>
                                       £{choicePrice.toFixed(2)}
@@ -229,6 +246,7 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                               const isSelected = selectedChoices[opt.name] === choice.value;
                               const vMatch = (book.variants || []).find(v => v.choices && v.choices[opt.name] === choice.value);
                               const choicePrice = vMatch ? vMatch.price : null;
+                              const displayLabel = getDisplayChoiceLabel(choice.value);
 
                               return (
                                 <button
@@ -237,7 +255,7 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                                   onClick={() => setSelectedChoices(prev => ({ ...prev, [opt.name]: choice.value }))}
                                   className={`p-3 rounded-xl text-xs font-sans border text-left transition-all flex items-center justify-between gap-3 ${isSelected ? 'border-[#8C2520] bg-red-50/80 text-[#8C2520] ring-1 ring-[#8C2520] font-bold shadow-xs' : 'border-slate-200 text-slate-700 bg-white hover:border-slate-300 font-medium'}`}
                                 >
-                                  <span className="leading-snug flex-1 break-words">{choice.value}</span>
+                                  <span className="leading-snug flex-1 break-words">{displayLabel}</span>
                                   {choicePrice !== null && (
                                     <span className={`shrink-0 text-xs font-bold ${isSelected ? 'text-[#8C2520]' : 'text-slate-900'}`}>
                                       £{choicePrice.toFixed(2)}
@@ -261,21 +279,33 @@ export default function BookModal({ book, onClose, onAddToCart, onOpenExcerpt, r
                   </label>
                   {book.availableFormats && book.availableFormats.length > 1 ? (
                     <div className="grid grid-cols-2 gap-2">
-                      {book.availableFormats.map((fmt) => (
-                        <button 
-                          key={fmt}
-                          type="button"
-                          onClick={() => setSelectedFormat(fmt)}
-                          className={`p-2.5 rounded-xl text-xs font-bold font-sans border text-center transition-all ${selectedFormat === fmt ? 'border-[#8C2520] bg-red-50 text-[#8C2520] shadow-sm' : 'border-slate-200 text-slate-700 hover:border-slate-300'}`}
-                        >
-                          {fmt}
-                        </button>
-                      ))}
+                      {book.availableFormats.map((fmt) => {
+                        const cleanFmt = fmt
+                          .replace(/\s*Edition\b/gi, '')
+                          .replace(/\bHardcover\b/gi, 'Hardback')
+                          .trim();
+                        return (
+                          <button 
+                            key={fmt}
+                            type="button"
+                            onClick={() => setSelectedFormat(cleanFmt)}
+                            className={`p-2.5 rounded-xl text-xs font-bold font-sans border text-center transition-all ${selectedFormat === cleanFmt ? 'border-[#8C2520] bg-red-50 text-[#8C2520] shadow-sm' : 'border-slate-200 text-slate-700 hover:border-slate-300'}`}
+                          >
+                            {cleanFmt}
+                          </button>
+                        );
+                      })}
                     </div>
                   ) : (
                     <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100 border border-slate-200 text-xs font-bold text-slate-800">
                       <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
-                      <span>{book.format ? `${book.format} Edition` : 'Paperback Edition'}</span>
+                      <span>{(() => {
+                        const raw = (book.availableFormats && book.availableFormats.length === 1) ? book.availableFormats[0] : (book.format || 'Paperback');
+                        return raw
+                          .replace(/\s*Edition\b/gi, '')
+                          .replace(/\bHardcover\b/gi, 'Hardback')
+                          .trim();
+                      })()}</span>
                       {book.isSigned && <span className="text-[#8C2520] font-semibold">(Author Signed Copy)</span>}
                     </div>
                   )}

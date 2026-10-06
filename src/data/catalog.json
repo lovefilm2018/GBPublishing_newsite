@@ -42,7 +42,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [
       {
@@ -491,7 +491,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -547,7 +547,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -598,7 +598,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -2056,7 +2056,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -2155,7 +2155,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -2169,7 +2169,7 @@
       }
     ],
     "availableFormats": [
-      "Hardcover Edition"
+      "Hardback"
     ]
   },
   {
@@ -2222,7 +2222,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback (Signed)"
+      "Paperback"
     ]
   },
   {
@@ -2257,7 +2257,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -2405,6 +2405,9 @@
         "sku": "",
         "inStock": true
       }
+    ],
+    "availableFormats": [
+      "Paperback"
     ]
   },
   {
@@ -2470,7 +2473,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -2563,6 +2566,9 @@
         "sku": "",
         "inStock": true
       }
+    ],
+    "availableFormats": [
+      "Paperback"
     ]
   },
   {
@@ -2613,7 +2619,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -3654,7 +3660,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -3702,7 +3708,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -3750,7 +3756,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -3798,7 +3804,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -3846,7 +3852,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -3894,7 +3900,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -3942,7 +3948,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -3990,7 +3996,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -4038,7 +4044,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -4086,7 +4092,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -4134,7 +4140,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -4182,7 +4188,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -4230,7 +4236,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -4278,7 +4284,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -4326,7 +4332,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -4374,7 +4380,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -4422,7 +4428,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -4486,7 +4492,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -4537,7 +4543,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -5135,7 +5141,7 @@
     "isWholesale": false,
     "isSigned": false,
     "visible": true,
-    "format": "Hardcover",
+    "format": "Hardback",
     "stock": 25,
     "options": [],
     "variants": [
@@ -5149,7 +5155,7 @@
       }
     ],
     "availableFormats": [
-      "Hardcover Edition"
+      "Hardback"
     ]
   },
   {
@@ -5200,7 +5206,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback (Signed)"
+      "Paperback"
     ]
   },
   {
@@ -5245,18 +5251,18 @@
         "optionType": "drop_down",
         "choices": [
           {
-            "value": "#1 Doogie and the Rollers",
-            "description": "#1 Doogie and the Rollers",
+            "value": "#1 Doogie and the Rollers - Paperback",
+            "description": "#1 Doogie and the Rollers - Paperback",
             "inStock": true
           },
           {
-            "value": "#2 Doogie and the Pyramid of Dungalore",
-            "description": "#2 Doogie and the Pyramid of Dungalore",
+            "value": "#2 Doogie and the Pyramid of Dungalore - Paperback",
+            "description": "#2 Doogie and the Pyramid of Dungalore - Paperback",
             "inStock": true
           },
           {
-            "value": "#1 Rollers & #2 Pyramid of Dungalore",
-            "description": "#1 Rollers & #2 Pyramid of Dungalore",
+            "value": "#1 Rollers & #2 Pyramid of Dungalore - Paperback",
+            "description": "#1 Rollers & #2 Pyramid of Dungalore - Paperback",
             "inStock": true
           }
         ]
@@ -5266,7 +5272,7 @@
       {
         "id": "b611dbae-0464-4a0e-9b78-8d7fb73fc3fc",
         "choices": {
-          "FREE mainland UK delivery over £15, Choose title ": "#1 Doogie and the Rollers"
+          "FREE mainland UK delivery over £15, Choose title ": "#1 Doogie and the Rollers - Paperback"
         },
         "price": 6.99,
         "originalPrice": 7.99,
@@ -5276,7 +5282,7 @@
       {
         "id": "e5711c4b-c601-458a-9d44-c59ea07ade00",
         "choices": {
-          "FREE mainland UK delivery over £15, Choose title ": "#2 Doogie and the Pyramid of Dungalore"
+          "FREE mainland UK delivery over £15, Choose title ": "#2 Doogie and the Pyramid of Dungalore - Paperback"
         },
         "price": 8.49,
         "originalPrice": 9.49,
@@ -5286,7 +5292,7 @@
       {
         "id": "84a46747-9afe-42d7-99b2-200df40948b7",
         "choices": {
-          "FREE mainland UK delivery over £15, Choose title ": "#1 Rollers & #2 Pyramid of Dungalore"
+          "FREE mainland UK delivery over £15, Choose title ": "#1 Rollers & #2 Pyramid of Dungalore - Paperback"
         },
         "price": 13.99,
         "originalPrice": 14.99,
@@ -5343,7 +5349,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -5507,7 +5513,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -5556,7 +5562,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -5858,7 +5864,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -6142,7 +6148,7 @@
     ],
     "availableFormats": [
       "Paperback (Signed)",
-      "Hardcover (Signed)"
+      "Hardback (Signed)"
     ]
   },
   {
@@ -6235,7 +6241,7 @@
     ],
     "availableFormats": [
       "Paperback (Signed)",
-      "Hardcover (Signed)"
+      "Hardback (Signed)"
     ]
   },
   {
@@ -6420,7 +6426,7 @@
     ],
     "description": "Recipes for ROMANCE by world renowned astrologer Penny Thornton (Coffee Table Cookbook paperback) SIGNED SENSUOUS CELESTIAL COOKING ? Yup. SEE MORE Does your lifestyle include making meals for dinner parties? Might you like to add SENSUOUS CELESTIAL party dishes, with adding zodiac signs to your date night recipes? LOVE astrology ? Fancy guests enjoying your dinner party dishes, specially made according to their own star signs ? Well, meet “The Zodiac Cooks”. Could serving the right food capture a heart? Yes, according to passionate cook Penny Thornton (author of Suns and Lovers) who believes matching meals to personality types can open the route to happy seduction. Want to cook to win a heart? Penny's advice: spread your love over a perfectly laid table and then serve sensual starters, mouth-watering mains and puddings to provoke passion. Not easy? Yes, could be, with a little help from The Zodiac Cooks , a book packed with recipes targeted for love with the right person for you. What some people relish could be 'poison' to others. So, before that special dinner at yours, check out a potential new partner's taste. Plain food, or titillating choices? Would s/he warm to a hearty French cassoulet, or might a delicate sea bass prove more tempting. Cleverly linking likes and dislikes from trends in star signs, ardent home-based cook Thornton has produced a unique book which includes a fine selection of tried and tested recipes for informed seduction - a novel idea for this fun, delicious book: The Zodiac Cooks , by Penny Thornton. PRESS/MEDIA FEMAIL, DAILY MAIL ONLINE: \"How your star sign rules your DIET – Princess Diana's astrologer reveals how the zodiac impacts everything from cravings to your cooking style\" WOMAN & HOME: \"w&h’s astrologer Penny Thornton reveals how your star sign can affect what you eat, how you cook – and even your temperament in the kitchen…\" Also on TV shows – THE LIST (USA), EXPRESSO (Africa), TOP BILLING (Africa)... About the author Penny Thornton has been an astrologer for over thirty years. She has a global clientele and her website, Astrolutely.com is one of the top astrology sites in the world. A classically trained astrologer, she has published books for the astrological purist and written articles and columns in magazines and newspapers. In 1995, a six-month daily spot on the US Food Network drew together her talents as a cook and astrologer; from those seeds The Zodiac Cooks germinated. Penny has three grown-up sons and, with her partner, divides her time between the USA, UK and Sweden. The Morton Report: \"Penny Thornton – What do the Stars Hold for William and Kate?\" Star Signs: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, and Pisces",
     "isWholesale": false,
-    "isSigned": true,
+    "isSigned": false,
     "visible": true,
     "format": "Paperback",
     "stock": 25,
@@ -6436,7 +6442,7 @@
       }
     ],
     "availableFormats": [
-      "Paperback Edition"
+      "Paperback"
     ]
   },
   {
@@ -6510,13 +6516,13 @@
         "optionType": "drop_down",
         "choices": [
           {
-            "value": "Book",
-            "description": "Book",
+            "value": "Hardback",
+            "description": "Hardback",
             "inStock": true
           },
           {
-            "value": "Book + Apron",
-            "description": "Book + Apron",
+            "value": "Hardback + Apron",
+            "description": "Hardback + Apron",
             "inStock": true
           },
           {
@@ -6531,7 +6537,7 @@
       {
         "id": "dbfa7bc0-ad65-459b-8364-e5c102cff386",
         "choices": {
-          "Book, apron or both - FREE mainland UK delivery": "Book"
+          "Book, apron or both - FREE mainland UK delivery": "Hardback"
         },
         "price": 20.99,
         "originalPrice": 25.99,
@@ -6541,7 +6547,7 @@
       {
         "id": "663e0c04-093b-4008-bc2c-cc973199841c",
         "choices": {
-          "Book, apron or both - FREE mainland UK delivery": "Book + Apron"
+          "Book, apron or both - FREE mainland UK delivery": "Hardback + Apron"
         },
         "price": 38.99,
         "originalPrice": 43.99,
@@ -6602,7 +6608,7 @@
     "visible": true,
     "format": "Paperback",
     "availableFormats": [
-      "Paperback (Signed)"
+      "Paperback"
     ],
     "stock": 25,
     "options": [],

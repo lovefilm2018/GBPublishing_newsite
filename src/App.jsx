@@ -408,7 +408,7 @@ export default function App() {
                       className={`px-3.5 py-2 rounded-xl border transition-all flex items-center gap-1.5 ${filterSignedOnly ? 'bg-amber-100 text-[#8C2520] border-amber-300 shadow-sm' : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300'}`}
                     >
                       <Feather className="w-3.5 h-3.5 text-[#D4A359]" />
-                      <span>Signed Editions</span>
+                      <span>Signed Copies</span>
                     </button>
                     <button 
                       onClick={() => setFilterUnder15(!filterUnder15)}
@@ -461,13 +461,13 @@ export default function App() {
               {/* Catalogue Header */}
               <div className="mb-8 space-y-3">
                 <span className="text-xs font-bold text-[#8C2520] uppercase tracking-widest block">
-                  GB PUBLISHING MASTER CATALOGUE
+                  GB PUBLISHING ORG
                 </span>
                 <h1 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900">
                   {selectedCategory === 'ALL' ? 'Complete Book Catalogue' : selectedCategory}
                 </h1>
                 <p className="text-xs text-slate-600 font-sans max-w-2xl">
-                  Showing {filteredBooks.length} titles available directly from GB Publishing Org. Free UK delivery on orders over £15, author signed editions, and direct royalties for indie creators.
+                  Showing {filteredBooks.length} titles available directly from GB Publishing Org. Free UK delivery on orders over £15, author signed copies, and direct royalties for indie creators.
                 </p>
               </div>
 

@@ -302,6 +302,7 @@ EDITORIAL_ENRICHMENTS = {
         'tagline': "Recipes for Romance from the Celestial Kitchen of Life — Sensuous cooking tailored to your date's star sign",
         'author': "renowned astrologer Penny Thornton",
         'ribbon': "Romantic Recipes",
+        'isSigned': False,
         'contributors': "Photography by Adrian Lawrence and Sian Irvine",
         'authorSectionTitle': "About the Author & Astrologer",
         'authors': [
@@ -912,7 +913,7 @@ for idx, p in enumerate(raw_products):
         "isWholesale": is_wholesale,
         "isSigned": is_signed,
         "visible": True,
-        "format": "Signed Copy" if is_signed else ("Hardcover" if price > 20 else "Paperback"),
+        "format": "Signed Copy" if is_signed else ("Hardback" if price > 20 else "Paperback"),
         "stock": p.get('stock', {}).get('quantity', 25),
         "options": clean_options,
         "variants": clean_variants

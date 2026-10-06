@@ -98,7 +98,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                     </div>
                     <h3 className="font-serif text-xl font-bold text-slate-800">Your direct cart is empty</h3>
                     <p className="text-xs text-slate-500 max-w-xs mx-auto">
-                      Explore our catalogue to support indie authors, discover signed editions, and support independent literature!
+                      Explore our catalogue to support indie authors, discover signed copies, and support independent literature!
                     </p>
                     <button 
                       onClick={onClose}
@@ -111,12 +111,20 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                   <div className="space-y-4">
                     {cartItems.map((item) => {
                       const itemKey = item.cartKey || `${item.id}-${item.selectedFormat || item.format}`;
+                      const rawFmt = item.selectedFormat || item.format || 'Paperback';
+                      const isSigned = /signed/i.test(rawFmt);
+                      const cleanFmt = rawFmt
+                        .replace(/\s*Edition\b/gi, '')
+                        .replace(/\bHardcover\b/gi, 'Hardback')
+                        .trim();
+                      const displayLabel = isSigned ? 'Copy: Signed' : `Format: ${cleanFmt}`;
+
                       return (
                         <div key={itemKey} className="flex gap-4 p-3 border border-slate-200 rounded-xl bg-slate-50/50 items-center">
                           <img src={item.coverImage} alt={item.title} className="w-14 h-20 object-cover rounded shadow-sm" />
                           <div className="flex-1 min-w-0">
                             <h4 className="font-serif text-sm font-bold text-slate-900 truncate">{item.title}</h4>
-                            <p className="text-[11px] text-slate-500 font-sans">Edition: {item.selectedFormat || item.format}</p>
+                            <p className="text-[11px] text-slate-500 font-sans">{displayLabel}</p>
                             <p className="font-serif text-sm font-bold text-[#7A1F1A] mt-1">£{item.price.toFixed(2)}</p>
                           </div>
                           <div className="flex flex-col items-end gap-2">

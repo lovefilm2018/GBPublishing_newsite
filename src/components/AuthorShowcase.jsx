@@ -43,8 +43,11 @@ export default function AuthorShowcase({ onSelectAuthor }) {
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900">
             Meet Our Independent Authors
           </h2>
-          <p className="text-slate-600 font-sans text-sm mt-2">
-            Every GB Publishing book is born from authentic passion, craftsmanship, and indie publishing independence.
+          <p className="text-[#8C2520] font-sans font-bold text-sm tracking-wide mt-1 uppercase">
+            GB Publishing Org
+          </p>
+          <p className="text-slate-600 font-sans text-sm mt-1">
+            Every GB Publishing Org book is born from authentic passion, craftsmanship, and indie publishing independence.
           </p>
         </div>
 
